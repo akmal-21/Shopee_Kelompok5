@@ -1,0 +1,5019 @@
+<!DOCTYPE html>
+
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+06/01/2025 23:26:02 -->
+
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=1349, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script id="anima-load-script" src="load.js"></script><script id="anima-hotspots-script" src="hotspots.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700,500|Inter:400");
+
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/677c63e2af2be0956b4eff88.677c63e2af2be0956b4eff8b.oaUHB0s.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --black: #000000;
+  --black-2: #000000a6;
+  --black-3: #0000008a;
+  --black-4: #000000cc;
+  --black-5: #00000017;
+  --black-6: #00000033;
+  --black-7: #000000de;
+  --black-8: #00000024;
+  --black-9: #0000000d;
+  --flamingo: #ee4d2d;
+  --log-cabin: #222222;
+  --white: #ffffff;
+  --white-2: #ffffff01;
+ 
+  --font-size-l: 16px;
+  --font-size-m: 14px;
+  --font-size-s: 13px;
+  --font-size-xl: 18px;
+  --font-size-xs: 12px;
+  --font-size-xxl: 20px;
+  --font-size-xxs: 10px;
+ 
+  --font-family-inter: "Inter", Helvetica;
+  --font-family-roboto: "Roboto", Helvetica;
+}
+.roboto-normal-black-12px {
+  color: var(--black-2);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roboto-normal-black-14px {
+  color: var(--black-3);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roboto-normal-black-14px-2 {
+  color: var(--black-4);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roboto-medium-black-14px {
+  color: var(--black-4);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.roboto-bold-black-12px {
+  color: var(--black-7);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.roboto-light-white-13px {
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 300;
+}
+
+.roboto-normal-log-cabin-14px {
+  color: var(--log-cabin);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roboto-normal-black-14px-3 {
+  color: var(--black-2);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+}
+
+
+/* screen - checkout-page */
+
+.checkout-page {
+  background-color: #f5f5f5;
+  height: 2339px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 1349px;
+}
+
+.checkout-page .container-teKhqi {
+  background-color: transparent;
+  height: 2339px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1349px;
+}
+
+.checkout-page .header-SlY5mp {
+  background: linear-gradient(180deg, rgb(245.00000059604645, 61.00000016391277, 45.00000111758709) 0%, rgb(255, 102.00000151991844, 51.00000075995922) 100%);
+  background-color: transparent;
+  height: 34px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1349px;
+}
+
+.checkout-page .nav-stxClL {
+  background-color: transparent;
+  height: 34px;
+  left: 74px;
+  position: relative;
+  top: 0px;
+  width: 1200px;
+}
+
+.checkout-page .link-2YUX7P {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  position: absolute;
+  top: 5px;
+  width: 80px;
+}
+
+.checkout-page .seller-centre-xfs8ur {
+  height: 15px;
+  left: 4px;
+  line-height: 15.6px;
+  top: 3px;
+  width: 72px;
+}
+
+.checkout-page .link-XUJ60B {
+  background-color: transparent;
+  height: 24px;
+  left: 90px;
+  position: absolute;
+  top: 5px;
+  width: 65px;
+}
+
+.checkout-page .download-reiv4M {
+  background-color: transparent;
+  height: 15px;
+  left: 4px;
+  letter-spacing: 0.00px;
+  line-height: 15.6px;
+  position: absolute;
+  text-align: left;
+  top: 3px;
+  white-space: nowrap;
+  width: 58px;
+}
+
+.checkout-page .vertical-divider-2YUX7P {
+  border-color: #ffffff38;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-right-width: 1px;
+  height: 15px;
+  left: 84px;
+  top: 10px;
+  width: 2px;
+}
+
+.checkout-page .ikuti-kami-di-2YUX7P {
+  background-color: transparent;
+  height: 15px;
+  left: 169px;
+  letter-spacing: 0.00px;
+  line-height: 15.6px;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  white-space: nowrap;
+  width: 69px;
+}
+
+.checkout-page .vertical-divider-XUJ60B {
+  border-color: #ffffff38;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-right-width: 1px;
+  height: 15px;
+  left: 159px;
+  top: 10px;
+  width: 2px;
+}
+
+.checkout-page .container-2YUX7P {
+  background-color: transparent;
+  height: 24px;
+  left: 237px;
+  position: absolute;
+  top: 5px;
+  width: 82px;
+}
+
+.checkout-page .link-pjTVOJ {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/link@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  top: 4px;
+  width: 16px;
+}
+
+.checkout-page .link-UjIVod {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/link@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 30px;
+  overflow: hidden;
+  position: absolute;
+  top: 4px;
+  width: 16px;
+}
+
+.checkout-page .link-ILxLMy {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/link@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 56px;
+  overflow: hidden;
+  position: absolute;
+  top: 4px;
+  width: 16px;
+}
+
+.checkout-page .list-2YUX7P {
+  height: 34px;
+  left: 787px;
+  top: 0px;
+  width: 413px;
+}
+
+.checkout-page .item-ausJoA {
+  background-color: transparent;
+  height: 30px;
+  left: 0px;
+  position: absolute;
+  top: 2px;
+  width: 72px;
+}
+
+.checkout-page .button-link-QxX5x3 {
+  background-color: transparent;
+  cursor: pointer;
+  height: 30px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 72px;
+}
+
+.checkout-page .notifikasi-2lFfnY {
+  background-color: transparent;
+  height: 15px;
+  left: 19px;
+  letter-spacing: 0.00px;
+  line-height: 15.6px;
+  position: absolute;
+  text-align: left;
+  top: 6px;
+  white-space: nowrap;
+  width: 54px;
+}
+
+.checkout-page .svg-2lFfnY {
+  height: 18px;
+  left: 0px;
+  top: 6px;
+  width: 14px;
+}
+
+.checkout-page .link-ausJoA {
+  background-color: transparent;
+  height: 18px;
+  left: 72px;
+  position: absolute;
+  top: 8px;
+  width: 88px;
+}
+
+.checkout-page .svg-vJw6zx {
+  height: 18px;
+  left: 8px;
+  top: 0px;
+  width: 18px;
+}
+
+.checkout-page .container-vJw6zx {
+  background-color: transparent;
+  height: 16px;
+  left: 31px;
+  position: absolute;
+  top: 1px;
+  width: 48px;
+}
+
+.checkout-page .bantuan-x8C14A {
+  height: 15px;
+  line-height: 15.6px;
+  width: 48px;
+}
+
+.checkout-page .item-e7LxEl {
+  background-color: transparent;
+  height: 30px;
+  left: 161px;
+  position: absolute;
+  top: 2px;
+  width: 159px;
+}
+
+.checkout-page .button-kct6kq {
+  background-color: transparent;
+  height: 30px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 159px;
+}
+
+.checkout-page .svg-7EAktf {
+  height: 16px;
+  left: 10px;
+  top: 7px;
+  width: 16px;
+}
+
+.checkout-page .bahasa-indonesia-7EAktf {
+  background-color: transparent;
+  height: 15px;
+  left: 31px;
+  letter-spacing: 0.00px;
+  line-height: 15.6px;
+  position: absolute;
+  text-align: left;
+  top: 6px;
+  white-space: nowrap;
+  width: 102px;
+}
+
+.checkout-page .svg-5RNrgk {
+  height: 12px;
+  left: 137px;
+  top: 9px;
+  width: 12px;
+}
+
+.checkout-page .item-bdhRld {
+  background-color: transparent;
+  height: 32px;
+  left: 320px;
+  position: absolute;
+  top: 1px;
+  width: 93px;
+}
+
+.checkout-page .button-lEuxDc {
+  background-color: transparent;
+  height: 32px;
+  left: 10px;
+  position: relative;
+  top: 0px;
+  width: 73px;
+}
+
+.checkout-page .container-a09ACK {
+  background-color: transparent;
+  height: 17px;
+  left: 22px;
+  overflow: hidden;
+  position: absolute;
+  top: 8px;
+  width: 51px;
+}
+
+.checkout-page .viper20-xSsLxI {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 5px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 46px;
+}
+
+.checkout-page .border-a09ACK {
+  background-color: transparent;
+  height: 22px;
+  left: 0px;
+  position: absolute;
+  top: 5px;
+  width: 22px;
+}
+
+.checkout-page .heading-2-SlY5mp {
+  left: -9999px;
+  top: 1042px;
+}
+
+.checkout-page .metode-60Lfj5 {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 48px;
+}
+
+.checkout-page .background-horizontal-border-SlY5mp {
+  background-color: var(--white);
+  border-bottom-style: solid;
+  border-color: var(--black-5);
+  height: 101px;
+  top: 34px;
+  width: 1349px;
+}
+
+.checkout-page .link-rRjeJ7 {
+  background-color: transparent;
+  height: 46px;
+  left: 92px;
+  position: relative;
+  top: 27px;
+  width: 245px;
+}
+
+.checkout-page .heading-1-xT4XzU {
+  background-color: transparent;
+  border-bottom-style: none;
+  border-color: var(--flamingo);
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-style: none;
+  border-top-style: none;
+  height: 30px;
+  left: 145px;
+  position: absolute;
+  top: 15px;
+  width: 100px;
+}
+
+.checkout-page .checkout-qb21Yx {
+  background-color: transparent;
+  color: var(--flamingo);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+  height: 24px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  white-space: nowrap;
+  width: 85px;
+}
+
+.checkout-page .svg-xT4XzU {
+  height: 46px;
+  left: 0px;
+  top: 0px;
+  width: 130px;
+}
+
+.checkout-page .main-SlY5mp {
+  background-color: transparent;
+  height: 1440px;
+  left: 74px;
+  position: absolute;
+  top: 147px;
+  width: 1200px;
+}
+
+.checkout-page .background-shadow-v0rx0S {
+  background-color: var(--white);
+  box-shadow: 0px 1px 1px #0000000d;
+  height: 196px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1200px;
+}
+
+.checkout-page .gradient-lV365P {
+  background: linear-gradient(180deg, rgb(111.00000098347664, 166.00000530481339, 214.00000244379044) 0%, rgb(111.00000098347664, 166.00000530481339, 214.00000244379044) 39.21768665313721%, rgba(0, 0, 0, 0) 39.21768665313721%, rgba(0, 0, 0, 0) 48.725005984306335%, rgb(241.00000083446503, 141.0000067949295, 155.00000596046448) 48.725005984306335%, rgb(241.00000083446503, 141.0000067949295, 155.00000596046448) 87.9426896572113%, rgba(0, 0, 0, 0) 87.9426896572113%, rgba(0, 0, 0, 0) 97.45001196861267%);
+  background-color: transparent;
+  height: 3px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1200px;
+}
+
+.checkout-page .svg-lV365P {
+  height: 16px;
+  left: 30px;
+  top: 34px;
+  width: 12px;
+}
+
+.checkout-page .heading-2-alamat-pengiriman-lV365P {
+  background-color: transparent;
+  color: var(--flamingo);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+  height: 22px;
+  left: 51px;
+  letter-spacing: 0.00px;
+  line-height: 21.6px;
+  position: absolute;
+  text-align: left;
+  top: 29px;
+  white-space: nowrap;
+  width: 153px;
+}
+
+.checkout-page .joel-62-81212497121-lV365P {
+  background-color: transparent;
+  color: var(--log-cabin);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+  height: 38px;
+  left: 30px;
+  letter-spacing: 0.00px;
+  line-height: 19.2px;
+  position: absolute;
+  text-align: left;
+  top: 72px;
+  width: 101px;
+}
+
+.checkout-page .house-mimi-jalan-anc-lV365P {
+  background-color: transparent;
+  color: var(--black-4);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  height: 38px;
+  left: 217px;
+  letter-spacing: 0.00px;
+  line-height: 19.2px;
+  position: absolute;
+  text-align: left;
+  top: 72px;
+  width: 812px;
+}
+
+.checkout-page .border-lV365P {
+  background-color: transparent;
+  border: 1px solid;
+  border-color: var(--flamingo);
+  border-radius: 1px;
+  height: 18px;
+  left: 1056px;
+  position: absolute;
+  top: 83px;
+  width: 41px;
+}
+
+.checkout-page .utama-DgYVWy {
+  background-color: transparent;
+  color: var(--flamingo);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 400;
+  height: 13px;
+  left: 6px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  top: 1px;
+  white-space: nowrap;
+  width: 30px;
+}
+
+.checkout-page .button-ubah-lV365P {
+  color: #4080ee;
+  font-weight: 400;
+  left: 1138px;
+  text-align: left;
+  top: 82px;
+}
+
+.checkout-page .horizontal-border-lV365P {
+  border-bottom-style: none;
+  border-color: #efefef;
+  border-top-style: solid;
+  border-top-width: 1px;
+  height: 46px;
+  left: 30px;
+  top: 126px;
+  width: 1140px;
+}
+
+.checkout-page .label-jmzkRh {
+  background-color: transparent;
+  height: 30px;
+  left: 0px;
+  position: relative;
+  top: 16px;
+  width: 167px;
+}
+
+.checkout-page .overlay-border-shadow-RlJLrZ {
+  background-color: var(--white-2);
+  border: 1px solid;
+  border-color: var(--black-8);
+  border-radius: 2px;
+  box-shadow: inset 0px 2px 0px 1px #00000005;
+  height: 18px;
+  left: 0px;
+  position: absolute;
+  top: 6px;
+  width: 18px;
+}
+
+.checkout-page .border-R7pzqT {
+  background-color: transparent;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-color: var(--white);
+  border-left-style: solid;
+  border-left-width: 2px;
+  border-right-style: none;
+  border-top-style: none;
+  height: 7px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  transform: rotate(-45deg);
+  width: 11px;
+}
+
+.checkout-page .kirim-sebagai-dropshipper-RlJLrZ {
+  background-color: transparent;
+  color: var(--black-3);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+  height: 14px;
+  left: 26px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 7px;
+  white-space: nowrap;
+  width: 141px;
+}
+
+.checkout-page .overlay-shadow-v0rx0S {
+  box-shadow: 0px 1px 1px #0000000d;
+  height: 489px;
+  top: 208px;
+}
+
+.checkout-page .background-shadow-GtEpD0 {
+  background-color: var(--white);
+  border-radius: 3px;
+  box-shadow: 0px 1px 1px #00000017;
+  height: 74px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1200px;
+}
+
+.checkout-page .heading-2-produk-dipesan-TvjSkH {
+  background-color: transparent;
+  color: var(--log-cabin);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+  height: 22px;
+  left: 30px;
+  letter-spacing: 0.00px;
+  line-height: 21.6px;
+  position: absolute;
+  text-align: left;
+  top: 36px;
+  white-space: nowrap;
+  width: 126px;
+}
+
+.checkout-page .harga-satuan-TvjSkH {
+  background-color: transparent;
+  height: 17px;
+  left: 705px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: right;
+  top: 40px;
+  white-space: nowrap;
+  width: 85px;
+}
+
+.checkout-page .jumlah-TvjSkH {
+  background-color: transparent;
+  height: 17px;
+  left: 934px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: right;
+  top: 40px;
+  white-space: nowrap;
+  width: 47px;
+}
+
+.checkout-page .subtotal-produk-TvjSkH {
+  background-color: transparent;
+  height: 17px;
+  left: 1071px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: right;
+  top: 40px;
+  white-space: nowrap;
+  width: 100px;
+}
+
+.checkout-page .background-shadow-KTa1ui {
+  background-color: var(--white);
+  border-radius: 3px;
+  box-shadow: 0px 1px 1px #00000017;
+  height: 415px;
+  left: 0px;
+  position: absolute;
+  top: 74px;
+  width: 1200px;
+}
+
+.checkout-page .background-wluzpQ {
+  background-color: var(--white);
+  border-radius: 3px;
+  height: 232px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1200px;
+}
+
+.checkout-page .svg-joITrr {
+  height: 16px;
+  left: 30px;
+  top: 17px;
+  width: 30px;
+}
+
+.checkout-page .heading-3-nvr_store20-joITrr {
+  background-color: transparent;
+  color: var(--black-7);
+  font-family: var(--font-family-inter);
+  font-size: 13.1px;
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 65px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 16px;
+  white-space: nowrap;
+  width: 76px;
+}
+
+.checkout-page .button-joITrr {
+  background-color: transparent;
+  border-bottom-style: none;
+  border-color: var(--black-5);
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-style: none;
+  border-top-style: none;
+  height: 17px;
+  left: 151px;
+  position: absolute;
+  top: 17px;
+  width: 123px;
+}
+
+.checkout-page .svg-tiy7XU {
+  height: 15px;
+  left: 11px;
+  top: 1px;
+  width: 20px;
+}
+
+.checkout-page .chat-sekarang-tiy7XU {
+  background-color: transparent;
+  color: #00bfa5;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 35px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.checkout-page .horizontal-border-joITrr {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: var(--black-5);
+  border-top-style: none;
+  height: 182px;
+  left: 0px;
+  top: 50px;
+  width: 1200px;
+}
+
+.checkout-page .container-Ebaq83 {
+  background-color: transparent;
+  height: 55px;
+  left: 30px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 1140px;
+}
+
+.checkout-page .container-FBVK2a {
+  background-color: transparent;
+  height: 55px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 380px;
+}
+
+.checkout-page .picture-id-11134207-xd0LEZ {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/picture---id-11134207-7r98x-lz779oy5ei4lfe-resize-w80-nl-webp@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 40px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 8px;
+  width: 40px;
+}
+
+.checkout-page .container-xd0LEZ {
+  background-color: transparent;
+  height: 33px;
+  left: 55px;
+  overflow: hidden;
+  position: absolute;
+  top: 11px;
+  width: 310px;
+}
+
+.checkout-page .container-ztxdwS {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 310px;
+}
+
+.checkout-page .kemeja-hitam-pria-le-RgMNHM {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 306px;
+}
+
+.checkout-page .border-ztxdwS {
+  background-color: transparent;
+  border: 1px solid;
+  border-color: var(--flamingo);
+  border-radius: 2px;
+  height: 14px;
+  left: 0px;
+  position: absolute;
+  top: 19px;
+  width: 100px;
+}
+
+.checkout-page .bebas-pengembalian-cZboMK {
+  background-color: transparent;
+  color: var(--flamingo);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 400;
+  height: 13px;
+  left: 3px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 94px;
+}
+
+.checkout-page .container-yGDJCk {
+  background-color: transparent;
+  height: 55px;
+  left: 380px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 190px;
+}
+
+.checkout-page .container-Nszuk6 {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 19px;
+  width: 111px;
+}
+
+.checkout-page .variasi-hitaml-pxUG4J {
+  background-color: transparent;
+  color: #929292;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 13px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 98px;
+}
+
+.checkout-page .container-dByruI {
+  background-color: transparent;
+  height: 55px;
+  left: 570px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 190px;
+}
+
+.checkout-page .rp141000-XPAO3Y {
+  left: 123px;
+  top: 17px;
+  width: 68px;
+}
+
+.checkout-page .container-HGk10j {
+  background-color: transparent;
+  height: 55px;
+  left: 760px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 190px;
+}
+
+.checkout-page .x1-UPiTxH {
+  line-height: 16.8px;
+  top: 17px;
+}
+
+.checkout-page .container-yu0xFa {
+  background-color: transparent;
+  height: 55px;
+  left: 950px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 190px;
+}
+
+.checkout-page .rp141000-mqILjp {
+  color: var(--log-cabin);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+  left: 122px;
+  top: 17px;
+  width: 69px;
+}
+
+.checkout-page .background-Ebaq83 {
+  background-color: #fafafa;
+  border-radius: 2px;
+  height: 66px;
+  left: 25px;
+  position: absolute;
+  top: 70px;
+  width: 1165px;
+}
+
+.checkout-page .container-ZB76QO {
+  background-color: transparent;
+  height: 36px;
+  left: 5px;
+  overflow: hidden;
+  position: absolute;
+  top: 15px;
+  width: 570px;
+}
+
+.checkout-page .input-0gmTZl {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--black-3);
+  border-radius: 2px;
+  height: 20px;
+  left: 15px;
+  position: absolute;
+  top: 0px;
+  width: 20px;
+}
+
+.checkout-page .proteksi-kerusakan-0gmTZl {
+  background-color: transparent;
+  color: var(--black-7);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+  height: 14px;
+  left: 45px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 133px;
+}
+
+.checkout-page .melindungi-produkmu-0gmTZl {
+  background-color: transparent;
+  color: var(--black-3);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+  height: 12px;
+  left: 45px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  top: 23px;
+  white-space: nowrap;
+  width: 362px;
+}
+
+.checkout-page .link-0gmTZl {
+  background-color: transparent;
+  height: 14px;
+  left: 412px;
+  position: absolute;
+  top: 23px;
+  width: 40px;
+}
+
+.checkout-page .pelajari-isqFxL {
+  background-color: transparent;
+  color: #4080ee;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 40px;
+}
+
+.checkout-page .container-cURd6K {
+  background-color: transparent;
+  height: 20px;
+  left: 575px;
+  overflow: hidden;
+  position: absolute;
+  top: 15px;
+  width: 190px;
+}
+
+.checkout-page .rp1700-WkNXdX {
+  height: 20px;
+  top: -1px;
+}
+
+.checkout-page .container-4joL91 {
+  background-color: transparent;
+  height: 20px;
+  left: 765px;
+  overflow: hidden;
+  position: absolute;
+  top: 15px;
+  width: 190px;
+}
+
+.checkout-page .x1-CooNCY {
+  line-height: 20px;
+  top: 0px;
+}
+
+.checkout-page .container-xOjoJf {
+  background-color: transparent;
+  height: 20px;
+  left: 955px;
+  overflow: hidden;
+  position: absolute;
+  top: 15px;
+  width: 190px;
+}
+
+.checkout-page .rp1700-bny3YP {
+  height: 17px;
+  top: 0px;
+}
+
+.checkout-page .background-horizontal-border-wluzpQ {
+  background-color: #fafdff;
+  border-bottom-style: dashed;
+  border-color: var(--black-5);
+  height: 113px;
+  top: 232px;
+  width: 1200px;
+}
+
+.checkout-page .pesan-gcAM3P {
+  background-color: transparent;
+  height: 40px;
+  left: 25px;
+  letter-spacing: 0.00px;
+  line-height: 40px;
+  position: absolute;
+  text-align: left;
+  top: 24px;
+  white-space: nowrap;
+  width: 42px;
+}
+
+.checkout-page .background-border-shadow-gcAM3P {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--black-8);
+  border-radius: 2px;
+  box-shadow: inset 0px 2px 0px 1px #00000005;
+  height: 40px;
+  left: 82px;
+  position: absolute;
+  top: 25px;
+  width: 373px;
+}
+
+.checkout-page .input-pesan-y6DqAt {
+  background-color: transparent;
+  height: 40px;
+  left: 1px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 371px;
+}
+
+.checkout-page .container-RuTkOk {
+  background-color: transparent;
+  height: 17px;
+  left: 12px;
+  overflow: hidden;
+  position: relative;
+  top: 12px;
+  width: 347px;
+}
+
+.checkout-page .opsional-tinggalkan-pesan-ke-penjual-zATMq0 {
+  background-color: transparent;
+  color: #bbbbbb;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 300;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  width: 239px;
+}
+
+.checkout-page .vertical-divider-gcAM3P {
+  border-color: var(--black-5);
+  border-left-style: dashed;
+  border-right-style: none;
+  height: 112px;
+  left: 480px;
+  top: 0px;
+  width: 1px;
+}
+
+.checkout-page .opsi-pengiriman-gcAM3P {
+  background-color: transparent;
+  height: 17px;
+  left: 505px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 23px;
+  white-space: nowrap;
+  width: 108px;
+}
+
+.checkout-page .reguler-gcAM3P {
+  background-color: transparent;
+  height: 17px;
+  left: 622px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 24px;
+  white-space: nowrap;
+  width: 48px;
+}
+
+.checkout-page .x41fe56ab756fc3082a08svg-gcAM3P {
+  background-color: transparent;
+  height: 13px;
+  left: 622px;
+  position: absolute;
+  top: 53px;
+  width: 19px;
+}
+
+.checkout-page .garansi-tiba-6-7-nov-gcAM3P {
+  background-color: transparent;
+  color: #26aa99;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+  height: 14px;
+  left: 643px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 51px;
+  white-space: nowrap;
+  width: 117px;
+}
+
+.checkout-page .voucher-sd-rp10000-j-gcAM3P {
+  background-color: transparent;
+  color: #00000066;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+  height: 14px;
+  left: 622px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 71px;
+  white-space: nowrap;
+  width: 315px;
+}
+
+.checkout-page .svg-gcAM3P {
+  height: 12px;
+  left: 942px;
+  top: 71px;
+  width: 12px;
+}
+
+.checkout-page .button-ubah-gcAM3P {
+  color: #0055aa;
+  font-weight: 500;
+  left: 876px;
+  text-align: center;
+  top: 24px;
+}
+
+.checkout-page .rp12000-gcAM3P {
+  color: var(--log-cabin);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+  left: 1115px;
+  text-align: right;
+  top: 23px;
+  width: 61px;
+}
+
+.checkout-page .paragraph-background-wluzpQ {
+  background-color: #fafdff;
+  height: 70px;
+  left: 0px;
+  position: absolute;
+  top: 345px;
+  width: 1200px;
+}
+
+.checkout-page .heading-3-total-pesanan-1-produk-7QfwDO {
+  background-color: transparent;
+  height: 17px;
+  left: 904px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 26px;
+  white-space: nowrap;
+  width: 161px;
+}
+
+.checkout-page .rp153000-7QfwDO {
+  background-color: transparent;
+  color: var(--flamingo);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 500;
+  height: 24px;
+  left: 1077px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 22px;
+  white-space: nowrap;
+  width: 98px;
+}
+
+.checkout-page .background-horizontal-border-v0rx0S {
+  background-color: var(--white);
+  border-bottom-style: solid;
+  border-color: var(--black-9);
+  height: 80px;
+  top: 717px;
+  width: 1200px;
+}
+
+.checkout-page .heading-2-voucher-shopee-x4UML8 {
+  background-color: transparent;
+  color: var(--black-4);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+  height: 22px;
+  left: 62px;
+  letter-spacing: 0.00px;
+  line-height: 21.6px;
+  position: absolute;
+  text-align: left;
+  top: 27px;
+  white-space: nowrap;
+  width: 131px;
+}
+
+.checkout-page .svg-x4UML8 {
+  height: 23px;
+  left: 30px;
+  top: 28px;
+  width: 24px;
+}
+
+.checkout-page .button-pilih-voucher-x4UML8 {
+  background-color: transparent;
+  color: #0055aa;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+  height: 21px;
+  left: 1087px;
+  letter-spacing: 0.00px;
+  line-height: 21px;
+  position: absolute;
+  text-align: center;
+  top: 28px;
+  white-space: nowrap;
+  width: 83px;
+}
+
+.checkout-page .background-horizontal-border-z6kNrD {
+  background-color: var(--white);
+  border-bottom-style: solid;
+  border-color: var(--black-9);
+  height: 79px;
+  top: 796px;
+  width: 1200px;
+}
+
+.checkout-page .heading-2-koin-shopee-ybq1f9 {
+  background-color: transparent;
+  color: var(--black-4);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+  height: 22px;
+  left: 62px;
+  letter-spacing: 0.00px;
+  line-height: 21.6px;
+  position: absolute;
+  text-align: left;
+  top: 26px;
+  white-space: nowrap;
+  width: 100px;
+}
+
+.checkout-page .koin-tidak-dapat-ditukarkan-ybq1f9 {
+  background-color: transparent;
+  color: #929292;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+  height: 17px;
+  left: 187px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 29px;
+  white-space: nowrap;
+  width: 172px;
+}
+
+.checkout-page .svg-ybq1f9 {
+  height: 18px;
+  left: 30px;
+  top: 30px;
+  width: 24px;
+}
+
+.checkout-page .rp0-ybq1f9 {
+  background-color: transparent;
+  color: #d0d0d0;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+  height: 17px;
+  left: 1095px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 28px;
+  white-space: nowrap;
+  width: 37px;
+}
+
+.checkout-page .label-ybq1f9 {
+  background-color: #e7e7e7;
+  border: 1px solid;
+  border-color: var(--black-8);
+  border-radius: 2px;
+  height: 18px;
+  left: 1144px;
+  opacity: 0.35;
+  position: absolute;
+  top: 30px;
+  width: 18px;
+}
+
+.checkout-page .overlay-shadow-z6kNrD {
+  box-shadow: 0px 1px 0px #0000000d;
+  height: 545px;
+  top: 895px;
+}
+
+.checkout-page .background-dPR5ZR {
+  background-color: var(--white);
+  height: 213px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1200px;
+}
+
+.checkout-page .cod-CnCxSB {
+  height: 16px;
+  left: 30px;
+  line-height: 16px;
+  top: 158px;
+}
+
+.checkout-page .cash-on-delivery-CnCxSB {
+  background-color: transparent;
+  height: 16px;
+  left: 230px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 158px;
+  white-space: nowrap;
+  width: 104px;
+}
+
+.checkout-page .horizontal-border-CnCxSB {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: var(--black-9);
+  border-top-style: none;
+  height: 131px;
+  left: 0px;
+  top: 0px;
+  width: 1200px;
+}
+
+.checkout-page .metode-pembayaran-LaVZMh {
+  color: var(--log-cabin);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+  height: 22px;
+  left: 30px;
+  line-height: 21.6px;
+  top: 47px;
+  width: 166px;
+}
+
+.checkout-page .radiogroup-LaVZMh {
+  background-color: transparent;
+  height: 100px;
+  left: 230px;
+  position: absolute;
+  top: 10px;
+  width: 940px;
+}
+
+.checkout-page .radio-6f1DYA {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--flamingo);
+  border-radius: 2px;
+  height: 40px;
+  left: 0px;
+  position: absolute;
+  top: 10px;
+  width: 171px;
+}
+
+.checkout-page .shopee-pay-ZcRdZl {
+  color: var(--flamingo);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+  height: 17px;
+  left: 50px;
+  line-height: 16.8px;
+  top: 11px;
+  width: 71px;
+}
+
+.checkout-page .container-ZcRdZl {
+  background-color: transparent;
+  height: 15px;
+  left: 154px;
+  position: absolute;
+  top: 23px;
+  width: 15px;
+}
+
+.checkout-page .radio-cod-6f1DYA {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: #e5e4e4;
+  border-radius: 2px;
+  height: 40px;
+  left: 179px;
+  position: absolute;
+  top: 10px;
+  width: 80px;
+}
+
+.checkout-page .cod-8mPmpC {
+  color: var(--black);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+  height: 17px;
+  left: 26px;
+  line-height: 16.8px;
+  top: 10px;
+}
+
+.checkout-page .radio-cod-cek-dulu-6f1DYA {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--black-5);
+  border-radius: 2px;
+  height: 40px;
+  left: 267px;
+  position: absolute;
+  top: 10px;
+  width: 121px;
+}
+
+.checkout-page .cod-cek-dulu-9Bf3v7 {
+  background-color: transparent;
+  height: 17px;
+  left: 13px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 10px;
+  white-space: nowrap;
+  width: 96px;
+}
+
+.checkout-page .radio-transfer-bank-6f1DYA {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--black-5);
+  border-radius: 2px;
+  height: 40px;
+  left: 397px;
+  position: absolute;
+  top: 10px;
+  width: 114px;
+}
+
+.checkout-page .transfer-bank-5qDJox {
+  background-color: transparent;
+  height: 17px;
+  left: 13px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 10px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.checkout-page .radio-kartu-kredit-debit-6f1DYA {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--black-5);
+  border-radius: 2px;
+  height: 40px;
+  left: 518px;
+  position: absolute;
+  top: 10px;
+  width: 139px;
+}
+
+.checkout-page .kartu-kredit-debit-hrGGPB {
+  background-color: transparent;
+  height: 17px;
+  left: 13px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 10px;
+  white-space: nowrap;
+  width: 114px;
+}
+
+.checkout-page .radio-cicilan-kartu-kredit-6f1DYA {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--black-5);
+  border-radius: 2px;
+  height: 40px;
+  left: 665px;
+  position: absolute;
+  top: 10px;
+  width: 147px;
+}
+
+.checkout-page .cicilan-kartu-kredit-uicHky {
+  background-color: transparent;
+  color: #00000042;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+  height: 17px;
+  left: 13px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 10px;
+  white-space: nowrap;
+  width: 121px;
+}
+
+.checkout-page .radio-bri-direct-debit-6f1DYA {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--black-5);
+  border-radius: 2px;
+  height: 40px;
+  left: 0px;
+  position: absolute;
+  top: 60px;
+  width: 124px;
+}
+
+.checkout-page .bri-direct-debit-fpgEow {
+  background-color: transparent;
+  height: 17px;
+  left: 13px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 10px;
+  white-space: nowrap;
+  width: 99px;
+}
+
+.checkout-page .radio-bca-one-klik-6f1DYA {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--black-5);
+  border-radius: 2px;
+  height: 40px;
+  left: 132px;
+  position: absolute;
+  top: 60px;
+  width: 105px;
+}
+
+.checkout-page .bca-one-klik-NtTx0X {
+  background-color: transparent;
+  height: 17px;
+  left: 13px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 10px;
+  white-space: nowrap;
+  width: 79px;
+}
+
+.checkout-page .radio-bayar-tunai-di-mitra-agen-6f1DYA {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--black-5);
+  border-radius: 2px;
+  height: 40px;
+  left: 245px;
+  position: absolute;
+  top: 60px;
+  width: 189px;
+}
+
+.checkout-page .bayar-tunai-di-mitra-agen-Hpmon1 {
+  background-color: transparent;
+  height: 17px;
+  left: 13px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 10px;
+  white-space: nowrap;
+  width: 163px;
+}
+
+.checkout-page .background-horizontal-border-shadow-dPR5ZR {
+  background-color: #fffefb;
+  border-bottom-style: none;
+  border-color: #f1f0ed;
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: solid;
+  border-top-width: 1px;
+  box-shadow: 0px 1px 1px #0000000d;
+  height: 332px;
+  left: 0px;
+  position: absolute;
+  top: 213px;
+  width: 1200px;
+}
+
+.checkout-page .heading-3-subtotal-untuk-produk-jaecvj {
+  background-color: transparent;
+  height: 17px;
+  left: 879px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 26px;
+  white-space: nowrap;
+  width: 138px;
+}
+
+.checkout-page .rp141000-jaecvj {
+  left: 1108px;
+  top: 26px;
+  width: 68px;
+}
+
+.checkout-page .heading-3-subtotal-pengiriman-jaecvj {
+  background-color: transparent;
+  height: 17px;
+  left: 879px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 66px;
+  white-space: nowrap;
+  width: 127px;
+}
+
+.checkout-page .rp12000-jaecvj {
+  left: 1116px;
+  text-align: left;
+  top: 66px;
+  width: 60px;
+}
+
+.checkout-page .rp15300-jaecvj {
+  background-color: transparent;
+  height: 17px;
+  left: 1116px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 146px;
+  white-space: nowrap;
+  width: 60px;
+}
+
+.checkout-page .title-jaecvj {
+  background-color: transparent;
+  color: var(--flamingo);
+  font-family: var(--font-family-roboto);
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  height: 34px;
+  left: 1038px;
+  letter-spacing: 0.00px;
+  line-height: 33.6px;
+  position: absolute;
+  text-align: left;
+  top: 182px;
+  white-space: nowrap;
+  width: 137px;
+}
+
+.checkout-page .heading-2-jaecvj {
+  left: -10074px;
+  top: 16px;
+}
+
+.checkout-page .total-Cpt10y {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 32px;
+}
+
+.checkout-page .heading-3-jaecvj {
+  top: 96px;
+}
+
+.checkout-page .biaya-layanan-T3lGS1 {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 10px;
+  white-space: nowrap;
+  width: 90px;
+}
+
+.checkout-page .button-svg-T3lGS1 {
+  left: 95px;
+}
+
+.checkout-page .rp1000-jaecvj {
+  background-color: transparent;
+  height: 17px;
+  left: 1123px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 106px;
+  white-space: nowrap;
+  width: 52px;
+}
+
+.checkout-page .heading-3-mFx0YB {
+  top: 136px;
+}
+
+.checkout-page .biaya-penanganan-tJSjoY {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 10px;
+  white-space: nowrap;
+  width: 115px;
+}
+
+.checkout-page .button-svg-tJSjoY {
+  left: 121px;
+}
+
+.checkout-page .heading-3-total-pembayaran-jaecvj {
+  background-color: transparent;
+  height: 17px;
+  left: 879px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 191px;
+  white-space: nowrap;
+  width: 113px;
+}
+
+.checkout-page .horizontal-border-jaecvj {
+  border-bottom-style: none;
+  border-color: var(--black-5);
+  border-top-style: dashed;
+  border-top-width: 1px;
+  height: 96px;
+  left: 0px;
+  top: 236px;
+  width: 1200px;
+}
+
+.checkout-page .button-gRnfQI {
+  background-color: var(--flamingo);
+  border: 1px solid;
+  border-color: var(--black-5);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000008;
+  cursor: pointer;
+  height: 40px;
+  left: 960px;
+  position: relative;
+  top: 28px;
+  width: 210px;
+}
+
+.checkout-page .buat-pesanan-pkfEVX {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  height: 19px;
+  left: 56px;
+  letter-spacing: 0.00px;
+  line-height: 19.2px;
+  position: absolute;
+  text-align: center;
+  top: 9px;
+  white-space: nowrap;
+  width: 99px;
+}
+
+.checkout-page .footer-SlY5mp {
+  background-color: var(--white);
+  border-bottom-style: none;
+  border-color: var(--flamingo);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: solid;
+  border-top-width: 4px;
+  height: 682px;
+  left: 0px;
+  position: absolute;
+  top: 1657px;
+  width: 1349px;
+}
+
+.checkout-page .background-CCldPv {
+  background-color: #fbfbfb;
+  height: 678px;
+  left: 0px;
+  position: relative;
+  top: 4px;
+  width: 1349px;
+}
+
+.checkout-page .container-Crf1Bb {
+  background-color: transparent;
+  height: 579px;
+  left: 70px;
+  position: absolute;
+  top: 0px;
+  width: 1210px;
+}
+
+.checkout-page .layanan-pelanggan-affzha {
+  background-color: transparent;
+  height: 14px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 49px;
+  white-space: nowrap;
+  width: 106px;
+}
+
+.checkout-page .list-affzha {
+  height: 252px;
+  left: 10px;
+  top: 84px;
+  width: 240px;
+}
+
+.checkout-page .item-link-dpy15J {
+  height: 14px;
+  top: 0px;
+  width: 44px;
+}
+
+.checkout-page .container-g3oIU7 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 44px;
+}
+
+.checkout-page .bantuan-kZVxWv {
+  height: 14px;
+  line-height: 14.4px;
+  width: 45px;
+}
+
+.checkout-page .item-link-f0Eo9j {
+  height: 14px;
+  top: 26px;
+  width: 110px;
+}
+
+.checkout-page .container-aomABt {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 110px;
+}
+
+.checkout-page .metode-pembayaran-ML0IEZ {
+  height: 14px;
+  left: 0px;
+  line-height: 14.4px;
+  top: -1px;
+  width: 111px;
+}
+
+.checkout-page .item-link-PHvyg2 {
+  height: 14px;
+  top: 53px;
+  width: 60px;
+}
+
+.checkout-page .container-LBO6W4 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 60px;
+}
+
+.checkout-page .shopee-pay-nj8Hv6 {
+  height: 14px;
+  left: 0px;
+  line-height: 14.4px;
+  top: -1px;
+  width: 60px;
+}
+
+.checkout-page .item-link-z1Fr9Q {
+  height: 14px;
+  top: 79px;
+  width: 67px;
+}
+
+.checkout-page .container-JWJHNU {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 67px;
+}
+
+.checkout-page .koin-shopee-MJi32w {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 67px;
+}
+
+.checkout-page .item-link-i8PGYs {
+  height: 14px;
+  top: 106px;
+  width: 127px;
+}
+
+.checkout-page .container-fFCEuM {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 127px;
+}
+
+.checkout-page .lacak-pesanan-pembeli-9KgNhM {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 128px;
+}
+
+.checkout-page .item-link-5SP4jn {
+  height: 14px;
+  top: 132px;
+  width: 138px;
+}
+
+.checkout-page .container-Huj6ZW {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 138px;
+}
+
+.checkout-page .lacak-pengiriman-penjual-fyU0HL {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 138px;
+}
+
+.checkout-page .item-link-D25GRH {
+  height: 14px;
+  top: 158px;
+  width: 69px;
+}
+
+.checkout-page .container-4ZbPRx {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 69px;
+}
+
+.checkout-page .gratis-ongkir-PTsus4 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 69px;
+}
+
+.checkout-page .item-link-0q4P3h {
+  height: 14px;
+  top: 185px;
+  width: 158px;
+}
+
+.checkout-page .container-5mpMIg {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 158px;
+}
+
+.checkout-page .pengembalian-barang-dana-HOmrbq {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 158px;
+}
+
+.checkout-page .item-link-Skk6Gx {
+  height: 14px;
+  top: 211px;
+  width: 84px;
+}
+
+.checkout-page .container-G4qinS {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 84px;
+}
+
+.checkout-page .garansi-shopee-MlvEOH {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 84px;
+}
+
+.checkout-page .item-link-v4t8fE {
+  height: 14px;
+  top: 238px;
+  width: 75px;
+}
+
+.checkout-page .container-TSRH3Y {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 75px;
+}
+
+.checkout-page .hubungi-kami-iOx08n {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 76px;
+}
+
+.checkout-page .jelajahi-shopee-affzha {
+  background-color: transparent;
+  height: 14px;
+  left: 260px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 49px;
+  white-space: nowrap;
+  width: 86px;
+}
+
+.checkout-page .list-QRsmqY {
+  height: 252px;
+  left: 260px;
+  top: 84px;
+  width: 240px;
+}
+
+.checkout-page .item-link-KNO3WA {
+  height: 14px;
+  top: 0px;
+  width: 74px;
+}
+
+.checkout-page .container-ArZxUj {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 74px;
+}
+
+.checkout-page .tentang-kami-tL689o {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 74px;
+}
+
+.checkout-page .item-link-QHV2G5 {
+  height: 14px;
+  top: 26px;
+  width: 25px;
+}
+
+.checkout-page .container-jXQ6TZ {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 25px;
+}
+
+.checkout-page .karir-hXWaRd {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 25px;
+}
+
+.checkout-page .item-link-cKHiDl {
+  height: 14px;
+  top: 53px;
+  width: 95px;
+}
+
+.checkout-page .container-KcTYVw {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 95px;
+}
+
+.checkout-page .kebijakan-shopee-JHlO9i {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 95px;
+}
+
+.checkout-page .item-link-qHmZWm {
+  height: 14px;
+  top: 79px;
+  width: 91px;
+}
+
+.checkout-page .container-yI9Chf {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 91px;
+}
+
+.checkout-page .kebijakan-privasi-G7deWI {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 91px;
+}
+
+.checkout-page .item-link-GNPgOX {
+  height: 14px;
+  top: 106px;
+  width: 24px;
+}
+
+.checkout-page .container-ajy2K5 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 24px;
+}
+
+.checkout-page .blog-sBS3ze {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 24px;
+}
+
+.checkout-page .item-link-JgEwhZ {
+  height: 14px;
+  top: 132px;
+  width: 66px;
+}
+
+.checkout-page .container-9KI5Z2 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 66px;
+}
+
+.checkout-page .shopee-mall-ZszK69 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 66px;
+}
+
+.checkout-page .item-link-MLQMb6 {
+  height: 14px;
+  top: 158px;
+  width: 68px;
+}
+
+.checkout-page .container-NVZkEX {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 68px;
+}
+
+.checkout-page .seller-centre-eO5aEx {
+  height: 14px;
+  left: 0px;
+  line-height: 14.4px;
+  top: -1px;
+  width: 68px;
+}
+
+.checkout-page .item-link-U8EEBY {
+  height: 14px;
+  top: 185px;
+  width: 55px;
+}
+
+.checkout-page .container-TZA1uI {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 55px;
+}
+
+.checkout-page .flash-sale-xi8LIZ {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 55px;
+}
+
+.checkout-page .item-link-fA1HlP {
+  height: 14px;
+  top: 211px;
+  width: 73px;
+}
+
+.checkout-page .container-euLGis {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 73px;
+}
+
+.checkout-page .kontak-media-6Avk21 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 74px;
+}
+
+.checkout-page .item-link-kKeyMV {
+  height: 14px;
+  top: 238px;
+  width: 84px;
+}
+
+.checkout-page .container-SgxdPc {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 84px;
+}
+
+.checkout-page .shopee-affiliate-JKlJsO {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 84px;
+}
+
+.checkout-page .pembayaran-affzha {
+  background-color: transparent;
+  height: 14px;
+  left: 510px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 49px;
+  white-space: nowrap;
+  width: 68px;
+}
+
+.checkout-page .list-O9ZSmC {
+  height: 228px;
+  left: 510px;
+  top: 84px;
+  width: 240px;
+}
+
+.checkout-page .item-WKs4nQ {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 60px;
+}
+
+.checkout-page .link-cMoXZf {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .x5589c755ab085d2fac3e33f4755c6a9e-APtszL {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/5589c755ab085d2fac3e33f4755c6a9e@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-hbeg91 {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 60px;
+}
+
+.checkout-page .link-9CCN5X {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .x49656d7100598b911a1f247dec64fda4-NWMXtn {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/49656d7100598b911a1f247dec64fda4@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-uB12xH {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 60px;
+}
+
+.checkout-page .link-J57nDm {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .e7865f5fb066b8b5e73f9d5c36fc7154-Bu3V71 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/e7865f5fb066b8b5e73f9d5c36fc7154@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-faGKZW {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 38px;
+  width: 60px;
+}
+
+.checkout-page .link-9OMMyU {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .x59185c096964e1892e9122ceaae2609d-yjQ5Zm {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/59185c096964e1892e9122ceaae2609d@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-y0urTj {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 38px;
+  width: 60px;
+}
+
+.checkout-page .link-FP7nne {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .x9a08d3abab3dd059fff945c72ca372d9-jy3RBl {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/9a08d3abab3dd059fff945c72ca372d9@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-8WBdlP {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 38px;
+  width: 60px;
+}
+
+.checkout-page .link-P9wPlj {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .x780c2be80e523384a7320b89f42008d5-JNlWL1 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/780c2be80e523384a7320b89f42008d5@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-Uvyak4 {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 76px;
+  width: 60px;
+}
+
+.checkout-page .link-0OEPCT {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .x0cf8caa250763eefc3d79bb1f8c08e73-CO8vvL {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/0cf8caa250763eefc3d79bb1f8c08e73@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-0uAIvB {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 76px;
+  width: 60px;
+}
+
+.checkout-page .link-gboxoG {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .c8dce1e557f48316ef80dc9dbee40097-zhjcN8 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/c8dce1e557f48316ef80dc9dbee40097@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-gUdaII {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 76px;
+  width: 60px;
+}
+
+.checkout-page .link-Qx18iP {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .x1ad101bcf0e90b74b5697db1511de529-3ePfbb {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/1ad101bcf0e90b74b5697db1511de529@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-Z1eIvx {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 114px;
+  width: 60px;
+}
+
+.checkout-page .link-zwcXMQ {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .x6167379c7a6e786452f9f03295f517e6-mLxtfh {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/6167379c7a6e786452f9f03295f517e6@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-qrwg2U {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 114px;
+  width: 60px;
+}
+
+.checkout-page .link-RWMUoy {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .fc6e7bb9f2e88e7d1a702eb6de938d79-Ax8xmr {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/fc6e7bb9f2e88e7d1a702eb6de938d79@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-iHSPfT {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 114px;
+  width: 60px;
+}
+
+.checkout-page .link-4HOyNP {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .x231b50853c37d3ed0933b8ba7479f0e4-ppgh69 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/231b50853c37d3ed0933b8ba7479f0e4@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-Qd9TPq {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 152px;
+  width: 60px;
+}
+
+.checkout-page .link-0tKnHj {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .d68d15075519a4dfcfc8ffd9385d7bb9-jTYJVf {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/d68d15075519a4dfcfc8ffd9385d7bb9@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-lpf9U8 {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 152px;
+  width: 60px;
+}
+
+.checkout-page .link-Mb1CdI {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .ea38821fb0e2ec640bcd4f21000de105-XnuX1N {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/ea38821fb0e2ec640bcd4f21000de105@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-HJNqe4 {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 152px;
+  width: 60px;
+}
+
+.checkout-page .link-Jk38dY {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .ef22f26ccc342ad4dea14cc383299d64-XSeGxi {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/ef22f26ccc342ad4dea14cc383299d64@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-foIS2y {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 190px;
+  width: 60px;
+}
+
+.checkout-page .link-xVIWGD {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .b228c4523a9d1261e4606e9bf3a4882f-tEYwhr {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/b228c4523a9d1261e4606e9bf3a4882f@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-xiN1DF {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 190px;
+  width: 60px;
+}
+
+.checkout-page .link-0Kmx7L {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .x41e4c83bae13f67b9898c7579dd53d05-5roBVp {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/41e4c83bae13f67b9898c7579dd53d05@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .pengiriman-affzha {
+  background-color: transparent;
+  height: 14px;
+  left: 510px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 327px;
+  white-space: nowrap;
+  width: 62px;
+}
+
+.checkout-page .list-dSlYoh {
+  height: 190px;
+  left: 510px;
+  top: 363px;
+  width: 240px;
+}
+
+.checkout-page .item-zroESh {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 60px;
+}
+
+.checkout-page .link-4xpoKm {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .id-50009109-0c5dd568-mRDQqU {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/id-50009109-0c5dd5687ff2ede525c04fbde2f7b7fd@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-KS1rxn {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 60px;
+}
+
+.checkout-page .link-i3PIiE {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .x982216a49044ce4636f861333bfdac5c-djGUe7 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/982216a49044ce4636f861333bfdac5c@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-E0pbX2 {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 60px;
+}
+
+.checkout-page .link-nVugxW {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .x5ecc185311ec587945838b507140ee21-WIEmMO {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/5ecc185311ec587945838b507140ee21@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-pUWeRv {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 38px;
+  width: 60px;
+}
+
+.checkout-page .link-15CK1p {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .x5c07836b22c5689d56cb217c88171785-mwUdI0 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/5c07836b22c5689d56cb217c88171785@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-zan3mX {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 38px;
+  width: 60px;
+}
+
+.checkout-page .link-Q0gAHF {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .fe439088405f5b71199c3f6117932462-VDn4hq {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/fe439088405f5b71199c3f6117932462@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-u9kJA5 {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 38px;
+  width: 60px;
+}
+
+.checkout-page .link-jbXwpD {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .x9f4d96722647cf501edf21c958294568-pipUbg {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/9f4d96722647cf501edf21c958294568@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-Xq8h9D {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 76px;
+  width: 60px;
+}
+
+.checkout-page .link-Y1Bl4x {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .c2abc2de79484198bfc3fc3efd4ea049-2c4SF0 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/c2abc2de79484198bfc3fc3efd4ea049@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-KRwad2 {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 76px;
+  width: 60px;
+}
+
+.checkout-page .link-qr8U4v {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .x5653e7f0ca1361ddddb5b545ab675bc2-igAGtY {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/5653e7f0ca1361ddddb5b545ab675bc2@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-E6mq39 {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 76px;
+  width: 60px;
+}
+
+.checkout-page .link-sHfnbl {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .ed038a4fcd786fb2d6ef7b70a7a9a1b1-Ixs6O0 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/ed038a4fcd786fb2d6ef7b70a7a9a1b1@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-ZAzQxs {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 114px;
+  width: 60px;
+}
+
+.checkout-page .link-HjJKq5 {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .x8810ac4e4cffb855d280503c6eb33ed4-r7eRQj {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/8810ac4e4cffb855d280503c6eb33ed4@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-51SB6x {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 114px;
+  width: 60px;
+}
+
+.checkout-page .link-0VZuHE {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .x5c023bfb427d9546a8055f3b76d91560-6puZxl {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/5c023bfb427d9546a8055f3b76d91560@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-YKjC8d {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 114px;
+  width: 60px;
+}
+
+.checkout-page .link-KlOSXd {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .x5e350fcf94101432052945e2931fa621-XlplZ5 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/5e350fcf94101432052945e2931fa621@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-ux84yv {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 152px;
+  width: 60px;
+}
+
+.checkout-page .link-205dEo {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .x47d94f9fb90cc7e374549620be687494-idX6V4 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/47d94f9fb90cc7e374549620be687494@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-g0VRia {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 152px;
+  width: 60px;
+}
+
+.checkout-page .link-zUXVup {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .b20bd74ad72a92f1d22dc80e18ae2836-eOBfCr {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/b20bd74ad72a92f1d22dc80e18ae2836@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .item-Xtpkts {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 152px;
+  width: 60px;
+}
+
+.checkout-page .link-T3jGN9 {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.checkout-page .fedcba5bb6bc183e31766f032fd49a00-NwxjSc {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/fedcba5bb6bc183e31766f032fd49a00@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .ikuti-kami-affzha {
+  background-color: transparent;
+  height: 14px;
+  left: 760px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 49px;
+  white-space: nowrap;
+  width: 55px;
+}
+
+.checkout-page .list-Hq19q5 {
+  height: 128px;
+  left: 760px;
+  top: 84px;
+  width: 240px;
+}
+
+.checkout-page .item-link-DF2lRM {
+  height: 16px;
+  top: 0px;
+  width: 76px;
+}
+
+.checkout-page .x622550fb2ffb8ddf3913538801bc4c05-eadF5U {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/622550fb2ffb8ddf3913538801bc4c05@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.checkout-page .container-eadF5U {
+  background-color: transparent;
+  height: 16px;
+  left: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .facebook-hdveJp {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 52px;
+}
+
+.checkout-page .item-link-B9yQew {
+  height: 16px;
+  top: 28px;
+  width: 78px;
+}
+
+.checkout-page .ec4d29967019ea44642daa53a40ff89c-zvTagT {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/ec4d29967019ea44642daa53a40ff89c@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.checkout-page .container-zvTagT {
+  background-color: transparent;
+  height: 16px;
+  left: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 54px;
+}
+
+.checkout-page .instagram-42sZPM {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 54px;
+}
+
+.checkout-page .item-link-4jt0TB {
+  height: 16px;
+  top: 56px;
+  width: 61px;
+}
+
+.checkout-page .x2bf3f4d1e10c63d4df16cf4090ded0a5-rmcB4W {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/2bf3f4d1e10c63d4df16cf4090ded0a5@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.checkout-page .container-rmcB4W {
+  background-color: transparent;
+  height: 16px;
+  left: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 37px;
+}
+
+.checkout-page .twitter-axfdYx {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 37px;
+}
+
+.checkout-page .item-link-v8mgje {
+  height: 16px;
+  top: 84px;
+  width: 69px;
+}
+
+.checkout-page .x32530e4a6641210fbbfdaf95f507aa1e-yR4GSP {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/32530e4a6641210fbbfdaf95f507aa1e@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.checkout-page .container-yR4GSP {
+  background-color: transparent;
+  height: 16px;
+  left: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 45px;
+}
+
+.checkout-page .linked-in-X3Ipjx {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 45px;
+}
+
+.checkout-page .item-link-hEbF4a {
+  height: 16px;
+  top: 112px;
+  width: 111px;
+}
+
+.checkout-page .a4c827473f54e4a6ae4550a14ea92653-QwQTQF {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/a4c827473f54e4a6ae4550a14ea92653@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.checkout-page .container-QwQTQF {
+  background-color: transparent;
+  height: 16px;
+  left: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 87px;
+}
+
+.checkout-page .kampus-shopee-YYtsuR {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 87px;
+}
+
+.checkout-page .keamanan-affzha {
+  background-color: transparent;
+  height: 14px;
+  left: 760px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 227px;
+  white-space: nowrap;
+  width: 57px;
+}
+
+.checkout-page .list-item-affzha {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 60px;
+  left: 760px;
+  overflow: hidden;
+  position: absolute;
+  top: 263px;
+  width: 120px;
+}
+
+.checkout-page .link-aUIIfK {
+  background-color: transparent;
+  height: 52px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 112px;
+}
+
+.checkout-page .id-11134258-7rasi-m1mj559k2yly05-bL1tCx {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/id-11134258-7rasi-m1mj559k2yly05@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 52px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 112px;
+}
+
+.checkout-page .download-aplikasi-shopee-affzha {
+  background-color: transparent;
+  height: 14px;
+  left: 1010px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 49px;
+  white-space: nowrap;
+  width: 143px;
+}
+
+.checkout-page .container-affzha {
+  background-color: transparent;
+  height: 93px;
+  left: 1010px;
+  position: absolute;
+  top: 84px;
+  width: 190px;
+}
+
+.checkout-page .link-90VwvU {
+  background-color: transparent;
+  height: 93px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100px;
+}
+
+.checkout-page .bed0af4663f887db16a7047185478dcf-0wvwjW {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/bed0af4663f887db16a7047185478dcf.svg);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 88px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 88px;
+}
+
+.checkout-page .link-e4Zi7b {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 24px;
+  left: 100px;
+  position: absolute;
+  top: 0px;
+  width: 76px;
+}
+
+.checkout-page .bbf28a2328ec8c7f57b9cc2069d693fd-y85rxa {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/bbf28a2328ec8c7f57b9cc2069d693fd@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 4px;
+  overflow: hidden;
+  position: relative;
+  top: 4px;
+  width: 68px;
+}
+
+.checkout-page .link-Hx5pSh {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 24px;
+  left: 100px;
+  position: absolute;
+  top: 32px;
+  width: 76px;
+}
+
+.checkout-page .x1858a153798406c87945f15a38bf4874-GvR78S {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/1858a153798406c87945f15a38bf4874@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 4px;
+  overflow: hidden;
+  position: relative;
+  top: 4px;
+  width: 68px;
+}
+
+.checkout-page .link-WwXVbt {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 24px;
+  left: 100px;
+  position: absolute;
+  top: 64px;
+  width: 76px;
+}
+
+.checkout-page .x0e74339f5da500baaaa52785f175bc6d-vXj0oY {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/0e74339f5da500baaaa52785f175bc6d@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 4px;
+  overflow: hidden;
+  position: relative;
+  top: 4px;
+  width: 68px;
+}
+
+.checkout-page .horizontal-border-Crf1Bb {
+  border-bottom-style: none;
+  border-color: #0000001a;
+  border-top-style: solid;
+  border-top-width: 1px;
+  height: 99px;
+  left: 74px;
+  top: 579px;
+  width: 1200px;
+}
+
+.checkout-page .shopee-2024-hak-cipta-dilindungi-kXy0x6 {
+  background-color: transparent;
+  height: 18px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: 40px;
+  white-space: nowrap;
+  width: 229px;
+}
+
+.checkout-page .negara-kXy0x6 {
+  background-color: transparent;
+  height: 18px;
+  left: 488px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: right;
+  top: 40px;
+  white-space: nowrap;
+  width: 49px;
+}
+
+.checkout-page .vertical-border-kXy0x6 {
+  left: 536px;
+  width: 74px;
+}
+
+.checkout-page .link-ovg2hy {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 63px;
+}
+
+.checkout-page .singapura-3dEsCN {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 63px;
+}
+
+.checkout-page .vertical-border-7tLDSH {
+  left: 609px;
+  width: 72px;
+}
+
+.checkout-page .link-H6hVjy {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 61px;
+}
+
+.checkout-page .indonesia-TTsQPx {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 61px;
+}
+
+.checkout-page .vertical-border-iEYCOR {
+  left: 681px;
+  width: 65px;
+}
+
+.checkout-page .link-RD7RCw {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 54px;
+}
+
+.checkout-page .thailand-RGoHVE {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 54px;
+}
+
+.checkout-page .vertical-border-y2mslR {
+  left: 746px;
+  width: 67px;
+}
+
+.checkout-page .link-xSwdZb {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 56px;
+}
+
+.checkout-page .malaysia-XAzPtx {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 56px;
+}
+
+.checkout-page .vertical-border-jzduWl {
+  left: 813px;
+  width: 63px;
+}
+
+.checkout-page .link-yMlvYu {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.checkout-page .vietnam-yI67aA {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 52px;
+}
+
+.checkout-page .vertical-border-rebVOQ {
+  left: 876px;
+  width: 56px;
+}
+
+.checkout-page .link-OM7LOV {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 45px;
+}
+
+.checkout-page .filipina-0gAHcS {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 45px;
+}
+
+.checkout-page .vertical-border-x3BBxr {
+  left: 931px;
+  width: 46px;
+}
+
+.checkout-page .link-7rFuoC {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 35px;
+}
+
+.checkout-page .brazil-Flc2t7 {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 35px;
+}
+
+.checkout-page .vertical-border-bj78Uz {
+  left: 977px;
+  width: 56px;
+}
+
+.checkout-page .link-fzx7kl {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 45px;
+}
+
+.checkout-page .mxico-l5xxTq {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 46px;
+}
+
+.checkout-page .vertical-border-NswZA5 {
+  left: 1033px;
+  width: 71px;
+}
+
+.checkout-page .link-QZCgK9 {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 60px;
+}
+
+.checkout-page .colombia-IKiGhP {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 60px;
+}
+
+.checkout-page .vertical-border-mCbqXj {
+  left: 1103px;
+  width: 42px;
+}
+
+.checkout-page .link-x2CBWx {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 31px;
+}
+
+.checkout-page .chile-GXBT7w {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 31px;
+}
+
+.checkout-page .link-kXy0x6 {
+  background-color: transparent;
+  height: 17px;
+  left: 1151px;
+  position: absolute;
+  top: 41px;
+  width: 44px;
+}
+
+.checkout-page .taiwan-nnxJ4v {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 45px;
+}
+
+.checkout-page .container-aVb0a3 {
+  background-color: transparent;
+  height: 48px;
+  left: 1241px;
+  position: fixed;
+  top: 2291px;
+  width: 100px;
+}
+
+.checkout-page .background-shadow-UDIg9m {
+  background-color: var(--flamingo);
+  border-radius: 4px 4px 0px 0px;
+  box-shadow: 0px 4px 20px #1c1c3329;
+  height: 48px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 100px;
+}
+
+.checkout-page .svg-wwUcnr {
+  height: 24px;
+  left: 12px;
+  top: 12px;
+  width: 24px;
+}
+
+.checkout-page .svg-mz2QBR {
+  height: 22px;
+  left: 44px;
+  top: 13px;
+  width: 44px;
+}
+
+.checkout-page .background-border-wwUcnr {
+  background-color: var(--flamingo);
+  border: 1px solid;
+  border-color: #f6f6f6;
+  border-radius: 9px;
+  height: 18px;
+  left: 79px;
+  overflow: hidden;
+  position: absolute;
+  top: -9px;
+  width: 25px;
+}
+
+.checkout-page .x52-fdwWRE {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+  height: 14px;
+  left: 6px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 1px;
+  white-space: nowrap;
+  width: 14px;
+}
+
+.checkout-page .background-horizontal-border {
+  border-bottom-width: 1px;
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  left: 0px;
+  position: absolute;
+}
+
+.checkout-page .bantuan {
+  background-color: transparent;
+  left: 0px;
+  letter-spacing: 0.00px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+}
+
+.checkout-page .button-svg {
+  background-color: transparent;
+  height: 14px;
+  position: absolute;
+  top: 13px;
+  width: 18px;
+}
+
+.checkout-page .button-ubah {
+  background-color: transparent;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  white-space: nowrap;
+  width: 33px;
+}
+
+.checkout-page .cod {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+  width: 28px;
+}
+
+.checkout-page .heading-2 {
+  background-color: transparent;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+.checkout-page .heading-3 {
+  background-color: transparent;
+  height: 40px;
+  left: 879px;
+  position: absolute;
+  width: 139px;
+}
+
+.checkout-page .horizontal-border {
+  background-color: transparent;
+  border-left-style: none;
+  border-right-style: none;
+  position: absolute;
+}
+
+.checkout-page .item-link {
+  background-color: transparent;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.checkout-page .list {
+  background-color: transparent;
+  position: absolute;
+}
+
+.checkout-page .metode-pembayaran {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.checkout-page .overlay-shadow {
+  background-color: var(--white-2);
+  border-radius: 3px;
+  left: 0px;
+  position: absolute;
+  width: 1200px;
+}
+
+.checkout-page .rp12000 {
+  background-color: transparent;
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.checkout-page .rp141000 {
+  background-color: transparent;
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.checkout-page .rp1700 {
+  background-color: transparent;
+  left: 138px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+  width: 52px;
+}
+
+.checkout-page .seller-centre {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.checkout-page .shopee-pay {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.checkout-page .svg {
+  background-color: transparent;
+  position: absolute;
+}
+
+.checkout-page .vertical-border {
+  background-color: transparent;
+  border-bottom-style: none;
+  border-color: var(--black-6);
+  border-left-style: none;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-style: none;
+  height: 18px;
+  position: absolute;
+  top: 41px;
+}
+
+.checkout-page .vertical-divider {
+  background-color: transparent;
+  border-bottom-style: none;
+  border-left-width: 1px;
+  border-top-style: none;
+  position: absolute;
+}
+
+.checkout-page .x1 {
+  background-color: transparent;
+  height: 17px;
+  left: 182px;
+  letter-spacing: 0.00px;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+  width: 8px;
+}
+</style>
+</head>
+<body style="margin: 0;background: #f5f5f5;">
+  <input type="hidden" id="anPageName" name="page" value="checkout-page"><div class="container-center-horizontal"><div class="checkout-page screen " data-id="7:3239"><div class="container-teKhqi" data-id="7:3240"><header class="header-SlY5mp" data-id="7:3241"><div class="nav-stxClL" data-id="7:3242"><div class="link-2YUX7P" data-id="7:3243"><div class="seller-centre-xfs8ur valign-text-middle seller-centre roboto-light-white-13px" data-id="7:3244">Seller Centre</div></div><div class="link-XUJ60B" data-id="7:3245"><div class="download-reiv4M valign-text-middle roboto-light-white-13px" data-id="7:3246">Download</div></div><div class="vertical-divider-2YUX7P vertical-divider" data-id="7:3247"></div><div class="ikuti-kami-di-2YUX7P valign-text-middle roboto-light-white-13px" data-id="7:3248">Ikuti kami di</div><div class="vertical-divider-XUJ60B vertical-divider" data-id="7:3249"></div><div class="container-2YUX7P" data-id="7:3250"><div class="link-pjTVOJ" data-id="7:3251-52608192-2540-4c74-ac62-dc12503aea3d"></div><div class="link-UjIVod" data-id="7:3252-c07045a8-79fb-4b51-a0c1-1c550ce26513"></div><div class="link-ILxLMy" data-id="7:3253-1a1e97d8-12fd-40e7-9e97-3fb6d7084624"></div></div><div class="list-2YUX7P list" data-id="7:3255"><div class="item-ausJoA" data-id="7:3256"><div class="button-link-QxX5x3" data-id="7:3257"><div class="notifikasi-2lFfnY valign-text-middle roboto-light-white-13px" data-id="7:3258">Notifikasi</div><img class="svg-2lFfnY svg" data-id="7:3259" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/svg.svg" alt="SVG"></div></div><div class="link-ausJoA" data-id="7:3262"><img class="svg-vJw6zx svg" data-id="7:3263" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/svg-1.svg" alt="SVG"><div class="container-vJw6zx" data-id="7:3267"><div class="bantuan-x8C14A valign-text-middle bantuan roboto-light-white-13px" data-id="7:3268">Bantuan</div></div></div><div class="item-e7LxEl" data-id="7:3269"><div class="button-kct6kq" data-id="7:3270"><img class="svg-7EAktf svg" data-id="7:3271" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/svg-2.svg" alt="SVG"><div class="bahasa-indonesia-7EAktf valign-text-middle roboto-light-white-13px" data-id="7:3275">Bahasa Indonesia</div><img class="svg-5RNrgk svg" data-id="7:3276" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/svg-3.svg" alt="SVG"></div></div><div class="item-bdhRld" data-id="7:3278"><div class="button-lEuxDc" data-id="7:3279"><div class="container-a09ACK" data-id="7:3280"><div class="viper20-xSsLxI valign-text-middle" data-id="7:3281">viper20</div></div><img class="border-a09ACK" data-id="7:3282" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/border.svg" alt="Border"></div></div></div></div></header><div class="heading-2-SlY5mp heading-2" data-id="7:3288"><div class="metode-60Lfj5 valign-text-middle roboto-normal-black-14px-2" data-id="7:3289">Metode</div></div><div class="background-horizontal-border-SlY5mp background-horizontal-border" data-id="7:3290"><div class="link-rRjeJ7" data-id="7:3291"><div class="heading-1-xT4XzU" data-id="7:3292"><div class="checkout-qb21Yx valign-text-middle" data-id="7:3293">Checkout</div></div><img class="svg-xT4XzU svg" data-id="7:3294" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/svg-4.svg" alt="SVG"></div></div><div class="main-SlY5mp" data-id="7:3298"><div class="background-shadow-v0rx0S" data-id="7:3299"><div class="gradient-lV365P" data-id="7:3300"></div><img class="svg-lV365P svg" data-id="7:3301" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/svg-5.svg" alt="SVG"><div class="heading-2-alamat-pengiriman-lV365P valign-text-middle" data-id="7:3303">Alamat Pengiriman</div><div class="joel-62-81212497121-lV365P valign-text-middle" data-id="7:3304">Joel (+62)<br>81212497121</div><p class="house-mimi-jalan-anc-lV365P valign-text-middle" data-id="7:3305">House Mimi, Jalan Ancol Timur XV No. 17, Ancol, Regol (Gerbang kuning), KOTA BANDUNG - REGOL, JAWA BARAT,<br>ID 40254</p><div class="border-lV365P" data-id="7:3306"><div class="utama-DgYVWy valign-text-middle" data-id="7:3307">Utama</div></div><div class="button-ubah-lV365P valign-text-middle button-ubah" data-id="7:3308">Ubah</div><div class="horizontal-border-lV365P horizontal-border" data-id="7:3309"><div class="label-jmzkRh" data-id="7:3310"><div class="overlay-border-shadow-RlJLrZ" data-id="7:3311"><div class="border-R7pzqT" data-id="7:3312"></div></div><div class="kirim-sebagai-dropshipper-RlJLrZ valign-text-middle" data-id="7:3313">Kirim sebagai Dropshipper</div></div></div></div><div class="overlay-shadow-v0rx0S overlay-shadow" data-id="7:3314"><div class="background-shadow-GtEpD0" data-id="7:3315"><div class="heading-2-produk-dipesan-TvjSkH valign-text-middle" data-id="7:3316">Produk Dipesan</div><div class="harga-satuan-TvjSkH valign-text-middle roboto-normal-black-14px" data-id="7:3318">Harga Satuan</div><div class="jumlah-TvjSkH valign-text-middle roboto-normal-black-14px" data-id="7:3319">Jumlah</div><div class="subtotal-produk-TvjSkH valign-text-middle roboto-normal-black-14px" data-id="7:3320">Subtotal Produk</div></div><div class="background-shadow-KTa1ui" data-id="7:3321"><div class="background-wluzpQ" data-id="7:3322"><img class="svg-joITrr svg" data-id="7:3323" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/svg-8.svg" alt="SVG"><div class="heading-3-nvr_store20-joITrr valign-text-middle" data-id="7:3326">Nvr_store20</div><div class="button-joITrr" data-id="7:3327"><img class="svg-tiy7XU svg" data-id="7:3328" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/svg-9.svg" alt="SVG"><div class="chat-sekarang-tiy7XU valign-text-middle" data-id="7:3331">chat sekarang</div></div><div class="horizontal-border-joITrr horizontal-border" data-id="7:3332"><div class="container-Ebaq83" data-id="7:3333"><div class="container-FBVK2a" data-id="7:3334"><div class="picture-id-11134207-xd0LEZ" data-id="7:3335-8112930c-e168-4a71-bf39-cc5de7a92365"></div><div class="container-xd0LEZ" data-id="7:3336"><div class="container-ztxdwS" data-id="7:3337"><p class="kemeja-hitam-pria-le-RgMNHM valign-text-middle roboto-normal-log-cabin-14px" data-id="7:3338">Kemeja Hitam Pria Lengan Panjang Kemeja Sha…</p></div><div class="border-ztxdwS" data-id="7:3339"><div class="bebas-pengembalian-cZboMK valign-text-middle" data-id="7:3340">Bebas Pengembalian</div></div></div></div><div class="container-yGDJCk" data-id="7:3341"><div class="container-Nszuk6" data-id="7:3342"><div class="variasi-hitaml-pxUG4J valign-text-middle" data-id="7:3343">Variasi: Hitam,L</div></div></div><div class="container-dByruI" data-id="7:3344"><div class="rp141000-XPAO3Y valign-text-middle rp141000 roboto-normal-log-cabin-14px" data-id="7:3345">Rp141.000</div></div><div class="container-HGk10j" data-id="7:3346"><div class="x1-UPiTxH valign-text-middle x1 roboto-normal-log-cabin-14px" data-id="7:3347">1</div></div><div class="container-yu0xFa" data-id="7:3348"><div class="rp141000-mqILjp valign-text-middle rp141000" data-id="7:3349">Rp141.000</div></div></div><div class="background-Ebaq83" data-id="7:3350"><div class="container-ZB76QO" data-id="7:3351"><div class="input-0gmTZl" data-id="7:3352"></div><div class="proteksi-kerusakan-0gmTZl valign-text-middle" data-id="7:3353">Proteksi Kerusakan +</div><p class="melindungi-produkmu-0gmTZl valign-text-middle" data-id="7:3354">Melindungi produkmu dari kerusakan/kerugian total selama 6 bulan.</p><div class="link-0gmTZl" data-id="7:3355"><div class="pelajari-isqFxL valign-text-middle" data-id="7:3356">Pelajari</div></div></div><div class="container-cURd6K" data-id="7:3357"><div class="rp1700-WkNXdX valign-text-middle rp1700 roboto-normal-black-14px-3" data-id="7:3358">Rp1.700</div></div><div class="container-4joL91" data-id="7:3359"><div class="x1-CooNCY valign-text-middle x1 roboto-normal-black-14px-3" data-id="7:3360">1</div></div><div class="container-xOjoJf" data-id="7:3361"><div class="rp1700-bny3YP valign-text-middle rp1700 roboto-normal-black-14px-3" data-id="7:3362">Rp1.700</div></div></div></div></div><div class="background-horizontal-border-wluzpQ background-horizontal-border" data-id="7:3363"><div class="pesan-gcAM3P valign-text-middle roboto-normal-black-14px-2" data-id="7:3364">Pesan:</div><div class="background-border-shadow-gcAM3P" data-id="7:3365"><div class="input-pesan-y6DqAt" data-id="7:3366"><div class="container-RuTkOk" data-id="7:3367"><p class="opsional-tinggalkan-pesan-ke-penjual-zATMq0 valign-text-middle" data-id="7:3368">(Opsional) Tinggalkan pesan ke penjual</p></div></div></div><div class="vertical-divider-gcAM3P vertical-divider" data-id="7:3369"></div><div class="opsi-pengiriman-gcAM3P valign-text-middle roboto-medium-black-14px" data-id="7:3370">Opsi Pengiriman:</div><div class="reguler-gcAM3P valign-text-middle roboto-medium-black-14px" data-id="7:3371">Reguler</div><img class="x41fe56ab756fc3082a08svg-gcAM3P" data-id="7:3372" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/41fe56ab756fc3082a08-svg.svg" alt="41fe56ab756fc3082a08.svg"><p class="garansi-tiba-6-7-nov-gcAM3P valign-text-middle" data-id="7:3381">Garansi tiba: 6 - 7 Nov</p><p class="voucher-sd-rp10000-j-gcAM3P valign-text-middle" data-id="7:3382">Voucher s/d Rp10.000 jika pesanan belum tiba 7 Nov 2024.</p><img class="svg-gcAM3P svg" data-id="7:3383" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/svg-10.svg" alt="SVG"><div class="button-ubah-gcAM3P valign-text-middle button-ubah" data-id="7:3387">Ubah</div><div class="rp12000-gcAM3P valign-text-middle rp12000" data-id="7:3388">Rp12.000</div></div><div class="paragraph-background-wluzpQ" data-id="7:3389"><div class="heading-3-total-pesanan-1-produk-7QfwDO valign-text-middle roboto-normal-black-14px" data-id="7:3390">Total Pesanan (1 Produk):</div><div class="rp153000-7QfwDO valign-text-middle" data-id="7:3391">Rp153.000</div></div></div></div><div class="background-horizontal-border-v0rx0S background-horizontal-border" data-id="7:3392"><div class="heading-2-voucher-shopee-x4UML8 valign-text-middle" data-id="7:3393">Voucher Shopee</div><img class="svg-x4UML8 svg" data-id="7:3394" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/svg-11@2x.png" alt="SVG"><div class="button-pilih-voucher-x4UML8 valign-text-middle" data-id="7:3401">Pilih Voucher</div></div><div class="background-horizontal-border-z6kNrD background-horizontal-border" data-id="7:3402"><div class="heading-2-koin-shopee-ybq1f9 valign-text-middle" data-id="7:3403">Koin Shopee</div><div class="koin-tidak-dapat-ditukarkan-ybq1f9 valign-text-middle" data-id="7:3404">Koin tidak dapat ditukarkan</div><img class="svg-ybq1f9 svg" data-id="7:3405" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/svg-12.svg" alt="SVG"><div class="rp0-ybq1f9 valign-text-middle" data-id="7:3408">[-Rp0]</div><div class="label-ybq1f9" data-id="7:3409"></div></div><div class="overlay-shadow-z6kNrD overlay-shadow" data-id="7:3410"><div class="background-dPR5ZR" data-id="7:3411"><div class="cod-CnCxSB valign-text-middle cod roboto-normal-black-14px-2" data-id="7:3412">COD</div><div class="cash-on-delivery-CnCxSB valign-text-middle roboto-normal-black-14px-2" data-id="7:3413">Cash on Delivery</div><div class="horizontal-border-CnCxSB horizontal-border" data-id="7:3414"><div class="metode-pembayaran-LaVZMh valign-text-middle metode-pembayaran" data-id="7:3415">Metode Pembayaran</div>
+  <div class="radiogroup-LaVZMh" data-id="7:3416">
+    <div class="radio-6f1DYA" data-id="7:3417">
+      <div class="shopee-pay-ZcRdZl valign-text-middle shopee-pay" data-id="7:3418">ShopeePay</div>
+      <img class="container-ZcRdZl" data-id="7:3422" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/container.svg" alt="Container"></div>
+      <div class="radio-cod-6f1DYA" data-id="7:3420">
+        <div class="cod-8mPmpC valign-text-middle cod" data-id="7:3421">COD</div>
+      </div><div class="radio-cod-cek-dulu-6f1DYA" data-id="7:3426">
+        <div class="cod-cek-dulu-9Bf3v7 valign-text-middle roboto-medium-black-14px" data-id="7:3427">COD - Cek Dulu</div></div><div class="radio-transfer-bank-6f1DYA" data-id="7:3428"><div class="transfer-bank-5qDJox valign-text-middle roboto-medium-black-14px" data-id="7:3429">Transfer Bank</div></div><div class="radio-kartu-kredit-debit-6f1DYA" data-id="7:3430"><div class="kartu-kredit-debit-hrGGPB valign-text-middle roboto-medium-black-14px" data-id="7:3431">Kartu Kredit/Debit</div></div><div class="radio-cicilan-kartu-kredit-6f1DYA" data-id="7:3432"><div class="cicilan-kartu-kredit-uicHky valign-text-middle" data-id="7:3433">Cicilan Kartu Kredit</div></div><div class="radio-bri-direct-debit-6f1DYA" data-id="7:3434"><div class="bri-direct-debit-fpgEow valign-text-middle roboto-medium-black-14px" data-id="7:3435">BRI Direct Debit</div></div><div class="radio-bca-one-klik-6f1DYA" data-id="7:3436"><div class="bca-one-klik-NtTx0X valign-text-middle roboto-medium-black-14px" data-id="7:3437">BCA OneKlik</div></div><div class="radio-bayar-tunai-di-mitra-agen-6f1DYA" data-id="7:3438"><div class="bayar-tunai-di-mitra-agen-Hpmon1 valign-text-middle roboto-medium-black-14px" data-id="7:3439">Bayar Tunai di Mitra/Agen</div></div></div></div></div><div class="background-horizontal-border-shadow-dPR5ZR" data-id="7:3440"><div class="heading-3-subtotal-untuk-produk-jaecvj valign-text-middle roboto-normal-black-14px" data-id="7:3441">Subtotal untuk Produk</div><div class="rp141000-jaecvj valign-text-middle rp141000 roboto-normal-black-14px-2" data-id="7:3442">Rp141.000</div><div class="heading-3-subtotal-pengiriman-jaecvj valign-text-middle roboto-normal-black-14px" data-id="7:3443">Subtotal Pengiriman</div><div class="rp12000-jaecvj valign-text-middle rp12000 roboto-normal-black-14px-2" data-id="7:3444">Rp12.000</div><div class="rp15300-jaecvj valign-text-middle roboto-normal-black-14px-2" data-id="7:3445">Rp15.300</div><h1 class="title-jaecvj valign-text-middle" data-id="7:3446">Rp169.300</h1><div class="heading-2-jaecvj heading-2" data-id="7:3447"><div class="total-Cpt10y valign-text-middle roboto-normal-black-14px-2" data-id="7:3448">Total</div></div><div class="heading-3-jaecvj heading-3" data-id="7:3449"><div class="biaya-layanan-T3lGS1 valign-text-middle roboto-normal-black-14px" data-id="7:3450">Biaya Layanan</div><img class="button-svg-T3lGS1 button-svg" data-id="7:3451" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/button---svg.svg" alt="Button  SVG"></div><div class="rp1000-jaecvj valign-text-middle roboto-normal-black-14px-2" data-id="7:3455">Rp1.000</div><div class="heading-3-mFx0YB heading-3" data-id="7:3456"><div class="biaya-penanganan-tJSjoY valign-text-middle roboto-normal-black-14px" data-id="7:3457">Biaya Penanganan</div><img class="button-svg-tJSjoY button-svg" data-id="7:3458" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/button---svg-1.svg" alt="Button  SVG"></div><div class="heading-3-total-pembayaran-jaecvj valign-text-middle roboto-normal-black-14px" data-id="7:3462">Total Pembayaran</div><div class="horizontal-border-jaecvj horizontal-border" data-id="7:3463"><div class="button-gRnfQI" data-id="7:3465">
+    <div class="buat-pesanan-pkfEVX valign-text-middle" data-id="7:3466"><a href="D:/VSCode/shopee akmal/halaman pesanan user.html">Buat Pesanan</a></div></div></div></div></div></div><footer class="footer-SlY5mp" data-id="7:3467"><div class="background-CCldPv" data-id="7:3468"><div class="container-Crf1Bb" data-id="7:3469"><div class="layanan-pelanggan-affzha valign-text-middle roboto-bold-black-12px" data-id="7:3470">Layanan Pelanggan</div><div class="list-affzha list" data-id="7:3471"><div class="item-link-dpy15J item-link" data-id="7:3472"><div class="container-g3oIU7" data-id="7:3473"><div class="bantuan-kZVxWv valign-text-middle bantuan roboto-normal-black-12px" data-id="7:3474">Bantuan</div></div></div><div class="item-link-f0Eo9j item-link" data-id="7:3475"><div class="container-aomABt" data-id="7:3476"><div class="metode-pembayaran-ML0IEZ valign-text-middle metode-pembayaran roboto-normal-black-12px" data-id="7:3477">Metode Pembayaran</div></div></div><div class="item-link-PHvyg2 item-link" data-id="7:3478"><div class="container-LBO6W4" data-id="7:3479"><div class="shopee-pay-nj8Hv6 valign-text-middle shopee-pay roboto-normal-black-12px" data-id="7:3480">ShopeePay</div></div></div><div class="item-link-z1Fr9Q item-link" data-id="7:3481"><div class="container-JWJHNU" data-id="7:3482"><div class="koin-shopee-MJi32w valign-text-middle roboto-normal-black-12px" data-id="7:3483">Koin Shopee</div></div></div><div class="item-link-i8PGYs item-link" data-id="7:3484"><div class="container-fFCEuM" data-id="7:3485"><div class="lacak-pesanan-pembeli-9KgNhM valign-text-middle roboto-normal-black-12px" data-id="7:3486">Lacak Pesanan Pembeli</div></div></div><div class="item-link-5SP4jn item-link" data-id="7:3487"><div class="container-Huj6ZW" data-id="7:3488"><div class="lacak-pengiriman-penjual-fyU0HL valign-text-middle roboto-normal-black-12px" data-id="7:3489">Lacak Pengiriman Penjual</div></div></div><div class="item-link-D25GRH item-link" data-id="7:3490"><div class="container-4ZbPRx" data-id="7:3491"><div class="gratis-ongkir-PTsus4 valign-text-middle roboto-normal-black-12px" data-id="7:3492">Gratis Ongkir</div></div></div><div class="item-link-0q4P3h item-link" data-id="7:3493"><div class="container-5mpMIg" data-id="7:3494"><div class="pengembalian-barang-dana-HOmrbq valign-text-middle roboto-normal-black-12px" data-id="7:3495">Pengembalian Barang &amp; Dana</div></div></div><div class="item-link-Skk6Gx item-link" data-id="7:3496"><div class="container-G4qinS" data-id="7:3497"><div class="garansi-shopee-MlvEOH valign-text-middle roboto-normal-black-12px" data-id="7:3498">Garansi Shopee</div></div></div><div class="item-link-v4t8fE item-link" data-id="7:3499"><div class="container-TSRH3Y" data-id="7:3500"><div class="hubungi-kami-iOx08n valign-text-middle roboto-normal-black-12px" data-id="7:3501">Hubungi Kami</div></div></div></div><div class="jelajahi-shopee-affzha valign-text-middle roboto-bold-black-12px" data-id="7:3502">Jelajahi Shopee</div><div class="list-QRsmqY list" data-id="7:3503"><div class="item-link-KNO3WA item-link" data-id="7:3504"><div class="container-ArZxUj" data-id="7:3505"><div class="tentang-kami-tL689o valign-text-middle roboto-normal-black-12px" data-id="7:3506">Tentang Kami</div></div></div><div class="item-link-QHV2G5 item-link" data-id="7:3507"><div class="container-jXQ6TZ" data-id="7:3508"><div class="karir-hXWaRd valign-text-middle roboto-normal-black-12px" data-id="7:3509">Karir</div></div></div><div class="item-link-cKHiDl item-link" data-id="7:3510"><div class="container-KcTYVw" data-id="7:3511"><div class="kebijakan-shopee-JHlO9i valign-text-middle roboto-normal-black-12px" data-id="7:3512">Kebijakan Shopee</div></div></div><div class="item-link-qHmZWm item-link" data-id="7:3513"><div class="container-yI9Chf" data-id="7:3514"><div class="kebijakan-privasi-G7deWI valign-text-middle roboto-normal-black-12px" data-id="7:3515">Kebijakan Privasi</div></div></div><div class="item-link-GNPgOX item-link" data-id="7:3516"><div class="container-ajy2K5" data-id="7:3517"><div class="blog-sBS3ze valign-text-middle roboto-normal-black-12px" data-id="7:3518">Blog</div></div></div><div class="item-link-JgEwhZ item-link" data-id="7:3519"><div class="container-9KI5Z2" data-id="7:3520"><div class="shopee-mall-ZszK69 valign-text-middle roboto-normal-black-12px" data-id="7:3521">Shopee Mall</div></div></div><div class="item-link-MLQMb6 item-link" data-id="7:3522"><div class="container-NVZkEX" data-id="7:3523"><div class="seller-centre-eO5aEx valign-text-middle seller-centre roboto-normal-black-12px" data-id="7:3524">Seller Centre</div></div></div><div class="item-link-U8EEBY item-link" data-id="7:3525"><div class="container-TZA1uI" data-id="7:3526"><div class="flash-sale-xi8LIZ valign-text-middle roboto-normal-black-12px" data-id="7:3527">Flash Sale</div></div></div><div class="item-link-fA1HlP item-link" data-id="7:3528"><div class="container-euLGis" data-id="7:3529"><div class="kontak-media-6Avk21 valign-text-middle roboto-normal-black-12px" data-id="7:3530">Kontak Media</div></div></div><div class="item-link-kKeyMV item-link" data-id="7:3531"><div class="container-SgxdPc" data-id="7:3532"><div class="shopee-affiliate-JKlJsO valign-text-middle roboto-normal-black-12px" data-id="7:3533">Shopee Affiliate</div></div></div></div><div class="pembayaran-affzha valign-text-middle roboto-bold-black-12px" data-id="7:3534">Pembayaran</div><div class="list-O9ZSmC list" data-id="7:3535"><div class="item-WKs4nQ" data-id="7:3536"><div class="link-cMoXZf" data-id="7:3537"><div class="x5589c755ab085d2fac3e33f4755c6a9e-APtszL" data-id="7:3538-dcbd3566-ad1d-4cfd-b81c-5387af4f3cba"></div></div></div><div class="item-hbeg91" data-id="7:3539"><div class="link-9CCN5X" data-id="7:3540"><div class="x49656d7100598b911a1f247dec64fda4-NWMXtn" data-id="7:3541-e4497907-d0a9-4bcc-b6a7-d0a65c2721b7"></div></div></div><div class="item-uB12xH" data-id="7:3542"><div class="link-J57nDm" data-id="7:3543"><div class="e7865f5fb066b8b5e73f9d5c36fc7154-Bu3V71" data-id="7:3544-e5c87258-e1b0-40b8-b173-a61a05c50eba"></div></div></div><div class="item-faGKZW" data-id="7:3545"><div class="link-9OMMyU" data-id="7:3546"><div class="x59185c096964e1892e9122ceaae2609d-yjQ5Zm" data-id="7:3547-c3988a2f-41c8-4299-b1ec-bd2bd82518ea"></div></div></div><div class="item-y0urTj" data-id="7:3548"><div class="link-FP7nne" data-id="7:3549"><div class="x9a08d3abab3dd059fff945c72ca372d9-jy3RBl" data-id="7:3550-a74b6642-cab3-4942-b27d-bb13abcbf34f"></div></div></div><div class="item-8WBdlP" data-id="7:3551"><div class="link-P9wPlj" data-id="7:3552"><div class="x780c2be80e523384a7320b89f42008d5-JNlWL1" data-id="7:3553-8762f1ee-4781-44e5-8bc4-276086079a29"></div></div></div><div class="item-Uvyak4" data-id="7:3554"><div class="link-0OEPCT" data-id="7:3555"><div class="x0cf8caa250763eefc3d79bb1f8c08e73-CO8vvL" data-id="7:3556-26e03ed2-3364-4bec-ad66-cdfe8d4ea01c"></div></div></div><div class="item-0uAIvB" data-id="7:3557"><div class="link-gboxoG" data-id="7:3558"><div class="c8dce1e557f48316ef80dc9dbee40097-zhjcN8" data-id="7:3559-4acc1ed5-3b32-4a0f-a471-0423ca6b458b"></div></div></div><div class="item-gUdaII" data-id="7:3560"><div class="link-Qx18iP" data-id="7:3561"><div class="x1ad101bcf0e90b74b5697db1511de529-3ePfbb" data-id="7:3562-80c6ddf5-b2df-4ac1-9fb9-986e5be02485"></div></div></div><div class="item-Z1eIvx" data-id="7:3563"><div class="link-zwcXMQ" data-id="7:3564"><div class="x6167379c7a6e786452f9f03295f517e6-mLxtfh" data-id="7:3565-3eb50b49-6cd0-495c-85e8-c11340597d58"></div></div></div><div class="item-qrwg2U" data-id="7:3566"><div class="link-RWMUoy" data-id="7:3567"><div class="fc6e7bb9f2e88e7d1a702eb6de938d79-Ax8xmr" data-id="7:3568-2a06d4db-2912-4d20-8efd-7c85c19fcb11"></div></div></div><div class="item-iHSPfT" data-id="7:3569"><div class="link-4HOyNP" data-id="7:3570"><div class="x231b50853c37d3ed0933b8ba7479f0e4-ppgh69" data-id="7:3571-f06fdf47-773f-4039-998d-5e68adbce601"></div></div></div><div class="item-Qd9TPq" data-id="7:3572"><div class="link-0tKnHj" data-id="7:3573"><div class="d68d15075519a4dfcfc8ffd9385d7bb9-jTYJVf" data-id="7:3574-85ea0b62-21e2-4b6e-bac6-f8be1e0d2548"></div></div></div><div class="item-lpf9U8" data-id="7:3575"><div class="link-Mb1CdI" data-id="7:3576"><div class="ea38821fb0e2ec640bcd4f21000de105-XnuX1N" data-id="7:3577-cd5cc8cf-24ba-480b-8ec3-67b2717e3b9c"></div></div></div><div class="item-HJNqe4" data-id="7:3578"><div class="link-Jk38dY" data-id="7:3579"><div class="ef22f26ccc342ad4dea14cc383299d64-XSeGxi" data-id="7:3580-29b36792-fb2b-470a-ae4b-3b6cc2a97916"></div></div></div><div class="item-foIS2y" data-id="7:3581"><div class="link-xVIWGD" data-id="7:3582"><div class="b228c4523a9d1261e4606e9bf3a4882f-tEYwhr" data-id="7:3583-c5bbc21a-5eba-4383-9838-d2d493059d5b"></div></div></div><div class="item-xiN1DF" data-id="7:3584"><div class="link-0Kmx7L" data-id="7:3585"><div class="x41e4c83bae13f67b9898c7579dd53d05-5roBVp" data-id="7:3586-c91c4071-0a57-4097-9b50-1a70a9684a81"></div></div></div></div><div class="pengiriman-affzha valign-text-middle roboto-bold-black-12px" data-id="7:3587">Pengiriman</div><div class="list-dSlYoh list" data-id="7:3588"><div class="item-zroESh" data-id="7:3589"><div class="link-4xpoKm" data-id="7:3590"><div class="id-50009109-0c5dd568-mRDQqU" data-id="7:3591-e39199c8-eac0-4e8d-9aff-5d487c1722af"></div></div></div><div class="item-KS1rxn" data-id="7:3592"><div class="link-i3PIiE" data-id="7:3593"><div class="x982216a49044ce4636f861333bfdac5c-djGUe7" data-id="7:3594-cef299f7-e055-418f-8e78-ff2824cfa339"></div></div></div><div class="item-E0pbX2" data-id="7:3595"><div class="link-nVugxW" data-id="7:3596"><div class="x5ecc185311ec587945838b507140ee21-WIEmMO" data-id="7:3597-667eeb35-bc4c-4274-b127-62ea34b176a8"></div></div></div><div class="item-pUWeRv" data-id="7:3598"><div class="link-15CK1p" data-id="7:3599"><div class="x5c07836b22c5689d56cb217c88171785-mwUdI0" data-id="7:3600-14037dc6-4939-4773-a749-69ea8b356ae2"></div></div></div><div class="item-zan3mX" data-id="7:3601"><div class="link-Q0gAHF" data-id="7:3602"><div class="fe439088405f5b71199c3f6117932462-VDn4hq" data-id="7:3603-de90da7f-8bcf-4230-bfcb-2795ca982c88"></div></div></div><div class="item-u9kJA5" data-id="7:3604"><div class="link-jbXwpD" data-id="7:3605"><div class="x9f4d96722647cf501edf21c958294568-pipUbg" data-id="7:3606-0eeace62-710b-4c61-88b1-9356d22c5a20"></div></div></div><div class="item-Xq8h9D" data-id="7:3607"><div class="link-Y1Bl4x" data-id="7:3608"><div class="c2abc2de79484198bfc3fc3efd4ea049-2c4SF0" data-id="7:3609-30ded0eb-1b2b-4c57-a389-d12bec375284"></div></div></div><div class="item-KRwad2" data-id="7:3610"><div class="link-qr8U4v" data-id="7:3611"><div class="x5653e7f0ca1361ddddb5b545ab675bc2-igAGtY" data-id="7:3612-70fc7519-52df-4a26-89c2-d258ee5a568f"></div></div></div><div class="item-E6mq39" data-id="7:3613"><div class="link-sHfnbl" data-id="7:3614"><div class="ed038a4fcd786fb2d6ef7b70a7a9a1b1-Ixs6O0" data-id="7:3615-d3f48c02-6542-40dc-ab54-8fdfb13cf05b"></div></div></div><div class="item-ZAzQxs" data-id="7:3616"><div class="link-HjJKq5" data-id="7:3617"><div class="x8810ac4e4cffb855d280503c6eb33ed4-r7eRQj" data-id="7:3618-5ce3a595-c84c-4e62-9d1e-f84f566d1af4"></div></div></div><div class="item-51SB6x" data-id="7:3619"><div class="link-0VZuHE" data-id="7:3620"><div class="x5c023bfb427d9546a8055f3b76d91560-6puZxl" data-id="7:3621-078c9e29-e18f-49c0-b9db-d0c666d79c15"></div></div></div><div class="item-YKjC8d" data-id="7:3622"><div class="link-KlOSXd" data-id="7:3623"><div class="x5e350fcf94101432052945e2931fa621-XlplZ5" data-id="7:3624-a17797c0-b6d6-449c-8fbe-3deadea76890"></div></div></div><div class="item-ux84yv" data-id="7:3625"><div class="link-205dEo" data-id="7:3626"><div class="x47d94f9fb90cc7e374549620be687494-idX6V4" data-id="7:3627-a6e08224-17fc-41ef-b1b4-e7588b7f1af0"></div></div></div><div class="item-g0VRia" data-id="7:3628"><div class="link-zUXVup" data-id="7:3629"><div class="b20bd74ad72a92f1d22dc80e18ae2836-eOBfCr" data-id="7:3630-81627b09-f165-46d0-b718-bde357619b3e"></div></div></div><div class="item-Xtpkts" data-id="7:3631"><div class="link-T3jGN9" data-id="7:3632"><div class="fedcba5bb6bc183e31766f032fd49a00-NwxjSc" data-id="7:3633-1146dede-b0ec-4d66-9c56-3259028cab03"></div></div></div></div><div class="ikuti-kami-affzha valign-text-middle roboto-bold-black-12px" data-id="7:3634">Ikuti Kami</div><div class="list-Hq19q5 list" data-id="7:3635"><div class="item-link-DF2lRM item-link" data-id="7:3636"><div class="x622550fb2ffb8ddf3913538801bc4c05-eadF5U" data-id="7:3637-d54c4d47-1c39-41c4-9197-bdb08f3f91f7"></div><div class="container-eadF5U" data-id="7:3638"><div class="facebook-hdveJp valign-text-middle roboto-normal-black-12px" data-id="7:3639">Facebook</div></div></div><div class="item-link-B9yQew item-link" data-id="7:3640"><div class="ec4d29967019ea44642daa53a40ff89c-zvTagT" data-id="7:3641-771991f8-a988-445b-bbd1-74afb07a3cae"></div><div class="container-zvTagT" data-id="7:3642"><div class="instagram-42sZPM valign-text-middle roboto-normal-black-12px" data-id="7:3643">Instagram</div></div></div><div class="item-link-4jt0TB item-link" data-id="7:3644"><div class="x2bf3f4d1e10c63d4df16cf4090ded0a5-rmcB4W" data-id="7:3645-7e66da39-953f-4144-9651-103443c28d92"></div><div class="container-rmcB4W" data-id="7:3646"><div class="twitter-axfdYx valign-text-middle roboto-normal-black-12px" data-id="7:3647">Twitter</div></div></div><div class="item-link-v8mgje item-link" data-id="7:3648"><div class="x32530e4a6641210fbbfdaf95f507aa1e-yR4GSP" data-id="7:3649-927f2c62-c5bf-4662-b7a6-d4178cfbe459"></div><div class="container-yR4GSP" data-id="7:3650"><div class="linked-in-X3Ipjx valign-text-middle roboto-normal-black-12px" data-id="7:3651">LinkedIn</div></div></div><div class="item-link-hEbF4a item-link" data-id="7:3652"><div class="a4c827473f54e4a6ae4550a14ea92653-QwQTQF" data-id="7:3653-ac7e38fd-1634-40cd-ade0-2d1453916101"></div><div class="container-QwQTQF" data-id="7:3654"><div class="kampus-shopee-YYtsuR valign-text-middle roboto-normal-black-12px" data-id="7:3655">Kampus Shopee</div></div></div></div><div class="keamanan-affzha valign-text-middle roboto-bold-black-12px" data-id="7:3656">Keamanan</div><div class="list-item-affzha" data-id="7:3657"><div class="link-aUIIfK" data-id="7:3658"><div class="id-11134258-7rasi-m1mj559k2yly05-bL1tCx" data-id="7:3659-b19812f5-ec27-4d38-940c-6238edd26939"></div></div></div><div class="download-aplikasi-shopee-affzha valign-text-middle roboto-bold-black-12px" data-id="7:3660">Download Aplikasi Shopee</div><div class="container-affzha" data-id="7:3661"><div class="link-90VwvU" data-id="7:3662"><div class="bed0af4663f887db16a7047185478dcf-0wvwjW" data-id="7:3663-111f8e03-45a5-4f3f-962a-eb3e61b4e2a8"></div></div><div class="link-e4Zi7b" data-id="7:3664"><div class="bbf28a2328ec8c7f57b9cc2069d693fd-y85rxa" data-id="7:3665-b43bd6b0-9ea9-41ed-8228-033d251bfbd8"></div></div><div class="link-Hx5pSh" data-id="7:3666"><div class="x1858a153798406c87945f15a38bf4874-GvR78S" data-id="7:3667-89ab0dc2-8d1d-4032-a94a-de6c0b50ffb5"></div></div><div class="link-WwXVbt" data-id="7:3668"><div class="x0e74339f5da500baaaa52785f175bc6d-vXj0oY" data-id="7:3669-e2dea566-970d-4e48-a6a6-505eb63c7827"></div></div></div></div><div class="horizontal-border-Crf1Bb horizontal-border" data-id="7:3670"><p class="shopee-2024-hak-cipta-dilindungi-kXy0x6 valign-text-middle roboto-normal-black-14px" data-id="7:3671">© Shopee 2024. Hak Cipta Dilindungi</p><div class="negara-kXy0x6 valign-text-middle roboto-normal-black-14px" data-id="7:3672">Negara:</div><div class="vertical-border-kXy0x6 vertical-border" data-id="7:3673"><div class="link-ovg2hy" data-id="7:3674"><div class="singapura-3dEsCN valign-text-middle roboto-normal-black-14px" data-id="7:3675">Singapura</div></div></div><div class="vertical-border-7tLDSH vertical-border" data-id="7:3676"><div class="link-H6hVjy" data-id="7:3677"><div class="indonesia-TTsQPx valign-text-middle roboto-normal-black-14px" data-id="7:3678">Indonesia</div></div></div><div class="vertical-border-iEYCOR vertical-border" data-id="7:3679"><div class="link-RD7RCw" data-id="7:3680"><div class="thailand-RGoHVE valign-text-middle roboto-normal-black-14px" data-id="7:3681">Thailand</div></div></div><div class="vertical-border-y2mslR vertical-border" data-id="7:3682"><div class="link-xSwdZb" data-id="7:3683"><div class="malaysia-XAzPtx valign-text-middle roboto-normal-black-14px" data-id="7:3684">Malaysia</div></div></div><div class="vertical-border-jzduWl vertical-border" data-id="7:3685"><div class="link-yMlvYu" data-id="7:3686"><div class="vietnam-yI67aA valign-text-middle roboto-normal-black-14px" data-id="7:3687">Vietnam</div></div></div><div class="vertical-border-rebVOQ vertical-border" data-id="7:3688"><div class="link-OM7LOV" data-id="7:3689"><div class="filipina-0gAHcS valign-text-middle roboto-normal-black-14px" data-id="7:3690">Filipina</div></div></div><div class="vertical-border-x3BBxr vertical-border" data-id="7:3691"><div class="link-7rFuoC" data-id="7:3692"><div class="brazil-Flc2t7 valign-text-middle roboto-normal-black-14px" data-id="7:3693">Brazil</div></div></div><div class="vertical-border-bj78Uz vertical-border" data-id="7:3694"><div class="link-fzx7kl" data-id="7:3695"><div class="mxico-l5xxTq valign-text-middle roboto-normal-black-14px" data-id="7:3696">México</div></div></div><div class="vertical-border-NswZA5 vertical-border" data-id="7:3697"><div class="link-QZCgK9" data-id="7:3698"><div class="colombia-IKiGhP valign-text-middle roboto-normal-black-14px" data-id="7:3699">Colombia</div></div></div><div class="vertical-border-mCbqXj vertical-border" data-id="7:3700"><div class="link-x2CBWx" data-id="7:3701"><div class="chile-GXBT7w valign-text-middle roboto-normal-black-14px" data-id="7:3702">Chile</div></div></div><div class="link-kXy0x6" data-id="7:3703"><div class="taiwan-nnxJ4v valign-text-middle roboto-normal-black-14px" data-id="7:3704">Taiwan</div></div></div></div></footer></div><div class="container-aVb0a3" data-id="7:3706"><div class="background-shadow-UDIg9m" data-id="7:3707"><img class="svg-wwUcnr svg" data-id="7:3708" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/svg-6.svg" alt="SVG"><img class="svg-mz2QBR svg" data-id="7:3710" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/svg-7.svg" alt="SVG"><div class="background-border-wwUcnr" data-id="7:3712"><div class="x52-fdwWRE valign-text-middle" data-id="7:3713">52</div></div></div></div></div></div><script src="launchpad-js/launchpad-banner.js" async></script><script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script></body></html>

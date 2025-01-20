@@ -1,0 +1,5262 @@
+<!DOCTYPE html>
+
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+07/01/2025 14:41:10 -->
+
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=1349, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script id="anima-load-script" src="load.js"></script><script id="anima-hotspots-script" src="hotspots.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700,500");
+
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/677a64e69ae9b2ea74a01a30.677a64e69ae9b2ea74a01a33.GtH04qf.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --black: #000000;
+  --black-2: #000000a6;
+  --black-3: #0000008a;
+  --black-4: #000000de;
+  --black-5: #00000017;
+  --black-6: #00000033;
+  --black-7: #000000cc;
+  --cultured-pearl: #f5f5f5;
+  --flamingo: #ee4d2d;
+  --fuscous-gray: #555555;
+  --white: #ffffff;
+  --white-2: #ffffffe6;
+ 
+  --font-size-l: 13px;
+  --font-size-m: 12px;
+  --font-size-xl: 14px;
+  --font-size-xxl: 16px;
+  --font-size-xxxl: 24px;
+  --font-size-xxxxl: 28px;
+ 
+  --font-family-roboto: "Roboto", Helvetica;
+}
+.roboto-light-white-12px {
+  color: var(--white-2);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 300;
+}
+
+.roboto-normal-black-12px {
+  color: var(--black-2);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roboto-normal-black-14px {
+  color: var(--black-3);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roboto-bold-black-12px {
+  color: var(--black-4);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.roboto-light-white-13px {
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 300;
+}
+
+.roboto-normal-black-16px {
+  color: var(--black-7);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roboto-normal-flamingo-14px {
+  color: var(--flamingo);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roboto-medium-black-14px {
+  color: var(--black-4);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 500;
+}
+
+:root {
+}
+
+
+/* screen - halaman-pesanan-terbatalkan-user */
+
+.halaman-pesanan-terbatalkan-user {
+  background-color: var(--cultured-pearl);
+  height: 1273px;
+  overflow-x: hidden;
+  position: relative;
+  width: 1349px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-CUNU7L {
+  background-color: transparent;
+  height: 1285px;
+  left: 0px;
+  position: absolute;
+  top: -12px;
+  width: 1349px;
+}
+
+.halaman-pesanan-terbatalkan-user .header-wLY1h5 {
+  background: linear-gradient(180deg, rgb(245.00000059604645, 61.00000016391277, 45.00000111758709) 0%, rgb(255, 102.00000151991844, 51.00000075995922) 100%);
+  background-color: transparent;
+  height: 119px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1349px;
+}
+
+.halaman-pesanan-terbatalkan-user .overlay-shadow-ZHXxd6 {
+  height: 85px;
+  position: absolute;
+  top: 34px;
+  width: 1349px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-kNKl0o {
+  background-color: transparent;
+  height: 59px;
+  left: 74px;
+  position: absolute;
+  top: 13px;
+  width: 202px;
+}
+
+.halaman-pesanan-terbatalkan-user .search-kNKl0o {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 2px 4px #00000017;
+  height: 40px;
+  left: 276px;
+  position: absolute;
+  top: 16px;
+  width: 840px;
+}
+
+.halaman-pesanan-terbatalkan-user .background-NO4bZC {
+  background-color: var(--white);
+  height: 34px;
+  left: 3px;
+  position: absolute;
+  top: 3px;
+  width: 774px;
+}
+
+.halaman-pesanan-terbatalkan-user .combobox-klaim-potongan-langsung-1-jt-u6dVZm {
+  background-color: var(--white);
+  height: 34px;
+  left: 10px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 754px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-mnqPkx {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 8px;
+  width: 754px;
+}
+
+.halaman-pesanan-terbatalkan-user .klaim-potongan-langsung-1-jt-pJWNxP {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  width: 201px;
+}
+
+.halaman-pesanan-terbatalkan-user .button-NO4bZC {
+  background-color: transparent;
+  height: 34px;
+  left: 777px;
+  position: absolute;
+  top: 3px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-cD1IWp {
+  background-color: transparent;
+  height: 14px;
+  left: 276px;
+  position: absolute;
+  top: 64px;
+  width: 152px;
+}
+
+.halaman-pesanan-terbatalkan-user .sepatu-giannis-immortality-3-Ds7dxs {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 153px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-zDh7qA {
+  background-color: transparent;
+  height: 14px;
+  left: 442px;
+  position: absolute;
+  top: 64px;
+  width: 114px;
+}
+
+.halaman-pesanan-terbatalkan-user .hoodie-tanpa-lengan-AzqhsN {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 115px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-jP4FOV {
+  background-color: transparent;
+  height: 14px;
+  left: 569px;
+  position: absolute;
+  top: 64px;
+  width: 86px;
+}
+
+.halaman-pesanan-terbatalkan-user .kemeja-sutra-es-Dm1BiO {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 86px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-vxIAk4 {
+  background-color: transparent;
+  height: 14px;
+  left: 668px;
+  position: absolute;
+  top: 64px;
+  width: 58px;
+}
+
+.halaman-pesanan-terbatalkan-user .fukustudio-KTMCqp {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 59px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-sILFLm {
+  background-color: transparent;
+  height: 14px;
+  left: 740px;
+  position: absolute;
+  top: 64px;
+  width: 97px;
+}
+
+.halaman-pesanan-terbatalkan-user .celana-winter-pria-ZpCtcw {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 97px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-AxCKFv {
+  background-color: transparent;
+  height: 14px;
+  left: 849px;
+  position: absolute;
+  top: 64px;
+  width: 96px;
+}
+
+.halaman-pesanan-terbatalkan-user .sweater-rajut-pria-t1weXK {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 97px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-KoESGT {
+  background-color: transparent;
+  height: 14px;
+  left: 959px;
+  position: absolute;
+  top: 64px;
+  width: 112px;
+}
+
+.halaman-pesanan-terbatalkan-user .giannis-immortality-3-vvJRid {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 113px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-mW05Ah {
+  background-color: transparent;
+  height: 14px;
+  left: 290px;
+  position: absolute;
+  top: 88px;
+  width: 33px;
+}
+
+.halaman-pesanan-terbatalkan-user .sndwr-7JM4kq {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 34px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-ynaVgI {
+  background-color: transparent;
+  height: 14px;
+  left: 336px;
+  position: absolute;
+  top: 88px;
+  width: 48px;
+}
+
+.halaman-pesanan-terbatalkan-user .coat-pria-FzwGKm {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 49px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-XUsQsj {
+  background-color: transparent;
+  height: 14px;
+  left: 397px;
+  position: absolute;
+  top: 88px;
+  width: 116px;
+}
+
+.halaman-pesanan-terbatalkan-user .kaos-kaki-skate-tebal-5vDVqT {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 116px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-CSXRNP {
+  background-color: transparent;
+  height: 14px;
+  left: 526px;
+  position: absolute;
+  top: 88px;
+  width: 79px;
+}
+
+.halaman-pesanan-terbatalkan-user .celana-berserk-vimqvK {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 79px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-DbRNWz {
+  background-color: transparent;
+  height: 14px;
+  left: 618px;
+  position: absolute;
+  top: 88px;
+  width: 97px;
+}
+
+.halaman-pesanan-terbatalkan-user .kemeja-flanel-pria-oEdzHp {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 98px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-22I2u9 {
+  background-color: transparent;
+  height: 14px;
+  left: 728px;
+  position: absolute;
+  top: 88px;
+  width: 82px;
+}
+
+.halaman-pesanan-terbatalkan-user .polo-old-money-vDHFyx {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 83px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-0JTX7P {
+  background-color: transparent;
+  height: 14px;
+  left: 824px;
+  position: absolute;
+  top: 88px;
+  width: 80px;
+}
+
+.halaman-pesanan-terbatalkan-user .uniqlo-dry-ex-biiQVN {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 80px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-Ox9EAH {
+  background-color: transparent;
+  height: 14px;
+  left: 916px;
+  position: absolute;
+  top: 88px;
+  width: 112px;
+}
+
+.halaman-pesanan-terbatalkan-user .celana-pendek-puma-Oex9mz {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 112px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-iMXJah {
+  background-color: transparent;
+  height: 14px;
+  left: 290px;
+  position: absolute;
+  top: 112px;
+  width: 103px;
+}
+
+.halaman-pesanan-terbatalkan-user .cable-knit-cardigan-53YqSa {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 104px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-oHWo5c {
+  background-color: transparent;
+  height: 14px;
+  left: 406px;
+  position: absolute;
+  top: 112px;
+  width: 105px;
+}
+
+.halaman-pesanan-terbatalkan-user .trousers-pria-loose-c4pdVO {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 105px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-vxkygy {
+  background-color: transparent;
+  height: 14px;
+  left: 524px;
+  position: absolute;
+  top: 112px;
+  width: 98px;
+}
+
+.halaman-pesanan-terbatalkan-user .compression-shirt-I6N5uV {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 98px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-rZ3vsR {
+  background-color: transparent;
+  height: 14px;
+  left: 634px;
+  position: absolute;
+  top: 112px;
+  width: 119px;
+}
+
+.halaman-pesanan-terbatalkan-user .korean-style-pria-1-set-YFKxCk {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 119px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-xcXtuw {
+  background-color: transparent;
+  height: 14px;
+  left: 766px;
+  position: absolute;
+  top: 112px;
+  width: 59px;
+}
+
+.halaman-pesanan-terbatalkan-user .jaket-polar-aDJXro {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 59px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-4XYghV {
+  background-color: transparent;
+  height: 14px;
+  left: 838px;
+  position: absolute;
+  top: 112px;
+  width: 41px;
+}
+
+.halaman-pesanan-terbatalkan-user .half-zip-AXdO2a {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 41px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-4C2vXO {
+  background-color: transparent;
+  height: 14px;
+  left: 892px;
+  position: absolute;
+  top: 112px;
+  width: 142px;
+}
+
+.halaman-pesanan-terbatalkan-user .celana-basket-lakers-putih-46vI9L {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 143px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-BcP09T {
+  background-color: transparent;
+  height: 14px;
+  left: 1048px;
+  position: absolute;
+  top: 112px;
+  width: 38px;
+}
+
+.halaman-pesanan-terbatalkan-user .balvein-yxUw5a {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 38px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-CzSJlf {
+  background-color: transparent;
+  height: 14px;
+  left: 290px;
+  position: absolute;
+  top: 136px;
+  width: 93px;
+}
+
+.halaman-pesanan-terbatalkan-user .linen-ankle-pants-dx5DJC {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 94px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-zzouhx {
+  background-color: transparent;
+  height: 14px;
+  left: 396px;
+  position: absolute;
+  top: 136px;
+  width: 71px;
+}
+
+.halaman-pesanan-terbatalkan-user .crop-top-pria-UMfs2Z {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 71px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-xel0kK {
+  background-color: transparent;
+  height: 14px;
+  left: 480px;
+  position: absolute;
+  top: 136px;
+  width: 101px;
+}
+
+.halaman-pesanan-terbatalkan-user .kevas-official-shop-DnGUPh {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 101px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-PWlwy5 {
+  background-color: transparent;
+  height: 14px;
+  left: 594px;
+  position: absolute;
+  top: 136px;
+  width: 141px;
+}
+
+.halaman-pesanan-terbatalkan-user .lifebuoy-body-wash-pump-PuQeE7 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 141px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-3cDaiH {
+  background-color: transparent;
+  height: 14px;
+  left: 747px;
+  position: absolute;
+  top: 136px;
+  width: 115px;
+}
+
+.halaman-pesanan-terbatalkan-user .knitted-polo-shirt-pria-hXEdJb {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 115px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-4AJ6Kp {
+  background-color: transparent;
+  height: 14px;
+  left: 875px;
+  position: absolute;
+  top: 136px;
+  width: 171px;
+}
+
+.halaman-pesanan-terbatalkan-user .kaos-kaki-compass-x-boy-pablo-lHvJ14 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 172px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-xeVOG4 {
+  background-color: transparent;
+  height: 14px;
+  left: 290px;
+  position: absolute;
+  top: 160px;
+  width: 84px;
+}
+
+.halaman-pesanan-terbatalkan-user .tas-basket-nike-cbuI25 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 84px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-r7PpKq {
+  background-color: transparent;
+  height: 14px;
+  left: 386px;
+  position: absolute;
+  top: 160px;
+  width: 90px;
+}
+
+.halaman-pesanan-terbatalkan-user .baggy-jeans-y2k-uLccsT {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 91px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-E9xxkz {
+  background-color: transparent;
+  height: 14px;
+  left: 489px;
+  position: absolute;
+  top: 160px;
+  width: 36px;
+}
+
+.halaman-pesanan-terbatalkan-user .sandal-KJ08t1 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 36px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-qLE2xi {
+  background-color: transparent;
+  height: 14px;
+  left: 538px;
+  position: absolute;
+  top: 160px;
+  width: 91px;
+}
+
+.halaman-pesanan-terbatalkan-user .new-balance-793-WxjYVC {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 92px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-Hl0Yxa {
+  background-color: transparent;
+  height: 14px;
+  left: 643px;
+  position: absolute;
+  top: 160px;
+  width: 84px;
+}
+
+.halaman-pesanan-terbatalkan-user .nike-blazer-low-h3exKH {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 84px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-zN8xzx {
+  background-color: transparent;
+  height: 14px;
+  left: 739px;
+  position: absolute;
+  top: 160px;
+  width: 125px;
+}
+
+.halaman-pesanan-terbatalkan-user .kemeja-pria-style-korea-FyECRP {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 126px;
+}
+
+.halaman-pesanan-terbatalkan-user .button-link-kNKl0o {
+  background-color: transparent;
+  height: 26px;
+  left: 1172px;
+  position: absolute;
+  top: 30px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .svg-xggsLF {
+  height: 26px;
+  left: 0px;
+  top: 0px;
+  width: 26px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-xggsLF {
+  background-color: transparent;
+  height: 1px;
+  left: -9999px;
+  overflow: hidden;
+  position: absolute;
+  top: 12px;
+  width: 1px;
+}
+
+.halaman-pesanan-terbatalkan-user .shopping-G1SgAo {
+  background-color: transparent;
+  color: #0000ee;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 59px;
+}
+
+.halaman-pesanan-terbatalkan-user .background-border-xggsLF {
+  background-color: var(--white);
+  border: 2px solid;
+  border-color: var(--flamingo);
+  border-radius: 44px;
+  height: 20px;
+  left: 16px;
+  position: absolute;
+  top: -8px;
+  width: 30px;
+}
+
+.halaman-pesanan-terbatalkan-user .x14-7UZNAc {
+  background-color: transparent;
+  height: 17px;
+  left: 7px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: center;
+  top: -1px;
+  white-space: nowrap;
+  width: 16px;
+}
+
+.halaman-pesanan-terbatalkan-user .nav-ZHXxd6 {
+  background-color: transparent;
+  height: 34px;
+  left: 74px;
+  position: absolute;
+  top: 0px;
+  width: 1200px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-hwTwF3 {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  position: absolute;
+  top: 5px;
+  width: 80px;
+}
+
+.halaman-pesanan-terbatalkan-user .seller-centre-V08daI {
+  height: 15px;
+  left: 4px;
+  line-height: 15.6px;
+  top: 3px;
+  width: 72px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-xzKIyQ {
+  background-color: transparent;
+  height: 24px;
+  left: 90px;
+  position: absolute;
+  top: 5px;
+  width: 65px;
+}
+
+.halaman-pesanan-terbatalkan-user .download-4ZK5K6 {
+  background-color: transparent;
+  height: 15px;
+  left: 4px;
+  letter-spacing: 0.00px;
+  line-height: 15.6px;
+  position: absolute;
+  text-align: left;
+  top: 3px;
+  white-space: nowrap;
+  width: 58px;
+}
+
+.halaman-pesanan-terbatalkan-user .vertical-divider-hwTwF3 {
+  left: 84px;
+}
+
+.halaman-pesanan-terbatalkan-user .ikuti-kami-di-hwTwF3 {
+  background-color: transparent;
+  height: 15px;
+  left: 169px;
+  letter-spacing: 0.00px;
+  line-height: 15.6px;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  white-space: nowrap;
+  width: 69px;
+}
+
+.halaman-pesanan-terbatalkan-user .vertical-divider-xzKIyQ {
+  left: 159px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-hwTwF3 {
+  background-color: transparent;
+  height: 24px;
+  left: 237px;
+  position: absolute;
+  top: 5px;
+  width: 82px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-pbwExw {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a66cb73ec47be6234d00d/img/link@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  top: 4px;
+  width: 16px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-I5ezAZ {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a66cb73ec47be6234d00d/img/link@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 30px;
+  overflow: hidden;
+  position: absolute;
+  top: 4px;
+  width: 16px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-sgeAAo {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a66cb73ec47be6234d00d/img/link@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 56px;
+  overflow: hidden;
+  position: absolute;
+  top: 4px;
+  width: 16px;
+}
+
+.halaman-pesanan-terbatalkan-user .list-hwTwF3 {
+  height: 34px;
+  left: 787px;
+  top: 0px;
+  width: 413px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-ZX2PFA {
+  background-color: transparent;
+  height: 30px;
+  left: 0px;
+  position: absolute;
+  top: 2px;
+  width: 72px;
+}
+
+.halaman-pesanan-terbatalkan-user .button-link-NBRmER {
+  background-color: transparent;
+  height: 30px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 72px;
+}
+
+.halaman-pesanan-terbatalkan-user .notifikasi-0FqdZA {
+  height: 15px;
+  left: 19px;
+  line-height: 15.6px;
+  top: 6px;
+  width: 54px;
+}
+
+.halaman-pesanan-terbatalkan-user .svg-0FqdZA {
+  height: 18px;
+  left: 0px;
+  top: 6px;
+  width: 14px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-ZX2PFA {
+  background-color: transparent;
+  height: 18px;
+  left: 72px;
+  position: absolute;
+  top: 8px;
+  width: 88px;
+}
+
+.halaman-pesanan-terbatalkan-user .svg-yCaHwL {
+  height: 18px;
+  left: 8px;
+  top: 0px;
+  width: 18px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-yCaHwL {
+  background-color: transparent;
+  height: 16px;
+  left: 31px;
+  position: absolute;
+  top: 1px;
+  width: 48px;
+}
+
+.halaman-pesanan-terbatalkan-user .bantuan-FAtRPG {
+  height: 15px;
+  line-height: 15.6px;
+  width: 48px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-FMgSvT {
+  background-color: transparent;
+  height: 30px;
+  left: 161px;
+  position: absolute;
+  top: 2px;
+  width: 159px;
+}
+
+.halaman-pesanan-terbatalkan-user .button-U31pnc {
+  background-color: transparent;
+  height: 30px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 159px;
+}
+
+.halaman-pesanan-terbatalkan-user .svg-VkCosB {
+  height: 16px;
+  left: 10px;
+  top: 7px;
+  width: 16px;
+}
+
+.halaman-pesanan-terbatalkan-user .bahasa-indonesia-VkCosB {
+  background-color: transparent;
+  height: 15px;
+  left: 31px;
+  letter-spacing: 0.00px;
+  line-height: 15.6px;
+  position: absolute;
+  text-align: left;
+  top: 6px;
+  white-space: nowrap;
+  width: 102px;
+}
+
+.halaman-pesanan-terbatalkan-user .svg-drm4GM {
+  height: 12px;
+  left: 137px;
+  top: 9px;
+  width: 12px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-EKGVHz {
+  background-color: transparent;
+  height: 32px;
+  left: 320px;
+  position: absolute;
+  top: 1px;
+  width: 93px;
+}
+
+.halaman-pesanan-terbatalkan-user .button-3mTjlH {
+  background-color: transparent;
+  height: 32px;
+  left: 10px;
+  position: relative;
+  top: 0px;
+  width: 73px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-HQwTzT {
+  background-color: transparent;
+  height: 17px;
+  left: 22px;
+  overflow: hidden;
+  position: absolute;
+  top: 8px;
+  width: 51px;
+}
+
+.halaman-pesanan-terbatalkan-user .user-omyxKq {
+  color: var(--white);
+  font-weight: 400;
+  left: 5px;
+  width: 46px;
+}
+
+.halaman-pesanan-terbatalkan-user .border-HQwTzT {
+  height: 22px;
+  left: 0px;
+  top: 5px;
+  width: 22px;
+}
+
+.halaman-pesanan-terbatalkan-user .horizontal-border-wLY1h5 {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: #efefef;
+  border-top-style: none;
+  height: 81px;
+  top: 139px;
+  width: 180px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-v4wXF9 {
+  background-color: transparent;
+  height: 50px;
+  left: 0px;
+  position: absolute;
+  top: 15px;
+  width: 50px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-v4wXF9 {
+  background-color: transparent;
+  height: 50px;
+  left: 50px;
+  overflow: hidden;
+  position: absolute;
+  top: 15px;
+  width: 130px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-Yxuuq1 {
+  background-color: transparent;
+  height: 17px;
+  left: 15px;
+  overflow: hidden;
+  position: absolute;
+  top: 6px;
+  width: 115px;
+}
+
+.halaman-pesanan-terbatalkan-user .user-n1nWBr {
+  color: #333333;
+  font-weight: 700;
+  left: 0px;
+  width: 48px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-Yxuuq1 {
+  background-color: transparent;
+  height: 17px;
+  left: 15px;
+  position: absolute;
+  top: 26px;
+  width: 84px;
+}
+
+.halaman-pesanan-terbatalkan-user .svg-4twfZa {
+  height: 12px;
+  left: 0px;
+  top: 1px;
+  width: 12px;
+}
+
+.halaman-pesanan-terbatalkan-user .ubah-profil-4twfZa {
+  background-color: transparent;
+  color: #888888;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 69px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-wLY1h5 {
+  background-color: transparent;
+  height: 20px;
+  left: 74px;
+  position: absolute;
+  top: 247px;
+  width: 180px;
+}
+
+.halaman-pesanan-terbatalkan-user .ba61750a46794d8847c3f463c5e71cc4-zp1axZ {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677c6a151562d3e0f08b30b8/img/ba61750a46794d8847c3f463c5e71cc4@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 20px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 20px;
+}
+
+.halaman-pesanan-terbatalkan-user .akun-saya-zp1axZ {
+  background-color: transparent;
+  height: 17px;
+  left: 30px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 66px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-7EBAV9 {
+  background-color: transparent;
+  height: 20px;
+  left: 74px;
+  position: absolute;
+  top: 282px;
+  width: 180px;
+}
+
+.halaman-pesanan-terbatalkan-user .f0049e9df4e536bc3e7f140d071e9078-RAYb9H {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677c6a151562d3e0f08b30b8/img/f0049e9df4e536bc3e7f140d071e9078@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 20px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 20px;
+}
+
+.halaman-pesanan-terbatalkan-user .pesanan-saya-RAYb9H {
+  background-color: transparent;
+  color: var(--flamingo);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 500;
+  height: 17px;
+  left: 30px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-ZQ3uq6 {
+  background-color: transparent;
+  height: 20px;
+  left: 74px;
+  position: absolute;
+  top: 320px;
+  width: 180px;
+}
+
+.halaman-pesanan-terbatalkan-user .e10a43b53ec8605f4829da5618e0717c-ICm2x6 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677c6a151562d3e0f08b30b8/img/e10a43b53ec8605f4829da5618e0717c@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 20px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 20px;
+}
+
+.halaman-pesanan-terbatalkan-user .notifikasi-ICm2x6 {
+  height: 17px;
+  left: 30px;
+  line-height: 16px;
+  top: 0px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-mh7G7V {
+  background-color: transparent;
+  height: 20px;
+  left: 74px;
+  position: absolute;
+  top: 355px;
+  width: 180px;
+}
+
+.halaman-pesanan-terbatalkan-user .x84feaa363ce325071c0a66d3c9a88748-LwC6mO {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677c6a151562d3e0f08b30b8/img/84feaa363ce325071c0a66d3c9a88748@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 20px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 20px;
+}
+
+.halaman-pesanan-terbatalkan-user .voucher-saya-LwC6mO {
+  background-color: transparent;
+  height: 17px;
+  left: 30px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 86px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-wHIEe8 {
+  background-color: transparent;
+  height: 20px;
+  left: 74px;
+  position: absolute;
+  top: 390px;
+  width: 180px;
+}
+
+.halaman-pesanan-terbatalkan-user .a0ef4bd8e16e481b4253bd0eb563f784-eV2AEp {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677c6a151562d3e0f08b30b8/img/a0ef4bd8e16e481b4253bd0eb563f784@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 20px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 20px;
+}
+
+.halaman-pesanan-terbatalkan-user .koin-shopee-saya-eV2AEp {
+  background-color: transparent;
+  height: 17px;
+  left: 30px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 113px;
+}
+
+.halaman-pesanan-terbatalkan-user .background-shadow-wLY1h5 {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 2px #00000021;
+  left: 282px;
+  top: 139px;
+}
+
+.halaman-pesanan-terbatalkan-user .heading-1-KEdByu {
+  background-color: transparent;
+  height: 1px;
+  left: -9999px;
+  overflow: hidden;
+  position: absolute;
+  top: 19px;
+  width: 1px;
+}
+
+.halaman-pesanan-terbatalkan-user .title-ButDcE {
+  background-color: transparent;
+  color: var(--black-7);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 700;
+  height: 34px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 33.6px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 345px;
+}
+
+.halaman-pesanan-terbatalkan-user .background-shadow-KEdByu {
+  background-color: var(--cultured-pearl);
+  box-shadow: 0px 0px 0px 2px #f5f5f5;
+  left: 0px;
+  overflow: hidden;
+  top: 0px;
+}
+
+.halaman-pesanan-terbatalkan-user .main-UEQGRw {
+  background-color: transparent;
+  height: 7711px;
+  left: 0px;
+  position: absolute;
+  top: 65px;
+  width: 993px;
+}
+
+.halaman-pesanan-terbatalkan-user .overlay-shadow-xLdkUM {
+  border-radius: 2px;
+  height: 340px;
+  position: relative;
+  top: 0px;
+  width: 993px;
+}
+
+.halaman-pesanan-terbatalkan-user .background-vgzo6s {
+  background-color: var(--white);
+  height: 197px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 993px;
+}
+
+.halaman-pesanan-terbatalkan-user .section-HD5pyY {
+  background-color: transparent;
+  height: 37px;
+  left: 24px;
+  position: absolute;
+  top: 24px;
+  width: 945px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-jQnOuc {
+  background-color: transparent;
+  height: 17px;
+  left: 72px;
+  overflow: hidden;
+  position: absolute;
+  top: 4px;
+  width: 200px;
+}
+
+.halaman-pesanan-terbatalkan-user .nvr_store20-W4cqlE {
+  background-color: transparent;
+  color: var(--black-7);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 197px;
+}
+
+.halaman-pesanan-terbatalkan-user .button-jQnOuc {
+  background-color: var(--flamingo);
+  border-radius: 2px;
+  height: 25px;
+  left: 280px;
+  position: absolute;
+  top: 0px;
+  width: 59px;
+}
+
+.halaman-pesanan-terbatalkan-user .chat-blGO6f {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: 14px;
+  left: 25px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: center;
+  top: 5px;
+  white-space: nowrap;
+  width: 25px;
+}
+
+.halaman-pesanan-terbatalkan-user .svg-blGO6f {
+  height: 12px;
+  left: 9px;
+  top: 7px;
+  width: 12px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-jQnOuc {
+  background-color: transparent;
+  height: 25px;
+  left: 347px;
+  position: absolute;
+  top: 0px;
+  width: 109px;
+}
+
+.halaman-pesanan-terbatalkan-user .background-border-KhAsv1 {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--black-5);
+  border-radius: 2px;
+  height: 25px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 109px;
+}
+
+.halaman-pesanan-terbatalkan-user .kunjungi-toko-hUYMK1 {
+  background-color: transparent;
+  color: var(--fuscous-gray);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: 14px;
+  left: 25px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 5px;
+  white-space: nowrap;
+  width: 76px;
+}
+
+.halaman-pesanan-terbatalkan-user .svg-hUYMK1 {
+  height: 12px;
+  left: 9px;
+  top: 7px;
+  width: 12px;
+}
+
+.halaman-pesanan-terbatalkan-user .dibatalkan-jQnOuc {
+  height: 24px;
+  left: 863px;
+  line-height: 24px;
+  text-align: right;
+  top: -0px;
+  width: 83px;
+}
+
+.halaman-pesanan-terbatalkan-user .svg-jQnOuc {
+  height: 16px;
+  left: 18px;
+  top: 3px;
+  width: 36px;
+}
+
+.halaman-pesanan-terbatalkan-user .horizontal-divider-HD5pyY {
+  border-bottom-style: solid;
+  left: 24px;
+  top: 61px;
+  width: 945px;
+}
+
+.halaman-pesanan-terbatalkan-user .section-link-HD5pyY {
+  background-color: transparent;
+  height: 123px;
+  left: 24px;
+  position: absolute;
+  top: 62px;
+  width: 945px;
+}
+
+.halaman-pesanan-terbatalkan-user .section-PxM5Pz {
+  background-color: transparent;
+  height: 123px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 945px;
+}
+
+.halaman-pesanan-terbatalkan-user .paragraph-JTy3Xx {
+  background-color: transparent;
+  height: 46px;
+  left: 94px;
+  overflow: hidden;
+  position: absolute;
+  top: 12px;
+  width: 704px;
+}
+
+.halaman-pesanan-terbatalkan-user .kemeja-hitam-pria-le-KcJlvl {
+  background-color: transparent;
+  color: var(--black-4);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+  height: 19px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 1px;
+  white-space: nowrap;
+  width: 700px;
+}
+
+.halaman-pesanan-terbatalkan-user .variasi-hitaml-JTy3Xx {
+  background-color: transparent;
+  height: 17px;
+  left: 94px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 37px;
+  white-space: nowrap;
+  width: 143px;
+}
+
+.halaman-pesanan-terbatalkan-user .x1-JTy3Xx {
+  background-color: transparent;
+  color: var(--black-4);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 94px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 59px;
+  white-space: nowrap;
+  width: 15px;
+}
+
+.halaman-pesanan-terbatalkan-user .border-JTy3Xx {
+  border: 1px solid;
+  border-color: #26aa99;
+  border-radius: 1px;
+  height: 20px;
+  left: 93px;
+  top: 85px;
+  width: 166px;
+}
+
+.halaman-pesanan-terbatalkan-user .garansi-bebas-pengembalian-F5cx9A {
+  background-color: transparent;
+  color: #26aa99;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: 14px;
+  left: 5px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  white-space: nowrap;
+  width: 157px;
+}
+
+.halaman-pesanan-terbatalkan-user .rp141000-JTy3Xx {
+  background-color: transparent;
+  height: 17px;
+  left: 872px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: right;
+  top: 57px;
+  white-space: nowrap;
+  width: 73px;
+}
+
+.halaman-pesanan-terbatalkan-user .picture-id-11134207-JTy3Xx {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677d3d038cd71f5b59923bb3/img/picture---id-11134207-7r98x-lz779oy5ei4lfe-resize-w80-nl-webp@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 82px;
+  left: 3px;
+  overflow: hidden;
+  position: absolute;
+  top: 18px;
+  width: 82px;
+}
+
+.halaman-pesanan-terbatalkan-user .background-SAVONa {
+  background-color: #fffefb;
+  height: 66px;
+  left: 0px;
+  position: absolute;
+  top: 198px;
+  width: 993px;
+}
+
+.halaman-pesanan-terbatalkan-user .label-FnMxdb {
+  background-color: transparent;
+  height: 20px;
+  left: 751px;
+  position: absolute;
+  top: 29px;
+  width: 92px;
+}
+
+.halaman-pesanan-terbatalkan-user .total-pesanan-DknG1t {
+  background-color: transparent;
+  color: var(--black-7);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 93px;
+}
+
+.halaman-pesanan-terbatalkan-user .total-pesanan-rp139700-rp139700-FnMxdb {
+  background-color: transparent;
+  color: var(--flamingo);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 400;
+  height: 30px;
+  left: 854px;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  position: absolute;
+  text-align: left;
+  top: 23px;
+  white-space: nowrap;
+  width: 116px;
+}
+
+.halaman-pesanan-terbatalkan-user .horizontal-divider-vgzo6s {
+  border-bottom-style: dashed;
+  left: 0px;
+  top: 197px;
+  width: 993px;
+}
+
+.halaman-pesanan-terbatalkan-user .background-xyBF28 {
+  background-color: var(--cultured-pearl);
+  border-radius: 3.5px;
+  height: 7px;
+  left: -4px;
+  position: absolute;
+  top: -4px;
+  width: 7px;
+}
+
+.halaman-pesanan-terbatalkan-user .background-GxZJMx {
+  background-color: var(--cultured-pearl);
+  border-radius: 3.5px;
+  height: 7px;
+  left: 990px;
+  position: absolute;
+  top: -4px;
+  width: 7px;
+}
+
+.halaman-pesanan-terbatalkan-user .background-5Z4ni2 {
+  background-color: #fffefb;
+  height: 76px;
+  left: 0px;
+  position: absolute;
+  top: 264px;
+  width: 993px;
+}
+
+.halaman-pesanan-terbatalkan-user .dibatalkan-anda-dibatalkan-anda-Jnlf2Y {
+  background-color: transparent;
+  color: var(--black-3);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: 14px;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 24px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.halaman-pesanan-terbatalkan-user .section-Jnlf2Y {
+  background-color: transparent;
+  height: 40px;
+  left: 411px;
+  position: absolute;
+  top: 12px;
+  width: 558px;
+}
+
+.halaman-pesanan-terbatalkan-user .button-BwgNKH {
+  background-color: var(--flamingo);
+  border: 1px solid;
+  border-color: #cd3011;
+  border-radius: 4px;
+  height: 40px;
+  left: 10px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 150px;
+}
+
+.halaman-pesanan-terbatalkan-user .beli-lagi-9VbMJY {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 49px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: center;
+  top: 10px;
+  white-space: nowrap;
+  width: 53px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-BwgNKH {
+  background-color: transparent;
+  height: 40px;
+  left: 170px;
+  position: absolute;
+  top: 0px;
+  width: 228px;
+}
+
+.halaman-pesanan-terbatalkan-user .button-nFR0uY {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--black-5);
+  border-radius: 4px;
+  height: 40px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 228px;
+}
+
+.halaman-pesanan-terbatalkan-user .tampilkan-rincian-pengembalian-QGomS5 {
+  background-color: transparent;
+  color: var(--fuscous-gray);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 11px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: center;
+  top: 10px;
+  white-space: nowrap;
+  width: 207px;
+}
+
+.halaman-pesanan-terbatalkan-user .button-xx3xXq {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--black-5);
+  border-radius: 4px;
+  height: 40px;
+  left: 408px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 150px;
+}
+
+.halaman-pesanan-terbatalkan-user .hubungi-penjual-Cde7Tj {
+  background-color: transparent;
+  color: var(--fuscous-gray);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: center;
+  top: 10px;
+  white-space: nowrap;
+  width: 102px;
+}
+
+.halaman-pesanan-terbatalkan-user .section-UEQGRw {
+  background-color: var(--white);
+  border-radius: 2px 2px 0px 0px;
+  height: 53px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 993px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-PlW9JM {
+  background-color: var(--white);
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-color: var(--black-5);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  height: 53px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 142px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-VYJZL1 {
+  background-color: transparent;
+  height: 19px;
+  left: 46px;
+  overflow: hidden;
+  position: relative;
+  top: 16px;
+  width: 50px;
+}
+
+.halaman-pesanan-terbatalkan-user .semua-JetnR1 {
+  background-color: transparent;
+  height: 19px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  top: -1px;
+  white-space: nowrap;
+  width: 50px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-LNEZF5 {
+  background-color: var(--white);
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-color: var(--black-5);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  height: 53px;
+  left: 142px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 142px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-gD37qt {
+  background-color: transparent;
+  height: 19px;
+  left: 26px;
+  overflow: hidden;
+  position: relative;
+  top: 16px;
+  width: 89px;
+}
+
+.halaman-pesanan-terbatalkan-user .belum-bayar-D4PbuF {
+  background-color: transparent;
+  height: 19px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  top: -1px;
+  white-space: nowrap;
+  width: 90px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-J0Ow0G {
+  background-color: var(--white);
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-color: var(--black-5);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  height: 53px;
+  left: 284px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 142px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-lKMQIe {
+  background-color: transparent;
+  height: 19px;
+  left: 1px;
+  overflow: hidden;
+  position: absolute;
+  top: 16px;
+  width: 119px;
+}
+
+.halaman-pesanan-terbatalkan-user .sedang-dikemas-BFC1C1 {
+  background-color: transparent;
+  height: 19px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  top: -1px;
+  white-space: nowrap;
+  width: 120px;
+}
+
+.halaman-pesanan-terbatalkan-user .x2-lKMQIe {
+  left: 124px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-UrAjhu {
+  background-color: var(--white);
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-color: var(--black-5);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  height: 53px;
+  left: 426px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 142px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-8Q9N7H {
+  background-color: transparent;
+  height: 19px;
+  left: 35px;
+  overflow: hidden;
+  position: absolute;
+  top: 16px;
+  width: 50px;
+}
+
+.halaman-pesanan-terbatalkan-user .dikirim-tywfQr {
+  background-color: transparent;
+  height: 19px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  top: -1px;
+  white-space: nowrap;
+  width: 50px;
+}
+
+.halaman-pesanan-terbatalkan-user .x2-8Q9N7H {
+  left: 89px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-arS3nj {
+  background-color: var(--white);
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-color: var(--black-5);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  height: 53px;
+  left: 567px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 142px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-kFbWjP {
+  background-color: transparent;
+  height: 19px;
+  left: 45px;
+  overflow: hidden;
+  position: relative;
+  top: 16px;
+  width: 51px;
+}
+
+.halaman-pesanan-terbatalkan-user .selesai-xeJaRa {
+  background-color: transparent;
+  height: 19px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  top: -1px;
+  white-space: nowrap;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-Bbcbcm {
+  background-color: var(--white);
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-color: var(--flamingo);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  height: 53px;
+  left: 709px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 142px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-EF6PMx {
+  background-color: transparent;
+  height: 19px;
+  left: 33px;
+  overflow: hidden;
+  position: relative;
+  top: 16px;
+  width: 76px;
+}
+
+.halaman-pesanan-terbatalkan-user .dibatalkan-kve05u {
+  color: var(--flamingo);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+  height: 19px;
+  left: 0px;
+  line-height: 19px;
+  text-align: center;
+  top: -1px;
+  width: 76px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-xwZqdp {
+  background-color: var(--white);
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-color: var(--black-5);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  height: 53px;
+  left: 851px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 142px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-xLS2tI {
+  background-color: transparent;
+  height: 19px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 16px;
+  width: 142px;
+}
+
+.halaman-pesanan-terbatalkan-user .pengembalian-bar-zAUl0H {
+  background-color: transparent;
+  height: 19px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  top: -1px;
+  white-space: nowrap;
+  width: 140px;
+}
+
+.halaman-pesanan-terbatalkan-user .footer-wLY1h5 {
+  background-color: var(--white);
+  border-bottom-style: none;
+  border-color: var(--flamingo);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: solid;
+  border-top-width: 4px;
+  height: 682px;
+  left: 0px;
+  position: absolute;
+  top: 603px;
+  width: 1349px;
+}
+
+.halaman-pesanan-terbatalkan-user .background-AGdf4W {
+  background-color: #fbfbfb;
+  height: 678px;
+  left: 0px;
+  position: relative;
+  top: 4px;
+  width: 1349px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-IANAs7 {
+  background-color: transparent;
+  height: 579px;
+  left: 70px;
+  position: absolute;
+  top: 0px;
+  width: 1210px;
+}
+
+.halaman-pesanan-terbatalkan-user .layanan-pelanggan-nFyJce {
+  background-color: transparent;
+  height: 14px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 49px;
+  white-space: nowrap;
+  width: 106px;
+}
+
+.halaman-pesanan-terbatalkan-user .list-nFyJce {
+  height: 252px;
+  left: 10px;
+  top: 84px;
+  width: 240px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-link-SFkoTD {
+  height: 14px;
+  top: 0px;
+  width: 44px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-EqDDjG {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 44px;
+}
+
+.halaman-pesanan-terbatalkan-user .bantuan-harQdv {
+  height: 14px;
+  line-height: 14.4px;
+  width: 45px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-link-3M0tZZ {
+  height: 14px;
+  top: 26px;
+  width: 110px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-7YZOoD {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 110px;
+}
+
+.halaman-pesanan-terbatalkan-user .metode-pembayaran-P7nQJA {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 111px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-link-tJaHoK {
+  height: 14px;
+  top: 53px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-GlODAZ {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .shopee-pay-wVhQ12 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-link-Eb31r9 {
+  height: 14px;
+  top: 79px;
+  width: 67px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-xVq5OR {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 67px;
+}
+
+.halaman-pesanan-terbatalkan-user .koin-shopee-1fMtOx {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 67px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-link-pf3uHS {
+  height: 14px;
+  top: 106px;
+  width: 127px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-17Fiwd {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 127px;
+}
+
+.halaman-pesanan-terbatalkan-user .lacak-pesanan-pembeli-biQ9r8 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 128px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-link-lxw14U {
+  height: 14px;
+  top: 132px;
+  width: 138px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-BhQQxw {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 138px;
+}
+
+.halaman-pesanan-terbatalkan-user .lacak-pengiriman-penjual-aDfhUx {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 138px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-link-pkulv3 {
+  height: 14px;
+  top: 158px;
+  width: 69px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-ahefjx {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 69px;
+}
+
+.halaman-pesanan-terbatalkan-user .gratis-ongkir-bMnrg5 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 69px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-link-Feb9Cz {
+  height: 14px;
+  top: 185px;
+  width: 158px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-m0tB68 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 158px;
+}
+
+.halaman-pesanan-terbatalkan-user .pengembalian-barang-dana-Mtst7v {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 158px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-link-1Kqa7d {
+  height: 14px;
+  top: 211px;
+  width: 84px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-DN8Cbh {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 84px;
+}
+
+.halaman-pesanan-terbatalkan-user .garansi-shopee-ea5hvO {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 84px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-link-rcglg2 {
+  height: 14px;
+  top: 238px;
+  width: 75px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-gvBYbj {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 75px;
+}
+
+.halaman-pesanan-terbatalkan-user .hubungi-kami-wGxQcL {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 76px;
+}
+
+.halaman-pesanan-terbatalkan-user .jelajahi-shopee-nFyJce {
+  background-color: transparent;
+  height: 14px;
+  left: 260px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 49px;
+  white-space: nowrap;
+  width: 86px;
+}
+
+.halaman-pesanan-terbatalkan-user .list-b9x81t {
+  height: 252px;
+  left: 260px;
+  top: 84px;
+  width: 240px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-link-B7kzsz {
+  height: 14px;
+  top: 0px;
+  width: 74px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-0zp50G {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 74px;
+}
+
+.halaman-pesanan-terbatalkan-user .tentang-kami-gZC8jK {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 74px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-link-xGf3hJ {
+  height: 14px;
+  top: 26px;
+  width: 25px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-I4AwZN {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 25px;
+}
+
+.halaman-pesanan-terbatalkan-user .karir-go9W6T {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 25px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-link-4ZohHA {
+  height: 14px;
+  top: 53px;
+  width: 95px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-4blV46 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 95px;
+}
+
+.halaman-pesanan-terbatalkan-user .kebijakan-shopee-dVSxQy {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 95px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-link-E8TxUO {
+  height: 14px;
+  top: 79px;
+  width: 91px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-Px4eEX {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 91px;
+}
+
+.halaman-pesanan-terbatalkan-user .kebijakan-privasi-2tmc7f {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 91px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-link-Dp7XjZ {
+  height: 14px;
+  top: 106px;
+  width: 24px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-14KHWA {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 24px;
+}
+
+.halaman-pesanan-terbatalkan-user .blog-SWoqaG {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 24px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-link-xCmPpD {
+  height: 14px;
+  top: 132px;
+  width: 66px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-VF04g6 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 66px;
+}
+
+.halaman-pesanan-terbatalkan-user .shopee-mall-OJwmjx {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 66px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-link-wrTgxF {
+  height: 14px;
+  top: 158px;
+  width: 68px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-WrDidw {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 68px;
+}
+
+.halaman-pesanan-terbatalkan-user .seller-centre-YukVRD {
+  height: 14px;
+  left: 0px;
+  line-height: 14.4px;
+  top: -1px;
+  width: 68px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-link-xgyX24 {
+  height: 14px;
+  top: 185px;
+  width: 55px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-cU7yVy {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 55px;
+}
+
+.halaman-pesanan-terbatalkan-user .flash-sale-1xSOGc {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 55px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-link-jxRANf {
+  height: 14px;
+  top: 211px;
+  width: 73px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-JSjY1G {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 73px;
+}
+
+.halaman-pesanan-terbatalkan-user .kontak-media-ynQxxc {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 74px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-link-Z23LQ6 {
+  height: 14px;
+  top: 238px;
+  width: 84px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-gOaJns {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 84px;
+}
+
+.halaman-pesanan-terbatalkan-user .shopee-affiliate-ikOCTk {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 84px;
+}
+
+.halaman-pesanan-terbatalkan-user .pembayaran-nFyJce {
+  background-color: transparent;
+  height: 14px;
+  left: 510px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 49px;
+  white-space: nowrap;
+  width: 68px;
+}
+
+.halaman-pesanan-terbatalkan-user .list-I8Hz4Z {
+  height: 228px;
+  left: 510px;
+  top: 84px;
+  width: 240px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-vR6RdC {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-wDiV7R {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .x5589c755ab085d2fac3e33f4755c6a9e-OeVT6h {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/5589c755ab085d2fac3e33f4755c6a9e@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-z766Zx {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-etN4Bb {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .x49656d7100598b911a1f247dec64fda4-wtEBl7 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/49656d7100598b911a1f247dec64fda4@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-DWcpBX {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-ViiH7o {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .e7865f5fb066b8b5e73f9d5c36fc7154-xV2jKP {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/e7865f5fb066b8b5e73f9d5c36fc7154@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-nfCIFh {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 38px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-xgf0bg {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .x59185c096964e1892e9122ceaae2609d-L44xJ4 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/59185c096964e1892e9122ceaae2609d@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-wUWuA9 {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 38px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-NhHeq3 {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .x9a08d3abab3dd059fff945c72ca372d9-0qYxDm {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677c6a151562d3e0f08b30b8/img/9a08d3abab3dd059fff945c72ca372d9@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-opwmTs {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 38px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-AFLaTA {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .x780c2be80e523384a7320b89f42008d5-hHkVE5 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/780c2be80e523384a7320b89f42008d5@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-PF57ak {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 76px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-tpXZrP {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .x0cf8caa250763eefc3d79bb1f8c08e73-3SNBwE {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/0cf8caa250763eefc3d79bb1f8c08e73@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-Dk7dRq {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 76px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-BtirUU {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .c8dce1e557f48316ef80dc9dbee40097-hdjhOf {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/c8dce1e557f48316ef80dc9dbee40097@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-k4Bn0s {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 76px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-T4xANw {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .x1ad101bcf0e90b74b5697db1511de529-SO0WNa {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/1ad101bcf0e90b74b5697db1511de529@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-IxvuoF {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 114px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-9xfhMO {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .x6167379c7a6e786452f9f03295f517e6-Wuz5lC {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/6167379c7a6e786452f9f03295f517e6@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-0Ddbgg {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 114px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-vu6qPj {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .fc6e7bb9f2e88e7d1a702eb6de938d79-wYJkya {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/fc6e7bb9f2e88e7d1a702eb6de938d79@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-ovGmKw {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 114px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-BonxY6 {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .x231b50853c37d3ed0933b8ba7479f0e4-cydhlq {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/231b50853c37d3ed0933b8ba7479f0e4@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-j8KzYw {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 152px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-P0ycAh {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .d68d15075519a4dfcfc8ffd9385d7bb9-7dVnM8 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/d68d15075519a4dfcfc8ffd9385d7bb9@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-OGPeV7 {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 152px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-vSAnz1 {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .ea38821fb0e2ec640bcd4f21000de105-69t52d {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/ea38821fb0e2ec640bcd4f21000de105@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-TDvTIx {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 152px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-TzTT02 {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .ef22f26ccc342ad4dea14cc383299d64-CV6S2H {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677c6a151562d3e0f08b30b8/img/ef22f26ccc342ad4dea14cc383299d64@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-gAJxzx {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 190px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-KYxgxL {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .b228c4523a9d1261e4606e9bf3a4882f-hc5vvC {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/b228c4523a9d1261e4606e9bf3a4882f@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-vOxEWf {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 190px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-LUsi2D {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .x41e4c83bae13f67b9898c7579dd53d05-WgTF1M {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/41e4c83bae13f67b9898c7579dd53d05@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .pengiriman-nFyJce {
+  background-color: transparent;
+  height: 14px;
+  left: 510px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 327px;
+  white-space: nowrap;
+  width: 62px;
+}
+
+.halaman-pesanan-terbatalkan-user .list-VJZeSq {
+  height: 190px;
+  left: 510px;
+  top: 363px;
+  width: 240px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-cL81Hh {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-m528cu {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .id-50009109-0c5dd568-NvEFLP {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/id-50009109-0c5dd5687ff2ede525c04fbde2f7b7fd@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-QAzpAu {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-yPx68f {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .x982216a49044ce4636f861333bfdac5c-3cbIyt {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/982216a49044ce4636f861333bfdac5c@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-P2vCY9 {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-h01rFj {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .x5ecc185311ec587945838b507140ee21-Rsfoh2 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/5ecc185311ec587945838b507140ee21@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-8u1w3S {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 38px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-o5VC9D {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .x5c07836b22c5689d56cb217c88171785-G7yW3Z {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/5c07836b22c5689d56cb217c88171785@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-X4gtJP {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 38px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-355j2A {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .fe439088405f5b71199c3f6117932462-6L44eE {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/fe439088405f5b71199c3f6117932462@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-t3XjgS {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 38px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-SyF2w3 {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .x9f4d96722647cf501edf21c958294568-HxirT7 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/9f4d96722647cf501edf21c958294568@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-M8pHPx {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 76px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-Fx0Z4o {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .c2abc2de79484198bfc3fc3efd4ea049-NP019r {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/c2abc2de79484198bfc3fc3efd4ea049@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-owzT5O {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 76px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-c1Llch {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .x5653e7f0ca1361ddddb5b545ab675bc2-RZ8bD9 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/5653e7f0ca1361ddddb5b545ab675bc2@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-g0RJof {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 76px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-w9s5yl {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .ed038a4fcd786fb2d6ef7b70a7a9a1b1-saHjKl {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/ed038a4fcd786fb2d6ef7b70a7a9a1b1@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-9pwQEX {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 114px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-uoR1p5 {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .x8810ac4e4cffb855d280503c6eb33ed4-MLxNIK {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/8810ac4e4cffb855d280503c6eb33ed4@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-O0RTXu {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 114px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-OsBsla {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .x5c023bfb427d9546a8055f3b76d91560-frExGn {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/5c023bfb427d9546a8055f3b76d91560@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-ftx5UU {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 114px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-eS4lTN {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .x5e350fcf94101432052945e2931fa621-4paE6p {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/5e350fcf94101432052945e2931fa621@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-fic5t0 {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 152px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-iOxtH3 {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .x47d94f9fb90cc7e374549620be687494-sjpdoi {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/47d94f9fb90cc7e374549620be687494@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-fzFgIW {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 152px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-fw6W70 {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .b20bd74ad72a92f1d22dc80e18ae2836-xxHWye {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/b20bd74ad72a92f1d22dc80e18ae2836@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-mQN0eq {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 152px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-zb3YyK {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .fedcba5bb6bc183e31766f032fd49a00-4GVVNX {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/fedcba5bb6bc183e31766f032fd49a00@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .ikuti-kami-nFyJce {
+  background-color: transparent;
+  height: 14px;
+  left: 760px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 49px;
+  white-space: nowrap;
+  width: 55px;
+}
+
+.halaman-pesanan-terbatalkan-user .list-Oxnw66 {
+  height: 128px;
+  left: 760px;
+  top: 84px;
+  width: 240px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-link-QxawbO {
+  height: 16px;
+  top: 0px;
+  width: 76px;
+}
+
+.halaman-pesanan-terbatalkan-user .x622550fb2ffb8ddf3913538801bc4c05-wx3F53 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/622550fb2ffb8ddf3913538801bc4c05@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-wx3F53 {
+  background-color: transparent;
+  height: 16px;
+  left: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .facebook-1r3bDG {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-link-fTjSdt {
+  height: 16px;
+  top: 28px;
+  width: 78px;
+}
+
+.halaman-pesanan-terbatalkan-user .ec4d29967019ea44642daa53a40ff89c-jdYux9 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/ec4d29967019ea44642daa53a40ff89c@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-jdYux9 {
+  background-color: transparent;
+  height: 16px;
+  left: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 54px;
+}
+
+.halaman-pesanan-terbatalkan-user .instagram-xsvy4l {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 54px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-link-Ctzu2U {
+  height: 16px;
+  top: 56px;
+  width: 61px;
+}
+
+.halaman-pesanan-terbatalkan-user .x2bf3f4d1e10c63d4df16cf4090ded0a5-Wyy0BP {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/2bf3f4d1e10c63d4df16cf4090ded0a5@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-Wyy0BP {
+  background-color: transparent;
+  height: 16px;
+  left: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 37px;
+}
+
+.halaman-pesanan-terbatalkan-user .twitter-rCEITc {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 37px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-link-griBe3 {
+  height: 16px;
+  top: 84px;
+  width: 69px;
+}
+
+.halaman-pesanan-terbatalkan-user .x32530e4a6641210fbbfdaf95f507aa1e-riqpQC {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/32530e4a6641210fbbfdaf95f507aa1e@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-riqpQC {
+  background-color: transparent;
+  height: 16px;
+  left: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 45px;
+}
+
+.halaman-pesanan-terbatalkan-user .linked-in-BelBG3 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 45px;
+}
+
+.halaman-pesanan-terbatalkan-user .item-link-VhPn9K {
+  height: 16px;
+  top: 112px;
+  width: 111px;
+}
+
+.halaman-pesanan-terbatalkan-user .a4c827473f54e4a6ae4550a14ea92653-oNsCnJ {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/a4c827473f54e4a6ae4550a14ea92653@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-oNsCnJ {
+  background-color: transparent;
+  height: 16px;
+  left: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 87px;
+}
+
+.halaman-pesanan-terbatalkan-user .kampus-shopee-xi3iGd {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 87px;
+}
+
+.halaman-pesanan-terbatalkan-user .keamanan-nFyJce {
+  background-color: transparent;
+  height: 14px;
+  left: 760px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 227px;
+  white-space: nowrap;
+  width: 57px;
+}
+
+.halaman-pesanan-terbatalkan-user .list-item-nFyJce {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 60px;
+  left: 760px;
+  overflow: hidden;
+  position: absolute;
+  top: 263px;
+  width: 120px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-VPjS9Y {
+  background-color: transparent;
+  height: 52px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 112px;
+}
+
+.halaman-pesanan-terbatalkan-user .id-11134258-7rasi-m1mj559k2yly05-cYtKav {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/id-11134258-7rasi-m1mj559k2yly05@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 52px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 112px;
+}
+
+.halaman-pesanan-terbatalkan-user .download-aplikasi-shopee-nFyJce {
+  background-color: transparent;
+  height: 14px;
+  left: 1010px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 49px;
+  white-space: nowrap;
+  width: 143px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-nFyJce {
+  background-color: transparent;
+  height: 93px;
+  left: 1010px;
+  position: absolute;
+  top: 84px;
+  width: 190px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-oef1gy {
+  background-color: transparent;
+  height: 93px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100px;
+}
+
+.halaman-pesanan-terbatalkan-user .bed0af4663f887db16a7047185478dcf-i2eI8m {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677d3d038cd71f5b59923bb3/img/bed0af4663f887db16a7047185478dcf.svg);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 88px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 88px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-3KccRk {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 24px;
+  left: 100px;
+  position: absolute;
+  top: 0px;
+  width: 76px;
+}
+
+.halaman-pesanan-terbatalkan-user .bbf28a2328ec8c7f57b9cc2069d693fd-HclDtK {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/bbf28a2328ec8c7f57b9cc2069d693fd@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 4px;
+  overflow: hidden;
+  position: relative;
+  top: 4px;
+  width: 68px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-ywd06f {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 24px;
+  left: 100px;
+  position: absolute;
+  top: 32px;
+  width: 76px;
+}
+
+.halaman-pesanan-terbatalkan-user .x1858a153798406c87945f15a38bf4874-NlleCz {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677c6a151562d3e0f08b30b8/img/1858a153798406c87945f15a38bf4874@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 4px;
+  overflow: hidden;
+  position: relative;
+  top: 4px;
+  width: 68px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-cgAOz3 {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 24px;
+  left: 100px;
+  position: absolute;
+  top: 64px;
+  width: 76px;
+}
+
+.halaman-pesanan-terbatalkan-user .x0e74339f5da500baaaa52785f175bc6d-fcYj3a {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677a666135d0c93a303e3ee3/img/0e74339f5da500baaaa52785f175bc6d@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 4px;
+  overflow: hidden;
+  position: relative;
+  top: 4px;
+  width: 68px;
+}
+
+.halaman-pesanan-terbatalkan-user .horizontal-border-IANAs7 {
+  border-bottom-style: none;
+  border-color: #0000001a;
+  border-top-style: solid;
+  border-top-width: 1px;
+  height: 99px;
+  top: 579px;
+  width: 1200px;
+}
+
+.halaman-pesanan-terbatalkan-user .shopee-2024-hak-cipta-dilindungi-kKB8b5 {
+  background-color: transparent;
+  height: 18px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: 40px;
+  white-space: nowrap;
+  width: 229px;
+}
+
+.halaman-pesanan-terbatalkan-user .negara-kKB8b5 {
+  background-color: transparent;
+  height: 18px;
+  left: 488px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: right;
+  top: 40px;
+  white-space: nowrap;
+  width: 49px;
+}
+
+.halaman-pesanan-terbatalkan-user .vertical-border-kKB8b5 {
+  left: 536px;
+  width: 74px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-Qnb59X {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 63px;
+}
+
+.halaman-pesanan-terbatalkan-user .singapura-K1i6W7 {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 63px;
+}
+
+.halaman-pesanan-terbatalkan-user .vertical-border-E2ebHr {
+  left: 609px;
+  width: 72px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-ocMzzu {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 61px;
+}
+
+.halaman-pesanan-terbatalkan-user .indonesia-0zB5HQ {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 61px;
+}
+
+.halaman-pesanan-terbatalkan-user .vertical-border-R1Ge4n {
+  left: 681px;
+  width: 65px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-Qbbgsa {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 54px;
+}
+
+.halaman-pesanan-terbatalkan-user .thailand-pheSqW {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 54px;
+}
+
+.halaman-pesanan-terbatalkan-user .vertical-border-oExbFO {
+  left: 746px;
+  width: 67px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-bcDWAF {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 56px;
+}
+
+.halaman-pesanan-terbatalkan-user .malaysia-maM3FP {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 56px;
+}
+
+.halaman-pesanan-terbatalkan-user .vertical-border-ainstb {
+  left: 813px;
+  width: 63px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-lfNKcN {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .vietnam-CnUDji {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 52px;
+}
+
+.halaman-pesanan-terbatalkan-user .vertical-border-vP70PE {
+  left: 876px;
+  width: 56px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-3L41VC {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 45px;
+}
+
+.halaman-pesanan-terbatalkan-user .filipina-PNHguE {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 45px;
+}
+
+.halaman-pesanan-terbatalkan-user .vertical-border-lTkgcr {
+  left: 931px;
+  width: 46px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-xmwvNA {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 35px;
+}
+
+.halaman-pesanan-terbatalkan-user .brazil-ixlvsn {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 35px;
+}
+
+.halaman-pesanan-terbatalkan-user .vertical-border-EmIFZx {
+  left: 977px;
+  width: 56px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-krXVbU {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 45px;
+}
+
+.halaman-pesanan-terbatalkan-user .mxico-rb9Pn6 {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 46px;
+}
+
+.halaman-pesanan-terbatalkan-user .vertical-border-7FaVOT {
+  left: 1033px;
+  width: 71px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-oeFU8t {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .colombia-sbItiT {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 60px;
+}
+
+.halaman-pesanan-terbatalkan-user .vertical-border-OsSdpv {
+  left: 1103px;
+  width: 42px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-CLvxPQ {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 31px;
+}
+
+.halaman-pesanan-terbatalkan-user .chile-E2XNAl {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 31px;
+}
+
+.halaman-pesanan-terbatalkan-user .link-kKB8b5 {
+  background-color: transparent;
+  height: 17px;
+  left: 1151px;
+  position: absolute;
+  top: 41px;
+  width: 44px;
+}
+
+.halaman-pesanan-terbatalkan-user .taiwan-BAKUlf {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 45px;
+}
+
+.halaman-pesanan-terbatalkan-user .container-1drFHk {
+  background-color: transparent;
+  height: 48px;
+  left: 1241px;
+  position: fixed;
+  top: 1225px;
+  width: 100px;
+}
+
+.halaman-pesanan-terbatalkan-user .background-shadow {
+  height: 414px;
+  position: absolute;
+  width: 993px;
+}
+
+.halaman-pesanan-terbatalkan-user .bantuan {
+  background-color: transparent;
+  left: 0px;
+  letter-spacing: 0.00px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+}
+
+.halaman-pesanan-terbatalkan-user .border {
+  background-color: transparent;
+  position: absolute;
+}
+
+.halaman-pesanan-terbatalkan-user .dibatalkan {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.halaman-pesanan-terbatalkan-user .horizontal-border {
+  background-color: transparent;
+  border-left-style: none;
+  border-right-style: none;
+  left: 74px;
+  position: absolute;
+}
+
+.halaman-pesanan-terbatalkan-user .horizontal-divider {
+  background-color: transparent;
+  border-bottom-width: 1px;
+  border-color: var(--black-5);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  height: 1px;
+  position: absolute;
+}
+
+.halaman-pesanan-terbatalkan-user .item-link {
+  background-color: transparent;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.halaman-pesanan-terbatalkan-user .list {
+  background-color: transparent;
+  position: absolute;
+}
+
+.halaman-pesanan-terbatalkan-user .notifikasi {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.halaman-pesanan-terbatalkan-user .overlay-shadow {
+  background-color: #ffffff01;
+  box-shadow: 0px 1px 1px #0000000d;
+  left: 0px;
+}
+
+.halaman-pesanan-terbatalkan-user .seller-centre {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.halaman-pesanan-terbatalkan-user .svg {
+  background-color: transparent;
+  position: absolute;
+}
+
+.halaman-pesanan-terbatalkan-user .user {
+  background-color: transparent;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+}
+
+.halaman-pesanan-terbatalkan-user .vertical-border {
+  background-color: transparent;
+  border-bottom-style: none;
+  border-color: var(--black-6);
+  border-left-style: none;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-style: none;
+  height: 18px;
+  position: absolute;
+  top: 41px;
+}
+
+.halaman-pesanan-terbatalkan-user .vertical-divider {
+  background-color: transparent;
+  border-bottom-style: none;
+  border-color: #ffffff38;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-style: none;
+  height: 15px;
+  position: absolute;
+  top: 10px;
+  width: 2px;
+}
+
+.halaman-pesanan-terbatalkan-user .x2 {
+  background-color: transparent;
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  top: 15px;
+  white-space: nowrap;
+  width: 18px;
+}
+</style></head><body style="margin: 0;background: #f5f5f5;"><input type="hidden" id="anPageName" name="page" value="halaman-pesanan-terbatalkan-user"><div class="container-center-horizontal"><div class="halaman-pesanan-terbatalkan-user screen " data-id="92:2"><div class="container-CUNU7L" data-id="92:3"><header class="header-wLY1h5" data-id="92:4"><div class="overlay-shadow-ZHXxd6 overlay-shadow" data-id="92:5"><img class="link-kNKl0o" data-id="92:6" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677d3d038cd71f5b59923bb3/img/link.svg" alt="Link"><div class="search-kNKl0o" data-id="92:10"><div class="background-NO4bZC" data-id="92:11"><div class="combobox-klaim-potongan-langsung-1-jt-u6dVZm" data-id="92:12"><div class="container-mnqPkx" data-id="92:13"><div class="klaim-potongan-langsung-1-jt-pJWNxP valign-text-middle roboto-normal-black-14px" data-id="92:14">KLAIM: Potongan Langsung 1JT</div></div></div></div><img class="button-NO4bZC" data-id="92:16" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677d3d038cd71f5b59923bb3/img/button.svg" alt="Button"></div><div class="link-cD1IWp" data-id="92:25"><div class="sepatu-giannis-immortality-3-Ds7dxs valign-text-middle roboto-light-white-12px" data-id="92:26">Sepatu Giannis Immortality 3</div></div><div class="link-zDh7qA" data-id="92:27"><div class="hoodie-tanpa-lengan-AzqhsN valign-text-middle roboto-light-white-12px" data-id="92:28">Hoodie Tanpa Lengan</div></div><div class="link-jP4FOV" data-id="92:29"><div class="kemeja-sutra-es-Dm1BiO valign-text-middle roboto-light-white-12px" data-id="92:30">Kemeja Sutra Es</div></div><div class="link-vxIAk4" data-id="92:31"><div class="fukustudio-KTMCqp valign-text-middle roboto-light-white-12px" data-id="92:32">Fukustudio</div></div><div class="link-sILFLm" data-id="92:33"><div class="celana-winter-pria-ZpCtcw valign-text-middle roboto-light-white-12px" data-id="92:34">Celana Winter Pria</div></div><div class="link-AxCKFv" data-id="92:35"><div class="sweater-rajut-pria-t1weXK valign-text-middle roboto-light-white-12px" data-id="92:36">Sweater Rajut Pria</div></div><div class="link-KoESGT" data-id="92:37"><div class="giannis-immortality-3-vvJRid valign-text-middle roboto-light-white-12px" data-id="92:38">Giannis Immortality 3</div></div><div class="link-mW05Ah" data-id="92:39"><div class="sndwr-7JM4kq valign-text-middle roboto-light-white-12px" data-id="92:40">Sndwr</div></div><div class="link-ynaVgI" data-id="92:41"><div class="coat-pria-FzwGKm valign-text-middle roboto-light-white-12px" data-id="92:42">Coat Pria</div></div><div class="link-XUsQsj" data-id="92:43"><div class="kaos-kaki-skate-tebal-5vDVqT valign-text-middle roboto-light-white-12px" data-id="92:44">Kaos Kaki Skate Tebal</div></div><div class="link-CSXRNP" data-id="92:45"><div class="celana-berserk-vimqvK valign-text-middle roboto-light-white-12px" data-id="92:46">Celana Berserk</div></div><div class="link-DbRNWz" data-id="92:47"><div class="kemeja-flanel-pria-oEdzHp valign-text-middle roboto-light-white-12px" data-id="92:48">Kemeja Flanel Pria</div></div><div class="link-22I2u9" data-id="92:49"><div class="polo-old-money-vDHFyx valign-text-middle roboto-light-white-12px" data-id="92:50">Polo Old Money</div></div><div class="link-0JTX7P" data-id="92:51"><div class="uniqlo-dry-ex-biiQVN valign-text-middle roboto-light-white-12px" data-id="92:52">UNIQLO Dry EX</div></div><div class="link-Ox9EAH" data-id="92:53"><div class="celana-pendek-puma-Oex9mz valign-text-middle roboto-light-white-12px" data-id="92:54">Celana Pendek Puma</div></div><div class="link-iMXJah" data-id="92:55"><div class="cable-knit-cardigan-53YqSa valign-text-middle roboto-light-white-12px" data-id="92:56">Cable Knit Cardigan</div></div><div class="link-oHWo5c" data-id="92:57"><div class="trousers-pria-loose-c4pdVO valign-text-middle roboto-light-white-12px" data-id="92:58">Trousers Pria Loose</div></div><div class="link-vxkygy" data-id="92:59"><div class="compression-shirt-I6N5uV valign-text-middle roboto-light-white-12px" data-id="92:60">Compression Shirt</div></div><div class="link-rZ3vsR" data-id="92:61"><p class="korean-style-pria-1-set-YFKxCk valign-text-middle roboto-light-white-12px" data-id="92:62">Korean Style Pria 1 Set</p></div><div class="link-xcXtuw" data-id="92:63"><div class="jaket-polar-aDJXro valign-text-middle roboto-light-white-12px" data-id="92:64">Jaket Polar</div></div><div class="link-4XYghV" data-id="92:65"><div class="half-zip-AXdO2a valign-text-middle roboto-light-white-12px" data-id="92:66">Half Zip</div></div><div class="link-4C2vXO" data-id="92:67"><div class="celana-basket-lakers-putih-46vI9L valign-text-middle roboto-light-white-12px" data-id="92:68">Celana Basket Lakers Putih</div></div><div class="link-BcP09T" data-id="92:69"><div class="balvein-yxUw5a valign-text-middle roboto-light-white-12px" data-id="92:70">Balvein</div></div><div class="link-CzSJlf" data-id="92:71"><div class="linen-ankle-pants-dx5DJC valign-text-middle roboto-light-white-12px" data-id="92:72">Linen Ankle Pants</div></div><div class="link-zzouhx" data-id="92:73"><div class="crop-top-pria-UMfs2Z valign-text-middle roboto-light-white-12px" data-id="92:74">Crop Top Pria</div></div><div class="link-xel0kK" data-id="92:75"><div class="kevas-official-shop-DnGUPh valign-text-middle roboto-light-white-12px" data-id="92:76">Kevas Official Shop</div></div><div class="link-PWlwy5" data-id="92:77"><div class="lifebuoy-body-wash-pump-PuQeE7 valign-text-middle roboto-light-white-12px" data-id="92:78">Lifebuoy Body Wash Pump</div></div><div class="link-3cDaiH" data-id="92:79"><div class="knitted-polo-shirt-pria-hXEdJb valign-text-middle roboto-light-white-12px" data-id="92:80">Knitted Polo Shirt Pria</div></div><div class="link-4AJ6Kp" data-id="92:81"><p class="kaos-kaki-compass-x-boy-pablo-lHvJ14 valign-text-middle roboto-light-white-12px" data-id="92:82">Kaos Kaki Compass X Boy Pablo</p></div><div class="link-xeVOG4" data-id="92:83"><div class="tas-basket-nike-cbuI25 valign-text-middle roboto-light-white-12px" data-id="92:84">Tas Basket Nike</div></div><div class="link-r7PpKq" data-id="92:85"><div class="baggy-jeans-y2k-uLccsT valign-text-middle roboto-light-white-12px" data-id="92:86">Baggy Jeans Y2k</div></div><div class="link-E9xxkz" data-id="92:87"><div class="sandal-KJ08t1 valign-text-middle roboto-light-white-12px" data-id="92:88">Sandal</div></div><div class="link-qLE2xi" data-id="92:89"><div class="new-balance-793-WxjYVC valign-text-middle roboto-light-white-12px" data-id="92:90">New Balance 793</div></div><div class="link-Hl0Yxa" data-id="92:91"><div class="nike-blazer-low-h3exKH valign-text-middle roboto-light-white-12px" data-id="92:92">Nike Blazer Low</div></div><div class="link-zN8xzx" data-id="92:93"><div class="kemeja-pria-style-korea-FyECRP valign-text-middle roboto-light-white-12px" data-id="92:94">Kemeja Pria Style Korea</div></div><div class="button-link-kNKl0o" data-id="92:95"><img class="svg-xggsLF svg" data-id="92:96" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677c6a151562d3e0f08b30b8/img/svg-4.svg" alt="SVG"><div class="container-xggsLF" data-id="92:100"><div class="shopping-G1SgAo valign-text-middle" data-id="92:101">Shopping</div></div><div class="background-border-xggsLF" data-id="92:102"><div class="x14-7UZNAc valign-text-middle roboto-normal-flamingo-14px" data-id="92:103">14</div></div></div></div><div class="nav-ZHXxd6" data-id="92:104"><div class="link-hwTwF3" data-id="92:105"><div class="seller-centre-V08daI valign-text-middle seller-centre roboto-light-white-13px" data-id="92:106">Seller Centre</div></div><div class="link-xzKIyQ" data-id="92:107"><div class="download-4ZK5K6 valign-text-middle roboto-light-white-13px" data-id="92:108">Download</div></div><div class="vertical-divider-hwTwF3 vertical-divider" data-id="92:109"></div><div class="ikuti-kami-di-hwTwF3 valign-text-middle roboto-light-white-13px" data-id="92:110">Ikuti kami di</div><div class="vertical-divider-xzKIyQ vertical-divider" data-id="92:111"></div><div class="container-hwTwF3" data-id="92:112"><div class="link-pbwExw" data-id="92:113-f4c4519a-0533-4b82-86d2-6e2a1e2018c7"></div><div class="link-I5ezAZ" data-id="92:114-5753bfb9-45e3-4ac9-b83f-308cb988409e"></div><div class="link-sgeAAo" data-id="92:115-ffb4103a-1bad-4511-821a-52d6b49bd1bf"></div></div><div class="list-hwTwF3 list" data-id="92:117"><div class="item-ZX2PFA" data-id="92:118"><div class="button-link-NBRmER" data-id="92:119"><div class="notifikasi-0FqdZA valign-text-middle notifikasi roboto-light-white-13px" data-id="92:120">Notifikasi</div><img class="svg-0FqdZA svg" data-id="92:121" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677d3d038cd71f5b59923bb3/img/svg-1.svg" alt="SVG"></div></div><div class="link-ZX2PFA" data-id="92:124"><img class="svg-yCaHwL svg" data-id="92:125" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677d3d038cd71f5b59923bb3/img/svg-2.svg" alt="SVG"><div class="container-yCaHwL" data-id="92:129"><div class="bantuan-FAtRPG valign-text-middle bantuan roboto-light-white-13px" data-id="92:130">Bantuan</div></div></div><div class="item-FMgSvT" data-id="92:131"><div class="button-U31pnc" data-id="92:132"><img class="svg-VkCosB svg" data-id="92:133" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677c6a151562d3e0f08b30b8/img/svg-7.svg" alt="SVG"><div class="bahasa-indonesia-VkCosB valign-text-middle roboto-light-white-13px" data-id="92:137">Bahasa Indonesia</div><img class="svg-drm4GM svg" data-id="92:138" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677c6a151562d3e0f08b30b8/img/svg.svg" alt="SVG"></div></div><div class="item-EKGVHz" data-id="92:140"><div class="button-3mTjlH" data-id="92:141"><div class="container-HQwTzT" data-id="92:142"><div class="user-omyxKq valign-text-middle user" data-id="92:143">User</div></div><img class="border-HQwTzT border" data-id="92:144" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677c6a151562d3e0f08b30b8/img/border.svg" alt="Border"></div></div></div></div></header><div class="horizontal-border-wLY1h5 horizontal-border" data-id="92:150"><img class="link-v4wXF9" data-id="92:151" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677c6a151562d3e0f08b30b8/img/link-4.svg" alt="Link"><div class="container-v4wXF9" data-id="92:158"><div class="container-Yxuuq1" data-id="92:159"><div class="user-n1nWBr valign-text-middle user" data-id="92:160">User</div></div><div class="link-Yxuuq1" data-id="92:161"><img class="svg-4twfZa svg" data-id="92:162" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677c6a151562d3e0f08b30b8/img/svg-1.svg" alt="SVG"><div class="ubah-profil-4twfZa valign-text-middle" data-id="92:164">Ubah Profil</div></div></div></div><div class="link-wLY1h5" data-id="92:165"><div class="ba61750a46794d8847c3f463c5e71cc4-zp1axZ" data-id="92:166-d0c2dc09-f202-484b-957f-80082b1e0b05"></div><div class="akun-saya-zp1axZ valign-text-middle roboto-medium-black-14px" data-id="92:167">Akun Saya</div></div><div class="link-7EBAV9" data-id="92:168"><div class="f0049e9df4e536bc3e7f140d071e9078-RAYb9H" data-id="92:169-03f7af6c-07e8-42ed-87e9-eff491a01bdf"></div><div class="pesanan-saya-RAYb9H valign-text-middle" data-id="92:170">Pesanan Saya</div></div><div class="link-ZQ3uq6" data-id="92:172"><div class="e10a43b53ec8605f4829da5618e0717c-ICm2x6" data-id="92:173-96c976a2-da11-40bd-90cd-00374892a6ee"></div><div class="notifikasi-ICm2x6 valign-text-middle notifikasi roboto-medium-black-14px" data-id="92:174">Notifikasi</div></div><div class="link-mh7G7V" data-id="92:175"><div class="x84feaa363ce325071c0a66d3c9a88748-LwC6mO" data-id="92:176-e9d7bede-6295-425f-be3d-4e79de548c43"></div><div class="voucher-saya-LwC6mO valign-text-middle roboto-medium-black-14px" data-id="92:177">Voucher Saya</div></div><div class="link-wHIEe8" data-id="92:178"><div class="a0ef4bd8e16e481b4253bd0eb563f784-eV2AEp" data-id="92:179-b0072c70-d137-4864-8dbd-275ccaa36013"></div><div class="koin-shopee-saya-eV2AEp valign-text-middle roboto-medium-black-14px" data-id="92:180">Koin Shopee Saya</div></div><div class="background-shadow-wLY1h5 background-shadow" data-id="92:181"><div class="heading-1-KEdByu" data-id="92:182"><h1 class="title-ButDcE valign-text-middle" data-id="92:183">opl_accessibility_page_title</h1></div><div class="background-shadow-KEdByu background-shadow" data-id="92:184"><div class="main-UEQGRw" data-id="92:185"><div class="overlay-shadow-xLdkUM overlay-shadow" data-id="92:186"><div class="background-vgzo6s" data-id="92:187"><div class="section-HD5pyY" data-id="92:188"><div class="container-jQnOuc" data-id="92:189"><div class="nvr_store20-W4cqlE valign-text-middle" data-id="92:190">Nvr_store20</div></div><div class="button-jQnOuc" data-id="92:191"><div class="chat-blGO6f valign-text-middle" data-id="92:192">Chat</div><img class="svg-blGO6f svg" data-id="92:193" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677d3d038cd71f5b59923bb3/img/svg-8.svg" alt="SVG"></div><div class="link-jQnOuc" data-id="92:196"><div class="background-border-KhAsv1" data-id="92:197"><div class="kunjungi-toko-hUYMK1 valign-text-middle" data-id="92:198">Kunjungi Toko</div><img class="svg-hUYMK1 svg" data-id="92:199" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677d3d038cd71f5b59923bb3/img/svg-5.svg" alt="SVG"></div></div><div class="dibatalkan-jQnOuc valign-text-middle dibatalkan roboto-normal-flamingo-14px" data-id="92:201">DIBATALKAN</div><img class="svg-jQnOuc svg" data-id="92:202" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677d3d038cd71f5b59923bb3/img/svg-7.svg" alt="SVG"></div><div class="horizontal-divider-HD5pyY horizontal-divider" data-id="92:210"></div><div class="section-link-HD5pyY" data-id="92:211"><div class="section-PxM5Pz" data-id="92:212"><div class="paragraph-JTy3Xx" data-id="92:213"><p class="kemeja-hitam-pria-le-KcJlvl valign-text-middle" data-id="92:214">Kemeja Hitam Pria Lengan Panjang Kemeja Shanghai Pria</p></div><div class="variasi-hitaml-JTy3Xx valign-text-middle roboto-normal-black-14px" data-id="92:215">Variasi: Hitam,L</div><div class="x1-JTy3Xx valign-text-middle" data-id="92:216">x1</div><div class="border-JTy3Xx border" data-id="92:217"><div class="garansi-bebas-pengembalian-F5cx9A valign-text-middle" data-id="92:218">Garansi Bebas Pengembalian</div></div><div class="rp141000-JTy3Xx valign-text-middle roboto-normal-flamingo-14px" data-id="92:219">Rp141.000</div><div class="picture-id-11134207-JTy3Xx" data-id="92:220-4ff55f07-3c5c-41de-a53d-776a793e3e51"></div></div></div></div><div class="background-SAVONa" data-id="92:221"><div class="label-FnMxdb" data-id="92:222"><div class="total-pesanan-DknG1t valign-text-middle" data-id="92:223">Total Pesanan:</div></div><div class="total-pesanan-rp139700-rp139700-FnMxdb valign-text-middle" data-id="92:224">Rp169.300</div></div><div class="horizontal-divider-vgzo6s horizontal-divider" data-id="92:225"><div class="background-xyBF28" data-id="92:226"></div><div class="background-GxZJMx" data-id="92:227"></div></div><div class="background-5Z4ni2" data-id="92:228"><div class="dibatalkan-anda-dibatalkan-anda-Jnlf2Y valign-text-middle" data-id="92:229">Dibatalkan Anda</div><div class="section-Jnlf2Y" data-id="92:230"><div class="button-BwgNKH" data-id="92:231"><div class="beli-lagi-9VbMJY valign-text-middle" data-id="92:232">Beli Lagi</div></div><div class="link-BwgNKH" data-id="92:233"><div class="button-nFR0uY" data-id="92:234"><div class="tampilkan-rincian-pengembalian-QGomS5 valign-text-middle" data-id="92:235">Tampilkan Rincian Pengembalian</div></div></div><div class="button-xx3xXq" data-id="92:236"><div class="hubungi-penjual-Cde7Tj valign-text-middle" data-id="92:237">Hubungi Penjual</div></div></div></div></div></div><div class="section-UEQGRw" data-id="92:239"><div class="link-PlW9JM" data-id="92:240"><div class="container-VYJZL1" data-id="92:241"><div class="semua-JetnR1 valign-text-middle roboto-normal-black-16px" data-id="92:242">Semua</div></div></div><div class="link-LNEZF5" data-id="92:243"><div class="container-gD37qt" data-id="92:244"><div class="belum-bayar-D4PbuF valign-text-middle roboto-normal-black-16px" data-id="92:245">Belum Bayar</div></div></div><div class="link-J0Ow0G" data-id="92:246"><div class="container-lKMQIe" data-id="92:247"><div class="sedang-dikemas-BFC1C1 valign-text-middle roboto-normal-black-16px" data-id="92:248">Sedang Dikemas</div></div><div class="x2-lKMQIe valign-text-middle x2 roboto-normal-flamingo-14px" data-id="92:249">(2)</div></div><div class="link-UrAjhu" data-id="92:250"><div class="container-8Q9N7H" data-id="92:251"><div class="dikirim-tywfQr valign-text-middle roboto-normal-black-16px" data-id="92:252">Dikirim</div></div><div class="x2-8Q9N7H valign-text-middle x2 roboto-normal-flamingo-14px" data-id="92:253">(2)</div></div><div class="link-arS3nj" data-id="92:254"><div class="container-kFbWjP" data-id="92:255"><div class="selesai-xeJaRa valign-text-middle roboto-normal-black-16px" data-id="92:256">Selesai</div></div></div><div class="link-Bbcbcm" data-id="92:257"><div class="container-EF6PMx" data-id="92:258"><div class="dibatalkan-kve05u valign-text-middle dibatalkan" data-id="92:259">Dibatalkan</div></div></div><div class="link-xwZqdp" data-id="92:260"><div class="container-xLS2tI" data-id="92:261"><div class="pengembalian-bar-zAUl0H valign-text-middle roboto-normal-black-16px" data-id="92:262">Pengembalian Bar…</div></div></div></div></div></div><footer class="footer-wLY1h5" data-id="92:264"><div class="background-AGdf4W" data-id="92:265"><div class="container-IANAs7" data-id="92:266"><div class="layanan-pelanggan-nFyJce valign-text-middle roboto-bold-black-12px" data-id="92:267">Layanan Pelanggan</div><div class="list-nFyJce list" data-id="92:268"><div class="item-link-SFkoTD item-link" data-id="92:269"><div class="container-EqDDjG" data-id="92:270"><div class="bantuan-harQdv valign-text-middle bantuan roboto-normal-black-12px" data-id="92:271">Bantuan</div></div></div><div class="item-link-3M0tZZ item-link" data-id="92:272"><div class="container-7YZOoD" data-id="92:273"><div class="metode-pembayaran-P7nQJA valign-text-middle roboto-normal-black-12px" data-id="92:274">Metode Pembayaran</div></div></div><div class="item-link-tJaHoK item-link" data-id="92:275"><div class="container-GlODAZ" data-id="92:276"><div class="shopee-pay-wVhQ12 valign-text-middle roboto-normal-black-12px" data-id="92:277">ShopeePay</div></div></div><div class="item-link-Eb31r9 item-link" data-id="92:278"><div class="container-xVq5OR" data-id="92:279"><div class="koin-shopee-1fMtOx valign-text-middle roboto-normal-black-12px" data-id="92:280">Koin Shopee</div></div></div><div class="item-link-pf3uHS item-link" data-id="92:281"><div class="container-17Fiwd" data-id="92:282"><div class="lacak-pesanan-pembeli-biQ9r8 valign-text-middle roboto-normal-black-12px" data-id="92:283">Lacak Pesanan Pembeli</div></div></div><div class="item-link-lxw14U item-link" data-id="92:284"><div class="container-BhQQxw" data-id="92:285"><div class="lacak-pengiriman-penjual-aDfhUx valign-text-middle roboto-normal-black-12px" data-id="92:286">Lacak Pengiriman Penjual</div></div></div><div class="item-link-pkulv3 item-link" data-id="92:287"><div class="container-ahefjx" data-id="92:288"><div class="gratis-ongkir-bMnrg5 valign-text-middle roboto-normal-black-12px" data-id="92:289">Gratis Ongkir</div></div></div><div class="item-link-Feb9Cz item-link" data-id="92:290"><div class="container-m0tB68" data-id="92:291"><div class="pengembalian-barang-dana-Mtst7v valign-text-middle roboto-normal-black-12px" data-id="92:292">Pengembalian Barang &amp; Dana</div></div></div><div class="item-link-1Kqa7d item-link" data-id="92:293"><div class="container-DN8Cbh" data-id="92:294"><div class="garansi-shopee-ea5hvO valign-text-middle roboto-normal-black-12px" data-id="92:295">Garansi Shopee</div></div></div><div class="item-link-rcglg2 item-link" data-id="92:296"><div class="container-gvBYbj" data-id="92:297"><div class="hubungi-kami-wGxQcL valign-text-middle roboto-normal-black-12px" data-id="92:298">Hubungi Kami</div></div></div></div><div class="jelajahi-shopee-nFyJce valign-text-middle roboto-bold-black-12px" data-id="92:299">Jelajahi Shopee</div><div class="list-b9x81t list" data-id="92:300"><div class="item-link-B7kzsz item-link" data-id="92:301"><div class="container-0zp50G" data-id="92:302"><div class="tentang-kami-gZC8jK valign-text-middle roboto-normal-black-12px" data-id="92:303">Tentang Kami</div></div></div><div class="item-link-xGf3hJ item-link" data-id="92:304"><div class="container-I4AwZN" data-id="92:305"><div class="karir-go9W6T valign-text-middle roboto-normal-black-12px" data-id="92:306">Karir</div></div></div><div class="item-link-4ZohHA item-link" data-id="92:307"><div class="container-4blV46" data-id="92:308"><div class="kebijakan-shopee-dVSxQy valign-text-middle roboto-normal-black-12px" data-id="92:309">Kebijakan Shopee</div></div></div><div class="item-link-E8TxUO item-link" data-id="92:310"><div class="container-Px4eEX" data-id="92:311"><div class="kebijakan-privasi-2tmc7f valign-text-middle roboto-normal-black-12px" data-id="92:312">Kebijakan Privasi</div></div></div><div class="item-link-Dp7XjZ item-link" data-id="92:313"><div class="container-14KHWA" data-id="92:314"><div class="blog-SWoqaG valign-text-middle roboto-normal-black-12px" data-id="92:315">Blog</div></div></div><div class="item-link-xCmPpD item-link" data-id="92:316"><div class="container-VF04g6" data-id="92:317"><div class="shopee-mall-OJwmjx valign-text-middle roboto-normal-black-12px" data-id="92:318">Shopee Mall</div></div></div><div class="item-link-wrTgxF item-link" data-id="92:319"><div class="container-WrDidw" data-id="92:320"><div class="seller-centre-YukVRD valign-text-middle seller-centre roboto-normal-black-12px" data-id="92:321">Seller Centre</div></div></div><div class="item-link-xgyX24 item-link" data-id="92:322"><div class="container-cU7yVy" data-id="92:323"><div class="flash-sale-1xSOGc valign-text-middle roboto-normal-black-12px" data-id="92:324">Flash Sale</div></div></div><div class="item-link-jxRANf item-link" data-id="92:325"><div class="container-JSjY1G" data-id="92:326"><div class="kontak-media-ynQxxc valign-text-middle roboto-normal-black-12px" data-id="92:327">Kontak Media</div></div></div><div class="item-link-Z23LQ6 item-link" data-id="92:328"><div class="container-gOaJns" data-id="92:329"><div class="shopee-affiliate-ikOCTk valign-text-middle roboto-normal-black-12px" data-id="92:330">Shopee Affiliate</div></div></div></div><div class="pembayaran-nFyJce valign-text-middle roboto-bold-black-12px" data-id="92:331">Pembayaran</div><div class="list-I8Hz4Z list" data-id="92:332"><div class="item-vR6RdC" data-id="92:333"><div class="link-wDiV7R" data-id="92:334"><div class="x5589c755ab085d2fac3e33f4755c6a9e-OeVT6h" data-id="92:335-07097b38-1524-4de9-ab00-bd24ac37ff76"></div></div></div><div class="item-z766Zx" data-id="92:336"><div class="link-etN4Bb" data-id="92:337"><div class="x49656d7100598b911a1f247dec64fda4-wtEBl7" data-id="92:338-a7f490dc-0d24-440f-a1b5-21d2c3baab43"></div></div></div><div class="item-DWcpBX" data-id="92:339"><div class="link-ViiH7o" data-id="92:340"><div class="e7865f5fb066b8b5e73f9d5c36fc7154-xV2jKP" data-id="92:341-6a9e283c-8cbe-443a-a496-b6309dbf464b"></div></div></div><div class="item-nfCIFh" data-id="92:342"><div class="link-xgf0bg" data-id="92:343"><div class="x59185c096964e1892e9122ceaae2609d-L44xJ4" data-id="92:344-e2e7be30-b148-4f94-a32a-b29a2e575927"></div></div></div><div class="item-wUWuA9" data-id="92:345"><div class="link-NhHeq3" data-id="92:346"><div class="x9a08d3abab3dd059fff945c72ca372d9-0qYxDm" data-id="92:347-618704c5-3def-4032-83d8-388905149e82"></div></div></div><div class="item-opwmTs" data-id="92:348"><div class="link-AFLaTA" data-id="92:349"><div class="x780c2be80e523384a7320b89f42008d5-hHkVE5" data-id="92:350-3d732e5b-80c3-4373-9ed0-eec9ea2b4da1"></div></div></div><div class="item-PF57ak" data-id="92:351"><div class="link-tpXZrP" data-id="92:352"><div class="x0cf8caa250763eefc3d79bb1f8c08e73-3SNBwE" data-id="92:353-cbbac000-e950-451c-803c-08fa833e75b4"></div></div></div><div class="item-Dk7dRq" data-id="92:354"><div class="link-BtirUU" data-id="92:355"><div class="c8dce1e557f48316ef80dc9dbee40097-hdjhOf" data-id="92:356-093d0c2a-9479-443b-a54a-a7423ebc7903"></div></div></div><div class="item-k4Bn0s" data-id="92:357"><div class="link-T4xANw" data-id="92:358"><div class="x1ad101bcf0e90b74b5697db1511de529-SO0WNa" data-id="92:359-9f073192-f004-4680-8bbd-76dfa64b6636"></div></div></div><div class="item-IxvuoF" data-id="92:360"><div class="link-9xfhMO" data-id="92:361"><div class="x6167379c7a6e786452f9f03295f517e6-Wuz5lC" data-id="92:362-96e794db-b3d3-499c-ad9e-536c893cfca6"></div></div></div><div class="item-0Ddbgg" data-id="92:363"><div class="link-vu6qPj" data-id="92:364"><div class="fc6e7bb9f2e88e7d1a702eb6de938d79-wYJkya" data-id="92:365-07b91b7c-c064-469c-98db-eab8de14c0f1"></div></div></div><div class="item-ovGmKw" data-id="92:366"><div class="link-BonxY6" data-id="92:367"><div class="x231b50853c37d3ed0933b8ba7479f0e4-cydhlq" data-id="92:368-bfd5e728-cae3-4514-856a-60a98f29d536"></div></div></div><div class="item-j8KzYw" data-id="92:369"><div class="link-P0ycAh" data-id="92:370"><div class="d68d15075519a4dfcfc8ffd9385d7bb9-7dVnM8" data-id="92:371-bc61c83c-19ed-4e8e-a436-6b6ccbd29375"></div></div></div><div class="item-OGPeV7" data-id="92:372"><div class="link-vSAnz1" data-id="92:373"><div class="ea38821fb0e2ec640bcd4f21000de105-69t52d" data-id="92:374-d5e6c77d-3b5f-496a-9718-d7d03c9a5dcf"></div></div></div><div class="item-TDvTIx" data-id="92:375"><div class="link-TzTT02" data-id="92:376"><div class="ef22f26ccc342ad4dea14cc383299d64-CV6S2H" data-id="92:377-d12c7060-2a51-4376-add5-7e61c4b728df"></div></div></div><div class="item-gAJxzx" data-id="92:378"><div class="link-KYxgxL" data-id="92:379"><div class="b228c4523a9d1261e4606e9bf3a4882f-hc5vvC" data-id="92:380-b7d86d8a-c5ce-4097-a17f-b6ba61c12d4d"></div></div></div><div class="item-vOxEWf" data-id="92:381"><div class="link-LUsi2D" data-id="92:382"><div class="x41e4c83bae13f67b9898c7579dd53d05-WgTF1M" data-id="92:383-4dc67e7f-186c-439a-88c0-76c783701f54"></div></div></div></div><div class="pengiriman-nFyJce valign-text-middle roboto-bold-black-12px" data-id="92:384">Pengiriman</div><div class="list-VJZeSq list" data-id="92:385"><div class="item-cL81Hh" data-id="92:386"><div class="link-m528cu" data-id="92:387"><div class="id-50009109-0c5dd568-NvEFLP" data-id="92:388-61694a2b-2689-4531-966c-38d531d042dc"></div></div></div><div class="item-QAzpAu" data-id="92:389"><div class="link-yPx68f" data-id="92:390"><div class="x982216a49044ce4636f861333bfdac5c-3cbIyt" data-id="92:391-4417c383-7e1e-4ca3-8c8e-fcf880bbad72"></div></div></div><div class="item-P2vCY9" data-id="92:392"><div class="link-h01rFj" data-id="92:393"><div class="x5ecc185311ec587945838b507140ee21-Rsfoh2" data-id="92:394-949532c7-748a-472c-b23f-ca94305c497c"></div></div></div><div class="item-8u1w3S" data-id="92:395"><div class="link-o5VC9D" data-id="92:396"><div class="x5c07836b22c5689d56cb217c88171785-G7yW3Z" data-id="92:397-a2586edc-1853-4a25-9376-51e036770370"></div></div></div><div class="item-X4gtJP" data-id="92:398"><div class="link-355j2A" data-id="92:399"><div class="fe439088405f5b71199c3f6117932462-6L44eE" data-id="92:400-1a8380b7-68af-4161-8ab4-d58d6630335d"></div></div></div><div class="item-t3XjgS" data-id="92:401"><div class="link-SyF2w3" data-id="92:402"><div class="x9f4d96722647cf501edf21c958294568-HxirT7" data-id="92:403-9df738c7-7ed8-4a78-ad90-a776f755e4f5"></div></div></div><div class="item-M8pHPx" data-id="92:404"><div class="link-Fx0Z4o" data-id="92:405"><div class="c2abc2de79484198bfc3fc3efd4ea049-NP019r" data-id="92:406-dc49d444-6c58-4528-aab5-36c2266e33be"></div></div></div><div class="item-owzT5O" data-id="92:407"><div class="link-c1Llch" data-id="92:408"><div class="x5653e7f0ca1361ddddb5b545ab675bc2-RZ8bD9" data-id="92:409-bda66301-4210-49ae-9437-b6aa365686e8"></div></div></div><div class="item-g0RJof" data-id="92:410"><div class="link-w9s5yl" data-id="92:411"><div class="ed038a4fcd786fb2d6ef7b70a7a9a1b1-saHjKl" data-id="92:412-00b4d2fb-b666-4892-81b9-89a36046a373"></div></div></div><div class="item-9pwQEX" data-id="92:413"><div class="link-uoR1p5" data-id="92:414"><div class="x8810ac4e4cffb855d280503c6eb33ed4-MLxNIK" data-id="92:415-6374a859-e53d-46c6-8848-87b9bdc76a14"></div></div></div><div class="item-O0RTXu" data-id="92:416"><div class="link-OsBsla" data-id="92:417"><div class="x5c023bfb427d9546a8055f3b76d91560-frExGn" data-id="92:418-c16394f8-a2c2-4c94-81d7-3303d96be467"></div></div></div><div class="item-ftx5UU" data-id="92:419"><div class="link-eS4lTN" data-id="92:420"><div class="x5e350fcf94101432052945e2931fa621-4paE6p" data-id="92:421-455a40e9-f606-403b-9ed8-64c407e430b2"></div></div></div><div class="item-fic5t0" data-id="92:422"><div class="link-iOxtH3" data-id="92:423"><div class="x47d94f9fb90cc7e374549620be687494-sjpdoi" data-id="92:424-d2c42894-67ec-415e-a54f-c17985a50963"></div></div></div><div class="item-fzFgIW" data-id="92:425"><div class="link-fw6W70" data-id="92:426"><div class="b20bd74ad72a92f1d22dc80e18ae2836-xxHWye" data-id="92:427-25f56330-d48a-44a5-b001-551a683e29dc"></div></div></div><div class="item-mQN0eq" data-id="92:428"><div class="link-zb3YyK" data-id="92:429"><div class="fedcba5bb6bc183e31766f032fd49a00-4GVVNX" data-id="92:430-089c7830-717a-45f1-b56e-710bd31864c1"></div></div></div></div><div class="ikuti-kami-nFyJce valign-text-middle roboto-bold-black-12px" data-id="92:431">Ikuti Kami</div><div class="list-Oxnw66 list" data-id="92:432"><div class="item-link-QxawbO item-link" data-id="92:433"><div class="x622550fb2ffb8ddf3913538801bc4c05-wx3F53" data-id="92:434-7b69e376-6803-4939-977d-fc469004ffb0"></div><div class="container-wx3F53" data-id="92:435"><div class="facebook-1r3bDG valign-text-middle roboto-normal-black-12px" data-id="92:436">Facebook</div></div></div><div class="item-link-fTjSdt item-link" data-id="92:437"><div class="ec4d29967019ea44642daa53a40ff89c-jdYux9" data-id="92:438-cfb3c857-90ca-40d9-9b25-1924956c8714"></div><div class="container-jdYux9" data-id="92:439"><div class="instagram-xsvy4l valign-text-middle roboto-normal-black-12px" data-id="92:440">Instagram</div></div></div><div class="item-link-Ctzu2U item-link" data-id="92:441"><div class="x2bf3f4d1e10c63d4df16cf4090ded0a5-Wyy0BP" data-id="92:442-6bb841f4-5944-42b2-a874-04ef28d9c14c"></div><div class="container-Wyy0BP" data-id="92:443"><div class="twitter-rCEITc valign-text-middle roboto-normal-black-12px" data-id="92:444">Twitter</div></div></div><div class="item-link-griBe3 item-link" data-id="92:445"><div class="x32530e4a6641210fbbfdaf95f507aa1e-riqpQC" data-id="92:446-a4127e93-69a1-4259-9468-29c9af41d4b6"></div><div class="container-riqpQC" data-id="92:447"><div class="linked-in-BelBG3 valign-text-middle roboto-normal-black-12px" data-id="92:448">LinkedIn</div></div></div><div class="item-link-VhPn9K item-link" data-id="92:449"><div class="a4c827473f54e4a6ae4550a14ea92653-oNsCnJ" data-id="92:450-1ab562ff-5c06-4051-92f0-327e84322445"></div><div class="container-oNsCnJ" data-id="92:451"><div class="kampus-shopee-xi3iGd valign-text-middle roboto-normal-black-12px" data-id="92:452">Kampus Shopee</div></div></div></div><div class="keamanan-nFyJce valign-text-middle roboto-bold-black-12px" data-id="92:453">Keamanan</div><div class="list-item-nFyJce" data-id="92:454"><div class="link-VPjS9Y" data-id="92:455"><div class="id-11134258-7rasi-m1mj559k2yly05-cYtKav" data-id="92:456-26015dd2-406c-4885-b8bd-5c21b6a49c09"></div></div></div><div class="download-aplikasi-shopee-nFyJce valign-text-middle roboto-bold-black-12px" data-id="92:457">Download Aplikasi Shopee</div><div class="container-nFyJce" data-id="92:458"><div class="link-oef1gy" data-id="92:459"><div class="bed0af4663f887db16a7047185478dcf-i2eI8m" data-id="92:460-25398cda-dde5-402a-902e-a361a608d60b"></div></div><div class="link-3KccRk" data-id="92:461"><div class="bbf28a2328ec8c7f57b9cc2069d693fd-HclDtK" data-id="92:462-089eb663-d052-4cad-891d-7e5ef7e274b8"></div></div><div class="link-ywd06f" data-id="92:463"><div class="x1858a153798406c87945f15a38bf4874-NlleCz" data-id="92:464-abb4a2dc-b92f-44dc-955f-d43c5f7675fd"></div></div><div class="link-cgAOz3" data-id="92:465"><div class="x0e74339f5da500baaaa52785f175bc6d-fcYj3a" data-id="92:466-cdaa0792-0f41-4c95-912b-1bb0c8650426"></div></div></div></div><div class="horizontal-border-IANAs7 horizontal-border" data-id="92:467"><p class="shopee-2024-hak-cipta-dilindungi-kKB8b5 valign-text-middle roboto-normal-black-14px" data-id="92:468">© Shopee 2024. Hak Cipta Dilindungi</p><div class="negara-kKB8b5 valign-text-middle roboto-normal-black-14px" data-id="92:469">Negara:</div><div class="vertical-border-kKB8b5 vertical-border" data-id="92:470"><div class="link-Qnb59X" data-id="92:471"><div class="singapura-K1i6W7 valign-text-middle roboto-normal-black-14px" data-id="92:472">Singapura</div></div></div><div class="vertical-border-E2ebHr vertical-border" data-id="92:473"><div class="link-ocMzzu" data-id="92:474"><div class="indonesia-0zB5HQ valign-text-middle roboto-normal-black-14px" data-id="92:475">Indonesia</div></div></div><div class="vertical-border-R1Ge4n vertical-border" data-id="92:476"><div class="link-Qbbgsa" data-id="92:477"><div class="thailand-pheSqW valign-text-middle roboto-normal-black-14px" data-id="92:478">Thailand</div></div></div><div class="vertical-border-oExbFO vertical-border" data-id="92:479"><div class="link-bcDWAF" data-id="92:480"><div class="malaysia-maM3FP valign-text-middle roboto-normal-black-14px" data-id="92:481">Malaysia</div></div></div><div class="vertical-border-ainstb vertical-border" data-id="92:482"><div class="link-lfNKcN" data-id="92:483"><div class="vietnam-CnUDji valign-text-middle roboto-normal-black-14px" data-id="92:484">Vietnam</div></div></div><div class="vertical-border-vP70PE vertical-border" data-id="92:485"><div class="link-3L41VC" data-id="92:486"><div class="filipina-PNHguE valign-text-middle roboto-normal-black-14px" data-id="92:487">Filipina</div></div></div><div class="vertical-border-lTkgcr vertical-border" data-id="92:488"><div class="link-xmwvNA" data-id="92:489"><div class="brazil-ixlvsn valign-text-middle roboto-normal-black-14px" data-id="92:490">Brazil</div></div></div><div class="vertical-border-EmIFZx vertical-border" data-id="92:491"><div class="link-krXVbU" data-id="92:492"><div class="mxico-rb9Pn6 valign-text-middle roboto-normal-black-14px" data-id="92:493">México</div></div></div><div class="vertical-border-7FaVOT vertical-border" data-id="92:494"><div class="link-oeFU8t" data-id="92:495"><div class="colombia-sbItiT valign-text-middle roboto-normal-black-14px" data-id="92:496">Colombia</div></div></div><div class="vertical-border-OsSdpv vertical-border" data-id="92:497"><div class="link-CLvxPQ" data-id="92:498"><div class="chile-E2XNAl valign-text-middle roboto-normal-black-14px" data-id="92:499">Chile</div></div></div><div class="link-kKB8b5" data-id="92:500"><div class="taiwan-BAKUlf valign-text-middle roboto-normal-black-14px" data-id="92:501">Taiwan</div></div></div></div></footer></div><img class="container-1drFHk" data-id="92:503" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677a64e79ae9b2ea74a01a35/releases/677d3d038cd71f5b59923bb3/img/container.svg" alt="Container"></div></div><script src="launchpad-js/launchpad-banner.js" async></script><script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script></body></html>

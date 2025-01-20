@@ -1,0 +1,5340 @@
+<!DOCTYPE html>
+
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+06/01/2025 23:28:30 -->
+
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=1349, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script id="anima-load-script" src="load.js"></script><script id="anima-hotspots-script" src="hotspots.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700,500");
+
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/677c63e2af2be0956b4eff88.677c63e2af2be0956b4eff8b.oaUHB0s.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --black: #000000;
+  --black-2: #000000a6;
+  --black-3: #0000008a;
+  --black-4: #000000de;
+  --black-5: #00000017;
+  --black-6: #00000033;
+  --black-7: #000000cc;
+  --cultured-pearl: #f5f5f5;
+  --flamingo: #ee4d2d;
+  --jungle-green: #26aa99;
+  --white: #ffffff;
+  --white-2: #ffffffe6;
+ 
+  --font-size-l: 13px;
+  --font-size-m: 12px;
+  --font-size-xl: 14px;
+  --font-size-xxl: 16px;
+  --font-size-xxxl: 24px;
+ 
+  --font-family-roboto: "Roboto", Helvetica;
+}
+.roboto-light-white-12px {
+  color: var(--white-2);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 300;
+}
+
+.roboto-normal-black-12px {
+  color: var(--black-2);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roboto-normal-black-14px {
+  color: var(--black-3);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roboto-bold-black-12px {
+  color: var(--black-4);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.roboto-light-white-13px {
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 300;
+}
+
+.roboto-normal-black-16px {
+  color: var(--black-7);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roboto-normal-flamingo-14px {
+  color: var(--flamingo);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roboto-medium-black-14px {
+  color: var(--black-4);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.roboto-normal-black-12px-2 {
+  color: var(--black-3);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+}
+
+
+/* screen - halaman-pesanan-user */
+
+.halaman-pesanan-user {
+  background-color: var(--cultured-pearl);
+  height: 1323px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 1349px;
+}
+
+.halaman-pesanan-user .container-AyOXoZ {
+  background-color: transparent;
+  height: 1323px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 1349px;
+}
+
+.halaman-pesanan-user .header-dGTx5I {
+  background: linear-gradient(180deg, rgb(245.00000059604645, 61.00000016391277, 45.00000111758709) 0%, rgb(255, 102.00000151991844, 51.00000075995922) 100%);
+  background-color: transparent;
+  height: 119px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1349px;
+}
+
+.halaman-pesanan-user .overlay-shadow-WzMxzg {
+  height: 85px;
+  position: absolute;
+  top: 34px;
+  width: 1349px;
+}
+
+.halaman-pesanan-user .link-tCwM1c {
+  background-color: transparent;
+  height: 59px;
+  left: 74px;
+  position: absolute;
+  top: 13px;
+  width: 202px;
+}
+
+.halaman-pesanan-user .search-tCwM1c {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 2px 4px #00000017;
+  height: 40px;
+  left: 276px;
+  position: absolute;
+  top: 16px;
+  width: 840px;
+}
+
+.halaman-pesanan-user .background-79SK6O {
+  background-color: var(--white);
+  height: 34px;
+  left: 3px;
+  position: absolute;
+  top: 3px;
+  width: 774px;
+}
+
+.halaman-pesanan-user .combobox-klaim-potongan-langsung-1-jt-2gIZFw {
+  background-color: var(--white);
+  height: 34px;
+  left: 10px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 754px;
+}
+
+.halaman-pesanan-user .container-8XFxuA {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 8px;
+  width: 754px;
+}
+
+.halaman-pesanan-user .klaim-potongan-langsung-1-jt-38944Y {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  width: 201px;
+}
+
+.halaman-pesanan-user .button-79SK6O {
+  background-color: transparent;
+  height: 34px;
+  left: 777px;
+  position: absolute;
+  top: 3px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-jwV2Bo {
+  background-color: transparent;
+  height: 14px;
+  left: 276px;
+  position: absolute;
+  top: 64px;
+  width: 152px;
+}
+
+.halaman-pesanan-user .sepatu-giannis-immortality-3-4BBiGf {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 153px;
+}
+
+.halaman-pesanan-user .link-etN4x1 {
+  background-color: transparent;
+  height: 14px;
+  left: 442px;
+  position: absolute;
+  top: 64px;
+  width: 114px;
+}
+
+.halaman-pesanan-user .hoodie-tanpa-lengan-fCSd6M {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 115px;
+}
+
+.halaman-pesanan-user .link-mLqPal {
+  background-color: transparent;
+  height: 14px;
+  left: 569px;
+  position: absolute;
+  top: 64px;
+  width: 86px;
+}
+
+.halaman-pesanan-user .kemeja-sutra-es-nxwKE9 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 86px;
+}
+
+.halaman-pesanan-user .link-d65gTv {
+  background-color: transparent;
+  height: 14px;
+  left: 668px;
+  position: absolute;
+  top: 64px;
+  width: 58px;
+}
+
+.halaman-pesanan-user .fukustudio-PWG62v {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 59px;
+}
+
+.halaman-pesanan-user .link-3p0bxj {
+  background-color: transparent;
+  height: 14px;
+  left: 740px;
+  position: absolute;
+  top: 64px;
+  width: 97px;
+}
+
+.halaman-pesanan-user .celana-winter-pria-GdUzJ6 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 97px;
+}
+
+.halaman-pesanan-user .link-xSy43B {
+  background-color: transparent;
+  height: 14px;
+  left: 849px;
+  position: absolute;
+  top: 64px;
+  width: 96px;
+}
+
+.halaman-pesanan-user .sweater-rajut-pria-yw3Aa0 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 97px;
+}
+
+.halaman-pesanan-user .link-dxjdc1 {
+  background-color: transparent;
+  height: 14px;
+  left: 959px;
+  position: absolute;
+  top: 64px;
+  width: 33px;
+}
+
+.halaman-pesanan-user .sndwr-MTwAMR {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 34px;
+}
+
+.halaman-pesanan-user .link-90tk80 {
+  background-color: transparent;
+  height: 14px;
+  left: 290px;
+  position: absolute;
+  top: 88px;
+  width: 116px;
+}
+
+.halaman-pesanan-user .kaos-kaki-skate-tebal-Xxf6Di {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 116px;
+}
+
+.halaman-pesanan-user .link-IvYVqT {
+  background-color: transparent;
+  height: 14px;
+  left: 418px;
+  position: absolute;
+  top: 88px;
+  width: 82px;
+}
+
+.halaman-pesanan-user .polo-old-money-znU2l2 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 83px;
+}
+
+.halaman-pesanan-user .link-Hvfw14 {
+  background-color: transparent;
+  height: 14px;
+  left: 514px;
+  position: absolute;
+  top: 88px;
+  width: 79px;
+}
+
+.halaman-pesanan-user .celana-berserk-DY6m0e {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 79px;
+}
+
+.halaman-pesanan-user .link-St6x0S {
+  background-color: transparent;
+  height: 14px;
+  left: 606px;
+  position: absolute;
+  top: 88px;
+  width: 48px;
+}
+
+.halaman-pesanan-user .coat-pria-Z7JGf3 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 49px;
+}
+
+.halaman-pesanan-user .link-GCXifA {
+  background-color: transparent;
+  height: 14px;
+  left: 667px;
+  position: absolute;
+  top: 88px;
+  width: 112px;
+}
+
+.halaman-pesanan-user .giannis-immortality-3-dFDHxr {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 113px;
+}
+
+.halaman-pesanan-user .link-D7qaGJ {
+  background-color: transparent;
+  height: 14px;
+  left: 792px;
+  position: absolute;
+  top: 88px;
+  width: 80px;
+}
+
+.halaman-pesanan-user .uniqlo-dry-ex-i4iOLu {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 80px;
+}
+
+.halaman-pesanan-user .link-6OoiLk {
+  background-color: transparent;
+  height: 14px;
+  left: 885px;
+  position: absolute;
+  top: 88px;
+  width: 97px;
+}
+
+.halaman-pesanan-user .kemeja-flanel-pria-oxo98C {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 98px;
+}
+
+.halaman-pesanan-user .link-e3wxD0 {
+  background-color: transparent;
+  height: 14px;
+  left: 995px;
+  position: absolute;
+  top: 88px;
+  width: 112px;
+}
+
+.halaman-pesanan-user .celana-pendek-puma-xObXzg {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 112px;
+}
+
+.halaman-pesanan-user .link-egl2Va {
+  background-color: transparent;
+  height: 14px;
+  left: 290px;
+  position: absolute;
+  top: 112px;
+  width: 105px;
+}
+
+.halaman-pesanan-user .trousers-pria-loose-kP0otN {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 105px;
+}
+
+.halaman-pesanan-user .link-6OGQVQ {
+  background-color: transparent;
+  height: 14px;
+  left: 407px;
+  position: absolute;
+  top: 112px;
+  width: 103px;
+}
+
+.halaman-pesanan-user .cable-knit-cardigan-wY9xvE {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 104px;
+}
+
+.halaman-pesanan-user .link-BVX7aJ {
+  background-color: transparent;
+  height: 14px;
+  left: 524px;
+  position: absolute;
+  top: 112px;
+  width: 98px;
+}
+
+.halaman-pesanan-user .compression-shirt-9l7uYD {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 98px;
+}
+
+.halaman-pesanan-user .link-Oi6go0 {
+  background-color: transparent;
+  height: 14px;
+  left: 634px;
+  position: absolute;
+  top: 112px;
+  width: 119px;
+}
+
+.halaman-pesanan-user .korean-style-pria-1-set-4lLoIu {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 119px;
+}
+
+.halaman-pesanan-user .link-FT0x30 {
+  background-color: transparent;
+  height: 14px;
+  left: 766px;
+  position: absolute;
+  top: 112px;
+  width: 41px;
+}
+
+.halaman-pesanan-user .half-zip-1lxlMm {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 41px;
+}
+
+.halaman-pesanan-user .link-BozrdF {
+  background-color: transparent;
+  height: 14px;
+  left: 820px;
+  position: absolute;
+  top: 112px;
+  width: 142px;
+}
+
+.halaman-pesanan-user .celana-basket-lakers-putih-NfgzBX {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 143px;
+}
+
+.halaman-pesanan-user .link-SSHtjT {
+  background-color: transparent;
+  height: 14px;
+  left: 976px;
+  position: absolute;
+  top: 112px;
+  width: 59px;
+}
+
+.halaman-pesanan-user .jaket-polar-4kgyqq {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 59px;
+}
+
+.halaman-pesanan-user .link-oxMHbD {
+  background-color: transparent;
+  height: 14px;
+  left: 1048px;
+  position: absolute;
+  top: 112px;
+  width: 38px;
+}
+
+.halaman-pesanan-user .balvein-22xUS9 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 38px;
+}
+
+.halaman-pesanan-user .link-h0IElT {
+  background-color: transparent;
+  height: 14px;
+  left: 290px;
+  position: absolute;
+  top: 136px;
+  width: 105px;
+}
+
+.halaman-pesanan-user .corduroy-pants-pria-hbbWay {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 105px;
+}
+
+.halaman-pesanan-user .link-LeoDTI {
+  background-color: transparent;
+  height: 14px;
+  left: 407px;
+  position: absolute;
+  top: 136px;
+  width: 101px;
+}
+
+.halaman-pesanan-user .kevas-official-shop-sxxRhw {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 101px;
+}
+
+.halaman-pesanan-user .link-SDzezR {
+  background-color: transparent;
+  height: 14px;
+  left: 521px;
+  position: absolute;
+  top: 136px;
+  width: 71px;
+}
+
+.halaman-pesanan-user .crop-top-pria-WWu1Pf {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 71px;
+}
+
+.halaman-pesanan-user .link-8VlTe9 {
+  background-color: transparent;
+  height: 14px;
+  left: 605px;
+  position: absolute;
+  top: 136px;
+  width: 115px;
+}
+
+.halaman-pesanan-user .knitted-polo-shirt-pria-xwRryr {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 115px;
+}
+
+.halaman-pesanan-user .link-Nqihi4 {
+  background-color: transparent;
+  height: 14px;
+  left: 733px;
+  position: absolute;
+  top: 136px;
+  width: 141px;
+}
+
+.halaman-pesanan-user .lifebuoy-body-wash-pump-pBCwPx {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 141px;
+}
+
+.halaman-pesanan-user .link-FhTg7w {
+  background-color: transparent;
+  height: 14px;
+  left: 886px;
+  position: absolute;
+  top: 136px;
+  width: 84px;
+}
+
+.halaman-pesanan-user .tas-basket-nike-MOD82t {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 84px;
+}
+
+.halaman-pesanan-user .link-ak2v8g {
+  background-color: transparent;
+  height: 14px;
+  left: 290px;
+  position: absolute;
+  top: 160px;
+  width: 171px;
+}
+
+.halaman-pesanan-user .kaos-kaki-compass-x-boy-pablo-0GqBa3 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 172px;
+}
+
+.halaman-pesanan-user .link-zxuJ0z {
+  background-color: transparent;
+  height: 14px;
+  left: 474px;
+  position: absolute;
+  top: 160px;
+  width: 91px;
+}
+
+.halaman-pesanan-user .new-balance-793-mNBaAv {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 92px;
+}
+
+.halaman-pesanan-user .link-Yt3xX2 {
+  background-color: transparent;
+  height: 14px;
+  left: 578px;
+  position: absolute;
+  top: 160px;
+  width: 90px;
+}
+
+.halaman-pesanan-user .baggy-jeans-y2k-heWulc {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 91px;
+}
+
+.halaman-pesanan-user .link-8rfCkA {
+  background-color: transparent;
+  height: 14px;
+  left: 681px;
+  position: absolute;
+  top: 160px;
+  width: 36px;
+}
+
+.halaman-pesanan-user .sandal-1MJmNu {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 36px;
+}
+
+.halaman-pesanan-user .link-xYzSxr {
+  background-color: transparent;
+  height: 14px;
+  left: 730px;
+  position: absolute;
+  top: 160px;
+  width: 131px;
+}
+
+.halaman-pesanan-user .kaos-kaki-basket-jordan-xHdOVd {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 131px;
+}
+
+.halaman-pesanan-user .link-xUdBgg {
+  background-color: transparent;
+  height: 14px;
+  left: 874px;
+  position: absolute;
+  top: 160px;
+  width: 125px;
+}
+
+.halaman-pesanan-user .kemeja-pria-style-korea-S5t9A7 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 126px;
+}
+
+.halaman-pesanan-user .button-link-tCwM1c {
+  background-color: transparent;
+  height: 26px;
+  left: 1172px;
+  position: absolute;
+  top: 30px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .svg-i50TvK {
+  height: 26px;
+  left: 0px;
+  top: 0px;
+  width: 26px;
+}
+
+.halaman-pesanan-user .container-i50TvK {
+  background-color: transparent;
+  height: 1px;
+  left: -9999px;
+  overflow: hidden;
+  position: absolute;
+  top: 12px;
+  width: 1px;
+}
+
+.halaman-pesanan-user .shopping-4AuTb4 {
+  background-color: transparent;
+  color: #0000ee;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 59px;
+}
+
+.halaman-pesanan-user .background-border-i50TvK {
+  background-color: var(--white);
+  border: 2px solid;
+  border-color: var(--flamingo);
+  border-radius: 44px;
+  height: 20px;
+  left: 16px;
+  position: absolute;
+  top: -8px;
+  width: 30px;
+}
+
+.halaman-pesanan-user .x14-PIdpqB {
+  background-color: transparent;
+  height: 17px;
+  left: 7px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: center;
+  top: -1px;
+  white-space: nowrap;
+  width: 16px;
+}
+
+.halaman-pesanan-user .nav-WzMxzg {
+  background-color: transparent;
+  height: 34px;
+  left: 74px;
+  position: absolute;
+  top: 0px;
+  width: 1200px;
+}
+
+.halaman-pesanan-user .link-f0XUBV {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  position: absolute;
+  top: 5px;
+  width: 80px;
+}
+
+.halaman-pesanan-user .seller-centre-6VEVam {
+  height: 15px;
+  left: 4px;
+  line-height: 15.6px;
+  top: 3px;
+  width: 72px;
+}
+
+.halaman-pesanan-user .link-ck58Bj {
+  background-color: transparent;
+  height: 24px;
+  left: 90px;
+  position: absolute;
+  top: 5px;
+  width: 65px;
+}
+
+.halaman-pesanan-user .download-x4FLI5 {
+  background-color: transparent;
+  height: 15px;
+  left: 4px;
+  letter-spacing: 0.00px;
+  line-height: 15.6px;
+  position: absolute;
+  text-align: left;
+  top: 3px;
+  white-space: nowrap;
+  width: 58px;
+}
+
+.halaman-pesanan-user .vertical-divider-f0XUBV {
+  left: 84px;
+}
+
+.halaman-pesanan-user .ikuti-kami-di-f0XUBV {
+  background-color: transparent;
+  height: 15px;
+  left: 169px;
+  letter-spacing: 0.00px;
+  line-height: 15.6px;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  white-space: nowrap;
+  width: 69px;
+}
+
+.halaman-pesanan-user .vertical-divider-ck58Bj {
+  left: 159px;
+}
+
+.halaman-pesanan-user .container-f0XUBV {
+  background-color: transparent;
+  height: 24px;
+  left: 237px;
+  position: absolute;
+  top: 5px;
+  width: 82px;
+}
+
+.halaman-pesanan-user .link-20CWAM {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/link@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  top: 4px;
+  width: 16px;
+}
+
+.halaman-pesanan-user .link-TMsQxQ {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/link@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 30px;
+  overflow: hidden;
+  position: absolute;
+  top: 4px;
+  width: 16px;
+}
+
+.halaman-pesanan-user .link-74FHiA {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/link@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 56px;
+  overflow: hidden;
+  position: absolute;
+  top: 4px;
+  width: 16px;
+}
+
+.halaman-pesanan-user .list-f0XUBV {
+  height: 34px;
+  left: 787px;
+  top: 0px;
+  width: 413px;
+}
+
+.halaman-pesanan-user .item-4ccCsO {
+  background-color: transparent;
+  height: 30px;
+  left: 0px;
+  position: absolute;
+  top: 2px;
+  width: 72px;
+}
+
+.halaman-pesanan-user .button-link-fJVVe5 {
+  background-color: transparent;
+  cursor: pointer;
+  height: 30px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 72px;
+}
+
+.halaman-pesanan-user .notifikasi-d5xL6x {
+  height: 15px;
+  left: 19px;
+  line-height: 15.6px;
+  top: 6px;
+  width: 54px;
+}
+
+.halaman-pesanan-user .svg-d5xL6x {
+  height: 18px;
+  left: 0px;
+  top: 6px;
+  width: 14px;
+}
+
+.halaman-pesanan-user .link-4ccCsO {
+  background-color: transparent;
+  height: 18px;
+  left: 72px;
+  position: absolute;
+  top: 8px;
+  width: 88px;
+}
+
+.halaman-pesanan-user .svg-YEk77p {
+  height: 18px;
+  left: 8px;
+  top: 0px;
+  width: 18px;
+}
+
+.halaman-pesanan-user .container-YEk77p {
+  background-color: transparent;
+  height: 16px;
+  left: 31px;
+  position: absolute;
+  top: 1px;
+  width: 48px;
+}
+
+.halaman-pesanan-user .bantuan-mkN6or {
+  height: 15px;
+  line-height: 15.6px;
+  width: 48px;
+}
+
+.halaman-pesanan-user .item-M9C4av {
+  background-color: transparent;
+  height: 30px;
+  left: 161px;
+  position: absolute;
+  top: 2px;
+  width: 159px;
+}
+
+.halaman-pesanan-user .button-643KRB {
+  background-color: transparent;
+  height: 30px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 159px;
+}
+
+.halaman-pesanan-user .svg-niTgEd {
+  height: 16px;
+  left: 10px;
+  top: 7px;
+  width: 16px;
+}
+
+.halaman-pesanan-user .bahasa-indonesia-niTgEd {
+  background-color: transparent;
+  height: 15px;
+  left: 31px;
+  letter-spacing: 0.00px;
+  line-height: 15.6px;
+  position: absolute;
+  text-align: left;
+  top: 6px;
+  white-space: nowrap;
+  width: 102px;
+}
+
+.halaman-pesanan-user .svg-yZuRBT {
+  height: 12px;
+  left: 137px;
+  top: 9px;
+  width: 12px;
+}
+
+.halaman-pesanan-user .item-5TqLRV {
+  background-color: transparent;
+  height: 32px;
+  left: 320px;
+  position: absolute;
+  top: 1px;
+  width: 93px;
+}
+
+.halaman-pesanan-user .button-jnosLX {
+  background-color: transparent;
+  height: 32px;
+  left: 10px;
+  position: relative;
+  top: 0px;
+  width: 73px;
+}
+
+.halaman-pesanan-user .container-2exaRC {
+  background-color: transparent;
+  height: 17px;
+  left: 22px;
+  overflow: hidden;
+  position: absolute;
+  top: 8px;
+  width: 51px;
+}
+
+.halaman-pesanan-user .user-aUlONs {
+  color: var(--white);
+  font-weight: 400;
+  left: 5px;
+  width: 46px;
+}
+
+.halaman-pesanan-user .border-2exaRC {
+  height: 22px;
+  left: 0px;
+  top: 5px;
+  width: 22px;
+}
+
+.halaman-pesanan-user .horizontal-border-dGTx5I {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: #efefef;
+  border-top-style: none;
+  height: 81px;
+  top: 139px;
+  width: 180px;
+}
+
+.halaman-pesanan-user .link-x3AbyD {
+  background-color: transparent;
+  height: 50px;
+  left: 0px;
+  position: absolute;
+  top: 15px;
+  width: 50px;
+}
+
+.halaman-pesanan-user .container-x3AbyD {
+  background-color: transparent;
+  height: 50px;
+  left: 50px;
+  overflow: hidden;
+  position: absolute;
+  top: 15px;
+  width: 130px;
+}
+
+.halaman-pesanan-user .container-QtctX9 {
+  background-color: transparent;
+  height: 17px;
+  left: 15px;
+  overflow: hidden;
+  position: absolute;
+  top: 6px;
+  width: 115px;
+}
+
+.halaman-pesanan-user .user-7oyvvC {
+  color: #333333;
+  font-weight: 700;
+  left: 0px;
+  width: 48px;
+}
+
+.halaman-pesanan-user .link-QtctX9 {
+  background-color: transparent;
+  height: 17px;
+  left: 15px;
+  position: absolute;
+  top: 26px;
+  width: 84px;
+}
+
+.halaman-pesanan-user .svg-CzOwVv {
+  height: 12px;
+  left: 0px;
+  top: 1px;
+  width: 12px;
+}
+
+.halaman-pesanan-user .ubah-profil-CzOwVv {
+  background-color: transparent;
+  color: #888888;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 69px;
+}
+
+.halaman-pesanan-user .link-dGTx5I {
+  background-color: transparent;
+  height: 20px;
+  left: 74px;
+  position: absolute;
+  top: 247px;
+  width: 180px;
+}
+
+.halaman-pesanan-user .ba61750a46794d8847c3f463c5e71cc4-P9KU1d {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c671cf29796bc7fd30c5c/img/ba61750a46794d8847c3f463c5e71cc4@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 20px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 20px;
+}
+
+.halaman-pesanan-user .akun-saya-P9KU1d {
+  background-color: transparent;
+  height: 17px;
+  left: 30px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 66px;
+}
+
+.halaman-pesanan-user .link-GT4FYq {
+  background-color: transparent;
+  height: 20px;
+  left: 74px;
+  position: absolute;
+  top: 282px;
+  width: 180px;
+}
+
+.halaman-pesanan-user .f0049e9df4e536bc3e7f140d071e9078-BxMU8X {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c671cf29796bc7fd30c5c/img/f0049e9df4e536bc3e7f140d071e9078@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 20px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 20px;
+}
+
+.halaman-pesanan-user .pesanan-saya-BxMU8X {
+  background-color: transparent;
+  color: var(--flamingo);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 500;
+  height: 17px;
+  left: 30px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 88px;
+}
+
+.halaman-pesanan-user .link-DL2rOh {
+  background-color: transparent;
+  cursor: pointer;
+  height: 20px;
+  left: 74px;
+  position: absolute;
+  top: 320px;
+  width: 180px;
+}
+
+.halaman-pesanan-user .e10a43b53ec8605f4829da5618e0717c-Zfmslp {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c671cf29796bc7fd30c5c/img/e10a43b53ec8605f4829da5618e0717c@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 20px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 20px;
+}
+
+.halaman-pesanan-user .notifikasi-Zfmslp {
+  height: 17px;
+  left: 30px;
+  line-height: 16px;
+  top: 0px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-12UuwR {
+  background-color: transparent;
+  height: 20px;
+  left: 74px;
+  position: absolute;
+  top: 355px;
+  width: 180px;
+}
+
+.halaman-pesanan-user .x84feaa363ce325071c0a66d3c9a88748-kXBTKT {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c671cf29796bc7fd30c5c/img/84feaa363ce325071c0a66d3c9a88748@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 20px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 20px;
+}
+
+.halaman-pesanan-user .voucher-saya-kXBTKT {
+  background-color: transparent;
+  height: 17px;
+  left: 30px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 86px;
+}
+
+.halaman-pesanan-user .link-8XgPSk {
+  background-color: transparent;
+  height: 20px;
+  left: 74px;
+  position: absolute;
+  top: 390px;
+  width: 180px;
+}
+
+.halaman-pesanan-user .a0ef4bd8e16e481b4253bd0eb563f784-FZKGUp {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c671cf29796bc7fd30c5c/img/a0ef4bd8e16e481b4253bd0eb563f784@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 20px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 20px;
+}
+
+.halaman-pesanan-user .koin-shopee-saya-FZKGUp {
+  background-color: transparent;
+  height: 17px;
+  left: 30px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 113px;
+}
+
+.halaman-pesanan-user .background-shadow-dGTx5I {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 2px #00000021;
+  height: 453px;
+  left: 282px;
+  position: absolute;
+  top: 129px;
+  width: 993px;
+}
+
+.halaman-pesanan-user .background-shadow-xp4MQC {
+  background-color: var(--cultured-pearl);
+  box-shadow: 0px 0px 0px 2px #f5f5f5;
+  height: 1165px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 993px;
+}
+
+.halaman-pesanan-user .main-c1GO89 {
+  background-color: transparent;
+  height: 1100px;
+  left: 0px;
+  position: absolute;
+  top: 65px;
+  width: 993px;
+}
+
+.halaman-pesanan-user .overlay-shadow-WikUJD {
+  border-radius: 2px;
+  height: 437px;
+  position: relative;
+  top: 0px;
+  width: 993px;
+}
+
+.halaman-pesanan-user .background-2xYrmq {
+  background-color: var(--white);
+  height: 294px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 993px;
+}
+
+.halaman-pesanan-user .section-pSS0SK {
+  background-color: transparent;
+  height: 46px;
+  left: 24px;
+  position: absolute;
+  top: 24px;
+  width: 945px;
+}
+
+.halaman-pesanan-user .svg-hFxZRe {
+  height: 16px;
+  left: 0px;
+  top: 9px;
+  width: 36px;
+}
+
+.halaman-pesanan-user .container-hFxZRe {
+  background-color: transparent;
+  height: 17px;
+  left: 44px;
+  overflow: hidden;
+  position: absolute;
+  top: 8px;
+  width: 164px;
+}
+
+.halaman-pesanan-user .nvr_store20-7kdiSY {
+  background-color: transparent;
+  color: var(--black-7);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 164px;
+}
+
+.halaman-pesanan-user .button-hFxZRe {
+  background-color: var(--flamingo);
+  border-radius: 2px;
+  height: 25px;
+  left: 216px;
+  position: absolute;
+  top: 4px;
+  width: 59px;
+}
+
+.halaman-pesanan-user .chat-7mMlEw {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: 14px;
+  left: 25px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: center;
+  top: 5px;
+  white-space: nowrap;
+  width: 25px;
+}
+
+.halaman-pesanan-user .svg-7mMlEw {
+  height: 12px;
+  left: 9px;
+  top: 7px;
+  width: 12px;
+}
+
+.halaman-pesanan-user .link-hFxZRe {
+  background-color: transparent;
+  height: 25px;
+  left: 282px;
+  position: absolute;
+  top: 4px;
+  width: 109px;
+}
+
+.halaman-pesanan-user .background-border-rkn3Nw {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--black-5);
+  border-radius: 2px;
+  height: 25px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 109px;
+}
+
+.halaman-pesanan-user .kunjungi-toko-h4qz8I {
+  background-color: transparent;
+  color: #555555;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: 14px;
+  left: 25px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 5px;
+  white-space: nowrap;
+  width: 76px;
+}
+
+.halaman-pesanan-user .svg-h4qz8I {
+  height: 12px;
+  left: 9px;
+  top: 7px;
+  width: 12px;
+}
+
+.halaman-pesanan-user .vertical-border-hFxZRe {
+  border-color: #0000001f;
+  height: 34px;
+  left: 402px;
+  top: 0px;
+  width: 416px;
+}
+
+.halaman-pesanan-user .link-ipYGC7 {
+  background-color: transparent;
+  height: 34px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 390px;
+}
+
+.halaman-pesanan-user .svg-l4fomZ {
+  height: 16px;
+  left: 10px;
+  top: 0px;
+  width: 16px;
+}
+
+.halaman-pesanan-user .pengirim-telah-menga-l4fomZ {
+  background-color: transparent;
+  color: var(--jungle-green);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+  height: 34px;
+  left: 34px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: right;
+  top: -2px;
+  width: 357px;
+}
+
+.halaman-pesanan-user .svg-ipYGC7 {
+  height: 14px;
+  left: 396px;
+  top: 10px;
+  width: 14px;
+}
+
+.halaman-pesanan-user .sedang-dikemas-hFxZRe {
+  height: 24px;
+  left: 828px;
+  line-height: 24px;
+  text-align: right;
+  top: 4px;
+  width: 117px;
+}
+
+.halaman-pesanan-user .horizontal-divider-pSS0SK {
+  border-bottom-style: solid;
+  left: 24px;
+  top: 70px;
+  width: 945px;
+}
+
+.halaman-pesanan-user .section-link-pSS0SK {
+  background-color: transparent;
+  height: 211px;
+  left: 24px;
+  position: absolute;
+  top: 71px;
+  width: 945px;
+}
+
+.halaman-pesanan-user .section-qRWU9m {
+  background-color: transparent;
+  height: 100px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 945px;
+}
+
+.halaman-pesanan-user .container-nuAT0V {
+  background-color: transparent;
+  height: 23px;
+  left: 94px;
+  overflow: hidden;
+  position: absolute;
+  top: 12px;
+  width: 417px;
+}
+
+.halaman-pesanan-user .kemeja-hitam-pria-le-QM0bBF {
+  background-color: transparent;
+  color: var(--black-4);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+  height: 19px;
+  left: -0px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  white-space: nowrap;
+  width: 460px;
+}
+
+.halaman-pesanan-user .variasi-hitaml-nuAT0V {
+  background-color: transparent;
+  height: 17px;
+  left: 94px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 39px;
+  white-space: nowrap;
+  width: 99px;
+}
+
+.halaman-pesanan-user .x1-nuAT0V {
+  background-color: transparent;
+  color: var(--black-4);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 94px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 60px;
+  white-space: nowrap;
+  width: 15px;
+}
+
+.halaman-pesanan-user .border-nuAT0V {
+  border: 1px solid;
+  border-color: var(--jungle-green);
+  border-radius: 1px;
+  height: 20px;
+  left: 94px;
+  top: 82px;
+  width: 166px;
+}
+
+.halaman-pesanan-user .garansi-bebas-pengembalian-wXxRzZ {
+  background-color: transparent;
+  color: var(--jungle-green);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: 14px;
+  left: 5px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  white-space: nowrap;
+  width: 157px;
+}
+
+.halaman-pesanan-user .rp141000-nuAT0V {
+  background-color: transparent;
+  height: 17px;
+  left: 864px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: right;
+  top: 46px;
+  white-space: nowrap;
+  width: 82px;
+}
+
+.halaman-pesanan-user .picture-id-11134207-nuAT0V {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c671cf29796bc7fd30c5c/img/picture---id-11134207-7r98x-lz779oy5ei4lfe-resize-w80-nl-webp@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 82px;
+  left: 6px;
+  overflow: hidden;
+  position: absolute;
+  top: 18px;
+  width: 82px;
+}
+
+.halaman-pesanan-user .background-thEskO {
+  background-color: #fffefb;
+  height: 66px;
+  left: 0px;
+  position: absolute;
+  top: 295px;
+  width: 993px;
+}
+
+.halaman-pesanan-user .label-Cl3lIu {
+  background-color: transparent;
+  height: 20px;
+  left: 759px;
+  position: absolute;
+  top: 29px;
+  width: 92px;
+}
+
+.halaman-pesanan-user .total-pesanan-fkhMux {
+  background-color: transparent;
+  color: var(--black-7);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 93px;
+}
+
+.halaman-pesanan-user .total-pesanan-rp68650-rp68650-Cl3lIu {
+  background-color: transparent;
+  color: var(--flamingo);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 400;
+  height: 30px;
+  left: 860px;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  position: absolute;
+  text-align: left;
+  top: 23px;
+  white-space: nowrap;
+  width: 126px;
+}
+
+.halaman-pesanan-user .horizontal-divider-2xYrmq {
+  border-bottom-style: dashed;
+  left: 0px;
+  top: 294px;
+  width: 993px;
+}
+
+.halaman-pesanan-user .background-fkZ1Wi {
+  background-color: var(--cultured-pearl);
+  border-radius: 3.5px;
+  height: 7px;
+  left: -4px;
+  position: absolute;
+  top: -4px;
+  width: 7px;
+}
+
+.halaman-pesanan-user .background-uexgrM {
+  background-color: var(--cultured-pearl);
+  border-radius: 3.5px;
+  height: 7px;
+  left: 990px;
+  position: absolute;
+  top: -4px;
+  width: 7px;
+}
+
+.halaman-pesanan-user .background-fm9AfN {
+  background-color: #fffefb;
+  height: 76px;
+  left: 0px;
+  position: absolute;
+  top: 361px;
+  width: 993px;
+}
+
+.halaman-pesanan-user .produk-akan-dikirimk-fA4Lsu {
+  left: 24px;
+  top: 25px;
+}
+
+.halaman-pesanan-user .produk-akan-dikirimk-U2u5FJ {
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+}
+
+.halaman-pesanan-user .span0-1lxpJ3 {
+}
+
+.halaman-pesanan-user .span1-1lxpJ3 {
+  text-decoration: underline;
+}
+
+.halaman-pesanan-user .section-fA4Lsu {
+  background-color: transparent;
+  height: 40px;
+  left: 645px;
+  position: absolute;
+  top: 12px;
+  width: 324px;
+}
+
+.halaman-pesanan-user .button-tulDgQ {
+  background-color: var(--flamingo);
+  border-radius: 2px;
+  height: 40px;
+  left: 10px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 150px;
+}
+
+.halaman-pesanan-user .hubungi-penjual-rqxRQq {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: center;
+  top: 10px;
+  white-space: nowrap;
+  width: 102px;
+}
+
+.halaman-pesanan-user .button-dxOATN {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--black-5);
+  border-radius: 2px;
+  height: 40px;
+  left: 170px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 154px;
+}
+
+.halaman-pesanan-user .batalkan-pesanan-wePYbg {
+  background-color: transparent;
+  color: #555555;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 21px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: center;
+  top: 10px;
+  white-space: nowrap;
+  width: 112px;
+}
+
+.halaman-pesanan-user .section-c1GO89 {
+  background-color: var(--white);
+  border-radius: 2px 2px 0px 0px;
+  height: 53px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 993px;
+}
+
+.halaman-pesanan-user .link-j1Htyn {
+  background-color: var(--white);
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-color: var(--black-5);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  height: 53px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 142px;
+}
+
+.halaman-pesanan-user .container-3ar4uJ {
+  background-color: transparent;
+  height: 19px;
+  left: 46px;
+  overflow: hidden;
+  position: relative;
+  top: 16px;
+  width: 50px;
+}
+
+.halaman-pesanan-user .semua-x5EvqP {
+  background-color: transparent;
+  height: 19px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  top: -1px;
+  white-space: nowrap;
+  width: 50px;
+}
+
+.halaman-pesanan-user .link-RxDRPi {
+  background-color: var(--white);
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-color: var(--black-5);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  height: 53px;
+  left: 142px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 142px;
+}
+
+.halaman-pesanan-user .container-67dB0U {
+  background-color: transparent;
+  height: 19px;
+  left: 26px;
+  overflow: hidden;
+  position: relative;
+  top: 16px;
+  width: 89px;
+}
+
+.halaman-pesanan-user .belum-bayar-xEyidj {
+  background-color: transparent;
+  height: 19px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  top: -1px;
+  white-space: nowrap;
+  width: 90px;
+}
+
+.halaman-pesanan-user .link-1yhDxy {
+  background-color: var(--white);
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-color: var(--flamingo);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  height: 53px;
+  left: 284px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 142px;
+}
+
+.halaman-pesanan-user .container-UkwJ9f {
+  background-color: transparent;
+  height: 19px;
+  left: 1px;
+  overflow: hidden;
+  position: absolute;
+  top: 16px;
+  width: 119px;
+}
+
+.halaman-pesanan-user .sedang-dikemas-orchnR {
+  color: var(--flamingo);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+  height: 19px;
+  left: 0px;
+  line-height: 19px;
+  text-align: center;
+  top: -1px;
+  width: 120px;
+}
+
+.halaman-pesanan-user .x2-UkwJ9f {
+  left: 124px;
+}
+
+.halaman-pesanan-user .link-4znEui {
+  background-color: var(--white);
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-color: var(--black-5);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  height: 53px;
+  left: 426px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 142px;
+}
+
+.halaman-pesanan-user .container-vh9Cwr {
+  background-color: transparent;
+  height: 19px;
+  left: 35px;
+  overflow: hidden;
+  position: absolute;
+  top: 16px;
+  width: 50px;
+}
+
+.halaman-pesanan-user .dikirim-inTzxp {
+  background-color: transparent;
+  height: 19px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  top: -1px;
+  white-space: nowrap;
+  width: 50px;
+}
+
+.halaman-pesanan-user .x2-vh9Cwr {
+  left: 89px;
+}
+
+.halaman-pesanan-user .link-vxUFfy {
+  background-color: var(--white);
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-color: var(--black-5);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  height: 53px;
+  left: 567px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 142px;
+}
+
+.halaman-pesanan-user .container-HwNqla {
+  background-color: transparent;
+  height: 19px;
+  left: 45px;
+  overflow: hidden;
+  position: relative;
+  top: 16px;
+  width: 51px;
+}
+
+.halaman-pesanan-user .selesai-7uuHnR {
+  background-color: transparent;
+  height: 19px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  top: -1px;
+  white-space: nowrap;
+  width: 52px;
+}
+
+.halaman-pesanan-user .link-trU1p8 {
+  background-color: var(--white);
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-color: var(--black-5);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  height: 53px;
+  left: 709px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 142px;
+}
+
+.halaman-pesanan-user .container-9RxW13 {
+  background-color: transparent;
+  height: 19px;
+  left: 33px;
+  overflow: hidden;
+  position: relative;
+  top: 16px;
+  width: 76px;
+}
+
+.halaman-pesanan-user .dibatalkan-YxCoJB {
+  background-color: transparent;
+  height: 19px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  top: -1px;
+  white-space: nowrap;
+  width: 76px;
+}
+
+.halaman-pesanan-user .link-KRngLF {
+  background-color: var(--white);
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-color: var(--black-5);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  height: 53px;
+  left: 851px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 142px;
+}
+
+.halaman-pesanan-user .container-LPVHxx {
+  background-color: transparent;
+  height: 19px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 16px;
+  width: 142px;
+}
+
+.halaman-pesanan-user .pengembalian-bar-w0Vo5U {
+  background-color: transparent;
+  height: 19px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  top: -1px;
+  white-space: nowrap;
+  width: 140px;
+}
+
+.halaman-pesanan-user .footer-dGTx5I {
+  background-color: var(--white);
+  border-bottom-style: none;
+  border-color: var(--flamingo);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: solid;
+  border-top-width: 4px;
+  height: 663px;
+  left: 0px;
+  position: absolute;
+  top: 641px;
+  width: 1349px;
+}
+
+.halaman-pesanan-user .background-MjxMNO {
+  background-color: #fbfbfb;
+  height: 678px;
+  left: 0px;
+  position: relative;
+  top: 4px;
+  width: 1349px;
+}
+
+.halaman-pesanan-user .container-jZBb5z {
+  background-color: transparent;
+  height: 579px;
+  left: 70px;
+  position: absolute;
+  top: 0px;
+  width: 1210px;
+}
+
+.halaman-pesanan-user .layanan-pelanggan-TM9NbP {
+  background-color: transparent;
+  height: 14px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 49px;
+  white-space: nowrap;
+  width: 106px;
+}
+
+.halaman-pesanan-user .list-TM9NbP {
+  height: 252px;
+  left: 10px;
+  top: 84px;
+  width: 240px;
+}
+
+.halaman-pesanan-user .item-link-mkjERU {
+  height: 14px;
+  top: 0px;
+  width: 44px;
+}
+
+.halaman-pesanan-user .container-njk882 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 44px;
+}
+
+.halaman-pesanan-user .bantuan-me7Iqs {
+  height: 14px;
+  line-height: 14.4px;
+  width: 45px;
+}
+
+.halaman-pesanan-user .item-link-uW70Na {
+  height: 14px;
+  top: 26px;
+  width: 110px;
+}
+
+.halaman-pesanan-user .container-JOK9gM {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 110px;
+}
+
+.halaman-pesanan-user .metode-pembayaran-mXMsdH {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 111px;
+}
+
+.halaman-pesanan-user .item-link-e4qQPk {
+  height: 14px;
+  top: 53px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .container-ZkYNUU {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .shopee-pay-j1ty0A {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 60px;
+}
+
+.halaman-pesanan-user .item-link-ddyaO2 {
+  height: 14px;
+  top: 79px;
+  width: 67px;
+}
+
+.halaman-pesanan-user .container-rVCt2F {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 67px;
+}
+
+.halaman-pesanan-user .koin-shopee-20cfry {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 67px;
+}
+
+.halaman-pesanan-user .item-link-BXXtQ7 {
+  height: 14px;
+  top: 106px;
+  width: 127px;
+}
+
+.halaman-pesanan-user .container-aER75x {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 127px;
+}
+
+.halaman-pesanan-user .lacak-pesanan-pembeli-kJmeXL {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 128px;
+}
+
+.halaman-pesanan-user .item-link-WkxdY5 {
+  height: 14px;
+  top: 132px;
+  width: 138px;
+}
+
+.halaman-pesanan-user .container-xrEosL {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 138px;
+}
+
+.halaman-pesanan-user .lacak-pengiriman-penjual-CmW7Id {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 138px;
+}
+
+.halaman-pesanan-user .item-link-XzyXzF {
+  height: 14px;
+  top: 158px;
+  width: 69px;
+}
+
+.halaman-pesanan-user .container-EGocYe {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 69px;
+}
+
+.halaman-pesanan-user .gratis-ongkir-avWGiP {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 69px;
+}
+
+.halaman-pesanan-user .item-link-VDTwDe {
+  height: 14px;
+  top: 185px;
+  width: 158px;
+}
+
+.halaman-pesanan-user .container-qEOvpp {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 158px;
+}
+
+.halaman-pesanan-user .pengembalian-barang-dana-W8QHgK {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 158px;
+}
+
+.halaman-pesanan-user .item-link-x8TwaY {
+  height: 14px;
+  top: 211px;
+  width: 84px;
+}
+
+.halaman-pesanan-user .container-JxXJiy {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 84px;
+}
+
+.halaman-pesanan-user .garansi-shopee-KA7gBY {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 84px;
+}
+
+.halaman-pesanan-user .item-link-aVyyXT {
+  height: 14px;
+  top: 238px;
+  width: 75px;
+}
+
+.halaman-pesanan-user .container-iLgp1b {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 75px;
+}
+
+.halaman-pesanan-user .hubungi-kami-vJygsH {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 76px;
+}
+
+.halaman-pesanan-user .jelajahi-shopee-TM9NbP {
+  background-color: transparent;
+  height: 14px;
+  left: 260px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 49px;
+  white-space: nowrap;
+  width: 86px;
+}
+
+.halaman-pesanan-user .list-KxA7pN {
+  height: 252px;
+  left: 260px;
+  top: 84px;
+  width: 240px;
+}
+
+.halaman-pesanan-user .item-link-rhi58l {
+  height: 14px;
+  top: 0px;
+  width: 74px;
+}
+
+.halaman-pesanan-user .container-uHDDss {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 74px;
+}
+
+.halaman-pesanan-user .tentang-kami-vGNxY8 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 74px;
+}
+
+.halaman-pesanan-user .item-link-3YBxLx {
+  height: 14px;
+  top: 26px;
+  width: 25px;
+}
+
+.halaman-pesanan-user .container-IQ7RJn {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 25px;
+}
+
+.halaman-pesanan-user .karir-8JxVky {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 25px;
+}
+
+.halaman-pesanan-user .item-link-wVfdAs {
+  height: 14px;
+  top: 53px;
+  width: 95px;
+}
+
+.halaman-pesanan-user .container-JX4VXk {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 95px;
+}
+
+.halaman-pesanan-user .kebijakan-shopee-Z4ZvT2 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 95px;
+}
+
+.halaman-pesanan-user .item-link-UwUS4A {
+  height: 14px;
+  top: 79px;
+  width: 91px;
+}
+
+.halaman-pesanan-user .container-nFJAyu {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 91px;
+}
+
+.halaman-pesanan-user .kebijakan-privasi-InVYuT {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 91px;
+}
+
+.halaman-pesanan-user .item-link-EJjvCj {
+  height: 14px;
+  top: 106px;
+  width: 24px;
+}
+
+.halaman-pesanan-user .container-E9yHr5 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 24px;
+}
+
+.halaman-pesanan-user .blog-sHoWwl {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 24px;
+}
+
+.halaman-pesanan-user .item-link-wM4GeN {
+  height: 14px;
+  top: 132px;
+  width: 66px;
+}
+
+.halaman-pesanan-user .container-Hgox7K {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 66px;
+}
+
+.halaman-pesanan-user .shopee-mall-1ZlOGR {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 66px;
+}
+
+.halaman-pesanan-user .item-link-dn3VwL {
+  height: 14px;
+  top: 158px;
+  width: 68px;
+}
+
+.halaman-pesanan-user .container-57xiu3 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 68px;
+}
+
+.halaman-pesanan-user .seller-centre-x95nxG {
+  height: 14px;
+  left: 0px;
+  line-height: 14.4px;
+  top: -1px;
+  width: 68px;
+}
+
+.halaman-pesanan-user .item-link-DlNBsN {
+  height: 14px;
+  top: 185px;
+  width: 55px;
+}
+
+.halaman-pesanan-user .container-xNdr44 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 55px;
+}
+
+.halaman-pesanan-user .flash-sale-z771Gn {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 55px;
+}
+
+.halaman-pesanan-user .item-link-Gsma6I {
+  height: 14px;
+  top: 211px;
+  width: 73px;
+}
+
+.halaman-pesanan-user .container-9jiaZx {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 73px;
+}
+
+.halaman-pesanan-user .kontak-media-h9YZkM {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 74px;
+}
+
+.halaman-pesanan-user .item-link-7lJGCz {
+  height: 14px;
+  top: 238px;
+  width: 84px;
+}
+
+.halaman-pesanan-user .container-VNcJZr {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 84px;
+}
+
+.halaman-pesanan-user .shopee-affiliate-M98ZyR {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 84px;
+}
+
+.halaman-pesanan-user .pembayaran-TM9NbP {
+  background-color: transparent;
+  height: 14px;
+  left: 510px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 49px;
+  white-space: nowrap;
+  width: 68px;
+}
+
+.halaman-pesanan-user .list-YYJhil {
+  height: 228px;
+  left: 510px;
+  top: 84px;
+  width: 240px;
+}
+
+.halaman-pesanan-user .item-OT0Bxj {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-7dLreM {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .x5589c755ab085d2fac3e33f4755c6a9e-yfvpLi {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/5589c755ab085d2fac3e33f4755c6a9e@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-ek1G7X {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-6KXmIz {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .x49656d7100598b911a1f247dec64fda4-qgTxMU {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/49656d7100598b911a1f247dec64fda4@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-wsUwgJ {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-37dAwk {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .e7865f5fb066b8b5e73f9d5c36fc7154-PK4vtM {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/e7865f5fb066b8b5e73f9d5c36fc7154@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-yr47ls {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 38px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-964TjC {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .x59185c096964e1892e9122ceaae2609d-hdYHc7 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/59185c096964e1892e9122ceaae2609d@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-CixuD4 {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 38px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-ac65bo {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .x9a08d3abab3dd059fff945c72ca372d9-pvQRaq {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/9a08d3abab3dd059fff945c72ca372d9@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-IXpR8n {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 38px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-7xRAl8 {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .x780c2be80e523384a7320b89f42008d5-KNc8fx {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/780c2be80e523384a7320b89f42008d5@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-xIXuzX {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 76px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-Z3UxPj {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .x0cf8caa250763eefc3d79bb1f8c08e73-EEoi7h {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/0cf8caa250763eefc3d79bb1f8c08e73@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-ZqRbsZ {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 76px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-lMPeOa {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .c8dce1e557f48316ef80dc9dbee40097-Fe6vvr {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/c8dce1e557f48316ef80dc9dbee40097@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-TNyn9B {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 76px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-mF1l6i {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .x1ad101bcf0e90b74b5697db1511de529-egh8Jp {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/1ad101bcf0e90b74b5697db1511de529@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-tGNAtx {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 114px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-JlEVoa {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .x6167379c7a6e786452f9f03295f517e6-c397cC {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/6167379c7a6e786452f9f03295f517e6@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-liSpLu {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 114px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-HISnol {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .fc6e7bb9f2e88e7d1a702eb6de938d79-PCyPvg {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/fc6e7bb9f2e88e7d1a702eb6de938d79@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-zTNmMC {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 114px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-cHLhJ3 {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .x231b50853c37d3ed0933b8ba7479f0e4-7LraQI {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/231b50853c37d3ed0933b8ba7479f0e4@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-dOSHHE {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 152px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-eobm6k {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .d68d15075519a4dfcfc8ffd9385d7bb9-bg4erQ {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/d68d15075519a4dfcfc8ffd9385d7bb9@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-wzJEWJ {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 152px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-QJeZrQ {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .ea38821fb0e2ec640bcd4f21000de105-pApix8 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/ea38821fb0e2ec640bcd4f21000de105@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-XJZeKD {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 152px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-9ddsyZ {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .ef22f26ccc342ad4dea14cc383299d64-mVYJRN {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/ef22f26ccc342ad4dea14cc383299d64@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-cEqBSo {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 190px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-LxJkO4 {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .b228c4523a9d1261e4606e9bf3a4882f-P1QRCx {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/b228c4523a9d1261e4606e9bf3a4882f@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-kHxixh {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 190px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-EnxiGR {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .x41e4c83bae13f67b9898c7579dd53d05-EJPKLw {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/41e4c83bae13f67b9898c7579dd53d05@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .pengiriman-TM9NbP {
+  background-color: transparent;
+  height: 14px;
+  left: 510px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 327px;
+  white-space: nowrap;
+  width: 62px;
+}
+
+.halaman-pesanan-user .list-nBAFnJ {
+  height: 190px;
+  left: 510px;
+  top: 363px;
+  width: 240px;
+}
+
+.halaman-pesanan-user .item-e2hchr {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-nnKsx8 {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .id-50009109-0c5dd568-ayQOrD {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/id-50009109-0c5dd5687ff2ede525c04fbde2f7b7fd@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-goGHHO {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-6M5Blb {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .x982216a49044ce4636f861333bfdac5c-q9vg34 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/982216a49044ce4636f861333bfdac5c@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-4VDvLx {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-mxWBdG {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .x5ecc185311ec587945838b507140ee21-zZY0W3 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/5ecc185311ec587945838b507140ee21@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-U0x45E {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 38px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-Zi76wq {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .x5c07836b22c5689d56cb217c88171785-xxJvkz {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/5c07836b22c5689d56cb217c88171785@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-WpKcfo {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 38px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-0Q4999 {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .fe439088405f5b71199c3f6117932462-mhZXPP {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/fe439088405f5b71199c3f6117932462@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-bTCcJd {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 38px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-0evxEU {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .x9f4d96722647cf501edf21c958294568-Sdjptx {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/9f4d96722647cf501edf21c958294568@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-ZZC8Rj {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 76px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-MgDZMf {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .c2abc2de79484198bfc3fc3efd4ea049-lZr1bu {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/c2abc2de79484198bfc3fc3efd4ea049@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-quMxQx {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 76px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-OfrGVx {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .x5653e7f0ca1361ddddb5b545ab675bc2-zNVr7d {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/5653e7f0ca1361ddddb5b545ab675bc2@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-kBKcpo {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 76px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-uUgL8q {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .ed038a4fcd786fb2d6ef7b70a7a9a1b1-DkYyaF {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/ed038a4fcd786fb2d6ef7b70a7a9a1b1@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-LLrVZo {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 114px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-9DDwJ3 {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .x8810ac4e4cffb855d280503c6eb33ed4-Vf6hoz {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/8810ac4e4cffb855d280503c6eb33ed4@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-BUofcz {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 114px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-CdctPh {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .x5c023bfb427d9546a8055f3b76d91560-i2JaKt {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/5c023bfb427d9546a8055f3b76d91560@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-krjdaA {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 114px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-UV8qaD {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .x5e350fcf94101432052945e2931fa621-xlg58m {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/5e350fcf94101432052945e2931fa621@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-rNKtJu {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 152px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-oxNWRx {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .x47d94f9fb90cc7e374549620be687494-ikFVCF {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/47d94f9fb90cc7e374549620be687494@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-yovQX6 {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 152px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-VYCUlK {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .b20bd74ad72a92f1d22dc80e18ae2836-xkxkUY {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/b20bd74ad72a92f1d22dc80e18ae2836@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-uQ0Q6t {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 152px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .link-1Gb3Yw {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .fedcba5bb6bc183e31766f032fd49a00-cXHS5J {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/fedcba5bb6bc183e31766f032fd49a00@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .ikuti-kami-TM9NbP {
+  background-color: transparent;
+  height: 14px;
+  left: 760px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 49px;
+  white-space: nowrap;
+  width: 55px;
+}
+
+.halaman-pesanan-user .list-x0Za3x {
+  height: 128px;
+  left: 760px;
+  top: 84px;
+  width: 240px;
+}
+
+.halaman-pesanan-user .item-link-SgciTk {
+  height: 16px;
+  top: 0px;
+  width: 76px;
+}
+
+.halaman-pesanan-user .x622550fb2ffb8ddf3913538801bc4c05-Ki99SJ {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/622550fb2ffb8ddf3913538801bc4c05@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.halaman-pesanan-user .container-Ki99SJ {
+  background-color: transparent;
+  height: 16px;
+  left: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .facebook-6Qv6ok {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 52px;
+}
+
+.halaman-pesanan-user .item-link-7loLuk {
+  height: 16px;
+  top: 28px;
+  width: 78px;
+}
+
+.halaman-pesanan-user .ec4d29967019ea44642daa53a40ff89c-5EBFmn {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/ec4d29967019ea44642daa53a40ff89c@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.halaman-pesanan-user .container-5EBFmn {
+  background-color: transparent;
+  height: 16px;
+  left: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 54px;
+}
+
+.halaman-pesanan-user .instagram-AdM7Bb {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 54px;
+}
+
+.halaman-pesanan-user .item-link-QOz9Lh {
+  height: 16px;
+  top: 56px;
+  width: 61px;
+}
+
+.halaman-pesanan-user .x2bf3f4d1e10c63d4df16cf4090ded0a5-Ap1DpU {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/2bf3f4d1e10c63d4df16cf4090ded0a5@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.halaman-pesanan-user .container-Ap1DpU {
+  background-color: transparent;
+  height: 16px;
+  left: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 37px;
+}
+
+.halaman-pesanan-user .twitter-XaQGca {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 37px;
+}
+
+.halaman-pesanan-user .item-link-CliA8J {
+  height: 16px;
+  top: 84px;
+  width: 69px;
+}
+
+.halaman-pesanan-user .x32530e4a6641210fbbfdaf95f507aa1e-B4XS6U {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/32530e4a6641210fbbfdaf95f507aa1e@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.halaman-pesanan-user .container-B4XS6U {
+  background-color: transparent;
+  height: 16px;
+  left: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 45px;
+}
+
+.halaman-pesanan-user .linked-in-OWvmxR {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 45px;
+}
+
+.halaman-pesanan-user .item-link-TWrsOe {
+  height: 16px;
+  top: 112px;
+  width: 111px;
+}
+
+.halaman-pesanan-user .a4c827473f54e4a6ae4550a14ea92653-SPUoEM {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/a4c827473f54e4a6ae4550a14ea92653@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.halaman-pesanan-user .container-SPUoEM {
+  background-color: transparent;
+  height: 16px;
+  left: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 87px;
+}
+
+.halaman-pesanan-user .kampus-shopee-x3JIBv {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 87px;
+}
+
+.halaman-pesanan-user .keamanan-TM9NbP {
+  background-color: transparent;
+  height: 14px;
+  left: 760px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 227px;
+  white-space: nowrap;
+  width: 57px;
+}
+
+.halaman-pesanan-user .list-item-TM9NbP {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 60px;
+  left: 760px;
+  overflow: hidden;
+  position: absolute;
+  top: 263px;
+  width: 120px;
+}
+
+.halaman-pesanan-user .link-DD2VE7 {
+  background-color: transparent;
+  height: 52px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 112px;
+}
+
+.halaman-pesanan-user .id-11134258-7rasi-m1mj559k2yly05-viCUUU {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/id-11134258-7rasi-m1mj559k2yly05@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 52px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 112px;
+}
+
+.halaman-pesanan-user .download-aplikasi-shopee-TM9NbP {
+  background-color: transparent;
+  height: 14px;
+  left: 1010px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 49px;
+  white-space: nowrap;
+  width: 143px;
+}
+
+.halaman-pesanan-user .container-TM9NbP {
+  background-color: transparent;
+  height: 93px;
+  left: 1010px;
+  position: absolute;
+  top: 84px;
+  width: 190px;
+}
+
+.halaman-pesanan-user .link-9R0S2E {
+  background-color: transparent;
+  height: 93px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100px;
+}
+
+.halaman-pesanan-user .bed0af4663f887db16a7047185478dcf-ZIExPZ {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c671cf29796bc7fd30c5c/img/bed0af4663f887db16a7047185478dcf.svg);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 88px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 88px;
+}
+
+.halaman-pesanan-user .link-dkPXGQ {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 24px;
+  left: 100px;
+  position: absolute;
+  top: 0px;
+  width: 76px;
+}
+
+.halaman-pesanan-user .bbf28a2328ec8c7f57b9cc2069d693fd-Dd0x0C {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/bbf28a2328ec8c7f57b9cc2069d693fd@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 4px;
+  overflow: hidden;
+  position: relative;
+  top: 4px;
+  width: 68px;
+}
+
+.halaman-pesanan-user .link-C9AEnI {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 24px;
+  left: 100px;
+  position: absolute;
+  top: 32px;
+  width: 76px;
+}
+
+.halaman-pesanan-user .x1858a153798406c87945f15a38bf4874-f5tiFQ {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/1858a153798406c87945f15a38bf4874@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 4px;
+  overflow: hidden;
+  position: relative;
+  top: 4px;
+  width: 68px;
+}
+
+.halaman-pesanan-user .link-wZvALg {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 24px;
+  left: 100px;
+  position: absolute;
+  top: 64px;
+  width: 76px;
+}
+
+.halaman-pesanan-user .x0e74339f5da500baaaa52785f175bc6d-yteFRJ {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/0e74339f5da500baaaa52785f175bc6d@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 4px;
+  overflow: hidden;
+  position: relative;
+  top: 4px;
+  width: 68px;
+}
+
+.halaman-pesanan-user .horizontal-border-jZBb5z {
+  border-bottom-style: none;
+  border-color: #0000001a;
+  border-top-style: solid;
+  border-top-width: 1px;
+  height: 99px;
+  top: 579px;
+  width: 1200px;
+}
+
+.halaman-pesanan-user .shopee-2024-hak-cipta-dilindungi-dJ8zlB {
+  background-color: transparent;
+  height: 18px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: 40px;
+  white-space: nowrap;
+  width: 229px;
+}
+
+.halaman-pesanan-user .negara-dJ8zlB {
+  background-color: transparent;
+  height: 18px;
+  left: 488px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: right;
+  top: 40px;
+  white-space: nowrap;
+  width: 49px;
+}
+
+.halaman-pesanan-user .vertical-border-dJ8zlB {
+  border-color: var(--black-6);
+  height: 18px;
+  left: 536px;
+  top: 41px;
+  width: 74px;
+}
+
+.halaman-pesanan-user .link-rBd0nt {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 63px;
+}
+
+.halaman-pesanan-user .singapura-tFdQBK {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 63px;
+}
+
+.halaman-pesanan-user .vertical-border-DTDALL {
+  border-color: var(--black-6);
+  height: 18px;
+  left: 609px;
+  top: 41px;
+  width: 72px;
+}
+
+.halaman-pesanan-user .link-s6efzn {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 61px;
+}
+
+.halaman-pesanan-user .indonesia-w4xbNs {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 61px;
+}
+
+.halaman-pesanan-user .vertical-border-4eWFZs {
+  border-color: var(--black-6);
+  height: 18px;
+  left: 681px;
+  top: 41px;
+  width: 65px;
+}
+
+.halaman-pesanan-user .link-ostYBz {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 54px;
+}
+
+.halaman-pesanan-user .thailand-UyuvT6 {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 54px;
+}
+
+.halaman-pesanan-user .vertical-border-GxdVG4 {
+  border-color: var(--black-6);
+  height: 18px;
+  left: 746px;
+  top: 41px;
+  width: 67px;
+}
+
+.halaman-pesanan-user .link-SyPHvQ {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 56px;
+}
+
+.halaman-pesanan-user .malaysia-K2AP9w {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 56px;
+}
+
+.halaman-pesanan-user .vertical-border-sfXCnm {
+  border-color: var(--black-6);
+  height: 18px;
+  left: 813px;
+  top: 41px;
+  width: 63px;
+}
+
+.halaman-pesanan-user .link-F5ch4J {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.halaman-pesanan-user .vietnam-gSu2DT {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 52px;
+}
+
+.halaman-pesanan-user .vertical-border-VDTLGt {
+  border-color: var(--black-6);
+  height: 18px;
+  left: 876px;
+  top: 41px;
+  width: 56px;
+}
+
+.halaman-pesanan-user .link-tRbMCH {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 45px;
+}
+
+.halaman-pesanan-user .filipina-4aaNbB {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 45px;
+}
+
+.halaman-pesanan-user .vertical-border-54uA60 {
+  border-color: var(--black-6);
+  height: 18px;
+  left: 931px;
+  top: 41px;
+  width: 46px;
+}
+
+.halaman-pesanan-user .link-iCBNcz {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 35px;
+}
+
+.halaman-pesanan-user .brazil-RCZRM0 {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 35px;
+}
+
+.halaman-pesanan-user .vertical-border-Ep53au {
+  border-color: var(--black-6);
+  height: 18px;
+  left: 977px;
+  top: 41px;
+  width: 56px;
+}
+
+.halaman-pesanan-user .link-SnOGAY {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 45px;
+}
+
+.halaman-pesanan-user .mxico-cqI2OW {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 46px;
+}
+
+.halaman-pesanan-user .vertical-border-58j1dH {
+  border-color: var(--black-6);
+  height: 18px;
+  left: 1033px;
+  top: 41px;
+  width: 71px;
+}
+
+.halaman-pesanan-user .link-xdlV2W {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 60px;
+}
+
+.halaman-pesanan-user .colombia-r66irx {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 60px;
+}
+
+.halaman-pesanan-user .vertical-border-tXeGe4 {
+  border-color: var(--black-6);
+  height: 18px;
+  left: 1103px;
+  top: 41px;
+  width: 42px;
+}
+
+.halaman-pesanan-user .link-zhJaKz {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 31px;
+}
+
+.halaman-pesanan-user .chile-sQx3q1 {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 31px;
+}
+
+.halaman-pesanan-user .link-dJ8zlB {
+  background-color: transparent;
+  height: 17px;
+  left: 1151px;
+  position: absolute;
+  top: 41px;
+  width: 44px;
+}
+
+.halaman-pesanan-user .taiwan-SkzpaW {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 45px;
+}
+
+.halaman-pesanan-user .background-shadow-dJ8zlB {
+  background-color: var(--flamingo);
+  border-radius: 4px 4px 0px 0px;
+  box-shadow: 0px 4px 20px #1c1c3329;
+  height: 48px;
+  left: 1100px;
+  position: absolute;
+  top: 51px;
+  width: 100px;
+}
+
+.halaman-pesanan-user .svg-GiPreD {
+  height: 24px;
+  left: 12px;
+  top: 12px;
+  width: 24px;
+}
+
+.halaman-pesanan-user .svg-gXYqdX {
+  height: 22px;
+  left: 44px;
+  top: 13px;
+  width: 44px;
+}
+
+.halaman-pesanan-user .background-border-GiPreD {
+  background-color: var(--flamingo);
+  border: 1px solid;
+  border-color: #f6f6f6;
+  border-radius: 9px;
+  height: 18px;
+  left: 79px;
+  overflow: hidden;
+  position: absolute;
+  top: -9px;
+  width: 25px;
+}
+
+.halaman-pesanan-user .x52-almcp4 {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: 14px;
+  left: 6px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 1px;
+  white-space: nowrap;
+  width: 14px;
+}
+
+.halaman-pesanan-user .bantuan {
+  background-color: transparent;
+  left: 0px;
+  letter-spacing: 0.00px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+}
+
+.halaman-pesanan-user .border {
+  background-color: transparent;
+  position: absolute;
+}
+
+.halaman-pesanan-user .horizontal-border {
+  background-color: transparent;
+  border-left-style: none;
+  border-right-style: none;
+  left: 74px;
+  position: absolute;
+}
+
+.halaman-pesanan-user .horizontal-divider {
+  background-color: transparent;
+  border-bottom-width: 1px;
+  border-color: var(--black-5);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  height: 1px;
+  position: absolute;
+}
+
+.halaman-pesanan-user .item-link {
+  background-color: transparent;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.halaman-pesanan-user .list {
+  background-color: transparent;
+  position: absolute;
+}
+
+.halaman-pesanan-user .notifikasi {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.halaman-pesanan-user .overlay-shadow {
+  background-color: #ffffff01;
+  box-shadow: 0px 1px 1px #0000000d;
+  left: 0px;
+}
+
+.halaman-pesanan-user .produk-akan-dikirimk {
+  background-color: transparent;
+  height: 14px;
+  position: absolute;
+  width: 237px;
+}
+
+.halaman-pesanan-user .sedang-dikemas {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.halaman-pesanan-user .seller-centre {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.halaman-pesanan-user .svg {
+  background-color: transparent;
+  position: absolute;
+}
+
+.halaman-pesanan-user .user {
+  background-color: transparent;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+}
+
+.halaman-pesanan-user .vertical-border {
+  background-color: transparent;
+  border-bottom-style: none;
+  border-left-style: none;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-style: none;
+  position: absolute;
+}
+
+.halaman-pesanan-user .vertical-divider {
+  background-color: transparent;
+  border-bottom-style: none;
+  border-color: #ffffff38;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-style: none;
+  height: 15px;
+  position: absolute;
+  top: 10px;
+  width: 2px;
+}
+
+.halaman-pesanan-user .x2 {
+  background-color: transparent;
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  top: 15px;
+  white-space: nowrap;
+  width: 18px;
+}
+</style></head><body style="margin: 0;background: #f5f5f5;"><input type="hidden" id="anPageName" name="page" value="halaman-pesanan-user"><div class="container-center-horizontal"><div class="halaman-pesanan-user screen " data-id="11:2"><div class="container-AyOXoZ" data-id="11:3"><header class="header-dGTx5I" data-id="11:4"><div class="overlay-shadow-WzMxzg overlay-shadow" data-id="11:5"><img class="link-tCwM1c" data-id="11:6" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c671cf29796bc7fd30c5c/img/link.svg" alt="Link"><div class="search-tCwM1c" data-id="11:11"><div class="background-79SK6O" data-id="11:12"><div class="combobox-klaim-potongan-langsung-1-jt-2gIZFw" data-id="11:13"><div class="container-8XFxuA" data-id="11:14"><div class="klaim-potongan-langsung-1-jt-38944Y valign-text-middle roboto-normal-black-14px" data-id="11:15">KLAIM: Potongan Langsung 1JT</div></div></div></div><img class="button-79SK6O" data-id="11:17" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c671cf29796bc7fd30c5c/img/button.svg" alt="Button"></div><div class="link-jwV2Bo" data-id="11:26"><div class="sepatu-giannis-immortality-3-4BBiGf valign-text-middle roboto-light-white-12px" data-id="11:27">Sepatu Giannis Immortality 3</div></div><div class="link-etN4x1" data-id="11:28"><div class="hoodie-tanpa-lengan-fCSd6M valign-text-middle roboto-light-white-12px" data-id="11:29">Hoodie Tanpa Lengan</div></div><div class="link-mLqPal" data-id="11:30"><div class="kemeja-sutra-es-nxwKE9 valign-text-middle roboto-light-white-12px" data-id="11:31">Kemeja Sutra Es</div></div><div class="link-d65gTv" data-id="11:32"><div class="fukustudio-PWG62v valign-text-middle roboto-light-white-12px" data-id="11:33">Fukustudio</div></div><div class="link-3p0bxj" data-id="11:34"><div class="celana-winter-pria-GdUzJ6 valign-text-middle roboto-light-white-12px" data-id="11:35">Celana Winter Pria</div></div><div class="link-xSy43B" data-id="11:36"><div class="sweater-rajut-pria-yw3Aa0 valign-text-middle roboto-light-white-12px" data-id="11:37">Sweater Rajut Pria</div></div><div class="link-dxjdc1" data-id="11:38"><div class="sndwr-MTwAMR valign-text-middle roboto-light-white-12px" data-id="11:39">Sndwr</div></div><div class="link-90tk80" data-id="11:40"><div class="kaos-kaki-skate-tebal-Xxf6Di valign-text-middle roboto-light-white-12px" data-id="11:41">Kaos Kaki Skate Tebal</div></div><div class="link-IvYVqT" data-id="11:42"><div class="polo-old-money-znU2l2 valign-text-middle roboto-light-white-12px" data-id="11:43">Polo Old Money</div></div><div class="link-Hvfw14" data-id="11:44"><div class="celana-berserk-DY6m0e valign-text-middle roboto-light-white-12px" data-id="11:45">Celana Berserk</div></div><div class="link-St6x0S" data-id="11:46"><div class="coat-pria-Z7JGf3 valign-text-middle roboto-light-white-12px" data-id="11:47">Coat Pria</div></div><div class="link-GCXifA" data-id="11:48"><div class="giannis-immortality-3-dFDHxr valign-text-middle roboto-light-white-12px" data-id="11:49">Giannis Immortality 3</div></div><div class="link-D7qaGJ" data-id="11:50"><div class="uniqlo-dry-ex-i4iOLu valign-text-middle roboto-light-white-12px" data-id="11:51">UNIQLO Dry EX</div></div><div class="link-6OoiLk" data-id="11:52"><div class="kemeja-flanel-pria-oxo98C valign-text-middle roboto-light-white-12px" data-id="11:53">Kemeja Flanel Pria</div></div><div class="link-e3wxD0" data-id="11:54"><div class="celana-pendek-puma-xObXzg valign-text-middle roboto-light-white-12px" data-id="11:55">Celana Pendek Puma</div></div><div class="link-egl2Va" data-id="11:56"><div class="trousers-pria-loose-kP0otN valign-text-middle roboto-light-white-12px" data-id="11:57">Trousers Pria Loose</div></div><div class="link-6OGQVQ" data-id="11:58"><div class="cable-knit-cardigan-wY9xvE valign-text-middle roboto-light-white-12px" data-id="11:59">Cable Knit Cardigan</div></div><div class="link-BVX7aJ" data-id="11:60"><div class="compression-shirt-9l7uYD valign-text-middle roboto-light-white-12px" data-id="11:61">Compression Shirt</div></div><div class="link-Oi6go0" data-id="11:62"><p class="korean-style-pria-1-set-4lLoIu valign-text-middle roboto-light-white-12px" data-id="11:63">Korean Style Pria 1 Set</p></div><div class="link-FT0x30" data-id="11:64"><div class="half-zip-1lxlMm valign-text-middle roboto-light-white-12px" data-id="11:65">Half Zip</div></div><div class="link-BozrdF" data-id="11:66"><div class="celana-basket-lakers-putih-NfgzBX valign-text-middle roboto-light-white-12px" data-id="11:67">Celana Basket Lakers Putih</div></div><div class="link-SSHtjT" data-id="11:68"><div class="jaket-polar-4kgyqq valign-text-middle roboto-light-white-12px" data-id="11:69">Jaket Polar</div></div><div class="link-oxMHbD" data-id="11:70"><div class="balvein-22xUS9 valign-text-middle roboto-light-white-12px" data-id="11:71">Balvein</div></div><div class="link-h0IElT" data-id="11:72"><div class="corduroy-pants-pria-hbbWay valign-text-middle roboto-light-white-12px" data-id="11:73">Corduroy Pants Pria</div></div><div class="link-LeoDTI" data-id="11:74"><div class="kevas-official-shop-sxxRhw valign-text-middle roboto-light-white-12px" data-id="11:75">Kevas Official Shop</div></div><div class="link-SDzezR" data-id="11:76"><div class="crop-top-pria-WWu1Pf valign-text-middle roboto-light-white-12px" data-id="11:77">Crop Top Pria</div></div><div class="link-8VlTe9" data-id="11:78"><div class="knitted-polo-shirt-pria-xwRryr valign-text-middle roboto-light-white-12px" data-id="11:79">Knitted Polo Shirt Pria</div></div><div class="link-Nqihi4" data-id="11:80"><div class="lifebuoy-body-wash-pump-pBCwPx valign-text-middle roboto-light-white-12px" data-id="11:81">Lifebuoy Body Wash Pump</div></div><div class="link-FhTg7w" data-id="11:82"><div class="tas-basket-nike-MOD82t valign-text-middle roboto-light-white-12px" data-id="11:83">Tas Basket Nike</div></div><div class="link-ak2v8g" data-id="11:84"><p class="kaos-kaki-compass-x-boy-pablo-0GqBa3 valign-text-middle roboto-light-white-12px" data-id="11:85">Kaos Kaki Compass X Boy Pablo</p></div><div class="link-zxuJ0z" data-id="11:86"><div class="new-balance-793-mNBaAv valign-text-middle roboto-light-white-12px" data-id="11:87">New Balance 793</div></div><div class="link-Yt3xX2" data-id="11:88"><div class="baggy-jeans-y2k-heWulc valign-text-middle roboto-light-white-12px" data-id="11:89">Baggy Jeans Y2k</div></div><div class="link-8rfCkA" data-id="11:90"><div class="sandal-1MJmNu valign-text-middle roboto-light-white-12px" data-id="11:91">Sandal</div></div><div class="link-xYzSxr" data-id="11:92"><div class="kaos-kaki-basket-jordan-xHdOVd valign-text-middle roboto-light-white-12px" data-id="11:93">Kaos Kaki Basket Jordan</div></div><div class="link-xUdBgg" data-id="11:94"><div class="kemeja-pria-style-korea-S5t9A7 valign-text-middle roboto-light-white-12px" data-id="11:95">Kemeja Pria Style Korea</div></div><div class="button-link-tCwM1c" data-id="11:96"><img class="svg-i50TvK svg" data-id="11:97" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c671cf29796bc7fd30c5c/img/svg.svg" alt="SVG"><div class="container-i50TvK" data-id="11:101"><div class="shopping-4AuTb4 valign-text-middle" data-id="11:102">Shopping</div></div><div class="background-border-i50TvK" data-id="11:103"><div class="x14-PIdpqB valign-text-middle roboto-normal-flamingo-14px" data-id="11:104">14</div></div></div></div><div class="nav-WzMxzg" data-id="11:105"><div class="link-f0XUBV" data-id="11:106"><div class="seller-centre-6VEVam valign-text-middle seller-centre roboto-light-white-13px" data-id="11:107">Seller Centre</div></div><div class="link-ck58Bj" data-id="11:108"><div class="download-x4FLI5 valign-text-middle roboto-light-white-13px" data-id="11:109">Download</div></div><div class="vertical-divider-f0XUBV vertical-divider" data-id="11:110"></div><div class="ikuti-kami-di-f0XUBV valign-text-middle roboto-light-white-13px" data-id="11:111">Ikuti kami di</div><div class="vertical-divider-ck58Bj vertical-divider" data-id="11:112"></div><div class="container-f0XUBV" data-id="11:113"><div class="link-20CWAM" data-id="11:114-272c0f5c-665b-4191-afe9-0e89dd234e02"></div><div class="link-TMsQxQ" data-id="11:115-414d4b96-ee6d-4752-8e96-93d05e27c52e"></div><div class="link-74FHiA" data-id="11:116-7de781ba-62aa-453c-a374-f9e0247ec3c5"></div></div><div class="list-f0XUBV list" data-id="11:118"><div class="item-4ccCsO" data-id="11:119">
+  <div class="button-link-fJVVe5" data-id="11:120">
+    <a href="D:/VSCode/shopee akmal/halaman notifikasi.html"></a>
+    <div class="notifikasi-d5xL6x valign-text-middle notifikasi roboto-light-white-13px" data-id="11:121"><a href="D:/VSCode/shopee akmal/halaman notifikasi.html">Notifikasi</a></div>
+    <img class="svg-d5xL6x svg" data-id="11:122" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/svg.svg" alt="SVG">
+  </div>
+</div><div class="link-4ccCsO" data-id="11:125"><img class="svg-YEk77p svg" data-id="11:126" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/svg-1.svg" alt="SVG"><div class="container-YEk77p" data-id="11:130"><div class="bantuan-mkN6or valign-text-middle bantuan roboto-light-white-13px" data-id="11:131">Bantuan</div></div></div><div class="item-M9C4av" data-id="11:132"><div class="button-643KRB" data-id="11:133"><img class="svg-niTgEd svg" data-id="11:134" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/svg-2.svg" alt="SVG"><div class="bahasa-indonesia-niTgEd valign-text-middle roboto-light-white-13px" data-id="11:138">Bahasa Indonesia</div><img class="svg-yZuRBT svg" data-id="11:139" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/svg-3.svg" alt="SVG"></div></div><div class="item-5TqLRV" data-id="11:141"><div class="button-jnosLX" data-id="11:142"><div class="container-2exaRC" data-id="11:143"><div class="user-aUlONs valign-text-middle user" data-id="11:144">User</div></div><img class="border-2exaRC border" data-id="11:145" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c6687ae171aa34338090b/img/border.svg" alt="Border"></div></div></div></div></header><div class="horizontal-border-dGTx5I horizontal-border" data-id="11:151"><img class="link-x3AbyD" data-id="11:152" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c671cf29796bc7fd30c5c/img/link-4.svg" alt="Link"><div class="container-x3AbyD" data-id="11:159"><div class="container-QtctX9" data-id="11:160"><div class="user-7oyvvC valign-text-middle user" data-id="11:161">User</div></div><div class="link-QtctX9" data-id="11:162"><img class="svg-CzOwVv svg" data-id="11:163" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c671cf29796bc7fd30c5c/img/svg-5.svg" alt="SVG"><div class="ubah-profil-CzOwVv valign-text-middle" data-id="11:165">Ubah Profil</div></div></div></div><div class="link-dGTx5I" data-id="11:166"><div class="ba61750a46794d8847c3f463c5e71cc4-P9KU1d" data-id="11:167-6210b753-eab1-4235-852f-1325ec10cf02"></div><div class="akun-saya-P9KU1d valign-text-middle roboto-medium-black-14px" data-id="11:168">Akun Saya</div></div><div class="link-GT4FYq" data-id="11:169"><div class="f0049e9df4e536bc3e7f140d071e9078-BxMU8X" data-id="11:170-f3a92a11-659c-44c8-bcaf-d7943800b309"></div><div class="pesanan-saya-BxMU8X valign-text-middle" data-id="11:171">Pesanan Saya</div></div><div class="link-DL2rOh" data-id="11:173"><div class="e10a43b53ec8605f4829da5618e0717c-Zfmslp" data-id="11:174-40025fc8-62d5-4dc8-98f8-2948e8fa64ed"></div><div class="notifikasi-Zfmslp valign-text-middle notifikasi roboto-medium-black-14px" data-id="11:175">Notifikasi</div></div><div class="link-12UuwR" data-id="11:176"><div class="x84feaa363ce325071c0a66d3c9a88748-kXBTKT" data-id="11:177-1998cfa6-2b8f-4434-9b97-a98d2b15435c"></div><div class="voucher-saya-kXBTKT valign-text-middle roboto-medium-black-14px" data-id="11:178">Voucher Saya</div></div><div class="link-8XgPSk" data-id="11:179"><div class="a0ef4bd8e16e481b4253bd0eb563f784-FZKGUp" data-id="11:180-c5e643ce-4c71-42ea-aa6c-70982606abb2"></div><div class="koin-shopee-saya-FZKGUp valign-text-middle roboto-medium-black-14px" data-id="11:181">Koin Shopee Saya</div></div><div class="background-shadow-dGTx5I" data-id="11:182"><div class="background-shadow-xp4MQC" data-id="11:183"><div class="main-c1GO89" data-id="11:184"><div class="overlay-shadow-WikUJD overlay-shadow" data-id="11:185"><div class="background-2xYrmq" data-id="11:186"><div class="section-pSS0SK" data-id="11:187"><img class="svg-hFxZRe svg" data-id="11:188" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c671cf29796bc7fd30c5c/img/svg-9.svg" alt="SVG"><div class="container-hFxZRe" data-id="11:196"><div class="nvr_store20-7kdiSY valign-text-middle" data-id="11:197">Nvr_store20</div></div><div class="button-hFxZRe" data-id="11:198"><div class="chat-7mMlEw valign-text-middle" data-id="11:199">Chat</div><img class="svg-7mMlEw svg" data-id="11:200" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c671cf29796bc7fd30c5c/img/svg-10.svg" alt="SVG"></div><div class="link-hFxZRe" data-id="11:203"><div class="background-border-rkn3Nw" data-id="11:204"><div class="kunjungi-toko-h4qz8I valign-text-middle" data-id="11:205">Kunjungi Toko</div><img class="svg-h4qz8I svg" data-id="11:206" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c671cf29796bc7fd30c5c/img/svg-6.svg" alt="SVG"></div></div><div class="vertical-border-hFxZRe vertical-border" data-id="11:208"><div class="link-ipYGC7" data-id="11:209"><img class="svg-l4fomZ svg" data-id="11:210" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c671cf29796bc7fd30c5c/img/svg-12@2x.png" alt="SVG"><p class="pengirim-telah-menga-l4fomZ valign-text-middle" data-id="11:218">Pengirim telah mengatur pengiriman. Menunggu pesanan<br>diserahkan ke pihak jasa kirim.</p></div><img class="svg-ipYGC7 svg" data-id="11:219" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c671cf29796bc7fd30c5c/img/svg-11.svg" alt="SVG"></div><div class="sedang-dikemas-hFxZRe valign-text-middle sedang-dikemas roboto-normal-flamingo-14px" data-id="11:223">SEDANG DIKEMAS</div></div><div class="horizontal-divider-pSS0SK horizontal-divider" data-id="11:224"></div><div class="section-link-pSS0SK" data-id="11:225"><div class="section-qRWU9m" data-id="11:226"><div class="container-nuAT0V" data-id="11:228"><p class="kemeja-hitam-pria-le-QM0bBF valign-text-middle" data-id="11:229">Kemeja Hitam Pria Lengan Panjang Kemeja Shanghai Pria</p></div><div class="variasi-hitaml-nuAT0V valign-text-middle roboto-normal-black-14px" data-id="11:230">Variasi: Hitam,L</div><div class="x1-nuAT0V valign-text-middle" data-id="11:231">x1</div><div class="border-nuAT0V border" data-id="11:232"><div class="garansi-bebas-pengembalian-wXxRzZ valign-text-middle" data-id="11:233">Garansi Bebas Pengembalian</div></div><div class="rp141000-nuAT0V valign-text-middle roboto-normal-flamingo-14px" data-id="11:236">Rp141.000</div><div class="picture-id-11134207-nuAT0V" data-id="12:1198-f63f938e-ee5f-40a1-90ed-bc927ea6cada"></div></div></div></div><div class="background-thEskO" data-id="11:249"><div class="label-Cl3lIu" data-id="11:250"><div class="total-pesanan-fkhMux valign-text-middle" data-id="11:251">Total Pesanan:</div></div><h1 class="total-pesanan-rp68650-rp68650-Cl3lIu valign-text-middle" data-id="11:252">Rp169.300</h1></div><div class="horizontal-divider-2xYrmq horizontal-divider" data-id="11:253"><div class="background-fkZ1Wi" data-id="11:254"></div><div class="background-uexgrM" data-id="11:255"></div></div><div class="background-fm9AfN" data-id="11:256"><div class="produk-akan-dikirimk-fA4Lsu produk-akan-dikirimk" data-id="11:257"><p class="produk-akan-dikirimk-U2u5FJ valign-text-middle produk-akan-dikirimk roboto-normal-black-12px-2" data-id="11:258"><span><span class="span0-1lxpJ3 roboto-normal-black-12px-2">Produk akan dikirimkan sebelum </span><span class="span1-1lxpJ3 roboto-normal-black-12px-2">04-11-2024</span></span></p></div><div class="section-fA4Lsu" data-id="11:259"><div class="button-tulDgQ" data-id="11:260"><div class="hubungi-penjual-rqxRQq valign-text-middle" data-id="11:261">Hubungi Penjual</div></div><div class="button-dxOATN" data-id="11:262"><div class="batalkan-pesanan-wePYbg valign-text-middle" data-id="11:263">Batalkan Pesanan</div></div></div></div></div></div><div class="section-c1GO89" data-id="11:372"><div class="link-j1Htyn" data-id="11:373"><div class="container-3ar4uJ" data-id="11:374"><div class="semua-x5EvqP valign-text-middle roboto-normal-black-16px" data-id="11:375">Semua</div></div></div><div class="link-RxDRPi" data-id="11:376"><div class="container-67dB0U" data-id="11:377"><div class="belum-bayar-xEyidj valign-text-middle roboto-normal-black-16px" data-id="11:378">Belum Bayar</div></div></div><div class="link-1yhDxy" data-id="11:379"><div class="container-UkwJ9f" data-id="11:380"><div class="sedang-dikemas-orchnR valign-text-middle sedang-dikemas" data-id="11:381">Sedang Dikemas</div></div><div class="x2-UkwJ9f valign-text-middle x2 roboto-normal-flamingo-14px" data-id="11:382">(2)</div></div><div class="link-4znEui" data-id="11:383"><div class="container-vh9Cwr" data-id="11:384"><div class="dikirim-inTzxp valign-text-middle roboto-normal-black-16px" data-id="11:385">Dikirim</div></div><div class="x2-vh9Cwr valign-text-middle x2 roboto-normal-flamingo-14px" data-id="11:386">(2)</div></div><div class="link-vxUFfy" data-id="11:387"><div class="container-HwNqla" data-id="11:388"><div class="selesai-7uuHnR valign-text-middle roboto-normal-black-16px" data-id="11:389">Selesai</div></div></div><div class="link-trU1p8" data-id="11:390"><div class="container-9RxW13" data-id="11:391"><div class="dibatalkan-YxCoJB valign-text-middle roboto-normal-black-16px" data-id="11:392">Dibatalkan</div></div></div><div class="link-KRngLF" data-id="11:393"><div class="container-LPVHxx" data-id="11:394"><div class="pengembalian-bar-w0Vo5U valign-text-middle roboto-normal-black-16px" data-id="11:395">Pengembalian Bar…</div></div></div></div></div></div><footer class="footer-dGTx5I" data-id="11:397"><div class="background-MjxMNO" data-id="11:398"><div class="container-jZBb5z" data-id="11:399"><div class="layanan-pelanggan-TM9NbP valign-text-middle roboto-bold-black-12px" data-id="11:400">Layanan Pelanggan</div><div class="list-TM9NbP list" data-id="11:401"><div class="item-link-mkjERU item-link" data-id="11:402"><div class="container-njk882" data-id="11:403"><div class="bantuan-me7Iqs valign-text-middle bantuan roboto-normal-black-12px" data-id="11:404">Bantuan</div></div></div><div class="item-link-uW70Na item-link" data-id="11:405"><div class="container-JOK9gM" data-id="11:406"><div class="metode-pembayaran-mXMsdH valign-text-middle roboto-normal-black-12px" data-id="11:407">Metode Pembayaran</div></div></div><div class="item-link-e4qQPk item-link" data-id="11:408"><div class="container-ZkYNUU" data-id="11:409"><div class="shopee-pay-j1ty0A valign-text-middle roboto-normal-black-12px" data-id="11:410">ShopeePay</div></div></div><div class="item-link-ddyaO2 item-link" data-id="11:411"><div class="container-rVCt2F" data-id="11:412"><div class="koin-shopee-20cfry valign-text-middle roboto-normal-black-12px" data-id="11:413">Koin Shopee</div></div></div><div class="item-link-BXXtQ7 item-link" data-id="11:414"><div class="container-aER75x" data-id="11:415"><div class="lacak-pesanan-pembeli-kJmeXL valign-text-middle roboto-normal-black-12px" data-id="11:416">Lacak Pesanan Pembeli</div></div></div><div class="item-link-WkxdY5 item-link" data-id="11:417"><div class="container-xrEosL" data-id="11:418"><div class="lacak-pengiriman-penjual-CmW7Id valign-text-middle roboto-normal-black-12px" data-id="11:419">Lacak Pengiriman Penjual</div></div></div><div class="item-link-XzyXzF item-link" data-id="11:420"><div class="container-EGocYe" data-id="11:421"><div class="gratis-ongkir-avWGiP valign-text-middle roboto-normal-black-12px" data-id="11:422">Gratis Ongkir</div></div></div><div class="item-link-VDTwDe item-link" data-id="11:423"><div class="container-qEOvpp" data-id="11:424"><div class="pengembalian-barang-dana-W8QHgK valign-text-middle roboto-normal-black-12px" data-id="11:425">Pengembalian Barang &amp; Dana</div></div></div><div class="item-link-x8TwaY item-link" data-id="11:426"><div class="container-JxXJiy" data-id="11:427"><div class="garansi-shopee-KA7gBY valign-text-middle roboto-normal-black-12px" data-id="11:428">Garansi Shopee</div></div></div><div class="item-link-aVyyXT item-link" data-id="11:429"><div class="container-iLgp1b" data-id="11:430"><div class="hubungi-kami-vJygsH valign-text-middle roboto-normal-black-12px" data-id="11:431">Hubungi Kami</div></div></div></div><div class="jelajahi-shopee-TM9NbP valign-text-middle roboto-bold-black-12px" data-id="11:432">Jelajahi Shopee</div><div class="list-KxA7pN list" data-id="11:433"><div class="item-link-rhi58l item-link" data-id="11:434"><div class="container-uHDDss" data-id="11:435"><div class="tentang-kami-vGNxY8 valign-text-middle roboto-normal-black-12px" data-id="11:436">Tentang Kami</div></div></div><div class="item-link-3YBxLx item-link" data-id="11:437"><div class="container-IQ7RJn" data-id="11:438"><div class="karir-8JxVky valign-text-middle roboto-normal-black-12px" data-id="11:439">Karir</div></div></div><div class="item-link-wVfdAs item-link" data-id="11:440"><div class="container-JX4VXk" data-id="11:441"><div class="kebijakan-shopee-Z4ZvT2 valign-text-middle roboto-normal-black-12px" data-id="11:442">Kebijakan Shopee</div></div></div><div class="item-link-UwUS4A item-link" data-id="11:443"><div class="container-nFJAyu" data-id="11:444"><div class="kebijakan-privasi-InVYuT valign-text-middle roboto-normal-black-12px" data-id="11:445">Kebijakan Privasi</div></div></div><div class="item-link-EJjvCj item-link" data-id="11:446"><div class="container-E9yHr5" data-id="11:447"><div class="blog-sHoWwl valign-text-middle roboto-normal-black-12px" data-id="11:448">Blog</div></div></div><div class="item-link-wM4GeN item-link" data-id="11:449"><div class="container-Hgox7K" data-id="11:450"><div class="shopee-mall-1ZlOGR valign-text-middle roboto-normal-black-12px" data-id="11:451">Shopee Mall</div></div></div><div class="item-link-dn3VwL item-link" data-id="11:452"><div class="container-57xiu3" data-id="11:453"><div class="seller-centre-x95nxG valign-text-middle seller-centre roboto-normal-black-12px" data-id="11:454">Seller Centre</div></div></div><div class="item-link-DlNBsN item-link" data-id="11:455"><div class="container-xNdr44" data-id="11:456"><div class="flash-sale-z771Gn valign-text-middle roboto-normal-black-12px" data-id="11:457">Flash Sale</div></div></div><div class="item-link-Gsma6I item-link" data-id="11:458"><div class="container-9jiaZx" data-id="11:459"><div class="kontak-media-h9YZkM valign-text-middle roboto-normal-black-12px" data-id="11:460">Kontak Media</div></div></div><div class="item-link-7lJGCz item-link" data-id="11:461"><div class="container-VNcJZr" data-id="11:462"><div class="shopee-affiliate-M98ZyR valign-text-middle roboto-normal-black-12px" data-id="11:463">Shopee Affiliate</div></div></div></div><div class="pembayaran-TM9NbP valign-text-middle roboto-bold-black-12px" data-id="11:464">Pembayaran</div><div class="list-YYJhil list" data-id="11:465"><div class="item-OT0Bxj" data-id="11:466"><div class="link-7dLreM" data-id="11:467"><div class="x5589c755ab085d2fac3e33f4755c6a9e-yfvpLi" data-id="11:468-2bb5814d-9f23-414f-bc95-290b82feffb3"></div></div></div><div class="item-ek1G7X" data-id="11:469"><div class="link-6KXmIz" data-id="11:470"><div class="x49656d7100598b911a1f247dec64fda4-qgTxMU" data-id="11:471-ad5dce19-2781-48e8-b50b-a12180798a9f"></div></div></div><div class="item-wsUwgJ" data-id="11:472"><div class="link-37dAwk" data-id="11:473"><div class="e7865f5fb066b8b5e73f9d5c36fc7154-PK4vtM" data-id="11:474-439cbf58-ecbb-4382-ae8d-e0a748d49269"></div></div></div><div class="item-yr47ls" data-id="11:475"><div class="link-964TjC" data-id="11:476"><div class="x59185c096964e1892e9122ceaae2609d-hdYHc7" data-id="11:477-6d9a0606-a65b-482e-8865-44854b880c18"></div></div></div><div class="item-CixuD4" data-id="11:478"><div class="link-ac65bo" data-id="11:479"><div class="x9a08d3abab3dd059fff945c72ca372d9-pvQRaq" data-id="11:480-6182472e-3cdc-4da0-b1ef-d635fb2c0c52"></div></div></div><div class="item-IXpR8n" data-id="11:481"><div class="link-7xRAl8" data-id="11:482"><div class="x780c2be80e523384a7320b89f42008d5-KNc8fx" data-id="11:483-f81c45a2-93fc-4a17-a6cd-692f6cad0aec"></div></div></div><div class="item-xIXuzX" data-id="11:484"><div class="link-Z3UxPj" data-id="11:485"><div class="x0cf8caa250763eefc3d79bb1f8c08e73-EEoi7h" data-id="11:486-ba78d170-dbfe-4630-b5ab-0c24460064f2"></div></div></div><div class="item-ZqRbsZ" data-id="11:487"><div class="link-lMPeOa" data-id="11:488"><div class="c8dce1e557f48316ef80dc9dbee40097-Fe6vvr" data-id="11:489-ec2ca5af-b081-42d9-85f9-7d902b876cbd"></div></div></div><div class="item-TNyn9B" data-id="11:490"><div class="link-mF1l6i" data-id="11:491"><div class="x1ad101bcf0e90b74b5697db1511de529-egh8Jp" data-id="11:492-df051150-bb6e-4346-99c6-d7a80fef098b"></div></div></div><div class="item-tGNAtx" data-id="11:493"><div class="link-JlEVoa" data-id="11:494"><div class="x6167379c7a6e786452f9f03295f517e6-c397cC" data-id="11:495-4391b088-efee-4260-a985-02010cfe9dc4"></div></div></div><div class="item-liSpLu" data-id="11:496"><div class="link-HISnol" data-id="11:497"><div class="fc6e7bb9f2e88e7d1a702eb6de938d79-PCyPvg" data-id="11:498-ad2de6fa-0ca2-4c6b-84cb-a7e2692a5b4f"></div></div></div><div class="item-zTNmMC" data-id="11:499"><div class="link-cHLhJ3" data-id="11:500"><div class="x231b50853c37d3ed0933b8ba7479f0e4-7LraQI" data-id="11:501-cfab8587-f080-4252-9312-3855e8c40291"></div></div></div><div class="item-dOSHHE" data-id="11:502"><div class="link-eobm6k" data-id="11:503"><div class="d68d15075519a4dfcfc8ffd9385d7bb9-bg4erQ" data-id="11:504-5abe828f-0702-411e-a282-eb0412fa5b1f"></div></div></div><div class="item-wzJEWJ" data-id="11:505"><div class="link-QJeZrQ" data-id="11:506"><div class="ea38821fb0e2ec640bcd4f21000de105-pApix8" data-id="11:507-20600037-a30e-4919-b2b6-ea71ede3d0ac"></div></div></div><div class="item-XJZeKD" data-id="11:508"><div class="link-9ddsyZ" data-id="11:509"><div class="ef22f26ccc342ad4dea14cc383299d64-mVYJRN" data-id="11:510-b82b11cb-98cf-49ab-a827-d89ead0da049"></div></div></div><div class="item-cEqBSo" data-id="11:511"><div class="link-LxJkO4" data-id="11:512"><div class="b228c4523a9d1261e4606e9bf3a4882f-P1QRCx" data-id="11:513-a6b1e09a-a488-41ac-96d0-dbc7e26e4ea4"></div></div></div><div class="item-kHxixh" data-id="11:514"><div class="link-EnxiGR" data-id="11:515"><div class="x41e4c83bae13f67b9898c7579dd53d05-EJPKLw" data-id="11:516-ebc65cf5-d294-4b2e-a03e-25f87b3813eb"></div></div></div></div><div class="pengiriman-TM9NbP valign-text-middle roboto-bold-black-12px" data-id="11:517">Pengiriman</div><div class="list-nBAFnJ list" data-id="11:518"><div class="item-e2hchr" data-id="11:519"><div class="link-nnKsx8" data-id="11:520"><div class="id-50009109-0c5dd568-ayQOrD" data-id="11:521-e15a0f0d-ee2b-4279-8fc9-87f6265633d8"></div></div></div><div class="item-goGHHO" data-id="11:522"><div class="link-6M5Blb" data-id="11:523"><div class="x982216a49044ce4636f861333bfdac5c-q9vg34" data-id="11:524-3cfcc651-23e9-4280-8241-82df79ac1c35"></div></div></div><div class="item-4VDvLx" data-id="11:525"><div class="link-mxWBdG" data-id="11:526"><div class="x5ecc185311ec587945838b507140ee21-zZY0W3" data-id="11:527-abfb8944-4d27-497f-8bd3-1d8161ce427e"></div></div></div><div class="item-U0x45E" data-id="11:528"><div class="link-Zi76wq" data-id="11:529"><div class="x5c07836b22c5689d56cb217c88171785-xxJvkz" data-id="11:530-319850ea-63c1-426f-a39c-c91188ff0ea5"></div></div></div><div class="item-WpKcfo" data-id="11:531"><div class="link-0Q4999" data-id="11:532"><div class="fe439088405f5b71199c3f6117932462-mhZXPP" data-id="11:533-f53c0187-b450-4ba4-b043-8d055df38b10"></div></div></div><div class="item-bTCcJd" data-id="11:534"><div class="link-0evxEU" data-id="11:535"><div class="x9f4d96722647cf501edf21c958294568-Sdjptx" data-id="11:536-319f44ac-ddde-4883-95b5-b49d49591dd2"></div></div></div><div class="item-ZZC8Rj" data-id="11:537"><div class="link-MgDZMf" data-id="11:538"><div class="c2abc2de79484198bfc3fc3efd4ea049-lZr1bu" data-id="11:539-0aa85989-0844-4377-ab72-a24f83150baa"></div></div></div><div class="item-quMxQx" data-id="11:540"><div class="link-OfrGVx" data-id="11:541"><div class="x5653e7f0ca1361ddddb5b545ab675bc2-zNVr7d" data-id="11:542-15526d53-1271-4075-ae67-062d787d550e"></div></div></div><div class="item-kBKcpo" data-id="11:543"><div class="link-uUgL8q" data-id="11:544"><div class="ed038a4fcd786fb2d6ef7b70a7a9a1b1-DkYyaF" data-id="11:545-971a6a0c-61f9-4d20-bbee-51fba4a79ebe"></div></div></div><div class="item-LLrVZo" data-id="11:546"><div class="link-9DDwJ3" data-id="11:547"><div class="x8810ac4e4cffb855d280503c6eb33ed4-Vf6hoz" data-id="11:548-e21ee29d-a6c9-4593-9b2b-66a34e6bfb63"></div></div></div><div class="item-BUofcz" data-id="11:549"><div class="link-CdctPh" data-id="11:550"><div class="x5c023bfb427d9546a8055f3b76d91560-i2JaKt" data-id="11:551-958df613-bfea-4f24-92fc-e2d1dbe72632"></div></div></div><div class="item-krjdaA" data-id="11:552"><div class="link-UV8qaD" data-id="11:553"><div class="x5e350fcf94101432052945e2931fa621-xlg58m" data-id="11:554-dafe0636-ced3-4178-bd9e-a29fff239d65"></div></div></div><div class="item-rNKtJu" data-id="11:555"><div class="link-oxNWRx" data-id="11:556"><div class="x47d94f9fb90cc7e374549620be687494-ikFVCF" data-id="11:557-7b9f0bdd-4e46-44fd-81cf-5c7bbaa73d0c"></div></div></div><div class="item-yovQX6" data-id="11:558"><div class="link-VYCUlK" data-id="11:559"><div class="b20bd74ad72a92f1d22dc80e18ae2836-xkxkUY" data-id="11:560-395dcf89-dc4b-4e16-a7f7-9aecc1dc0653"></div></div></div><div class="item-uQ0Q6t" data-id="11:561"><div class="link-1Gb3Yw" data-id="11:562"><div class="fedcba5bb6bc183e31766f032fd49a00-cXHS5J" data-id="11:563-19542623-1a97-4e1b-af88-ffe6aac694a8"></div></div></div></div><div class="ikuti-kami-TM9NbP valign-text-middle roboto-bold-black-12px" data-id="11:564">Ikuti Kami</div><div class="list-x0Za3x list" data-id="11:565"><div class="item-link-SgciTk item-link" data-id="11:566"><div class="x622550fb2ffb8ddf3913538801bc4c05-Ki99SJ" data-id="11:567-63cf1e8e-7565-42e5-b8ca-123b8ba2ee4e"></div><div class="container-Ki99SJ" data-id="11:568"><div class="facebook-6Qv6ok valign-text-middle roboto-normal-black-12px" data-id="11:569">Facebook</div></div></div><div class="item-link-7loLuk item-link" data-id="11:570"><div class="ec4d29967019ea44642daa53a40ff89c-5EBFmn" data-id="11:571-2f6280f5-0dc1-45b5-839a-18feb680b7c7"></div><div class="container-5EBFmn" data-id="11:572"><div class="instagram-AdM7Bb valign-text-middle roboto-normal-black-12px" data-id="11:573">Instagram</div></div></div><div class="item-link-QOz9Lh item-link" data-id="11:574"><div class="x2bf3f4d1e10c63d4df16cf4090ded0a5-Ap1DpU" data-id="11:575-0a5cafd4-e53a-4f86-96c5-253df8077ea3"></div><div class="container-Ap1DpU" data-id="11:576"><div class="twitter-XaQGca valign-text-middle roboto-normal-black-12px" data-id="11:577">Twitter</div></div></div><div class="item-link-CliA8J item-link" data-id="11:578"><div class="x32530e4a6641210fbbfdaf95f507aa1e-B4XS6U" data-id="11:579-34c8ac94-c8e1-416b-bd9f-7b2206d6a643"></div><div class="container-B4XS6U" data-id="11:580"><div class="linked-in-OWvmxR valign-text-middle roboto-normal-black-12px" data-id="11:581">LinkedIn</div></div></div><div class="item-link-TWrsOe item-link" data-id="11:582"><div class="a4c827473f54e4a6ae4550a14ea92653-SPUoEM" data-id="11:583-85759f25-d81e-4557-bb0f-3719a1832fdf"></div><div class="container-SPUoEM" data-id="11:584"><div class="kampus-shopee-x3JIBv valign-text-middle roboto-normal-black-12px" data-id="11:585">Kampus Shopee</div></div></div></div><div class="keamanan-TM9NbP valign-text-middle roboto-bold-black-12px" data-id="11:586">Keamanan</div><div class="list-item-TM9NbP" data-id="11:587"><div class="link-DD2VE7" data-id="11:588"><div class="id-11134258-7rasi-m1mj559k2yly05-viCUUU" data-id="11:589-f04b6b9d-01a2-48d4-b978-c57ced34c406"></div></div></div><div class="download-aplikasi-shopee-TM9NbP valign-text-middle roboto-bold-black-12px" data-id="11:590">Download Aplikasi Shopee</div><div class="container-TM9NbP" data-id="11:591"><div class="link-9R0S2E" data-id="11:592"><div class="bed0af4663f887db16a7047185478dcf-ZIExPZ" data-id="11:593-e77421b2-b35b-4b35-a506-dee0c12c3b91"></div></div><div class="link-dkPXGQ" data-id="11:594"><div class="bbf28a2328ec8c7f57b9cc2069d693fd-Dd0x0C" data-id="11:595-c9837458-6c24-4438-b00f-33462d0e5616"></div></div><div class="link-C9AEnI" data-id="11:596"><div class="x1858a153798406c87945f15a38bf4874-f5tiFQ" data-id="11:597-25dd7d11-a6fc-40a1-b96a-84de05457059"></div></div><div class="link-wZvALg" data-id="11:598"><div class="x0e74339f5da500baaaa52785f175bc6d-yteFRJ" data-id="11:599-ad32c0c4-f28c-403c-bde8-04b5b4576453"></div></div></div></div><div class="horizontal-border-jZBb5z horizontal-border" data-id="11:600"><p class="shopee-2024-hak-cipta-dilindungi-dJ8zlB valign-text-middle roboto-normal-black-14px" data-id="11:601">© Shopee 2024. Hak Cipta Dilindungi</p><div class="negara-dJ8zlB valign-text-middle roboto-normal-black-14px" data-id="11:602">Negara:</div><div class="vertical-border-dJ8zlB vertical-border" data-id="11:603"><div class="link-rBd0nt" data-id="11:604"><div class="singapura-tFdQBK valign-text-middle roboto-normal-black-14px" data-id="11:605">Singapura</div></div></div><div class="vertical-border-DTDALL vertical-border" data-id="11:606"><div class="link-s6efzn" data-id="11:607"><div class="indonesia-w4xbNs valign-text-middle roboto-normal-black-14px" data-id="11:608">Indonesia</div></div></div><div class="vertical-border-4eWFZs vertical-border" data-id="11:609"><div class="link-ostYBz" data-id="11:610"><div class="thailand-UyuvT6 valign-text-middle roboto-normal-black-14px" data-id="11:611">Thailand</div></div></div><div class="vertical-border-GxdVG4 vertical-border" data-id="11:612"><div class="link-SyPHvQ" data-id="11:613"><div class="malaysia-K2AP9w valign-text-middle roboto-normal-black-14px" data-id="11:614">Malaysia</div></div></div><div class="vertical-border-sfXCnm vertical-border" data-id="11:615"><div class="link-F5ch4J" data-id="11:616"><div class="vietnam-gSu2DT valign-text-middle roboto-normal-black-14px" data-id="11:617">Vietnam</div></div></div><div class="vertical-border-VDTLGt vertical-border" data-id="11:618"><div class="link-tRbMCH" data-id="11:619"><div class="filipina-4aaNbB valign-text-middle roboto-normal-black-14px" data-id="11:620">Filipina</div></div></div><div class="vertical-border-54uA60 vertical-border" data-id="11:621"><div class="link-iCBNcz" data-id="11:622"><div class="brazil-RCZRM0 valign-text-middle roboto-normal-black-14px" data-id="11:623">Brazil</div></div></div><div class="vertical-border-Ep53au vertical-border" data-id="11:624"><div class="link-SnOGAY" data-id="11:625"><div class="mxico-cqI2OW valign-text-middle roboto-normal-black-14px" data-id="11:626">México</div></div></div><div class="vertical-border-58j1dH vertical-border" data-id="11:627"><div class="link-xdlV2W" data-id="11:628"><div class="colombia-r66irx valign-text-middle roboto-normal-black-14px" data-id="11:629">Colombia</div></div></div><div class="vertical-border-tXeGe4 vertical-border" data-id="11:630"><div class="link-zhJaKz" data-id="11:631"><div class="chile-sQx3q1 valign-text-middle roboto-normal-black-14px" data-id="11:632">Chile</div></div></div><div class="link-dJ8zlB" data-id="11:633"><div class="taiwan-SkzpaW valign-text-middle roboto-normal-black-14px" data-id="11:634">Taiwan</div></div><div class="background-shadow-dJ8zlB" data-id="11:637"><img class="svg-GiPreD svg" data-id="11:638" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c671cf29796bc7fd30c5c/img/svg-7.svg" alt="SVG"><img class="svg-gXYqdX svg" data-id="11:640" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c671cf29796bc7fd30c5c/img/svg-8.svg" alt="SVG"><div class="background-border-GiPreD" data-id="11:642"><div class="x52-almcp4 valign-text-middle" data-id="11:643">52</div></div></div></div></div></footer></div></div></div><script src="launchpad-js/launchpad-banner.js" async></script><script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script></body></html>

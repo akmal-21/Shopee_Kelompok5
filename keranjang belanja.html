@@ -1,0 +1,4065 @@
+<!DOCTYPE html>
+
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+06/01/2025 23:15:45 -->
+
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=1499, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script id="anima-load-script" src="load.js"></script><script id="anima-hotspots-script" src="hotspots.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700,500");
+
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/677c63e2af2be0956b4eff88.677c63e2af2be0956b4eff8b.oaUHB0s.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --black: #000000;
+  --black-2: #000000a6;
+  --black-3: #0000008a;
+  --black-4: #000000de;
+  --black-5: #00000033;
+  --black-6: #00000017;
+  --black-7: #000000cc;
+  --flamingo: #ee4d2d;
+  --suva-gray: #888888;
+  --white: #ffffff;
+ 
+  --font-size-l: 16px;
+  --font-size-m: 14px;
+  --font-size-s: 13px;
+  --font-size-xl: 20px;
+  --font-size-xs: 12px;
+  --font-size-xxs: 10px;
+ 
+  --font-family-roboto: "Roboto", Helvetica;
+}
+.roboto-normal-black-12px {
+  color: var(--black-2);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roboto-normal-black-14px {
+  color: var(--black-3);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roboto-bold-black-12px {
+  color: var(--black-4);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.roboto-light-white-13px {
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 300;
+}
+
+.roboto-normal-suva-gray-14px {
+  color: var(--suva-gray);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roboto-normal-black-14px-2 {
+  color: var(--black-4);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+}
+
+
+/* screen - keranjang */
+
+.keranjang {
+  background-color: #f5f5f5;
+  height: 1214px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 1499px;
+}
+
+.keranjang .container-xSlvxr {
+  background-color: transparent;
+  height: 1214px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 1499px;
+}
+
+.keranjang .header-rzCtjv {
+  background: linear-gradient(180deg, rgb(245.00000059604645, 61.00000016391277, 45.00000111758709) 0%, rgb(255, 102.00000151991844, 51.00000075995922) 100%);
+  background-color: transparent;
+  height: 34px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1499px;
+}
+
+.keranjang .nav-tycxgL {
+  background-color: transparent;
+  height: 34px;
+  left: 149px;
+  position: relative;
+  top: 0px;
+  width: 1200px;
+}
+
+.keranjang .link-YznxmS {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  position: absolute;
+  top: 5px;
+  width: 80px;
+}
+
+.keranjang .seller-centre-Xki0Ko {
+  height: 16px;
+  left: 4px;
+  line-height: 15.6px;
+  top: 3px;
+  width: 72px;
+}
+
+.keranjang .link-f6FI8o {
+  background-color: transparent;
+  height: 24px;
+  left: 90px;
+  position: absolute;
+  top: 5px;
+  width: 65px;
+}
+
+.keranjang .download-x2r56b {
+  background-color: transparent;
+  height: 16px;
+  left: 4px;
+  letter-spacing: 0.00px;
+  line-height: 15.6px;
+  position: absolute;
+  text-align: left;
+  top: 3px;
+  white-space: nowrap;
+  width: 57px;
+}
+
+.keranjang .border-YznxmS {
+  background-color: transparent;
+  border-bottom-style: none;
+  border-color: #ffffff38;
+  border-left-style: solid;
+  border-left-width: 1.111109972000122px;
+  border-right-style: solid;
+  border-right-width: 1.111109972000122px;
+  border-top-style: none;
+  height: 15px;
+  left: 84px;
+  position: absolute;
+  top: 10px;
+  width: 2px;
+}
+
+.keranjang .ikuti-kami-di-YznxmS {
+  background-color: transparent;
+  height: 16px;
+  left: 169px;
+  letter-spacing: 0.00px;
+  line-height: 15.6px;
+  position: absolute;
+  text-align: left;
+  top: 8px;
+  white-space: nowrap;
+  width: 69px;
+}
+
+.keranjang .border-f6FI8o {
+  background-color: transparent;
+  border-bottom-style: none;
+  border-color: #ffffff38;
+  border-left-style: solid;
+  border-left-width: 1.111109972000122px;
+  border-right-style: solid;
+  border-right-width: 1.111109972000122px;
+  border-top-style: none;
+  height: 15px;
+  left: 159px;
+  position: absolute;
+  top: 10px;
+  width: 2px;
+}
+
+.keranjang .container-YznxmS {
+  background-color: transparent;
+  height: 24px;
+  left: 237px;
+  position: absolute;
+  top: 5px;
+  width: 82px;
+}
+
+.keranjang .link-PNpCuY {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/link@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  top: 4px;
+  width: 16px;
+}
+
+.keranjang .link-KCVYDq {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/link-1@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 30px;
+  overflow: hidden;
+  position: absolute;
+  top: 4px;
+  width: 16px;
+}
+
+.keranjang .link-Kx5Tbe {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/link-2@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 56px;
+  overflow: hidden;
+  position: absolute;
+  top: 4px;
+  width: 16px;
+}
+
+.keranjang .list-YznxmS {
+  height: 34px;
+  left: 787px;
+  top: 0px;
+  width: 413px;
+}
+
+.keranjang .item-Szoxh6 {
+  background-color: transparent;
+  height: 30px;
+  left: 0px;
+  position: absolute;
+  top: 2px;
+  width: 72px;
+}
+
+.keranjang .button-link-gHDlnh {
+  background-color: transparent;
+  cursor: pointer;
+  height: 30px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 72px;
+}
+
+.keranjang .notifikasi-REqpBF {
+  background-color: transparent;
+  height: 16px;
+  left: 19px;
+  letter-spacing: 0.00px;
+  line-height: 15.6px;
+  position: absolute;
+  text-align: left;
+  top: 6px;
+  white-space: nowrap;
+  width: 54px;
+}
+
+.keranjang .svg-REqpBF {
+  height: 18px;
+  left: 0px;
+  top: 6px;
+  width: 14px;
+}
+
+.keranjang .link-Szoxh6 {
+  background-color: transparent;
+  height: 18px;
+  left: 72px;
+  position: absolute;
+  top: 8px;
+  width: 88px;
+}
+
+.keranjang .svg-bw9nbe {
+  height: 18px;
+  left: 8px;
+  top: 0px;
+  width: 18px;
+}
+
+.keranjang .container-bw9nbe {
+  background-color: transparent;
+  height: 16px;
+  left: 31px;
+  position: absolute;
+  top: 1px;
+  width: 48px;
+}
+
+.keranjang .bantuan-p1JVoX {
+  height: 16px;
+  line-height: 15.6px;
+  top: -1px;
+  width: 48px;
+}
+
+.keranjang .item-Zjv1Ee {
+  background-color: transparent;
+  height: 30px;
+  left: 161px;
+  position: absolute;
+  top: 2px;
+  width: 159px;
+}
+
+.keranjang .button-cvZXPh {
+  background-color: transparent;
+  height: 30px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 159px;
+}
+
+.keranjang .svg-suDjFI {
+  height: 16px;
+  left: 10px;
+  top: 7px;
+  width: 16px;
+}
+
+.keranjang .bahasa-indonesia-suDjFI {
+  background-color: transparent;
+  height: 16px;
+  left: 31px;
+  letter-spacing: 0.00px;
+  line-height: 15.6px;
+  position: absolute;
+  text-align: left;
+  top: 6px;
+  white-space: nowrap;
+  width: 102px;
+}
+
+.keranjang .svg-k22bdK {
+  height: 12px;
+  left: 137px;
+  top: 9px;
+  width: 12px;
+}
+
+.keranjang .item-7Wf7gb {
+  background-color: transparent;
+  height: 32px;
+  left: 320px;
+  position: absolute;
+  top: 1px;
+  width: 93px;
+}
+
+.keranjang .button-BbIzCF {
+  background-color: transparent;
+  height: 32px;
+  left: 10px;
+  position: relative;
+  top: 0px;
+  width: 73px;
+}
+
+.keranjang .container-SPdACm {
+  background-color: transparent;
+  height: 17px;
+  left: 22px;
+  overflow: hidden;
+  position: absolute;
+  top: 8px;
+  width: 51px;
+}
+
+.keranjang .user-sJPRW3 {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 5px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 46px;
+}
+
+.keranjang .border-SPdACm {
+  background-color: transparent;
+  height: 22px;
+  left: 0px;
+  position: absolute;
+  top: 5px;
+  width: 22px;
+}
+
+.keranjang .section-rzCtjv {
+  border-bottom-style: solid;
+  border-bottom-width: 1.111109972000122px;
+  border-color: var(--black-6);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  height: 101px;
+  top: 34px;
+  width: 1499px;
+}
+
+.keranjang .link-UcPjlL {
+  background-color: transparent;
+  height: 46px;
+  left: 167px;
+  position: absolute;
+  top: 27px;
+  width: 321px;
+}
+
+.keranjang .vertical-border-hoAgcz {
+  border-color: var(--flamingo);
+  border-left-style: solid;
+  border-left-width: 1.111109972000122px;
+  border-right-style: none;
+  height: 30px;
+  left: 145px;
+  top: 15px;
+  width: 176px;
+}
+
+.keranjang .keranjang-belanja-7m61VC {
+  background-color: transparent;
+  color: var(--flamingo);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+  height: 24px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 30px;
+  position: absolute;
+  text-align: left;
+  top: 1px;
+  white-space: nowrap;
+  width: 160px;
+}
+
+.keranjang .svg-hoAgcz {
+  height: 46px;
+  left: 0px;
+  top: 0px;
+  width: 130px;
+}
+
+.keranjang .search-UcPjlL {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--flamingo);
+  border-radius: 2px;
+  height: 40px;
+  left: 728px;
+  position: absolute;
+  top: 30px;
+  width: 621px;
+}
+
+.keranjang .combobox-klaim-potongan-langsung-1-jt-UoIkxY {
+  background-color: var(--white);
+  height: 38px;
+  left: 11px;
+  overflow: hidden;
+  position: absolute;
+  top: 1px;
+  width: 519px;
+}
+
+.keranjang .container-d7UaTG {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 11px;
+  width: 519px;
+}
+
+.keranjang .klaim-potongan-langsung-1-jt-aXxIYT {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 201px;
+}
+
+.keranjang .button-UoIkxY {
+  background-color: transparent;
+  height: 38px;
+  left: 540px;
+  position: absolute;
+  top: 1px;
+  width: 80px;
+}
+
+.keranjang .main-rzCtjv {
+  background-color: transparent;
+  height: 1055px;
+  left: 149px;
+  position: absolute;
+  top: 135px;
+  width: 1200px;
+}
+
+.keranjang .background-shadow-yNjxsL {
+  background-color: var(--white);
+  border-radius: 3px;
+  box-shadow: 0px 1px 1px #0000000d;
+  height: 55px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 20px;
+  width: 1200px;
+}
+
+.keranjang .label-zFChxn {
+  background-color: #ffffff01;
+  border-color: #00000024;
+  left: 40px;
+  top: 18px;
+}
+
+.keranjang .border-p4frjJ {
+  background-color: transparent;
+  border-bottom-style: solid;
+  border-bottom-width: 1.111109972000122px;
+  border-color: var(--white);
+  border-left-style: solid;
+  border-left-width: 1.111109972000122px;
+  border-right-style: none;
+  border-top-style: none;
+  height: 6px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  transform: rotate(-45deg);
+  width: 10px;
+}
+
+.keranjang .produk-zFChxn {
+  background-color: transparent;
+  color: var(--black-7);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 78px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 18px;
+  white-space: nowrap;
+  width: 44px;
+}
+
+.keranjang .harga-satuan-zFChxn {
+  background-color: transparent;
+  height: 17px;
+  left: 629px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: center;
+  top: 18px;
+  white-space: nowrap;
+  width: 85px;
+}
+
+.keranjang .kuantitas-zFChxn {
+  background-color: transparent;
+  height: 17px;
+  left: 813px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: center;
+  top: 18px;
+  white-space: nowrap;
+  width: 59px;
+}
+
+.keranjang .total-harga-zFChxn {
+  background-color: transparent;
+  height: 17px;
+  left: 948px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: center;
+  top: 18px;
+  white-space: nowrap;
+  width: 73px;
+}
+
+.keranjang .aksi-zFChxn {
+  background-color: transparent;
+  height: 17px;
+  left: 1097px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: center;
+  top: 18px;
+  white-space: nowrap;
+  width: 27px;
+}
+
+.keranjang .section-yNjxsL {
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #0000000d;
+  height: 255px;
+  top: 87px;
+  width: 1200px;
+}
+
+.keranjang .horizontal-border-hh0wPd {
+  border-bottom-style: solid;
+  border-bottom-width: 1.111109972000122px;
+  border-color: var(--black-6);
+  border-top-style: none;
+  height: 60px;
+  left: 0px;
+  top: 0px;
+}
+
+.keranjang .label-2OENm2 {
+  background-color: var(--flamingo);
+  border-color: var(--flamingo);
+  left: 40px;
+  top: 20px;
+}
+
+.keranjang .border-KOc2s0 {
+  background-color: transparent;
+  border-bottom-style: solid;
+  border-bottom-width: 1.111109972000122px;
+  border-color: var(--white);
+  border-left-style: solid;
+  border-left-width: 1.111109972000122px;
+  border-right-style: none;
+  border-top-style: none;
+  height: 6px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  transform: rotate(-45deg);
+  width: 10px;
+}
+
+.keranjang .link-2OENm2 {
+  background-color: transparent;
+  height: 17px;
+  left: 78px;
+  position: absolute;
+  top: 21px;
+  width: 116px;
+}
+
+.keranjang .svg-YVxggx {
+  height: 16px;
+  left: 0px;
+  top: 0px;
+  width: 30px;
+}
+
+.keranjang .nvr_store20-YVxggx {
+  background-color: transparent;
+  color: var(--black-4);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+  height: 17px;
+  left: 40px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 76px;
+}
+
+.keranjang .button-svg-2OENm2 {
+  background-color: transparent;
+  height: 16px;
+  left: 199px;
+  position: absolute;
+  top: 21px;
+  width: 22px;
+}
+
+.keranjang .list-listitem-hh0wPd {
+  background-color: transparent;
+  height: 83px;
+  left: 20px;
+  position: absolute;
+  top: 90px;
+  width: 1160px;
+}
+
+.keranjang .label-MMdBZg {
+  background-color: var(--flamingo);
+  border-color: var(--flamingo);
+  left: 20px;
+  top: 32px;
+}
+
+.keranjang .border-09m6Eu {
+  background-color: transparent;
+  border-bottom-style: solid;
+  border-bottom-width: 1.111109972000122px;
+  border-color: var(--white);
+  border-left-style: solid;
+  border-left-width: 1.111109972000122px;
+  border-right-style: none;
+  border-top-style: none;
+  height: 6px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  transform: rotate(-45deg);
+  width: 10px;
+}
+
+.keranjang .link-MMdBZg {
+  background-color: transparent;
+  height: 83px;
+  left: 58px;
+  position: absolute;
+  top: 0px;
+  width: 80px;
+}
+
+.keranjang .picture-id-11134207-JLKHd0 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/picture---id-11134207-7r98x-lz779oy5ei4lfe-resize-w80-nl-webp@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 80px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 80px;
+}
+
+.keranjang .container-MMdBZg {
+  background-color: transparent;
+  height: 83px;
+  left: 138px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 238px;
+}
+
+.keranjang .link-SN36Wh {
+  background-color: transparent;
+  height: 32px;
+  left: 10px;
+  overflow: hidden;
+  position: absolute;
+  top: 5px;
+  width: 208px;
+}
+
+.keranjang .kemeja-hitam-pria-le-2ci9fr {
+  background-color: transparent;
+  height: 49px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  width: 207px;
+}
+
+.keranjang .border-SN36Wh {
+  background-color: transparent;
+  border: 1px solid;
+  border-color: var(--flamingo);
+  border-radius: 2px;
+  height: 18px;
+  left: 10px;
+  overflow: hidden;
+  position: absolute;
+  top: 42px;
+  width: 104px;
+}
+
+.keranjang .bebas-pengembalian-R6jQrn {
+  background-color: transparent;
+  color: var(--flamingo);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 400;
+  height: 12px;
+  left: 5px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  top: 1px;
+  white-space: nowrap;
+  width: 94px;
+}
+
+.keranjang .id-11134258-7r992-lyc05kppnjyzeb-SN36Wh {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/id-11134258-7r992-lyc05kppnjyzeb@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 18px;
+  left: 10px;
+  overflow: hidden;
+  position: absolute;
+  top: 65px;
+  width: 208px;
+}
+
+.keranjang .button-MMdBZg {
+  background-color: transparent;
+  height: 39px;
+  left: 376px;
+  position: absolute;
+  top: 22px;
+  width: 179px;
+}
+
+.keranjang .variasi-cjW9im {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 46px;
+}
+
+.keranjang .border-cjW9im {
+  background-color: transparent;
+  border-bottom-style: none;
+  border-color: var(--black-3);
+  border-left-style: solid;
+  border-left-width: 3.333329916000366px;
+  border-right-style: solid;
+  border-right-width: 3.333329916000366px;
+  border-top-style: solid;
+  border-top-width: 4.444439888000488px;
+  height: 4px;
+  left: 56px;
+  position: absolute;
+  top: 6px;
+  width: 7px;
+}
+
+.keranjang .container-cjW9im {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 22px;
+  width: 48px;
+}
+
+.keranjang .hitaml-GrZKgk {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 48px;
+}
+
+.keranjang .rp141000-MMdBZg {
+  left: 618px;
+}
+
+.keranjang .button-decrease-MMdBZg {
+  background-color: transparent;
+  height: 32px;
+  left: 765px;
+  position: absolute;
+  top: 26px;
+  width: 32px;
+}
+
+.keranjang .spinbutton-MMdBZg {
+  background-color: transparent;
+  border-bottom-style: solid;
+  border-bottom-width: 1.111109972000122px;
+  border-color: var(--black-6);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: solid;
+  border-top-width: 1.111109972000122px;
+  height: 32px;
+  left: 797px;
+  overflow: hidden;
+  position: absolute;
+  top: 26px;
+  width: 50px;
+}
+
+.keranjang .container-RNf08V::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+
+.keranjang .container-RNf08V {
+  background-color: transparent;
+  height: 20px;
+  left: 2px;
+  overflow: scroll;
+  position: relative;
+  top: 6px;
+  width: 46px;
+}
+
+.keranjang .x1-PnaC3O {
+  background-color: transparent;
+  color: var(--black-7);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  height: 20px;
+  left: 19px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: -1px;
+  width: 9px;
+}
+
+.keranjang .button-increase-MMdBZg {
+  background-color: transparent;
+  height: 32px;
+  left: 847px;
+  position: absolute;
+  top: 26px;
+  width: 32px;
+}
+
+.keranjang .rp141000-zsM4iU {
+  color: var(--flamingo);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  left: 930px;
+}
+
+.keranjang .button-zsM4iU {
+  background-color: transparent;
+  height: 19px;
+  left: 1064px;
+  position: absolute;
+  top: 17px;
+  width: 52px;
+}
+
+.keranjang .hapus-YvRGOC {
+  background-color: transparent;
+  height: 17px;
+  left: 6px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: center;
+  top: -0px;
+  white-space: nowrap;
+  width: 41px;
+}
+
+.keranjang .button-RBpe6d {
+  background-color: transparent;
+  height: 30px;
+  left: 1030px;
+  position: absolute;
+  top: 36px;
+  width: 121px;
+}
+
+.keranjang .produk-serupa-eMRV2M {
+  background-color: transparent;
+  color: var(--flamingo);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 8px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  text-align: center;
+  top: 5px;
+  white-space: nowrap;
+  width: 92px;
+}
+
+.keranjang .svg-eMRV2M {
+  height: 14px;
+  left: 103px;
+  top: 8px;
+  width: 10px;
+}
+
+.keranjang .horizontal-border-PzqhuR {
+  border-bottom-style: none;
+  border-color: var(--black-6);
+  border-top-style: solid;
+  border-top-width: 1.111109972000122px;
+  height: 61px;
+  left: 0px;
+  top: 194px;
+}
+
+.keranjang .x5f084b1a89253f024a13png-qR48Y0 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/5f084b1a89253f024a13-png@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 20px;
+  left: 40px;
+  overflow: hidden;
+  position: absolute;
+  top: 21px;
+  width: 24px;
+}
+
+.keranjang .gratis-ongkir-sd-rp1-qR48Y0 {
+  background-color: transparent;
+  color: var(--black-7);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 79px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 22px;
+  white-space: nowrap;
+  width: 719px;
+}
+
+.keranjang .container-qR48Y0 {
+  background-color: transparent;
+  height: 17px;
+  left: 797px;
+  position: absolute;
+  top: 23px;
+  width: 123px;
+}
+
+.keranjang .pelajari-lebih-lanjut-GBrvCx {
+  background-color: transparent;
+  color: #0055aa;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 6px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 118px;
+}
+
+.keranjang .button-qR48Y0 {
+  background-color: var(--flamingo);
+  border: 1px solid;
+  border-color: var(--black-6);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000008;
+  cursor: pointer;
+  height: 40px;
+  left: 979px;
+  position: absolute;
+  top: 10px;
+  width: 210px;
+}
+
+.keranjang .checkout-cvMLS4 {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  height: 19px;
+  left: 56px;
+  letter-spacing: 0.00px;
+  line-height: 19.2px;
+  position: absolute;
+  text-align: center;
+  top: 9px;
+  white-space: nowrap;
+  width: 99px;
+}
+
+.keranjang .footer-rzCtjv {
+  background-color: var(--white);
+  border-bottom-style: none;
+  border-color: var(--flamingo);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: solid;
+  border-top-width: 3.333329916000366px;
+  height: 678px;
+  left: -1px;
+  position: absolute;
+  top: 509px;
+  width: 1499px;
+}
+
+.keranjang .background-TeNPzN {
+  background-color: #fbfbfb;
+  height: 678px;
+  left: 0px;
+  position: relative;
+  top: 3px;
+  width: 1499px;
+}
+
+.keranjang .container-CZy9MS {
+  background-color: transparent;
+  height: 579px;
+  left: 144px;
+  position: absolute;
+  top: 0px;
+  width: 1210px;
+}
+
+.keranjang .layanan-pelanggan-xXouMt {
+  background-color: transparent;
+  height: 14px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 48px;
+  white-space: nowrap;
+  width: 106px;
+}
+
+.keranjang .list-xXouMt {
+  height: 252px;
+  left: 10px;
+  top: 84px;
+  width: 240px;
+}
+
+.keranjang .item-link-B2dGua {
+  height: 14px;
+  top: 0px;
+  width: 44px;
+}
+
+.keranjang .container-owANXd {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 44px;
+}
+
+.keranjang .bantuan-0X6STh {
+  height: 14px;
+  line-height: 14.4px;
+  top: -2px;
+  width: 45px;
+}
+
+.keranjang .item-link-6l40r5 {
+  height: 14px;
+  top: 26px;
+  width: 110px;
+}
+
+.keranjang .container-55OfW2 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 110px;
+}
+
+.keranjang .metode-pembayaran-OK8WiR {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 110px;
+}
+
+.keranjang .item-link-wC3sKD {
+  height: 14px;
+  top: 53px;
+  width: 60px;
+}
+
+.keranjang .container-rxTLMo {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 60px;
+}
+
+.keranjang .shopee-pay-R3iqaU {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 60px;
+}
+
+.keranjang .item-link-3WJxJJ {
+  height: 14px;
+  top: 79px;
+  width: 67px;
+}
+
+.keranjang .container-4Vhs3E {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 67px;
+}
+
+.keranjang .koin-shopee-Sg5tTo {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 67px;
+}
+
+.keranjang .item-link-YIn7cx {
+  height: 14px;
+  top: 106px;
+  width: 127px;
+}
+
+.keranjang .container-eStqgI {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 127px;
+}
+
+.keranjang .lacak-pesanan-pembeli-kh3Kfq {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 128px;
+}
+
+.keranjang .item-link-xXZx0k {
+  height: 14px;
+  top: 132px;
+  width: 138px;
+}
+
+.keranjang .container-4kSLCu {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 138px;
+}
+
+.keranjang .lacak-pengiriman-penjual-7oWffx {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 138px;
+}
+
+.keranjang .item-link-XJRugs {
+  height: 14px;
+  top: 158px;
+  width: 69px;
+}
+
+.keranjang .container-UKJ7mf {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 69px;
+}
+
+.keranjang .gratis-ongkir-KSSomg {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 69px;
+}
+
+.keranjang .item-link-aWrAYw {
+  height: 14px;
+  top: 185px;
+  width: 158px;
+}
+
+.keranjang .container-hMO1Zq {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 158px;
+}
+
+.keranjang .pengembalian-barang-dana-VxWCpe {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 158px;
+}
+
+.keranjang .item-link-07wxMG {
+  height: 14px;
+  top: 211px;
+  width: 84px;
+}
+
+.keranjang .container-Ixhkjp {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 84px;
+}
+
+.keranjang .garansi-shopee-exxrH5 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 84px;
+}
+
+.keranjang .item-link-diqQx4 {
+  height: 14px;
+  top: 238px;
+  width: 75px;
+}
+
+.keranjang .container-0Bo12I {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 75px;
+}
+
+.keranjang .hubungi-kami-3RjFuZ {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 75px;
+}
+
+.keranjang .jelajahi-shopee-xXouMt {
+  background-color: transparent;
+  height: 14px;
+  left: 260px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 48px;
+  white-space: nowrap;
+  width: 86px;
+}
+
+.keranjang .list-Tp6Zgg {
+  height: 252px;
+  left: 260px;
+  top: 84px;
+  width: 240px;
+}
+
+.keranjang .item-link-xJXw2E {
+  height: 14px;
+  top: 0px;
+  width: 74px;
+}
+
+.keranjang .container-LZEk1X {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 74px;
+}
+
+.keranjang .tentang-kami-1KO2yJ {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 74px;
+}
+
+.keranjang .item-link-FxOZnZ {
+  height: 14px;
+  top: 26px;
+  width: 25px;
+}
+
+.keranjang .container-XfCKaf {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 25px;
+}
+
+.keranjang .karir-BmNrpD {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 25px;
+}
+
+.keranjang .item-link-5gpfBn {
+  height: 14px;
+  top: 53px;
+  width: 95px;
+}
+
+.keranjang .container-bxN2gF {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 95px;
+}
+
+.keranjang .kebijakan-shopee-5TCLYF {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 95px;
+}
+
+.keranjang .item-link-oo6fae {
+  height: 14px;
+  top: 79px;
+  width: 91px;
+}
+
+.keranjang .container-4BVUfs {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 91px;
+}
+
+.keranjang .kebijakan-privasi-nqb9Zq {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 91px;
+}
+
+.keranjang .item-link-l0E3xs {
+  height: 14px;
+  top: 106px;
+  width: 24px;
+}
+
+.keranjang .container-L7TRMh {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 24px;
+}
+
+.keranjang .blog-IVZjxj {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 24px;
+}
+
+.keranjang .item-link-1SCDgM {
+  height: 14px;
+  top: 132px;
+  width: 66px;
+}
+
+.keranjang .container-x71tg1 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 66px;
+}
+
+.keranjang .shopee-mall-l8xZ7r {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 66px;
+}
+
+.keranjang .item-link-1jd3vl {
+  height: 14px;
+  top: 158px;
+  width: 68px;
+}
+
+.keranjang .container-RSHhXM {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 68px;
+}
+
+.keranjang .seller-centre-KwwTk4 {
+  height: 14px;
+  left: 0px;
+  line-height: 14.4px;
+  top: -2px;
+  width: 68px;
+}
+
+.keranjang .item-link-k2IzWM {
+  height: 14px;
+  top: 185px;
+  width: 55px;
+}
+
+.keranjang .container-wEUbTP {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 55px;
+}
+
+.keranjang .flash-sale-jQGf7i {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 55px;
+}
+
+.keranjang .item-link-dzwD2a {
+  height: 14px;
+  top: 211px;
+  width: 73px;
+}
+
+.keranjang .container-nlecWy {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 73px;
+}
+
+.keranjang .kontak-media-RcUx63 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 74px;
+}
+
+.keranjang .item-link-xHAdzq {
+  height: 14px;
+  top: 238px;
+  width: 84px;
+}
+
+.keranjang .container-knOed2 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 84px;
+}
+
+.keranjang .shopee-affiliate-E370Cr {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 84px;
+}
+
+.keranjang .pembayaran-xXouMt {
+  background-color: transparent;
+  height: 14px;
+  left: 510px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 48px;
+  white-space: nowrap;
+  width: 68px;
+}
+
+.keranjang .list-TpJJak {
+  height: 228px;
+  left: 510px;
+  top: 84px;
+  width: 240px;
+}
+
+.keranjang .item-oadqVy {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 60px;
+}
+
+.keranjang .link-5Yyx0L {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .x5589c755ab085d2fac3e33f4755c6a9e-M6ON7w {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/5589c755ab085d2fac3e33f4755c6a9e@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-Q73mj8 {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 60px;
+}
+
+.keranjang .link-oPr5pE {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .x49656d7100598b911a1f247dec64fda4-nDMOG8 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/49656d7100598b911a1f247dec64fda4@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-Qzw6R3 {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 60px;
+}
+
+.keranjang .link-jGHHeW {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .e7865f5fb066b8b5e73f9d5c36fc7154-z4UpmY {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/e7865f5fb066b8b5e73f9d5c36fc7154@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-MSFAfv {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 38px;
+  width: 60px;
+}
+
+.keranjang .link-6G5bXq {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .x59185c096964e1892e9122ceaae2609d-lvLkDR {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/59185c096964e1892e9122ceaae2609d@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-9qBDBT {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 38px;
+  width: 60px;
+}
+
+.keranjang .link-lzqx9L {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .x9a08d3abab3dd059fff945c72ca372d9-3mb9TZ {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/9a08d3abab3dd059fff945c72ca372d9@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-jUpAoG {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 38px;
+  width: 60px;
+}
+
+.keranjang .link-L4GHBp {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .x780c2be80e523384a7320b89f42008d5-BxHa5h {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/780c2be80e523384a7320b89f42008d5@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-HrIlMb {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 76px;
+  width: 60px;
+}
+
+.keranjang .link-MjtpIW {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .x0cf8caa250763eefc3d79bb1f8c08e73-dWLqOU {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/0cf8caa250763eefc3d79bb1f8c08e73@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-ZALG5x {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 76px;
+  width: 60px;
+}
+
+.keranjang .link-GzM4xy {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .c8dce1e557f48316ef80dc9dbee40097-F9Kzde {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/c8dce1e557f48316ef80dc9dbee40097@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-MawVw6 {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 76px;
+  width: 60px;
+}
+
+.keranjang .link-NOgXDE {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .x1ad101bcf0e90b74b5697db1511de529-XdYwI4 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/1ad101bcf0e90b74b5697db1511de529@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-auM5Fh {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 114px;
+  width: 60px;
+}
+
+.keranjang .link-sBPJtr {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .x6167379c7a6e786452f9f03295f517e6-96Qjbs {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/6167379c7a6e786452f9f03295f517e6@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-OLX6dX {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 114px;
+  width: 60px;
+}
+
+.keranjang .link-btEkBg {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .fc6e7bb9f2e88e7d1a702eb6de938d79-QPxoh3 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/fc6e7bb9f2e88e7d1a702eb6de938d79@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-9sxXct {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 114px;
+  width: 60px;
+}
+
+.keranjang .link-pqsSwR {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .x231b50853c37d3ed0933b8ba7479f0e4-Zshxfn {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/231b50853c37d3ed0933b8ba7479f0e4@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-3fcTXo {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 152px;
+  width: 60px;
+}
+
+.keranjang .link-cXWLRQ {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .d68d15075519a4dfcfc8ffd9385d7bb9-yoydVx {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/d68d15075519a4dfcfc8ffd9385d7bb9@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-tc8djp {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 152px;
+  width: 60px;
+}
+
+.keranjang .link-Qh3jcv {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .ea38821fb0e2ec640bcd4f21000de105-Avozhv {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/ea38821fb0e2ec640bcd4f21000de105@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-E5Ad1r {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 152px;
+  width: 60px;
+}
+
+.keranjang .link-ByHfsG {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .ef22f26ccc342ad4dea14cc383299d64-oBRe62 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/ef22f26ccc342ad4dea14cc383299d64@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-Q8Enpp {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 190px;
+  width: 60px;
+}
+
+.keranjang .link-V6LqGU {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .b228c4523a9d1261e4606e9bf3a4882f-UYiZ4w {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/b228c4523a9d1261e4606e9bf3a4882f@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-EXUDkD {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 190px;
+  width: 60px;
+}
+
+.keranjang .link-fj3Jzj {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .x41e4c83bae13f67b9898c7579dd53d05-2ZSAEf {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/41e4c83bae13f67b9898c7579dd53d05@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .pengiriman-xXouMt {
+  background-color: transparent;
+  height: 14px;
+  left: 510px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 326px;
+  white-space: nowrap;
+  width: 62px;
+}
+
+.keranjang .list-dkNTA5 {
+  height: 190px;
+  left: 510px;
+  top: 363px;
+  width: 240px;
+}
+
+.keranjang .item-Wqk4ox {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 60px;
+}
+
+.keranjang .link-nloI5D {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .id-50009109-0c5dd568-f73B4Y {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/id-50009109-0c5dd5687ff2ede525c04fbde2f7b7fd@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-oRX4zq {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 60px;
+}
+
+.keranjang .link-k3Gcao {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .x982216a49044ce4636f861333bfdac5c-iEHo3O {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/982216a49044ce4636f861333bfdac5c@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-XvhRaZ {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 60px;
+}
+
+.keranjang .link-HyyxiM {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .x5ecc185311ec587945838b507140ee21-w2Uxed {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/5ecc185311ec587945838b507140ee21@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-Uuab8J {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 38px;
+  width: 60px;
+}
+
+.keranjang .link-d71apm {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .x5c07836b22c5689d56cb217c88171785-pEst0c {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/5c07836b22c5689d56cb217c88171785@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-IC2rsS {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 38px;
+  width: 60px;
+}
+
+.keranjang .link-dGQBd1 {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .fe439088405f5b71199c3f6117932462-SuBrTT {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/fe439088405f5b71199c3f6117932462@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-3wUPj2 {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 38px;
+  width: 60px;
+}
+
+.keranjang .link-nycxOr {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .x9f4d96722647cf501edf21c958294568-ND2Jlp {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/9f4d96722647cf501edf21c958294568@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-iJG0TG {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 76px;
+  width: 60px;
+}
+
+.keranjang .link-nZYUor {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .c2abc2de79484198bfc3fc3efd4ea049-frCv98 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/c2abc2de79484198bfc3fc3efd4ea049@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-YZ3809 {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 76px;
+  width: 60px;
+}
+
+.keranjang .link-4xalpG {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .x5653e7f0ca1361ddddb5b545ab675bc2-d6CktF {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/5653e7f0ca1361ddddb5b545ab675bc2@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-fHmQ6Q {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 76px;
+  width: 60px;
+}
+
+.keranjang .link-V0f6qH {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .ed038a4fcd786fb2d6ef7b70a7a9a1b1-XQBfQi {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/ed038a4fcd786fb2d6ef7b70a7a9a1b1@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-xvTLW8 {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 114px;
+  width: 60px;
+}
+
+.keranjang .link-AlTcUi {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .x8810ac4e4cffb855d280503c6eb33ed4-Qjxh9b {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/8810ac4e4cffb855d280503c6eb33ed4@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-9re2hx {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 114px;
+  width: 60px;
+}
+
+.keranjang .link-JEDBBm {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .x5c023bfb427d9546a8055f3b76d91560-X0xwT3 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/5c023bfb427d9546a8055f3b76d91560@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-WP8Ixi {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 114px;
+  width: 60px;
+}
+
+.keranjang .link-19R0Xh {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .x5e350fcf94101432052945e2931fa621-46wQGA {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/5e350fcf94101432052945e2931fa621@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-wwHgsp {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 152px;
+  width: 60px;
+}
+
+.keranjang .link-IxVw94 {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .x47d94f9fb90cc7e374549620be687494-U4NB1T {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/47d94f9fb90cc7e374549620be687494@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-3CDkmP {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 68px;
+  overflow: hidden;
+  position: absolute;
+  top: 152px;
+  width: 60px;
+}
+
+.keranjang .link-LB8Q0A {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .b20bd74ad72a92f1d22dc80e18ae2836-5NxTz9 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/b20bd74ad72a92f1d22dc80e18ae2836@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .item-0526tT {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  left: 136px;
+  overflow: hidden;
+  position: absolute;
+  top: 152px;
+  width: 60px;
+}
+
+.keranjang .link-yRXISb {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.keranjang .fedcba5bb6bc183e31766f032fd49a00-dvf2in {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/fedcba5bb6bc183e31766f032fd49a00@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .ikuti-kami-xXouMt {
+  background-color: transparent;
+  height: 14px;
+  left: 760px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 48px;
+  white-space: nowrap;
+  width: 55px;
+}
+
+.keranjang .list-8f1MzV {
+  height: 128px;
+  left: 760px;
+  top: 84px;
+  width: 240px;
+}
+
+.keranjang .item-link-mOiSBg {
+  height: 16px;
+  top: 0px;
+  width: 76px;
+}
+
+.keranjang .x622550fb2ffb8ddf3913538801bc4c05-8AWxce {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/622550fb2ffb8ddf3913538801bc4c05@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.keranjang .container-8AWxce {
+  background-color: transparent;
+  height: 16px;
+  left: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .facebook-5UBWni {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 52px;
+}
+
+.keranjang .item-link-uPZ6xF {
+  height: 16px;
+  top: 28px;
+  width: 78px;
+}
+
+.keranjang .ec4d29967019ea44642daa53a40ff89c-TxgkGF {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/ec4d29967019ea44642daa53a40ff89c@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.keranjang .container-TxgkGF {
+  background-color: transparent;
+  height: 16px;
+  left: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 54px;
+}
+
+.keranjang .instagram-pKsLaM {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 54px;
+}
+
+.keranjang .item-link-m0wHhk {
+  height: 16px;
+  top: 56px;
+  width: 61px;
+}
+
+.keranjang .x2bf3f4d1e10c63d4df16cf4090ded0a5-0Xm7fe {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/2bf3f4d1e10c63d4df16cf4090ded0a5@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.keranjang .container-0Xm7fe {
+  background-color: transparent;
+  height: 16px;
+  left: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 37px;
+}
+
+.keranjang .twitter-cOSFUl {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 37px;
+}
+
+.keranjang .item-link-8BVYNb {
+  height: 16px;
+  top: 84px;
+  width: 69px;
+}
+
+.keranjang .x32530e4a6641210fbbfdaf95f507aa1e-5irWSX {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/32530e4a6641210fbbfdaf95f507aa1e@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.keranjang .container-5irWSX {
+  background-color: transparent;
+  height: 16px;
+  left: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 45px;
+}
+
+.keranjang .linked-in-aw1H9k {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 45px;
+}
+
+.keranjang .item-link-PAUHnc {
+  height: 16px;
+  top: 112px;
+  width: 111px;
+}
+
+.keranjang .a4c827473f54e4a6ae4550a14ea92653-oKkZt0 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/a4c827473f54e4a6ae4550a14ea92653@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.keranjang .container-oKkZt0 {
+  background-color: transparent;
+  height: 16px;
+  left: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 87px;
+}
+
+.keranjang .kampus-shopee-sQMKvx {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 87px;
+}
+
+.keranjang .keamanan-xXouMt {
+  background-color: transparent;
+  height: 14px;
+  left: 760px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 226px;
+  white-space: nowrap;
+  width: 57px;
+}
+
+.keranjang .list-item-xXouMt {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 60px;
+  left: 760px;
+  overflow: hidden;
+  position: absolute;
+  top: 263px;
+  width: 120px;
+}
+
+.keranjang .link-ucwGoF {
+  background-color: transparent;
+  height: 52px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 112px;
+}
+
+.keranjang .id-11134258-7rasi-m1mj559k2yly05-ZSkRaJ {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/id-11134258-7rasi-m1mj559k2yly05@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 52px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 112px;
+}
+
+.keranjang .download-aplikasi-shopee-xXouMt {
+  background-color: transparent;
+  height: 14px;
+  left: 1010px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 48px;
+  white-space: nowrap;
+  width: 143px;
+}
+
+.keranjang .container-xXouMt {
+  background-color: transparent;
+  height: 91px;
+  left: 1010px;
+  position: absolute;
+  top: 84px;
+  width: 190px;
+}
+
+.keranjang .link-BcFQ30 {
+  background-color: transparent;
+  height: 91px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100px;
+}
+
+.keranjang .bed0af4663f887db16a7047185478dcf-2dm9sf {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/bed0af4663f887db16a7047185478dcf.svg);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 88px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 88px;
+}
+
+.keranjang .link-sC7c41 {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 24px;
+  left: 100px;
+  position: absolute;
+  top: 0px;
+  width: 76px;
+}
+
+.keranjang .bbf28a2328ec8c7f57b9cc2069d693fd-xn0a9B {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/bbf28a2328ec8c7f57b9cc2069d693fd@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 4px;
+  overflow: hidden;
+  position: relative;
+  top: 4px;
+  width: 68px;
+}
+
+.keranjang .link-rhRUYT {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 24px;
+  left: 100px;
+  position: absolute;
+  top: 32px;
+  width: 76px;
+}
+
+.keranjang .x1858a153798406c87945f15a38bf4874-JTkkRF {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/1858a153798406c87945f15a38bf4874@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 4px;
+  overflow: hidden;
+  position: relative;
+  top: 4px;
+  width: 68px;
+}
+
+.keranjang .link-AcBHFD {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 24px;
+  left: 100px;
+  position: absolute;
+  top: 64px;
+  width: 76px;
+}
+
+.keranjang .x0e74339f5da500baaaa52785f175bc6d-JLp6UN {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/0e74339f5da500baaaa52785f175bc6d@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 4px;
+  overflow: hidden;
+  position: relative;
+  top: 4px;
+  width: 68px;
+}
+
+.keranjang .horizontal-border-CZy9MS {
+  border-bottom-style: none;
+  border-color: #0000001a;
+  border-top-style: solid;
+  border-top-width: 1.111109972000122px;
+  height: 99px;
+  left: 149px;
+  top: 579px;
+}
+
+.keranjang .shopee-2024-hak-cipta-dilindungi-ugYZf4 {
+  background-color: transparent;
+  height: 18px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: 40px;
+  white-space: nowrap;
+  width: 229px;
+}
+
+.keranjang .negara-ugYZf4 {
+  background-color: transparent;
+  height: 18px;
+  left: 486px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: right;
+  top: 40px;
+  white-space: nowrap;
+  width: 49px;
+}
+
+.keranjang .vertical-border-ugYZf4 {
+  border-color: var(--black-5);
+  border-left-style: none;
+  border-right-style: solid;
+  border-right-width: 1.111109972000122px;
+  height: 18px;
+  left: 535px;
+  top: 41px;
+  width: 74px;
+}
+
+.keranjang .link-54LKLo {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 63px;
+}
+
+.keranjang .singapura-oyZIkT {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 63px;
+}
+
+.keranjang .vertical-border-znnIO0 {
+  border-color: var(--black-5);
+  border-left-style: none;
+  border-right-style: solid;
+  border-right-width: 1.111109972000122px;
+  height: 18px;
+  left: 608px;
+  top: 41px;
+  width: 72px;
+}
+
+.keranjang .link-uKxylN {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 61px;
+}
+
+.keranjang .indonesia-kfZWQ8 {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 61px;
+}
+
+.keranjang .vertical-border-cSFjUm {
+  border-color: var(--black-5);
+  border-left-style: none;
+  border-right-style: solid;
+  border-right-width: 1.111109972000122px;
+  height: 18px;
+  left: 680px;
+  top: 41px;
+  width: 65px;
+}
+
+.keranjang .link-I7MiSP {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 54px;
+}
+
+.keranjang .thailand-67N8te {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 54px;
+}
+
+.keranjang .vertical-border-1GnGzj {
+  border-color: var(--black-5);
+  border-left-style: none;
+  border-right-style: solid;
+  border-right-width: 1.111109972000122px;
+  height: 18px;
+  left: 745px;
+  top: 41px;
+  width: 67px;
+}
+
+.keranjang .link-cVImOe {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 56px;
+}
+
+.keranjang .malaysia-dnVe2O {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 56px;
+}
+
+.keranjang .vertical-border-XI5qw3 {
+  border-color: var(--black-5);
+  border-left-style: none;
+  border-right-style: solid;
+  border-right-width: 1.111109972000122px;
+  height: 18px;
+  left: 812px;
+  top: 41px;
+  width: 63px;
+}
+
+.keranjang .link-bQDyQc {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.keranjang .vietnam-rRTPyt {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 52px;
+}
+
+.keranjang .vertical-border-gn2Ynf {
+  border-color: var(--black-5);
+  border-left-style: none;
+  border-right-style: solid;
+  border-right-width: 1.111109972000122px;
+  height: 18px;
+  left: 875px;
+  top: 41px;
+  width: 56px;
+}
+
+.keranjang .link-6Jj5zg {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 45px;
+}
+
+.keranjang .filipina-3DdfQM {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 45px;
+}
+
+.keranjang .vertical-border-eIsUFI {
+  border-color: var(--black-5);
+  border-left-style: none;
+  border-right-style: solid;
+  border-right-width: 1.111109972000122px;
+  height: 18px;
+  left: 931px;
+  top: 41px;
+  width: 46px;
+}
+
+.keranjang .link-P0ID8p {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 35px;
+}
+
+.keranjang .brazil-yQMxx6 {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 35px;
+}
+
+.keranjang .vertical-border-RbfXbe {
+  border-color: var(--black-5);
+  border-left-style: none;
+  border-right-style: solid;
+  border-right-width: 1.111109972000122px;
+  height: 18px;
+  left: 976px;
+  top: 41px;
+  width: 56px;
+}
+
+.keranjang .link-7gxUFx {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 45px;
+}
+
+.keranjang .mxico-FMRkfe {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 46px;
+}
+
+.keranjang .vertical-border-6KBq5k {
+  border-color: var(--black-5);
+  border-left-style: none;
+  border-right-style: solid;
+  border-right-width: 1.111109972000122px;
+  height: 18px;
+  left: 1033px;
+  top: 41px;
+  width: 71px;
+}
+
+.keranjang .link-XdTnxU {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 60px;
+}
+
+.keranjang .colombia-GPgiaK {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 60px;
+}
+
+.keranjang .vertical-border-R78xLR {
+  border-color: var(--black-5);
+  border-left-style: none;
+  border-right-style: solid;
+  border-right-width: 1.111109972000122px;
+  height: 18px;
+  left: 1103px;
+  top: 41px;
+  width: 42px;
+}
+
+.keranjang .link-nnx0oJ {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 31px;
+}
+
+.keranjang .chile-baEWJM {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 31px;
+}
+
+.keranjang .link-ugYZf4 {
+  background-color: transparent;
+  height: 17px;
+  left: 1151px;
+  position: absolute;
+  top: 41px;
+  width: 44px;
+}
+
+.keranjang .taiwan-5WbFMm {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 45px;
+}
+
+.keranjang .container-PvsmeU {
+  background-color: transparent;
+  height: 48px;
+  left: 1372px;
+  position: absolute;
+  top: 628px;
+  width: 100px;
+}
+
+.keranjang .background-shadow-mg8Tc9 {
+  background-color: var(--flamingo);
+  border-radius: 4px 4px 0px 0px;
+  box-shadow: 0px 4px 20px #1c1c3329;
+  height: 48px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 100px;
+}
+
+.keranjang .svg-7EEZRH {
+  height: 24px;
+  left: 12px;
+  top: 12px;
+  width: 24px;
+}
+
+.keranjang .svg-r07Mrg {
+  height: 22px;
+  left: 44px;
+  top: 13px;
+  width: 44px;
+}
+
+.keranjang .background-border-7EEZRH {
+  background-color: var(--flamingo);
+  border: 1px solid;
+  border-color: #f6f6f6;
+  border-radius: 9px;
+  height: 18px;
+  left: 78px;
+  overflow: hidden;
+  position: absolute;
+  top: -9px;
+  width: 26px;
+}
+
+.keranjang .x52-q6uKpi {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+  height: 14px;
+  left: 6px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -0px;
+  white-space: nowrap;
+  width: 14px;
+}
+
+.keranjang .bantuan {
+  background-color: transparent;
+  left: 0px;
+  letter-spacing: 0.00px;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.keranjang .horizontal-border {
+  background-color: transparent;
+  border-left-style: none;
+  border-right-style: none;
+  position: absolute;
+  width: 1200px;
+}
+
+.keranjang .item-link {
+  background-color: transparent;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.keranjang .label {
+  border: 1px solid;
+  border-radius: 2px;
+  box-shadow: inset 0px 2px 0px 1px #00000005;
+  height: 18px;
+  position: absolute;
+  width: 18px;
+}
+
+.keranjang .list {
+  background-color: transparent;
+  position: absolute;
+}
+
+.keranjang .rp141000 {
+  background-color: transparent;
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 32px;
+  white-space: nowrap;
+  width: 68px;
+}
+
+.keranjang .section {
+  background-color: var(--white);
+  left: 0px;
+  position: absolute;
+}
+
+.keranjang .seller-centre {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.keranjang .svg {
+  background-color: transparent;
+  position: absolute;
+}
+
+.keranjang .vertical-border {
+  background-color: transparent;
+  border-bottom-style: none;
+  border-top-style: none;
+  position: absolute;
+}
+</style>
+</head>
+<body style="margin: 0;background: #f5f5f5;"><input type="hidden" id="anPageName" name="page" value="keranjang">
+  <div class="container-center-horizontal"><div class="keranjang screen " data-id="7:17"><div class="container-xSlvxr" data-id="7:18"><header class="header-rzCtjv" data-id="7:19"><div class="nav-tycxgL" data-id="7:20"><div class="link-YznxmS" data-id="7:21"><div class="seller-centre-Xki0Ko valign-text-middle seller-centre roboto-light-white-13px" data-id="7:22">Seller Centre</div></div><div class="link-f6FI8o" data-id="7:23"><div class="download-x2r56b valign-text-middle roboto-light-white-13px" data-id="7:24">Download</div></div><div class="border-YznxmS" data-id="7:25"></div><div class="ikuti-kami-di-YznxmS valign-text-middle roboto-light-white-13px" data-id="7:26">Ikuti kami di</div><div class="border-f6FI8o" data-id="7:27"></div><div class="container-YznxmS" data-id="7:28"><div class="link-PNpCuY" data-id="7:29-990d18ed-6df9-4d75-b4aa-bb93a3bef8c0"></div><div class="link-KCVYDq" data-id="7:30-a34be70a-cf80-4bee-b2b9-a2e84c27ef6a"></div><div class="link-Kx5Tbe" data-id="7:31-0ea0c180-d487-411f-9411-36eff2c3bf22"></div></div><div class="list-YznxmS list" data-id="7:33"><div class="item-Szoxh6" data-id="7:34"><div class="button-link-gHDlnh" data-id="7:35"><div class="notifikasi-REqpBF valign-text-middle roboto-light-white-13px" data-id="7:36">Notifikasi</div><img class="svg-REqpBF svg" data-id="7:37" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/svg.svg" alt="SVG"></div></div><div class="link-Szoxh6" data-id="7:40"><img class="svg-bw9nbe svg" data-id="7:41" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/svg-1.svg" alt="SVG"><div class="container-bw9nbe" data-id="7:45"><div class="bantuan-p1JVoX valign-text-middle bantuan roboto-light-white-13px" data-id="7:46">Bantuan</div></div></div><div class="item-Zjv1Ee" data-id="7:47"><div class="button-cvZXPh" data-id="7:48"><img class="svg-suDjFI svg" data-id="7:49" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/svg-2.svg" alt="SVG"><div class="bahasa-indonesia-suDjFI valign-text-middle roboto-light-white-13px" data-id="7:53">Bahasa Indonesia</div><img class="svg-k22bdK svg" data-id="7:54" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/svg-3.svg" alt="SVG"></div></div><div class="item-7Wf7gb" data-id="7:56"><div class="button-BbIzCF" data-id="7:57"><div class="container-SPdACm" data-id="7:58"><div class="user-sJPRW3 valign-text-middle" data-id="7:59">User</div></div><img class="border-SPdACm" data-id="7:60" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/border.svg" alt="Border"></div></div></div></div></header><div class="section-rzCtjv section" data-id="7:66"><div class="link-UcPjlL" data-id="7:67"><div class="vertical-border-hoAgcz vertical-border" data-id="7:68"><div class="keranjang-belanja-7m61VC valign-text-middle" data-id="7:69">Keranjang Belanja</div></div><img class="svg-hoAgcz svg" data-id="7:70" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/svg-4.svg" alt="SVG"></div><div class="search-UcPjlL" data-id="7:74"><div class="combobox-klaim-potongan-langsung-1-jt-UoIkxY" data-id="7:75"><div class="container-d7UaTG" data-id="7:76"><div class="klaim-potongan-langsung-1-jt-aXxIYT valign-text-middle roboto-normal-black-14px" data-id="7:77">KLAIM: Potongan Langsung 1JT</div></div></div><img class="button-UoIkxY" data-id="7:79" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/button.svg" alt="Button"></div></div><div class="main-rzCtjv" data-id="7:88"><div class="background-shadow-yNjxsL" data-id="7:89"><div class="label-zFChxn label" data-id="7:90"><div class="border-p4frjJ" data-id="7:91"></div></div><div class="produk-zFChxn valign-text-middle" data-id="7:92">Produk</div><div class="harga-satuan-zFChxn valign-text-middle roboto-normal-suva-gray-14px" data-id="7:93">Harga Satuan</div><div class="kuantitas-zFChxn valign-text-middle roboto-normal-suva-gray-14px" data-id="7:94">Kuantitas</div><div class="total-harga-zFChxn valign-text-middle roboto-normal-suva-gray-14px" data-id="7:95">Total Harga</div><div class="aksi-zFChxn valign-text-middle roboto-normal-suva-gray-14px" data-id="7:96">Aksi</div></div><div class="section-yNjxsL section" data-id="7:97"><div class="horizontal-border-hh0wPd horizontal-border" data-id="7:98"><div class="label-2OENm2 label" data-id="7:99"><div class="border-KOc2s0" data-id="7:100"></div></div><div class="link-2OENm2" data-id="7:101"><img class="svg-YVxggx svg" data-id="7:102" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/svg-8.svg" alt="SVG"><div class="nvr_store20-YVxggx valign-text-middle" data-id="7:105">Nvr_store20</div></div><img class="button-svg-2OENm2" data-id="7:106" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/button---svg.svg" alt="Button  SVG"></div><div class="list-listitem-hh0wPd" data-id="7:110"><div class="label-MMdBZg label" data-id="7:111"><div class="border-09m6Eu" data-id="7:112"></div></div><div class="link-MMdBZg" data-id="7:113"><div class="picture-id-11134207-JLKHd0" data-id="7:114-9c7ebe9c-4d2a-458c-994e-ee617ebf9bf2"></div></div><div class="container-MMdBZg" data-id="7:115"><div class="link-SN36Wh" data-id="7:116"><p class="kemeja-hitam-pria-le-2ci9fr valign-text-middle roboto-normal-black-14px-2" data-id="7:117">Kemeja Hitam Pria Lengan Panja<br>ng Kemeja Shanghai Pria Lenga…<br>Panjang Kemeja Pria Kemeja Pria</p></div><div class="border-SN36Wh" data-id="7:118"><div class="bebas-pengembalian-R6jQrn valign-text-middle" data-id="7:119">Bebas Pengembalian</div></div><div class="id-11134258-7r992-lyc05kppnjyzeb-SN36Wh" data-id="7:120-ab21c0cc-e093-406f-8bfc-62dd1580465f"></div></div><div class="button-MMdBZg" data-id="7:121"><div class="variasi-cjW9im valign-text-middle roboto-normal-black-14px" data-id="7:122">Variasi:</div><div class="border-cjW9im" data-id="7:123"></div><div class="container-cjW9im" data-id="7:124"><div class="hitaml-GrZKgk valign-text-middle roboto-normal-black-14px" data-id="7:125">Hitam,L</div></div></div><div class="rp141000-MMdBZg valign-text-middle rp141000 roboto-normal-black-14px-2" data-id="7:126">Rp141.000</div><img class="button-decrease-MMdBZg" data-id="7:127" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/button---decrease.svg" alt="Button - Decrease"><div class="spinbutton-MMdBZg" data-id="7:130"><div class="container-RNf08V" data-id="7:131"><div class="x1-PnaC3O valign-text-middle" data-id="7:132">1</div></div></div><img class="button-increase-MMdBZg" data-id="7:133" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/button---increase.svg" alt="Button - Increase"><div class="rp141000-zsM4iU valign-text-middle rp141000" data-id="7:136">Rp141.000</div><div class="button-zsM4iU" data-id="7:137"><div class="hapus-YvRGOC valign-text-middle roboto-normal-black-14px-2" data-id="7:138">Hapus</div></div><div class="button-RBpe6d" data-id="7:139"><div class="produk-serupa-eMRV2M valign-text-middle" data-id="7:140">Produk Serupa</div><img class="svg-eMRV2M svg" data-id="7:141" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/svg-5.svg" alt="SVG"></div></div><div class="horizontal-border-PzqhuR horizontal-border" data-id="7:143"><div class="x5f084b1a89253f024a13png-qR48Y0" data-id="7:144-13e3f581-a6c4-41b1-ae63-b0d6310857a3"></div><p class="gratis-ongkir-sd-rp1-qR48Y0 valign-text-middle" data-id="7:145">Gratis Ongkir s/d Rp15.000 dengan min. belanja Rp0; Gratis Ongkir s/d Rp250.000 dengan min. belanja Rp3.000.000</p><div class="container-qR48Y0" data-id="7:146">
+    <div class="pelajari-lebih-lanjut-GBrvCx valign-text-middle" data-id="7:147">Pelajari lebih lanjut</div>
+  </div>
+  <div class="button-qR48Y0" data-id="12:1752">
+    <div class="checkout-cvMLS4 valign-text-middle" data-id="12:1753"><a href="D:/VSCode/shopee akmal/halaman checkout.html">Checkout</a></div>
+  </div></div></div></div><footer class="footer-rzCtjv" data-id="7:1381"><div class="background-TeNPzN" data-id="7:1382"><div class="container-CZy9MS" data-id="7:1383"><div class="layanan-pelanggan-xXouMt valign-text-middle roboto-bold-black-12px" data-id="7:1384">Layanan Pelanggan</div><div class="list-xXouMt list" data-id="7:1385"><div class="item-link-B2dGua item-link" data-id="7:1386"><div class="container-owANXd" data-id="7:1387"><div class="bantuan-0X6STh valign-text-middle bantuan roboto-normal-black-12px" data-id="7:1388">Bantuan</div></div></div><div class="item-link-6l40r5 item-link" data-id="7:1389"><div class="container-55OfW2" data-id="7:1390"><div class="metode-pembayaran-OK8WiR valign-text-middle roboto-normal-black-12px" data-id="7:1391">Metode Pembayaran</div></div></div><div class="item-link-wC3sKD item-link" data-id="7:1392"><div class="container-rxTLMo" data-id="7:1393"><div class="shopee-pay-R3iqaU valign-text-middle roboto-normal-black-12px" data-id="7:1394">ShopeePay</div></div></div><div class="item-link-3WJxJJ item-link" data-id="7:1395"><div class="container-4Vhs3E" data-id="7:1396"><div class="koin-shopee-Sg5tTo valign-text-middle roboto-normal-black-12px" data-id="7:1397">Koin Shopee</div></div></div><div class="item-link-YIn7cx item-link" data-id="7:1398"><div class="container-eStqgI" data-id="7:1399"><div class="lacak-pesanan-pembeli-kh3Kfq valign-text-middle roboto-normal-black-12px" data-id="7:1400">Lacak Pesanan Pembeli</div></div></div><div class="item-link-xXZx0k item-link" data-id="7:1401"><div class="container-4kSLCu" data-id="7:1402"><div class="lacak-pengiriman-penjual-7oWffx valign-text-middle roboto-normal-black-12px" data-id="7:1403">Lacak Pengiriman Penjual</div></div></div><div class="item-link-XJRugs item-link" data-id="7:1404"><div class="container-UKJ7mf" data-id="7:1405"><div class="gratis-ongkir-KSSomg valign-text-middle roboto-normal-black-12px" data-id="7:1406">Gratis Ongkir</div></div></div><div class="item-link-aWrAYw item-link" data-id="7:1407"><div class="container-hMO1Zq" data-id="7:1408"><div class="pengembalian-barang-dana-VxWCpe valign-text-middle roboto-normal-black-12px" data-id="7:1409">Pengembalian Barang &amp; Dana</div></div></div><div class="item-link-07wxMG item-link" data-id="7:1410"><div class="container-Ixhkjp" data-id="7:1411"><div class="garansi-shopee-exxrH5 valign-text-middle roboto-normal-black-12px" data-id="7:1412">Garansi Shopee</div></div></div><div class="item-link-diqQx4 item-link" data-id="7:1413"><div class="container-0Bo12I" data-id="7:1414"><div class="hubungi-kami-3RjFuZ valign-text-middle roboto-normal-black-12px" data-id="7:1415">Hubungi Kami</div></div></div></div><div class="jelajahi-shopee-xXouMt valign-text-middle roboto-bold-black-12px" data-id="7:1416">Jelajahi Shopee</div><div class="list-Tp6Zgg list" data-id="7:1417"><div class="item-link-xJXw2E item-link" data-id="7:1418"><div class="container-LZEk1X" data-id="7:1419"><div class="tentang-kami-1KO2yJ valign-text-middle roboto-normal-black-12px" data-id="7:1420">Tentang Kami</div></div></div><div class="item-link-FxOZnZ item-link" data-id="7:1421"><div class="container-XfCKaf" data-id="7:1422"><div class="karir-BmNrpD valign-text-middle roboto-normal-black-12px" data-id="7:1423">Karir</div></div></div><div class="item-link-5gpfBn item-link" data-id="7:1424"><div class="container-bxN2gF" data-id="7:1425"><div class="kebijakan-shopee-5TCLYF valign-text-middle roboto-normal-black-12px" data-id="7:1426">Kebijakan Shopee</div></div></div><div class="item-link-oo6fae item-link" data-id="7:1427"><div class="container-4BVUfs" data-id="7:1428"><div class="kebijakan-privasi-nqb9Zq valign-text-middle roboto-normal-black-12px" data-id="7:1429">Kebijakan Privasi</div></div></div><div class="item-link-l0E3xs item-link" data-id="7:1430"><div class="container-L7TRMh" data-id="7:1431"><div class="blog-IVZjxj valign-text-middle roboto-normal-black-12px" data-id="7:1432">Blog</div></div></div><div class="item-link-1SCDgM item-link" data-id="7:1433"><div class="container-x71tg1" data-id="7:1434"><div class="shopee-mall-l8xZ7r valign-text-middle roboto-normal-black-12px" data-id="7:1435">Shopee Mall</div></div></div><div class="item-link-1jd3vl item-link" data-id="7:1436"><div class="container-RSHhXM" data-id="7:1437"><div class="seller-centre-KwwTk4 valign-text-middle seller-centre roboto-normal-black-12px" data-id="7:1438">Seller Centre</div></div></div><div class="item-link-k2IzWM item-link" data-id="7:1439"><div class="container-wEUbTP" data-id="7:1440"><div class="flash-sale-jQGf7i valign-text-middle roboto-normal-black-12px" data-id="7:1441">Flash Sale</div></div></div><div class="item-link-dzwD2a item-link" data-id="7:1442"><div class="container-nlecWy" data-id="7:1443"><div class="kontak-media-RcUx63 valign-text-middle roboto-normal-black-12px" data-id="7:1444">Kontak Media</div></div></div><div class="item-link-xHAdzq item-link" data-id="7:1445"><div class="container-knOed2" data-id="7:1446"><div class="shopee-affiliate-E370Cr valign-text-middle roboto-normal-black-12px" data-id="7:1447">Shopee Affiliate</div></div></div></div><div class="pembayaran-xXouMt valign-text-middle roboto-bold-black-12px" data-id="7:1448">Pembayaran</div><div class="list-TpJJak list" data-id="7:1449"><div class="item-oadqVy" data-id="7:1450"><div class="link-5Yyx0L" data-id="7:1451"><div class="x5589c755ab085d2fac3e33f4755c6a9e-M6ON7w" data-id="7:1452-ac480f26-bd4f-4156-9e8c-88272b71df62"></div></div></div><div class="item-Q73mj8" data-id="7:1453"><div class="link-oPr5pE" data-id="7:1454"><div class="x49656d7100598b911a1f247dec64fda4-nDMOG8" data-id="7:1455-a3750936-d76e-4402-b6c0-97088ad8c79d"></div></div></div><div class="item-Qzw6R3" data-id="7:1456"><div class="link-jGHHeW" data-id="7:1457"><div class="e7865f5fb066b8b5e73f9d5c36fc7154-z4UpmY" data-id="7:1458-3737ef51-2f34-47e6-a996-8429a191bdb4"></div></div></div><div class="item-MSFAfv" data-id="7:1459"><div class="link-6G5bXq" data-id="7:1460"><div class="x59185c096964e1892e9122ceaae2609d-lvLkDR" data-id="7:1461-bfed4c06-2a19-4bba-aa9b-1d87d9ae41f5"></div></div></div><div class="item-9qBDBT" data-id="7:1462"><div class="link-lzqx9L" data-id="7:1463"><div class="x9a08d3abab3dd059fff945c72ca372d9-3mb9TZ" data-id="7:1464-9699067f-c7bf-41fe-bf43-3e680a979dd6"></div></div></div><div class="item-jUpAoG" data-id="7:1465"><div class="link-L4GHBp" data-id="7:1466"><div class="x780c2be80e523384a7320b89f42008d5-BxHa5h" data-id="7:1467-cbc7f7c4-868a-4b15-8295-43095a868211"></div></div></div><div class="item-HrIlMb" data-id="7:1468"><div class="link-MjtpIW" data-id="7:1469"><div class="x0cf8caa250763eefc3d79bb1f8c08e73-dWLqOU" data-id="7:1470-dedadee2-e252-4c62-9a30-6c6868dd096c"></div></div></div><div class="item-ZALG5x" data-id="7:1471"><div class="link-GzM4xy" data-id="7:1472"><div class="c8dce1e557f48316ef80dc9dbee40097-F9Kzde" data-id="7:1473-b860a504-49b2-4fbb-8176-949f0954bcab"></div></div></div><div class="item-MawVw6" data-id="7:1474"><div class="link-NOgXDE" data-id="7:1475"><div class="x1ad101bcf0e90b74b5697db1511de529-XdYwI4" data-id="7:1476-bf910560-7790-4aa3-a270-c2f44b4706c2"></div></div></div><div class="item-auM5Fh" data-id="7:1477"><div class="link-sBPJtr" data-id="7:1478"><div class="x6167379c7a6e786452f9f03295f517e6-96Qjbs" data-id="7:1479-40d9224f-da0a-4dc6-88b2-dde29e84215b"></div></div></div><div class="item-OLX6dX" data-id="7:1480"><div class="link-btEkBg" data-id="7:1481"><div class="fc6e7bb9f2e88e7d1a702eb6de938d79-QPxoh3" data-id="7:1482-d1809417-13fe-4225-b57c-9228a1846f68"></div></div></div><div class="item-9sxXct" data-id="7:1483"><div class="link-pqsSwR" data-id="7:1484"><div class="x231b50853c37d3ed0933b8ba7479f0e4-Zshxfn" data-id="7:1485-e10bff1c-6388-4dda-a683-d6e59104468d"></div></div></div><div class="item-3fcTXo" data-id="7:1486"><div class="link-cXWLRQ" data-id="7:1487"><div class="d68d15075519a4dfcfc8ffd9385d7bb9-yoydVx" data-id="7:1488-4a325f6d-8bff-440e-b673-651cd612e795"></div></div></div><div class="item-tc8djp" data-id="7:1489"><div class="link-Qh3jcv" data-id="7:1490"><div class="ea38821fb0e2ec640bcd4f21000de105-Avozhv" data-id="7:1491-bb0bb504-7bda-4d14-a439-eaa63733e4fb"></div></div></div><div class="item-E5Ad1r" data-id="7:1492"><div class="link-ByHfsG" data-id="7:1493"><div class="ef22f26ccc342ad4dea14cc383299d64-oBRe62" data-id="7:1494-ffd8931f-a944-4649-8bbb-1fc984cd8fef"></div></div></div><div class="item-Q8Enpp" data-id="7:1495"><div class="link-V6LqGU" data-id="7:1496"><div class="b228c4523a9d1261e4606e9bf3a4882f-UYiZ4w" data-id="7:1497-ae5b8c3e-92eb-416d-a9e8-8bb45caf94bc"></div></div></div><div class="item-EXUDkD" data-id="7:1498"><div class="link-fj3Jzj" data-id="7:1499"><div class="x41e4c83bae13f67b9898c7579dd53d05-2ZSAEf" data-id="7:1500-07c81c77-9727-44f7-9474-b9d38bcdf66d"></div></div></div></div><div class="pengiriman-xXouMt valign-text-middle roboto-bold-black-12px" data-id="7:1501">Pengiriman</div><div class="list-dkNTA5 list" data-id="7:1502"><div class="item-Wqk4ox" data-id="7:1503"><div class="link-nloI5D" data-id="7:1504"><div class="id-50009109-0c5dd568-f73B4Y" data-id="7:1505-703c4146-0958-4952-83c2-62a0385d9630"></div></div></div><div class="item-oRX4zq" data-id="7:1506"><div class="link-k3Gcao" data-id="7:1507"><div class="x982216a49044ce4636f861333bfdac5c-iEHo3O" data-id="7:1508-957e3728-cf79-4a1a-be00-006e3c29fa26"></div></div></div><div class="item-XvhRaZ" data-id="7:1509"><div class="link-HyyxiM" data-id="7:1510"><div class="x5ecc185311ec587945838b507140ee21-w2Uxed" data-id="7:1511-0af5e2b0-ad81-4cca-b237-aca15ca24c4c"></div></div></div><div class="item-Uuab8J" data-id="7:1512"><div class="link-d71apm" data-id="7:1513"><div class="x5c07836b22c5689d56cb217c88171785-pEst0c" data-id="7:1514-7789ffb7-afd3-4587-bad3-6f271520483b"></div></div></div><div class="item-IC2rsS" data-id="7:1515"><div class="link-dGQBd1" data-id="7:1516"><div class="fe439088405f5b71199c3f6117932462-SuBrTT" data-id="7:1517-7edad0f9-f5e5-45c7-be8b-4c58d3bbc448"></div></div></div><div class="item-3wUPj2" data-id="7:1518"><div class="link-nycxOr" data-id="7:1519"><div class="x9f4d96722647cf501edf21c958294568-ND2Jlp" data-id="7:1520-f84eaecf-fe6e-4421-919c-91bf8bcf0330"></div></div></div><div class="item-iJG0TG" data-id="7:1521"><div class="link-nZYUor" data-id="7:1522"><div class="c2abc2de79484198bfc3fc3efd4ea049-frCv98" data-id="7:1523-93717d29-c94b-449a-ab56-bb57e8ed5074"></div></div></div><div class="item-YZ3809" data-id="7:1524"><div class="link-4xalpG" data-id="7:1525"><div class="x5653e7f0ca1361ddddb5b545ab675bc2-d6CktF" data-id="7:1526-8de35b2a-c144-4116-b40a-c405f822502d"></div></div></div><div class="item-fHmQ6Q" data-id="7:1527"><div class="link-V0f6qH" data-id="7:1528"><div class="ed038a4fcd786fb2d6ef7b70a7a9a1b1-XQBfQi" data-id="7:1529-c70aafb5-1ea5-4a9e-86ba-de01438366d2"></div></div></div><div class="item-xvTLW8" data-id="7:1530"><div class="link-AlTcUi" data-id="7:1531"><div class="x8810ac4e4cffb855d280503c6eb33ed4-Qjxh9b" data-id="7:1532-39d8bd5b-024b-4346-8069-36fe7121467b"></div></div></div><div class="item-9re2hx" data-id="7:1533"><div class="link-JEDBBm" data-id="7:1534"><div class="x5c023bfb427d9546a8055f3b76d91560-X0xwT3" data-id="7:1535-f7667e1c-98b8-486d-a007-c27f8df53627"></div></div></div><div class="item-WP8Ixi" data-id="7:1536"><div class="link-19R0Xh" data-id="7:1537"><div class="x5e350fcf94101432052945e2931fa621-46wQGA" data-id="7:1538-15b97867-8d0b-4b4b-856c-3db0c571f3d9"></div></div></div><div class="item-wwHgsp" data-id="7:1539"><div class="link-IxVw94" data-id="7:1540"><div class="x47d94f9fb90cc7e374549620be687494-U4NB1T" data-id="7:1541-303f1d94-231f-466a-8a07-fb5a93bac993"></div></div></div><div class="item-3CDkmP" data-id="7:1542"><div class="link-LB8Q0A" data-id="7:1543"><div class="b20bd74ad72a92f1d22dc80e18ae2836-5NxTz9" data-id="7:1544-155ae3c7-dfac-4f18-8338-3131546db751"></div></div></div><div class="item-0526tT" data-id="7:1545"><div class="link-yRXISb" data-id="7:1546"><div class="fedcba5bb6bc183e31766f032fd49a00-dvf2in" data-id="7:1547-eab82586-9572-4c92-b2d8-8e9f51eb999e"></div></div></div></div><div class="ikuti-kami-xXouMt valign-text-middle roboto-bold-black-12px" data-id="7:1548">Ikuti Kami</div><div class="list-8f1MzV list" data-id="7:1549"><div class="item-link-mOiSBg item-link" data-id="7:1550"><div class="x622550fb2ffb8ddf3913538801bc4c05-8AWxce" data-id="7:1551-49a5c34f-e169-466f-8ffe-e7f73b9fd80e"></div><div class="container-8AWxce" data-id="7:1552"><div class="facebook-5UBWni valign-text-middle roboto-normal-black-12px" data-id="7:1553">Facebook</div></div></div><div class="item-link-uPZ6xF item-link" data-id="7:1554"><div class="ec4d29967019ea44642daa53a40ff89c-TxgkGF" data-id="7:1555-05561deb-7400-45e7-88c9-c3af41642a86"></div><div class="container-TxgkGF" data-id="7:1556"><div class="instagram-pKsLaM valign-text-middle roboto-normal-black-12px" data-id="7:1557">Instagram</div></div></div><div class="item-link-m0wHhk item-link" data-id="7:1558"><div class="x2bf3f4d1e10c63d4df16cf4090ded0a5-0Xm7fe" data-id="7:1559-71bd71ee-8a26-4904-a83f-ce41ab0ed50b"></div><div class="container-0Xm7fe" data-id="7:1560"><div class="twitter-cOSFUl valign-text-middle roboto-normal-black-12px" data-id="7:1561">Twitter</div></div></div><div class="item-link-8BVYNb item-link" data-id="7:1562"><div class="x32530e4a6641210fbbfdaf95f507aa1e-5irWSX" data-id="7:1563-216fc242-ce4c-452d-803d-4db00ab3a907"></div><div class="container-5irWSX" data-id="7:1564"><div class="linked-in-aw1H9k valign-text-middle roboto-normal-black-12px" data-id="7:1565">LinkedIn</div></div></div><div class="item-link-PAUHnc item-link" data-id="7:1566"><div class="a4c827473f54e4a6ae4550a14ea92653-oKkZt0" data-id="7:1567-d0ca3563-7fe0-414d-b5a5-0c9fda01276c"></div><div class="container-oKkZt0" data-id="7:1568"><div class="kampus-shopee-sQMKvx valign-text-middle roboto-normal-black-12px" data-id="7:1569">Kampus Shopee</div></div></div></div><div class="keamanan-xXouMt valign-text-middle roboto-bold-black-12px" data-id="7:1570">Keamanan</div><div class="list-item-xXouMt" data-id="7:1571"><div class="link-ucwGoF" data-id="7:1572"><div class="id-11134258-7rasi-m1mj559k2yly05-ZSkRaJ" data-id="7:1573-dc2c653c-a7aa-4554-a6a8-480c89916dd8"></div></div></div><div class="download-aplikasi-shopee-xXouMt valign-text-middle roboto-bold-black-12px" data-id="7:1574">Download Aplikasi Shopee</div><div class="container-xXouMt" data-id="7:1575"><div class="link-BcFQ30" data-id="7:1576"><div class="bed0af4663f887db16a7047185478dcf-2dm9sf" data-id="7:1577-39feddd7-c48b-4ed9-82f1-c46a2db31aaf"></div></div><div class="link-sC7c41" data-id="7:1578"><div class="bbf28a2328ec8c7f57b9cc2069d693fd-xn0a9B" data-id="7:1579-b6dbfa54-8867-4e58-964b-180e485960d3"></div></div><div class="link-rhRUYT" data-id="7:1580"><div class="x1858a153798406c87945f15a38bf4874-JTkkRF" data-id="7:1581-5e02c47d-faf6-4a54-aaed-3591d2c465b8"></div></div><div class="link-AcBHFD" data-id="7:1582"><div class="x0e74339f5da500baaaa52785f175bc6d-JLp6UN" data-id="7:1583-dbc82b3c-897c-4b17-9df8-cfc1cfacec05"></div></div></div></div><div class="horizontal-border-CZy9MS horizontal-border" data-id="7:1584"><p class="shopee-2024-hak-cipta-dilindungi-ugYZf4 valign-text-middle roboto-normal-black-14px" data-id="7:1585">© Shopee 2024. Hak Cipta Dilindungi</p><div class="negara-ugYZf4 valign-text-middle roboto-normal-black-14px" data-id="7:1586">Negara:</div><div class="vertical-border-ugYZf4 vertical-border" data-id="7:1587"><div class="link-54LKLo" data-id="7:1588"><div class="singapura-oyZIkT valign-text-middle roboto-normal-black-14px" data-id="7:1589">Singapura</div></div></div><div class="vertical-border-znnIO0 vertical-border" data-id="7:1590"><div class="link-uKxylN" data-id="7:1591"><div class="indonesia-kfZWQ8 valign-text-middle roboto-normal-black-14px" data-id="7:1592">Indonesia</div></div></div><div class="vertical-border-cSFjUm vertical-border" data-id="7:1593"><div class="link-I7MiSP" data-id="7:1594"><div class="thailand-67N8te valign-text-middle roboto-normal-black-14px" data-id="7:1595">Thailand</div></div></div><div class="vertical-border-1GnGzj vertical-border" data-id="7:1596"><div class="link-cVImOe" data-id="7:1597"><div class="malaysia-dnVe2O valign-text-middle roboto-normal-black-14px" data-id="7:1598">Malaysia</div></div></div><div class="vertical-border-XI5qw3 vertical-border" data-id="7:1599"><div class="link-bQDyQc" data-id="7:1600"><div class="vietnam-rRTPyt valign-text-middle roboto-normal-black-14px" data-id="7:1601">Vietnam</div></div></div><div class="vertical-border-gn2Ynf vertical-border" data-id="7:1602"><div class="link-6Jj5zg" data-id="7:1603"><div class="filipina-3DdfQM valign-text-middle roboto-normal-black-14px" data-id="7:1604">Filipina</div></div></div><div class="vertical-border-eIsUFI vertical-border" data-id="7:1605"><div class="link-P0ID8p" data-id="7:1606"><div class="brazil-yQMxx6 valign-text-middle roboto-normal-black-14px" data-id="7:1607">Brazil</div></div></div><div class="vertical-border-RbfXbe vertical-border" data-id="7:1608"><div class="link-7gxUFx" data-id="7:1609"><div class="mxico-FMRkfe valign-text-middle roboto-normal-black-14px" data-id="7:1610">México</div></div></div><div class="vertical-border-6KBq5k vertical-border" data-id="7:1611"><div class="link-XdTnxU" data-id="7:1612"><div class="colombia-GPgiaK valign-text-middle roboto-normal-black-14px" data-id="7:1613">Colombia</div></div></div><div class="vertical-border-R78xLR vertical-border" data-id="7:1614"><div class="link-nnx0oJ" data-id="7:1615"><div class="chile-baEWJM valign-text-middle roboto-normal-black-14px" data-id="7:1616">Chile</div></div></div><div class="link-ugYZf4" data-id="7:1617"><div class="taiwan-5WbFMm valign-text-middle roboto-normal-black-14px" data-id="7:1618">Taiwan</div></div></div><div class="container-PvsmeU" data-id="7:1620"><div class="background-shadow-mg8Tc9" data-id="7:1621"><img class="svg-7EEZRH svg" data-id="7:1622" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/svg-6.svg" alt="SVG"><img class="svg-r07Mrg svg" data-id="7:1624" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/677c63e4af2be0956b4eff8d/releases/677c641fbfe660916868e7bc/img/svg-7.svg" alt="SVG"><div class="background-border-7EEZRH" data-id="7:1626"><div class="x52-q6uKpi valign-text-middle" data-id="7:1627">52</div></div></div></div></div></footer></div></div></div><script src="launchpad-js/launchpad-banner.js" async></script><script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script></body></html>

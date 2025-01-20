@@ -1,0 +1,3174 @@
+<!DOCTYPE html>
+
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+05/01/2025 08:56:47 -->
+
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=1349, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script id="anima-load-script" src="load.js"></script><script id="anima-hotspots-script" src="hotspots.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:500,400,700");
+
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/67724c892d989b86f5440eea.67724c8a2d989b86f5440eed.k4PmFFy.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --amber: #ffbf00;
+  --black: #000000;
+  --black-2: #000000a6;
+  --black-3: #0000008a;
+  --black-4: #00000033;
+  --black-5: #000000de;
+  --black-6: #00000042;
+  --flamingo: #ee4d2d;
+  --white: #ffffff;
+  --white-2: #ffffff01;
+ 
+  --font-size-l: 14px;
+  --font-size-m: 12px;
+  --font-size-xl: 20px;
+  --font-size-xxl: 24px;
+ 
+  --font-family-roboto: "Roboto", Helvetica;
+}
+.roboto-normal-black-12px {
+  color: var(--black-2);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roboto-normal-black-14px {
+  color: var(--black-3);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roboto-bold-black-12px {
+  color: var(--black-5);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.roboto-normal-black-14px-2 {
+  color: var(--black-6);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+}
+
+
+/* screen - login-page */
+
+.login-page {
+  background-color: #f5f5f5;
+  height: 1362px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 1349px;
+}
+
+.login-page .background-fmx5hU {
+  background-color: var(--white);
+  height: 1362px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 1349px;
+}
+
+.login-page .nav-WLa5tN {
+  background-color: var(--white-2);
+  box-shadow: 0px 6px 6px #0000000f;
+  height: 84px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1349px;
+}
+
+.login-page .link-GwNyxm {
+  background-color: transparent;
+  cursor: pointer;
+  height: 32px;
+  left: 74px;
+  position: absolute;
+  top: 26px;
+  width: 172px;
+}
+
+.login-page .title-GwNyxm {
+  background-color: transparent;
+  color: #222222;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+  height: 29px;
+  left: 246px;
+  letter-spacing: 0.00px;
+  line-height: 28.8px;
+  position: absolute;
+  text-align: left;
+  top: 27px;
+  white-space: nowrap;
+  width: 65px;
+}
+
+.login-page .link-wDrHNA {
+  background-color: transparent;
+  height: 17px;
+  left: 1162px;
+  position: absolute;
+  top: 34px;
+  width: 97px;
+}
+
+.login-page .butuh-bantuan-EEWGo7 {
+  background-color: transparent;
+  color: var(--flamingo);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 98px;
+}
+
+.login-page .background-WLa5tN {
+  background-color: var(--flamingo);
+  height: 600px;
+  left: 0px;
+  position: absolute;
+  top: 84px;
+  width: 1349px;
+}
+
+.login-page .background-FxrzIi {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/677a494c1d1abb6914c8c0a7/img/background.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 600px;
+  left: 154px;
+  position: relative;
+  top: 0px;
+  width: 1040px;
+}
+
+.login-page .background-shadow-KRLPVn {
+  background-color: var(--white);
+  border-radius: 4px;
+  box-shadow: 0px 3px 10px #00000024;
+  height: 460px;
+  left: 640px;
+  overflow: hidden;
+  position: relative;
+  top: 70px;
+  width: 400px;
+}
+
+.login-page .log-in-wFjZnJ {
+  color: #222222;
+  font-size: var(--font-size-xl);
+  height: 24px;
+  left: 30px;
+  line-height: 24px;
+  text-align: left;
+  top: 30px;
+  width: 55px;
+}
+
+.login-page .link-wFjZnJ {
+  background-color: transparent;
+  height: 40px;
+  left: 330px;
+  position: absolute;
+  top: 23px;
+  width: 40px;
+}
+
+.login-page .background-border-wFjZnJ {
+  border: 2px solid;
+  border-radius: 2px;
+  height: 43px;
+  left: 171px;
+  top: 22px;
+  width: 143px;
+}
+
+.login-page .log-in-dengan-qr-tzTvne {
+  background-color: transparent;
+  color: var(--amber);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+  height: 17px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 10px;
+  white-space: nowrap;
+  width: 111px;
+}
+
+.login-page .background-border-tzTvne {
+  border-bottom-style: none;
+  border-left-style: none;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  height: 12px;
+  left: 137px;
+  top: 17px;
+  transform: rotate(45deg);
+  width: 12px;
+}
+
+.login-page .container-wFjZnJ {
+  background-color: transparent;
+  height: 327px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 87px;
+  width: 400px;
+}
+
+.login-page .form-kZWg9H {
+  background-color: transparent;
+  height: 184px;
+  left: 30px;
+  position: absolute;
+  top: 0px;
+  width: 340px;
+}
+
+.login-page .overlay-border-shadow-LK8iRV {
+  top: 0px;
+}
+
+.login-page .input-39ftOT {
+  position: relative;
+  width: 338px;
+}
+
+.login-page .container-z6DEhN {
+  background-color: transparent;
+  height: 17px;
+  left: 12px;
+  overflow: hidden;
+  position: relative;
+  top: 12px;
+  width: 314px;
+}
+
+.login-page .no-handphone-username-email-j2qg4C {
+  background-color: transparent;
+  height: 17px;
+  left: 3px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  width: 207px;
+}
+
+.login-page .overlay-border-shadow-8MUKAQ {
+  top: 70px;
+}
+
+.login-page .input-Hq914Z {
+  position: absolute;
+  width: 291px;
+}
+
+.login-page .container-Jxu6Bt {
+  background-color: transparent;
+  height: 17px;
+  left: 12px;
+  overflow: hidden;
+  position: relative;
+  top: 12px;
+  width: 267px;
+}
+
+.login-page .password-iTtlg7 {
+  background-color: transparent;
+  height: 17px;
+  left: 3px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  width: 62px;
+}
+
+.login-page .button-svg-Hq914Z {
+  background-color: transparent;
+  height: 16px;
+  left: 304px;
+  position: absolute;
+  top: 12px;
+  width: 20px;
+}
+
+.login-page .button-LK8iRV {
+  background-color: var(--flamingo);
+  box-shadow: 0px 1px 1px #00000017;
+  cursor: pointer;
+  left: 0px;
+  opacity: 0.7;
+  top: 144px;
+  width: 340px;
+}
+
+.login-page .log-in-LmVl5Y {
+  color: var(--white);
+  font-size: var(--font-size-l);
+  height: 17px;
+  left: 148px;
+  line-height: 16.8px;
+  text-align: center;
+  top: 10px;
+  width: 44px;
+}
+
+.login-page .link-kZWg9H {
+  background-color: transparent;
+  height: 14px;
+  left: 30px;
+  position: absolute;
+  top: 194px;
+  width: 82px;
+}
+
+.login-page .lupa-password-X2Nbxb {
+  background-color: transparent;
+  color: #0055aa;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 82px;
+}
+
+.login-page .link-Wjk61q {
+  background-color: transparent;
+  height: 14px;
+  left: 213px;
+  position: absolute;
+  top: 194px;
+  width: 157px;
+}
+
+.login-page .log-in-dengan-no-handphone-shUH4M {
+  background-color: transparent;
+  color: #0055aa;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 158px;
+}
+
+.login-page .horizontal-divider-kZWg9H {
+  left: 30px;
+}
+
+.login-page .atau-kZWg9H {
+  background-color: transparent;
+  color: #cccccc;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  height: 14px;
+  left: 185px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 217px;
+  white-space: nowrap;
+  width: 30px;
+}
+
+.login-page .horizontal-divider-Wjk61q {
+  left: 231px;
+}
+
+.login-page .button-kZWg9H {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--black-6);
+  left: 30px;
+  top: 252px;
+  width: 165px;
+}
+
+.login-page .image-qbvqvi {
+  left: 38px;
+}
+
+.login-page .facebook-qbvqvi {
+  color: var(--black-5);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 67px;
+  line-height: 16.8px;
+  text-align: center;
+  top: 11px;
+  width: 61px;
+}
+
+.login-page .button-Wjk61q {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--black-6);
+  left: 205px;
+  top: 252px;
+  width: 165px;
+}
+
+.login-page .image-JTCUm5 {
+  left: 46px;
+}
+
+.login-page .google-JTCUm5 {
+  background-color: transparent;
+  color: var(--black-5);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  height: 17px;
+  left: 75px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: center;
+  top: 11px;
+  white-space: nowrap;
+  width: 45px;
+}
+
+.login-page .baru-di-shopee-wFjZnJ {
+  background-color: transparent;
+  height: 17px;
+  left: 129px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: 413px;
+  white-space: nowrap;
+  width: 104px;
+}
+
+.login-page .link-axfPHw {
+  background-color: transparent;
+  height: 17px;
+  left: 232px;
+  position: absolute;
+  top: 414px;
+  width: 39px;
+}
+
+.login-page .daftar-4prAZa {
+  background-color: transparent;
+  color: var(--flamingo);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 500;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: left;
+  top: -2px;
+  white-space: nowrap;
+  width: 39px;
+}
+
+.login-page .footer-WLa5tN {
+  background-color: #f5f5f5;
+  height: 678px;
+  left: 0px;
+  position: absolute;
+  top: 684px;
+  width: 1349px;
+}
+
+.login-page .container-bBxLlO {
+  background-color: transparent;
+  height: 579px;
+  left: 70px;
+  position: absolute;
+  top: 0px;
+  width: 1210px;
+}
+
+.login-page .layanan-pelanggan-BlRw5W {
+  background-color: transparent;
+  height: 14px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 49px;
+  white-space: nowrap;
+  width: 106px;
+}
+
+.login-page .list-BlRw5W {
+  height: 252px;
+  left: 10px;
+  top: 84px;
+}
+
+.login-page .item-link-wRFVfB {
+  height: 14px;
+  top: 0px;
+  width: 44px;
+}
+
+.login-page .container-4xgxR3 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 44px;
+}
+
+.login-page .bantuan-HjXYaL {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 45px;
+}
+
+.login-page .item-link-0dRIGb {
+  height: 14px;
+  top: 26px;
+  width: 110px;
+}
+
+.login-page .container-SzS5cr {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 110px;
+}
+
+.login-page .metode-pembayaran-nPxJGO {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 111px;
+}
+
+.login-page .item-link-jYwMqj {
+  height: 14px;
+  top: 53px;
+  width: 60px;
+}
+
+.login-page .container-j0E1jw {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 60px;
+}
+
+.login-page .shopee-pay-HeYOc8 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 60px;
+}
+
+.login-page .item-link-Z3nNc4 {
+  height: 14px;
+  top: 79px;
+  width: 67px;
+}
+
+.login-page .container-O5p3mc {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 67px;
+}
+
+.login-page .koin-shopee-CLpaa1 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 67px;
+}
+
+.login-page .item-link-MxkWrm {
+  height: 14px;
+  top: 106px;
+  width: 127px;
+}
+
+.login-page .container-yhHqja {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 127px;
+}
+
+.login-page .lacak-pesanan-pembeli-xxoqhb {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 128px;
+}
+
+.login-page .item-link-iLV4bp {
+  height: 14px;
+  top: 132px;
+  width: 138px;
+}
+
+.login-page .container-WWuLC1 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 138px;
+}
+
+.login-page .lacak-pengiriman-penjual-ReapfZ {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 138px;
+}
+
+.login-page .item-link-Ul3x46 {
+  height: 14px;
+  top: 158px;
+  width: 69px;
+}
+
+.login-page .container-Nzx1Pr {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 69px;
+}
+
+.login-page .gratis-ongkir-q6z9Dl {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 69px;
+}
+
+.login-page .item-link-yEJQWO {
+  height: 14px;
+  top: 185px;
+  width: 158px;
+}
+
+.login-page .container-2QzntZ {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 158px;
+}
+
+.login-page .pengembalian-barang-dana-SJ2xR1 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 158px;
+}
+
+.login-page .item-link-JaOKKB {
+  height: 14px;
+  top: 211px;
+  width: 84px;
+}
+
+.login-page .container-5CxRuq {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 84px;
+}
+
+.login-page .garansi-shopee-7UKx3F {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 84px;
+}
+
+.login-page .item-link-cA1jvk {
+  height: 14px;
+  top: 238px;
+  width: 75px;
+}
+
+.login-page .container-4x5uex {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 75px;
+}
+
+.login-page .hubungi-kami-J9wZ1R {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 76px;
+}
+
+.login-page .jelajahi-shopee-BlRw5W {
+  background-color: transparent;
+  height: 14px;
+  left: 260px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 49px;
+  white-space: nowrap;
+  width: 86px;
+}
+
+.login-page .list-WpmmPx {
+  height: 252px;
+  left: 260px;
+  top: 84px;
+}
+
+.login-page .item-link-zwtfGg {
+  height: 14px;
+  top: 0px;
+  width: 74px;
+}
+
+.login-page .container-gTDHvx {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 74px;
+}
+
+.login-page .tentang-kami-dimI17 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 74px;
+}
+
+.login-page .item-link-7rMtBx {
+  height: 14px;
+  top: 26px;
+  width: 25px;
+}
+
+.login-page .container-NIy9N3 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 25px;
+}
+
+.login-page .karir-oOXygk {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 25px;
+}
+
+.login-page .item-link-f6yORN {
+  height: 14px;
+  top: 53px;
+  width: 95px;
+}
+
+.login-page .container-ArpUiI {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 95px;
+}
+
+.login-page .kebijakan-shopee-DV6rRJ {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 95px;
+}
+
+.login-page .item-link-1YuPDb {
+  height: 14px;
+  top: 79px;
+  width: 91px;
+}
+
+.login-page .container-1ILrW2 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 91px;
+}
+
+.login-page .kebijakan-privasi-DQbJ6Y {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 91px;
+}
+
+.login-page .item-link-MPCP6v {
+  height: 14px;
+  top: 106px;
+  width: 24px;
+}
+
+.login-page .container-0MEiX4 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 24px;
+}
+
+.login-page .blog-UXNTrx {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 24px;
+}
+
+.login-page .item-link-GhxQId {
+  height: 14px;
+  top: 132px;
+  width: 66px;
+}
+
+.login-page .container-kwVfpd {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 66px;
+}
+
+.login-page .shopee-mall-SRIiPP {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 66px;
+}
+
+.login-page .item-link-PMAFQV {
+  height: 14px;
+  top: 158px;
+  width: 68px;
+}
+
+.login-page .container-u86sPu {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 68px;
+}
+
+.login-page .seller-centre-RM1p2J {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 68px;
+}
+
+.login-page .item-link-x2boHf {
+  height: 14px;
+  top: 185px;
+  width: 55px;
+}
+
+.login-page .container-syLeOn {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 55px;
+}
+
+.login-page .flash-sale-XdiSVJ {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 55px;
+}
+
+.login-page .item-link-UlE0la {
+  height: 14px;
+  top: 211px;
+  width: 73px;
+}
+
+.login-page .container-RSD7Db {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 73px;
+}
+
+.login-page .kontak-media-16Y7k2 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 74px;
+}
+
+.login-page .item-link-sWX9E9 {
+  height: 14px;
+  top: 238px;
+  width: 84px;
+}
+
+.login-page .container-F32zFF {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 84px;
+}
+
+.login-page .shopee-affiliate-jDuhPX {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 85px;
+}
+
+.login-page .pembayaran-BlRw5W {
+  background-color: transparent;
+  height: 14px;
+  left: 510px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 49px;
+  white-space: nowrap;
+  width: 68px;
+}
+
+.login-page .list-avwtzQ {
+  height: 228px;
+  left: 510px;
+  top: 84px;
+}
+
+.login-page .item-KmyH5g {
+  left: 0px;
+  top: 0px;
+}
+
+.login-page .link-oHx1Hk {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .x5589c755ab085d2fac3e33f4755c6a9e-43FRsn {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/5589c755ab085d2fac3e33f4755c6a9e@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-UwQb3W {
+  left: 68px;
+  top: 0px;
+}
+
+.login-page .link-rs48Xx {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .x49656d7100598b911a1f247dec64fda4-Rb28fG {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/49656d7100598b911a1f247dec64fda4@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-Bu8ESd {
+  left: 136px;
+  top: 0px;
+}
+
+.login-page .link-BV0sdj {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .e7865f5fb066b8b5e73f9d5c36fc7154-MXPlMv {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/e7865f5fb066b8b5e73f9d5c36fc7154@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-53NC9K {
+  left: 0px;
+  top: 38px;
+}
+
+.login-page .link-RxlXI5 {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .x59185c096964e1892e9122ceaae2609d-b316Vu {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/59185c096964e1892e9122ceaae2609d@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-iewKFX {
+  left: 68px;
+  top: 38px;
+}
+
+.login-page .link-JHVZDn {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .x9a08d3abab3dd059fff945c72ca372d9-GjFSiP {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/9a08d3abab3dd059fff945c72ca372d9@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-cwFq8k {
+  left: 136px;
+  top: 38px;
+}
+
+.login-page .link-C42JeW {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .x780c2be80e523384a7320b89f42008d5-NRUkIA {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/780c2be80e523384a7320b89f42008d5@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-Gg3YVJ {
+  left: 0px;
+  top: 76px;
+}
+
+.login-page .link-HiSVyX {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .x0cf8caa250763eefc3d79bb1f8c08e73-obSdsJ {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/0cf8caa250763eefc3d79bb1f8c08e73@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-JDpvzh {
+  left: 68px;
+  top: 76px;
+}
+
+.login-page .link-i6wdZI {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .c8dce1e557f48316ef80dc9dbee40097-KDHtHg {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/c8dce1e557f48316ef80dc9dbee40097@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-xwo951 {
+  left: 136px;
+  top: 76px;
+}
+
+.login-page .link-mGB3ns {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .x1ad101bcf0e90b74b5697db1511de529-4UotMo {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/1ad101bcf0e90b74b5697db1511de529@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-z9xTUO {
+  left: 0px;
+  top: 114px;
+}
+
+.login-page .link-AEOGeQ {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .x6167379c7a6e786452f9f03295f517e6-aw8RrM {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/6167379c7a6e786452f9f03295f517e6@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-HmxfBG {
+  left: 68px;
+  top: 114px;
+}
+
+.login-page .link-ZlVYYv {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .fc6e7bb9f2e88e7d1a702eb6de938d79-7zwBcM {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/fc6e7bb9f2e88e7d1a702eb6de938d79@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-qpxcx9 {
+  left: 136px;
+  top: 114px;
+}
+
+.login-page .link-eY9JuU {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .x231b50853c37d3ed0933b8ba7479f0e4-FyzP9h {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/231b50853c37d3ed0933b8ba7479f0e4@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-fUGGvt {
+  left: 0px;
+  top: 152px;
+}
+
+.login-page .link-16fOwI {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .d68d15075519a4dfcfc8ffd9385d7bb9-SwrB27 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/d68d15075519a4dfcfc8ffd9385d7bb9@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-uzDaed {
+  left: 68px;
+  top: 152px;
+}
+
+.login-page .link-qNw5Qd {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .ea38821fb0e2ec640bcd4f21000de105-a0xPya {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/ea38821fb0e2ec640bcd4f21000de105@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-Gx3b3Y {
+  left: 136px;
+  top: 152px;
+}
+
+.login-page .link-l8hdLp {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .ef22f26ccc342ad4dea14cc383299d64-zal6uL {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/ef22f26ccc342ad4dea14cc383299d64@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-bpOSC4 {
+  left: 0px;
+  top: 190px;
+}
+
+.login-page .link-ekJUNE {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .b228c4523a9d1261e4606e9bf3a4882f-A3uuyD {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/b228c4523a9d1261e4606e9bf3a4882f@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-bheKP0 {
+  left: 68px;
+  top: 190px;
+}
+
+.login-page .link-o2gtnP {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .x41e4c83bae13f67b9898c7579dd53d05-p3ceSN {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/41e4c83bae13f67b9898c7579dd53d05@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .pengiriman-BlRw5W {
+  background-color: transparent;
+  height: 14px;
+  left: 510px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 327px;
+  white-space: nowrap;
+  width: 62px;
+}
+
+.login-page .list-a90CR8 {
+  height: 190px;
+  left: 510px;
+  top: 363px;
+}
+
+.login-page .item-DVuIck {
+  left: 0px;
+  top: 0px;
+}
+
+.login-page .link-4arIgs {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .id-50009109-0c5dd568-kEHw4r {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/id-50009109-0c5dd5687ff2ede525c04fbde2f7b7fd@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-FmBQuu {
+  left: 68px;
+  top: 0px;
+}
+
+.login-page .link-x1xUmS {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .x982216a49044ce4636f861333bfdac5c-xmJpNj {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/982216a49044ce4636f861333bfdac5c@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-Rx4xye {
+  left: 136px;
+  top: 0px;
+}
+
+.login-page .link-1yiBJG {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .x5ecc185311ec587945838b507140ee21-xRg1nv {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/5ecc185311ec587945838b507140ee21@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-96kWg9 {
+  left: 0px;
+  top: 38px;
+}
+
+.login-page .link-p8MW88 {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .x5c07836b22c5689d56cb217c88171785-xWYiuF {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/5c07836b22c5689d56cb217c88171785@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-cixbzX {
+  left: 68px;
+  top: 38px;
+}
+
+.login-page .link-7Bj3Y6 {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .fe439088405f5b71199c3f6117932462-S8L8Ic {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/fe439088405f5b71199c3f6117932462@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-q6EJyI {
+  left: 136px;
+  top: 38px;
+}
+
+.login-page .link-3hsFUo {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .x9f4d96722647cf501edf21c958294568-sAt4QD {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/9f4d96722647cf501edf21c958294568@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-xWsWil {
+  left: 0px;
+  top: 76px;
+}
+
+.login-page .link-YUEnze {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .c2abc2de79484198bfc3fc3efd4ea049-7W6xi7 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/c2abc2de79484198bfc3fc3efd4ea049@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-xL6xxi {
+  left: 68px;
+  top: 76px;
+}
+
+.login-page .link-KTOYoG {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .x5653e7f0ca1361ddddb5b545ab675bc2-bcD0MO {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/5653e7f0ca1361ddddb5b545ab675bc2@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-UQkaeC {
+  left: 136px;
+  top: 76px;
+}
+
+.login-page .link-xxVZCw {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .ed038a4fcd786fb2d6ef7b70a7a9a1b1-cPlD1P {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/ed038a4fcd786fb2d6ef7b70a7a9a1b1@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-Lvo6pX {
+  left: 0px;
+  top: 114px;
+}
+
+.login-page .link-nzzz4k {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .x8810ac4e4cffb855d280503c6eb33ed4-4mPgQ4 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/8810ac4e4cffb855d280503c6eb33ed4@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-KpKqns {
+  left: 68px;
+  top: 114px;
+}
+
+.login-page .link-g7pURA {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .x5c023bfb427d9546a8055f3b76d91560-x2tXsR {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/5c023bfb427d9546a8055f3b76d91560@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-SA2tly {
+  left: 136px;
+  top: 114px;
+}
+
+.login-page .link-4k601A {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .x5e350fcf94101432052945e2931fa621-SVhWk6 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/5e350fcf94101432052945e2931fa621@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-jxBKDH {
+  left: 0px;
+  top: 152px;
+}
+
+.login-page .link-bqtv1N {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .x47d94f9fb90cc7e374549620be687494-tMdtgu {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/47d94f9fb90cc7e374549620be687494@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-I3iV8K {
+  left: 68px;
+  top: 152px;
+}
+
+.login-page .link-6H5B0y {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .b20bd74ad72a92f1d22dc80e18ae2836-sUx6OT {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/b20bd74ad72a92f1d22dc80e18ae2836@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .item-kMksrU {
+  left: 136px;
+  top: 152px;
+}
+
+.login-page .link-Fca2jP {
+  background-color: transparent;
+  height: 22px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 52px;
+}
+
+.login-page .fedcba5bb6bc183e31766f032fd49a00-bxfhDa {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/fedcba5bb6bc183e31766f032fd49a00@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .ikuti-kami-BlRw5W {
+  background-color: transparent;
+  height: 14px;
+  left: 760px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 49px;
+  white-space: nowrap;
+  width: 55px;
+}
+
+.login-page .list-ele7Uc {
+  height: 128px;
+  left: 760px;
+  top: 84px;
+}
+
+.login-page .item-link-DKnqLx {
+  height: 16px;
+  top: 0px;
+  width: 76px;
+}
+
+.login-page .x622550fb2ffb8ddf3913538801bc4c05-6FeDmA {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/622550fb2ffb8ddf3913538801bc4c05@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.login-page .container-6FeDmA {
+  background-color: transparent;
+  height: 16px;
+  left: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .facebook-pOIfaC {
+  height: 14px;
+  left: 0px;
+  line-height: 14.4px;
+  text-align: left;
+  top: -1px;
+  width: 52px;
+}
+
+.login-page .item-link-Fb2Acx {
+  height: 16px;
+  top: 28px;
+  width: 78px;
+}
+
+.login-page .ec4d29967019ea44642daa53a40ff89c-tp0vmu {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/ec4d29967019ea44642daa53a40ff89c@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.login-page .container-tp0vmu {
+  background-color: transparent;
+  height: 16px;
+  left: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 54px;
+}
+
+.login-page .instagram-1MRH30 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 54px;
+}
+
+.login-page .item-link-UVs7mq {
+  height: 16px;
+  top: 56px;
+  width: 61px;
+}
+
+.login-page .x2bf3f4d1e10c63d4df16cf4090ded0a5-onSFqa {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/2bf3f4d1e10c63d4df16cf4090ded0a5@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.login-page .container-onSFqa {
+  background-color: transparent;
+  height: 16px;
+  left: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 37px;
+}
+
+.login-page .twitter-0VYuz6 {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 37px;
+}
+
+.login-page .item-link-QkxaS7 {
+  height: 16px;
+  top: 84px;
+  width: 69px;
+}
+
+.login-page .x32530e4a6641210fbbfdaf95f507aa1e-1Ikacr {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/32530e4a6641210fbbfdaf95f507aa1e@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.login-page .container-1Ikacr {
+  background-color: transparent;
+  height: 16px;
+  left: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 45px;
+}
+
+.login-page .linked-in-Kuv0ra {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 45px;
+}
+
+.login-page .item-link-MGbGwE {
+  height: 16px;
+  top: 112px;
+  width: 111px;
+}
+
+.login-page .a4c827473f54e4a6ae4550a14ea92653-4hoOSY {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/a4c827473f54e4a6ae4550a14ea92653@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.login-page .container-4hoOSY {
+  background-color: transparent;
+  height: 16px;
+  left: 24px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 87px;
+}
+
+.login-page .kampus-shopee-9Nh6XN {
+  background-color: transparent;
+  height: 14px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 87px;
+}
+
+.login-page .keamanan-BlRw5W {
+  background-color: transparent;
+  height: 14px;
+  left: 760px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 227px;
+  white-space: nowrap;
+  width: 57px;
+}
+
+.login-page .list-item-BlRw5W {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 60px;
+  left: 760px;
+  overflow: hidden;
+  position: absolute;
+  top: 263px;
+  width: 120px;
+}
+
+.login-page .link-gxDPMa {
+  background-color: transparent;
+  height: 52px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 112px;
+}
+
+.login-page .id-11134258-7rasi-m1mj559k2yly05-MyNBUu {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/id-11134258-7rasi-m1mj559k2yly05@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 52px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 112px;
+}
+
+.login-page .download-aplikasi-shopee-BlRw5W {
+  background-color: transparent;
+  height: 14px;
+  left: 1010px;
+  letter-spacing: 0.00px;
+  line-height: 14.4px;
+  position: absolute;
+  text-align: left;
+  top: 49px;
+  white-space: nowrap;
+  width: 143px;
+}
+
+.login-page .container-BlRw5W {
+  background-color: transparent;
+  height: 93px;
+  left: 1010px;
+  position: absolute;
+  top: 84px;
+  width: 190px;
+}
+
+.login-page .link-A2ZB4p {
+  background-color: transparent;
+  height: 93px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100px;
+}
+
+.login-page .bed0af4663f887db16a7047185478dcf-nV8aOd {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/677a494c1d1abb6914c8c0a7/img/bed0af4663f887db16a7047185478dcf.svg);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 88px;
+  left: 0px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  width: 88px;
+}
+
+.login-page .link-huixIa {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 24px;
+  left: 100px;
+  position: absolute;
+  top: 0px;
+  width: 76px;
+}
+
+.login-page .bbf28a2328ec8c7f57b9cc2069d693fd-fSO0wQ {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/bbf28a2328ec8c7f57b9cc2069d693fd@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 4px;
+  overflow: hidden;
+  position: relative;
+  top: 4px;
+  width: 68px;
+}
+
+.login-page .link-QaEAxU {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 24px;
+  left: 100px;
+  position: absolute;
+  top: 32px;
+  width: 76px;
+}
+
+.login-page .x1858a153798406c87945f15a38bf4874-Psy6Mz {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/1858a153798406c87945f15a38bf4874@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 4px;
+  overflow: hidden;
+  position: relative;
+  top: 4px;
+  width: 68px;
+}
+
+.login-page .link-CnRgfh {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 24px;
+  left: 100px;
+  position: absolute;
+  top: 64px;
+  width: 76px;
+}
+
+.login-page .x0e74339f5da500baaaa52785f175bc6d-fdT5ts {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/67724ce9f6726bbd8945c7f9/img/0e74339f5da500baaaa52785f175bc6d@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 16px;
+  left: 4px;
+  overflow: hidden;
+  position: relative;
+  top: 4px;
+  width: 68px;
+}
+
+.login-page .horizontal-border-bBxLlO {
+  background-color: transparent;
+  border-bottom-style: none;
+  border-color: #0000001a;
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: solid;
+  border-top-width: 1px;
+  height: 99px;
+  left: 74px;
+  position: absolute;
+  top: 579px;
+  width: 1200px;
+}
+
+.login-page .shopee-2024-hak-cipta-dilindungi-1YvG0R {
+  background-color: transparent;
+  height: 18px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: 40px;
+  white-space: nowrap;
+  width: 229px;
+}
+
+.login-page .negara-1YvG0R {
+  background-color: transparent;
+  height: 18px;
+  left: 488px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: right;
+  top: 40px;
+  white-space: nowrap;
+  width: 49px;
+}
+
+.login-page .vertical-border-1YvG0R {
+  left: 536px;
+  width: 74px;
+}
+
+.login-page .link-N9iMF5 {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 63px;
+}
+
+.login-page .singapura-BnxIxE {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 63px;
+}
+
+.login-page .vertical-border-5MfHAu {
+  left: 609px;
+  width: 72px;
+}
+
+.login-page .link-VddMqi {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 61px;
+}
+
+.login-page .indonesia-2jMGxS {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 61px;
+}
+
+.login-page .vertical-border-f5w5XV {
+  left: 681px;
+  width: 65px;
+}
+
+.login-page .link-xVZrtG {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 54px;
+}
+
+.login-page .thailand-KnQSLU {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 54px;
+}
+
+.login-page .vertical-border-9ExJEa {
+  left: 746px;
+  width: 67px;
+}
+
+.login-page .link-CxEjOa {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 56px;
+}
+
+.login-page .malaysia-QZquAy {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 56px;
+}
+
+.login-page .vertical-border-xPeL2E {
+  left: 813px;
+  width: 63px;
+}
+
+.login-page .link-bsOjdu {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 52px;
+}
+
+.login-page .vietnam-v1dBP4 {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 52px;
+}
+
+.login-page .vertical-border-kwS1Io {
+  left: 876px;
+  width: 56px;
+}
+
+.login-page .link-eru6Ft {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 45px;
+}
+
+.login-page .filipina-48ciRx {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 45px;
+}
+
+.login-page .vertical-border-cCtxTu {
+  left: 931px;
+  width: 46px;
+}
+
+.login-page .link-k8sDwF {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 35px;
+}
+
+.login-page .brazil-MNGziE {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 35px;
+}
+
+.login-page .vertical-border-77IGLS {
+  left: 977px;
+  width: 56px;
+}
+
+.login-page .link-K0hDGX {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 45px;
+}
+
+.login-page .mxico-YNdAvE {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 46px;
+}
+
+.login-page .vertical-border-HOjR6j {
+  left: 1033px;
+  width: 71px;
+}
+
+.login-page .link-Hqxaba {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 60px;
+}
+
+.login-page .colombia-rx6OEa {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 60px;
+}
+
+.login-page .vertical-border-peXwb5 {
+  left: 1103px;
+  width: 42px;
+}
+
+.login-page .link-Znd0Zl {
+  background-color: transparent;
+  height: 17px;
+  left: 5px;
+  position: relative;
+  top: 0px;
+  width: 31px;
+}
+
+.login-page .chile-GoAQe6 {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 31px;
+}
+
+.login-page .link-1YvG0R {
+  background-color: transparent;
+  height: 17px;
+  left: 1151px;
+  position: absolute;
+  top: 41px;
+  width: 44px;
+}
+
+.login-page .taiwan-NQKm7E {
+  background-color: transparent;
+  height: 17px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: -1px;
+  white-space: nowrap;
+  width: 45px;
+}
+
+.login-page .background-border {
+  background-color: #fefaec;
+  border-color: var(--amber);
+  position: absolute;
+}
+
+.login-page .button {
+  border-radius: 2px;
+  height: 40px;
+  position: absolute;
+}
+
+.login-page .facebook {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.login-page .horizontal-divider {
+  background-color: #dbdbdb;
+  height: 1px;
+  position: absolute;
+  top: 225px;
+  width: 139px;
+}
+
+.login-page .image {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  top: 9px;
+  width: 22px;
+}
+
+.login-page .input {
+  background-color: var(--white);
+  height: 40px;
+  left: 1px;
+  overflow: hidden;
+  top: 0px;
+}
+
+.login-page .item {
+  background-color: var(--white);
+  border-radius: 2px;
+  box-shadow: 0px 1px 1px #00000033;
+  height: 30px;
+  overflow: hidden;
+  position: absolute;
+  width: 60px;
+}
+
+.login-page .item-link {
+  background-color: transparent;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.login-page .list {
+  background-color: transparent;
+  position: absolute;
+  width: 240px;
+}
+
+.login-page .log-in {
+  background-color: transparent;
+  font-family: var(--font-family-roboto);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.00px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.login-page .overlay-border-shadow {
+  background-color: var(--white-2);
+  border: 1px solid;
+  border-color: #00000024;
+  border-radius: 2px;
+  box-shadow: inset 0px 2px 0px 1px #00000005;
+  height: 40px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  width: 340px;
+}
+
+.login-page .vertical-border {
+  background-color: transparent;
+  border-bottom-style: none;
+  border-color: var(--black-4);
+  border-left-style: none;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-style: none;
+  height: 18px;
+  position: absolute;
+  top: 41px;
+}
+</style>
+</head>
+<body style="margin: 0;background: #f5f5f5;">
+  <input type="hidden" id="anPageName" name="page" value="login-page">
+  <div class="container-center-horizontal">
+      <div class="login-page screen" data-id="1:2">
+          <div class="background-fmx5hU" data-id="1:3">
+              <div class="nav-WLa5tN" data-id="1:4">
+                  <img class="link-GwNyxm" data-id="1:5" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/677a494c1d1abb6914c8c0a7/img/link.svg" alt="Link">
+                  <h1 class="title-GwNyxm valign-text-middle" data-id="1:9">Log in</h1>
+                  <div class="link-wDrHNA" data-id="1:10">
+                      <div class="butuh-bantuan-EEWGo7 valign-text-middle" data-id="1:11">Butuh bantuan?</div>
+                  </div>
+              </div>
+              <div class="background-WLa5tN" data-id="1:12">
+                  <div class="background-FxrzIi" data-id="1:13-ef93dc6f-62f6-409d-833a-4a5c4b45fdb7">
+                      <div class="background-shadow-KRLPVn" data-id="1:14">
+                          <div class="log-in-wFjZnJ valign-text-middle log-in" data-id="1:15">Log in</div>
+                          <img class="link-wFjZnJ" data-id="1:16" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/677a494c1d1abb6914c8c0a7/img/link-1.svg" alt="Link">
+                          <div class="background-border-wFjZnJ background-border" data-id="1:26">
+                              <div class="log-in-dengan-qr-tzTvne valign-text-middle" data-id="1:27">Log in dengan QR</div>
+                              <div class="background-border-tzTvne background-border" data-id="1:28"></div>
+                          </div>
+                          <div class="container-wFjZnJ" data-id="1:29">
+                              <div class="form-kZWg9H" data-id="1:30">
+                                  <div class="overlay-border-shadow-LK8iRV overlay-border-shadow" data-id="1:31">
+                                      <div class="input-39ftOT input" data-id="1:32">
+                                          <div class="container-z6DEhN" data-id="1:33">
+                                              <div class="no-handphone-username-email-j2qg4C valign-text-middle roboto-normal-black-14px-2" data-id="1:34">No. Handphone/Username/Email</div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="overlay-border-shadow-8MUKAQ overlay-border-shadow" data-id="1:35">
+                                      <div class="input-Hq914Z input" data-id="1:36">
+                                          <div class="container-Jxu6Bt" data-id="1:37">
+                                              <div class="password-iTtlg7 valign-text-middle roboto-normal-black-14px-2" data-id="1:38">Password</div>
+                                          </div>
+                                      </div>
+                                      <img class="button-svg-Hq914Z" data-id="1:39" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/677a494c1d1abb6914c8c0a7/img/button---svg.svg" alt="Button SVG">
+                                  </div>
+                                  <div class="button-LK8iRV button" data-id="1:41">
+                                      <div class="log-in-LmVl5Y valign-text-middle log-in" data-id="1:42"><a href="D:/VSCode/shopee akmal/Beranda.html">LOG IN</a></div>
+                                  </div>
+                              </div>
+                              <div class="link-kZWg9H" data-id="1:43">
+                                  <div class="lupa-password-X2Nbxb valign-text-middle" data-id="1:44">Lupa Password</div>
+                              </div>
+                              <div class="link-Wjk61q" data-id="1:45">
+                                  <p class="log-in-dengan-no-handphone-shUH4M valign-text-middle" data-id="1:46">Log in dengan no. handphone</p>
+                              </div>
+                              <div class="horizontal-divider-kZWg9H horizontal-divider" data-id="1:47"></div>
+                              <div class="atau-kZWg9H valign-text-middle" data-id="1:48">ATAU</div>
+                              <div class="horizontal-divider-Wjk61q horizontal-divider" data-id="1:49"></div>
+                              <div class="button-kZWg9H button" data-id="1:50">
+                                  <img class="image-qbvqvi image" data-id="1:51" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/677a494c1d1abb6914c8c0a7/img/image@2x.png" alt="Image">
+                                  <div class="facebook-qbvqvi valign-text-middle facebook" data-id="1:52">Facebook</div>
+                              </div>
+                              <div class="button-Wjk61q button" data-id="1:53">
+                                  <img class="image-JTCUm5 image" data-id="1:54" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/67724c8b2d989b86f5440eef/releases/677a494c1d1abb6914c8c0a7/img/image-1@2x.png" alt="Image">
+                                  <div class="google-JTCUm5 valign-text-middle" data-id="1:55">Google</div>
+                              </div>
+                          </div>
+                          <div class="baru-di-shopee-wFjZnJ valign-text-middle roboto-normal-black-14px-2" data-id="1:56">Baru di Shopee?</div>
+                          <div class="link-axfPHw" data-id="1:57">
+                              <div class="daftar-4prAZa valign-text-middle" data-id="1:58">Daftar</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <footer class="footer-WLa5tN" data-id="1:59">
+                  <div class="container-bBxLlO" data-id="1:60">
+                      <div class="layanan-pelanggan-BlRw5W valign-text-middle roboto-bold-black-12px" data-id="1:61">Layanan Pelanggan</div>
+                      <div class="list-BlRw5W list" data-id="1:62">
+                          <div class="item-link-wRFVfB item-link" data-id="1:63">
+                              <div class="container-4xgxR3" data-id="1:64">
+                                  <div class="bantuan-HjXYaL valign-text-middle roboto-normal-black-12px" data-id="1:65">Bantuan</div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </footer>
+          </div>
+      </div>
+  </div>
+  <script src="launchpad-js/launchpad-banner.js" async></script>
+  <script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script>
+</body>
+</html>
